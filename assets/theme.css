@@ -9,3 +9,5 @@
 
 .reading p,.reading figcaption,.reading summary,.reading td,.reading h1,.reading h2,.reading .next a{overflow-wrap:anywhere}.reading a{overflow-wrap:anywhere}.brand,.menu a{overflow-wrap:normal}
 .searchrow label{min-width:0;max-width:100%}.searchrow select{min-width:0;width:100%}
+
+.fare-map{display:block;width:100%;max-width:32rem;height:auto;margin:0 auto;font-family:system-ui,sans-serif}.fare-example figcaption{text-align:center}
