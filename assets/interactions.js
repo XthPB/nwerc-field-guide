@@ -128,7 +128,7 @@ if (list && window.problemCatalog) {
       }
       if(method){
         cols[2].append(link(labels[method][0],labels[method][1]));
-        templateRow(window.lessonTemplates[method],'Supporting templates');
+        templateRow(window.problemTemplates[String(id)+idx],'Supporting templates');
       } else if(info.op.length){
         templateRow(info.op.map(op=>op[0]),'Building blocks visible in code');
         const examples=document.createElement('small');

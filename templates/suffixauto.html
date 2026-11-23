@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Suffix automaton for distinct substrings · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Suffix automaton for distinct substrings</h1><p class="lead">Append lowercase letters to build the automaton. Compute continuation counts in decreasing state length for rank queries or count distinct substrings from suffix-link lengths.</p><p class="small">From the DP companion.</p><pre tabindex="0"><code>// Lowercase a-z. Each path from the initial state is a distinct substring.
+// Number of distinct substrings = sum(len[v] - len[link[v]]) over non-root states.
+struct SuffixAutomaton {
+    struct State {
+        int length=0, link=-1;
+        std::array&lt;int,26&gt; next;
+        State() { next.fill(-1); }
+    };
+    std::vector&lt;State&gt; nodes{State{}};
+    int last=0;
+    void append(char ch) {
+        int c=ch-&#x27;a&#x27;;
+        assert(c&gt;=0 &amp;&amp; c&lt;26);
+        int cur=static_cast&lt;int&gt;(nodes.size());
+        nodes.emplace_back();
+        nodes[cur].length=nodes[last].length+1;
+        int p=last;
+        while (p!=-1 &amp;&amp; nodes[p].next[c]==-1) {
+            nodes[p].next[c]=cur;
+            p=nodes[p].link;
+        }
+        if (p==-1) nodes[cur].link=0;
+        else {
+            int q=nodes[p].next[c];
+            if (nodes[p].length+1==nodes[q].length) nodes[cur].link=q;
+            else {
+                int clone=static_cast&lt;int&gt;(nodes.size());
+                State copied=nodes[q];
+                copied.length=nodes[p].length+1;
+                nodes.push_back(copied);
+                while (p!=-1 &amp;&amp; nodes[p].next[c]==q) {
+                    nodes[p].next[c]=clone;
+                    p=nodes[p].link;
+                }
+                nodes[q].link=nodes[cur].link=clone;
+            }
+        }
+        last=cur;
+    }
+};</code></pre><p><a href="../companion.hpp">Download the complete C++17 header</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/substringrank.html">Rank distinct substrings by counting paths in a suffix automaton</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>
