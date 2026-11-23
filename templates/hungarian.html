@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Hungarian assignment · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Hungarian assignment</h1><p class="lead">Use a rectangular or padded assignment model with the correct dimensions and feasibility assumptions.</p><p>From the ICPC Code Templates section “Hungarian Algorithm (assignment)”. Use the code with the types and conventions shown in the excerpt.</p><p>The listing includes its required numeric constant. Choose bounds and tolerances for the input scale.</p><pre><code>constexpr long long INF = (1LL &lt;&lt; 62);
+// Hungarian algorithm: assignment problem. n rows (workers) to m
+//   columns (jobs), n &lt;= m, every row gets a different column,
+//   minimise the total cost. Maximise: negate the costs.
+// NEEDS: cost matrix a[n][m] (0-based, any sign), INF (template).
+// TIME: O(n^2 m) (n = m = 500: ~0.1 s). Faster than min-cost flow.
+// returns {min cost, col[i] = column given to row i}
+pair&lt;ll, vector&lt;int&gt;&gt; hungarian(const vector&lt;vector&lt;ll&gt;&gt; &amp;a) {
+    int n = a.size(), m = a[0].size();
+    vector&lt;ll&gt; u(n + 1), v(m + 1);           // potentials
+    vector&lt;int&gt; p(m + 1), way(m + 1);        // p[j] = row of column j
+    for (int i = 1; i &lt;= n; i++) {
+        p[0] = i;
+        int j0 = 0;
+        vector&lt;ll&gt; minv(m + 1, INF);
+        vector&lt;bool&gt; used(m + 1, false);
+        do {
+            used[j0] = true;
+            int i0 = p[j0], j1 = 0;
+            ll delta = INF;
+            for (int j = 1; j &lt;= m; j++)
+                if (!used[j]) {
+                    ll cur = a[i0 - 1][j - 1] - u[i0] - v[j];
+                    if (cur &lt; minv[j]) { minv[j] = cur; way[j] = j0; }
+                    if (minv[j] &lt; delta) { delta = minv[j]; j1 = j; }
+                }
+            for (int j = 0; j &lt;= m; j++)
+                if (used[j]) { u[p[j]] += delta; v[j] -= delta; }
+                else minv[j] -= delta;
+            j0 = j1;
+        } while (p[j0] != 0);
+        do {
+            int j1 = way[j0];
+            p[j0] = p[j1];
+            j0 = j1;
+        } while (j0);
+    }
+    vector&lt;int&gt; col(n);
+    for (int j = 1; j &lt;= m; j++)
+        if (p[j]) col[p[j] - 1] = j - 1;
+    return {-v[0], col};
+}</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Knapsack, subsequences and interval DP · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/advanced.html">Advanced DP across subjects</a> · Foundations</p><h1>Knapsack, subsequences and interval DP</h1><h2>One template, different dependency directions</h2>
+<p>In 0/1 knapsack, item i may be used once. <code>dp[w]</code> stores the best value at capacity w. Iterate w downward so <code>dp[w-weight]</code> still belongs to the previous item layer.</p>
+<pre><code class="language-cpp">for(auto [weight,value]:items)
+    for(int w=W;w&gt;=weight;--w)
+        dp[w]=max(dp[w],dp[w-weight]+value);
+</code></pre>
+<p>For unlimited copies, iterate upward: using an updated state deliberately permits another copy. For exact weight, initialise <code>dp[0]=0</code> and all other entries to −∞; for “at most W”, all-zero initialisation can be valid when taking nothing is allowed. Those initialisations solve different problems.</p>
+<h2>Change which quantity is the state</h2>
+<p>If capacity is 10^9 but the sum of values is 10000, store minimum weight for each total value. If both are huge but there are at most 40 items, meet in the middle. If weights have a small modulus or only a few distinct types, count-vector DP may help. Constraints are clues about which dimension can be enumerated.</p>
+<h2>Longest increasing subsequence</h2>
+<p>The O(n²) DP is <code>dp[i]=1+max(dp[j])</code> over j&lt;i with a[j]&lt;a[i]. The O(n log n) method stores the smallest possible final value of an increasing subsequence of each length. A smaller tail preserves more future options.</p>
+<pre><code class="language-cpp">vector&lt;long long&gt; tail;
+for(long long x:a) {
+    auto it=lower_bound(tail.begin(),tail.end(),x);
+    if(it==tail.end()) tail.push_back(x); else *it=x;
+}
+</code></pre>
+<p>For nondecreasing subsequences, use <code>upper_bound</code>. The tails array is not necessarily the subsequence itself; reconstruction needs predecessor indices.</p>
+<h2>LCS: two advancing boundaries</h2>
+<p>For strings a and b, <code>dp[i][j]</code> is the longest common subsequence of their prefixes. Equal final characters can extend <code>dp[i−1][j−1]</code>; otherwise drop one final character. Time is O(nm). Two rows give lengths in O(min(n,m)) memory; Hirschberg’s divide-and-conquer reconstructs an LCS with linear working memory and O(nm) time.</p>
+<p>Evolutionary Excerpt relaxes optimality and promises random strings. That allows local block LCS or a banded DP. Do not apply those shortcuts to arbitrary LCS problems.</p>
+<h2>Interval DP: choose the final split</h2>
+<p>When a solution acts on a contiguous interval, try <code>dp[l][r]</code>. For matrix-chain multiplication, splitting at k yields two smaller intervals plus a merge cost. Process by increasing length:</p>
+<pre><code class="language-cpp">for(int len=2;len&lt;=n;len++) for(int l=0;l+len&lt;=n;l++) {
+    int r=l+len;
+    for(int k=l+1;k&lt;r;k++)
+        dp[l][r]=min(dp[l][r],dp[l][k]+dp[k][r]+mergeCost(l,k,r));
+}
+</code></pre>
+<p>O(n³) is the baseline. Knuth or divide-and-conquer optimisation requires extra structure; a split recurrence alone does not justify either.</p>
+<details><summary>Checkpoint: what happens if you run 0/1 knapsack upward?</summary><p>The same item can feed its own later states, so you silently solve an unbounded variant. With one item of weight 2 and value 3, capacity 4 would incorrectly get value 6.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2023-e.html">BAPC 2023-E · Exam Study Planning</a></li><li><a href="../regional/bapc-2021-e.html">BAPC 2021-E · Evolutionary Excerpt</a></li><li><a href="../regional/bapc-2022-c.html">BAPC 2022-C · Crashing Competition Computer</a></li></ul></section><p><a href="../tracks/advanced.html">Advanced DP across subjects</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

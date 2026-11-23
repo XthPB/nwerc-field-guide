@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Linear algebra, XOR bases and recurrences · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/arithmetic.html">Number theory and algebra</a> · Foundations</p><h1>Linear algebra, XOR bases and recurrences</h1><h2>Elimination is systematic substitution</h2>
+<p>To solve Ax=b, choose a nonzero pivot, normalise its row if appropriate, and eliminate that variable from other rows. A row of all-zero coefficients with nonzero right side means inconsistency; missing pivots mean free variables. Gaussian elimination costs O(n³) for a dense n×n system.</p>
+<p>Over real numbers, partial pivoting improves numerical stability. Over a prime field, pivot division uses a modular inverse and has no rounding error. Over a composite modulus, nonzero does not imply invertible; ordinary field elimination may fail.</p>
+<h2>XOR is addition over F₂</h2>
+<p>Represent a bit vector as a machine word. XOR adds vectors modulo 2. A basis stores one vector for each highest set bit. Insert x by eliminating its highest bit with the corresponding basis vector; if none exists, x becomes a new pivot.</p>
+<pre><code class="language-cpp">array&lt;unsigned long long,64&gt; basis{};
+void insert(unsigned long long x) {
+    for(int b=63;b&gt;=0;b--) if(x&gt;&gt;b&amp;1ULL) {
+        if(!basis[b]) {basis[b]=x;return;}
+        x^=basis[b];
+    }
+}
+</code></pre>
+<p>Each insertion costs O(word bits). A vector reduces to zero exactly when it lies in the span. With rank r, the span contains 2^r distinct XOR values. If n original vectors have rank r, each attainable XOR has 2^(n−r) subset representations, because the linear map's kernel has that size.</p>
+<p>To maximise an unsigned XOR, scan basis vectors from high bit down and replace answer by <code>max(answer,answer^basis[b])</code>. Counting k-th XOR values needs a canonical reduced basis and careful ordering; the insertion form alone is not enough.</p>
+<h2>Matrix exponentiation accelerates repeated transitions</h2>
+<p>For a linear recurrence such as Fibonacci, store a vector state and a transition matrix. Applying it k times is matrix exponentiation by squaring: O(d³ log k) for a dense d×d matrix. This is useful when the number of steps is enormous but the state dimension is small.</p>
+<pre><code class="language-cpp">Matrix power(Matrix a,long long k) {
+    Matrix result=identity(a.size());
+    while(k) {
+        if(k&amp;1) result=result*a;
+        a=a*a;k&gt;&gt;=1;
+    }
+    return result;
+}
+</code></pre>
+<p>Matrix multiplication can use other semirings: Boolean OR/AND for reachability of exactly k edges, or min/+ for minimum cost of exactly k edges. “Exactly k” is not the same as “at most k”; add appropriate self-loops or an augmented state only after checking the intended meaning.</p>
+<h2>Algebra can remove interactions</h2>
+<p>Lopsided Lineup seems to require optimising pair synergies. Symmetry makes cross-team terms cancel in the difference, leaving independent row weights. This is not Gaussian elimination, but it is the same habit of rewriting expressions until the true degrees of freedom become visible.</p>
+<h2>Further tools</h2>
+<p>For high-order linear recurrences, polynomial reduction can improve on cubic matrix multiplication. Berlekamp–Massey finds a shortest linear recurrence over a field from a sufficiently informative sequence; using it on a handful of terms without a justified model is pattern guessing. Kirchhoff's matrix-tree theorem counts spanning trees via a Laplacian minor determinant. Both deserve separate implementation practice before use under contest pressure.</p>
+<details><summary>Checkpoint: can a nonzero integer always be used as a pivot modulo 8?</summary><p>No. For example, 2 is nonzero but has no inverse modulo 8. Field-based elimination assumes every nonzero pivot is invertible; a prime modulus provides that property.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2025-f.html">BAPC 2025-F · Faulty Connection</a></li><li><a href="../regional/bapc-2021-l.html">BAPC 2021-L · Lopsided Lineup</a></li></ul></section><p><a href="../tracks/arithmetic.html">Number theory and algebra</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

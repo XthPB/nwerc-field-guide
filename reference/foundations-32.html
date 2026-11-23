@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>A study route from foundations to contest execution · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/construct.html">Constructive proofs and implementation</a> · Foundations</p><h1>A study route from foundations to contest execution</h1><h2>Read with the solution closed</h2>
+<p>For each problem, read the original statement and solve the samples manually. Spend a real attempt identifying the model and writing a brute force. Open only the first hint when stuck. After seeing the efficient idea, close it and derive the recurrence or invariant yourself.</p>
+<p>The five approach stages are a learning ladder. Some are deliberately slow, some are tempting failures, and some are broader extensions. They are labelled so you can learn from them without mistaking every snippet for a passing submission. Full jury C++ sources are provided separately.</p>
+<h2>A flexible eight-block programme</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Focus</th>
+<th>Exit test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modelling, complexity, exact arithmetic, sorting</td>
+<td>Solve four level-1/2 problems without hints and explain why</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Greedy proofs, binary search, prefix sums, monotonic queues</td>
+<td>Produce a proof and a counterexample to a wrong alternative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Basic DP, knapsack, strings, state compression</td>
+<td>Derive state/base/order before looking at code</td>
+</tr>
+<tr>
+<td>4</td>
+<td>BFS/Dijkstra, SCC, DSU, DAG DP</td>
+<td>Build the correct graph, including extra state when needed</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Tree DP/rerooting, range queries, segment trees</td>
+<td>Implement and differential-test one template of each</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bitmask/profile DP, matching/flow, suffix structures</td>
+<td>Solve at least two level-4 problems with independent reconstruction</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Probability, interactive, geometry, advanced optimisation</td>
+<td>State assumptions and guarantees accurately</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Full contests and targeted repair</td>
+<td>Complete a timed team simulation and a written postmortem</td>
+</tr>
+</tbody>
+</table>
+<p>These are study blocks, not a promise that each takes exactly one week. Move on when the exit test holds. Revisit prerequisites when an advanced chapter feels opaque.</p>
+<h2>Use a three-pass problem cycle</h2>
+<p><strong>Attempt:</strong> record your model, complexity and where you got stuck. Avoid browsing the solution at the first discomfort.</p>
+<p><strong>Reconstruct:</strong> after learning the idea, implement from a blank file, run samples and small oracle tests, then submit on an available practice judge if you want full judging. Local samples do not replace hidden tests.</p>
+<p><strong>Retain:</strong> a few days later, explain the key invariant without notes and solve a related problem. A month later, redo the hardest step or a variant. The library's progress states distinguish reading, attempting, solving and revisiting; a checked box is not mastery by itself.</p>
+<h2>Build a personal error log</h2>
+<p>For each miss, classify the cause: wrong model, missing proof condition, complexity underestimate, overflow, indexing, unhandled tie, protocol error, or implementation bug. Write the smallest failing example and the corrected invariant. This is more useful than “need more DP practice.”</p>
+<p>A strong postmortem answers: What clue in the statement should have suggested the model? Which brute-force transition was accelerated? What assumption made the optimisation valid? How will I recognise a related problem next time?</p>
+<h2>Team contest execution</h2>
+<p>In a five-hour simulation, skim the full set early, assign likely easy solves, and keep a shared list of candidate models and estimated difficulty. Rotate a stuck problem to a teammate with a precise summary of what has been proved. Before coding a difficult solution, do a short proof review together. Before submission, check bounds, integer widths, output format and a few adversarial examples.</p>
+<p>Keep a compact reference notebook of implementations you understand. Know whether its use and printing are permitted by the current event rules; check the organiser's current instructions rather than assuming rules from an older year.</p>
+<h2>What this archive can and cannot predict</h2>
+<p>The topic explorer counts tags from these 61 guides; tags include meaningful alternatives and overlap. They are learning priorities, not official classifications or probabilities of future appearance. Bitmask encoding, bitset intersections and bitmask DP are different concepts. The broader syllabus deliberately covers important ICPC techniques beyond those used as the main method in this sample.</p>
+<details><summary>Your final checkpoint</summary><p>Pick an unseen level-4 problem. In twenty minutes, write a brute-force model, a candidate efficient state, a complexity calculation and the exact lemma you still need. Even before finishing, that is evidence that you are developing transferable contest reasoning.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2025-k.html">BAPC 2025-K · Knowing the Clock</a></li><li><a href="../regional/bapc-2024-j.html">BAPC 2024-J · Jumbled Scoreboards</a></li><li><a href="../regional/bapc-2023-a.html">BAPC 2023-A · APT Upgrade</a></li><li><a href="../regional/bapc-2022-e.html">BAPC 2022-E · Equalising Audio</a></li><li><a href="../regional/bapc-2023-e.html">BAPC 2023-E · Exam Study Planning</a></li><li><a href="../regional/bapc-2024-m.html">BAPC 2024-M · Museum Visit</a></li><li><a href="../regional/bapc-2023-j.html">BAPC 2023-J · Jungle Job</a></li><li><a href="../regional/bapc-2025-f.html">BAPC 2025-F · Faulty Connection</a></li></ul></section><p><a href="../tracks/construct.html">Constructive proofs and implementation</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

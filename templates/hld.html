@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Heavy-light decomposition · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Heavy-light decomposition</h1><p class="lead">Decide whether each array position stores the entering edge or the vertex.</p><p>From the ICPC Code Templates section “Heavy-Light Decomposition”. Use the code with the types and conventions shown in the excerpt.</p><p>Include these supporting sections first · <a href="../templates/seg.html">Bottom-up segment tree</a></p><pre><code>// Heavy-light decomposition: PATH and SUBTREE queries with updates.
+// USE: &quot;change the value of node v&quot;, &quot;sum / max on the path u-v&quot;,
+//   &quot;sum of the subtree of v&quot;.
+// NEEDS: tree, nodes 0..n-1, the 2n SegTree above (set its combine
+//   and ID; path queries need a COMMUTATIVE combine). Values on
+//   NODES. Edge weights: store w(p, v) on the child v and skip the
+//   top node: in queryPath use seg.query(pos[u] + 1, pos[v] + 1).
+// TIME: O(n log n) build, path O(log^2 n), subtree O(log n).
+struct HLD {
+    vector&lt;int&gt; parent, depth, heavy, head, pos, sz;
+    SegTree seg;
+    HLD(const vector&lt;vector&lt;int&gt;&gt; &amp;adj, const vector&lt;ll&gt; &amp;value,
+        int root = 0) : seg(vector&lt;ll&gt;(adj.size(), 0)) {
+        int n = adj.size();
+        parent.assign(n, -1); depth.assign(n, 0); heavy.assign(n, -1);
+        head.assign(n, 0); pos.assign(n, 0); sz.assign(n, 1);
+        vector&lt;int&gt; order = {root};                // BFS order
+        for (int i = 0; i &lt; (int)order.size(); i++) {
+            int u = order[i];
+            for (int v : adj[u])
+                if (v != parent[u]) {
+                    parent[v] = u;
+                    depth[v] = depth[u] + 1;
+                    order.push_back(v);
+                }
+        }
+        for (int i = n - 1; i &gt; 0; i--) {          // children first
+            int v = order[i], p = parent[v];
+            sz[p] += sz[v];
+            if (heavy[p] == -1 || sz[v] &gt; sz[heavy[p]]) heavy[p] = v;
+        }
+        int cur = 0;                    // DFS order, heavy child first
+        vector&lt;int&gt; st = {root};
+        while (!st.empty()) {
+            int v = st.back();
+            st.pop_back();
+            pos[v] = cur++;
+            int p = parent[v];
+            head[v] = (p != -1 &amp;&amp; heavy[p] == v) ? head[p] : v;
+            for (int c : adj[v])
+                if (c != p &amp;&amp; c != heavy[v]) st.push_back(c);
+            if (heavy[v] != -1) st.push_back(heavy[v]);
+        }
+        for (int v = 0; v &lt; n; v++) seg.update(pos[v], value[v]);
+    }
+    void setValue(int v, ll x) { seg.update(pos[v], x); }
+    ll queryPath(int u, int v) {
+        ll res = seg.ID;
+        while (head[u] != head[v]) {
+            if (depth[head[u]] &lt; depth[head[v]]) swap(u, v);
+            res = seg.combine(res, seg.query(pos[head[u]], pos[u] + 1));
+            u = parent[head[u]];
+        }
+        if (depth[u] &gt; depth[v]) swap(u, v);       // u = LCA
+        return seg.combine(res, seg.query(pos[u], pos[v] + 1));
+    }
+    ll querySubtree(int v) { return seg.query(pos[v], pos[v] + sz[v]); }
+};</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

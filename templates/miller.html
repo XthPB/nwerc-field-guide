@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Miller–Rabin primality testing · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Miller–Rabin primality testing</h1><p class="lead">The chosen witness set and multiplication type must cover your integer domain.</p><p>From the ICPC Code Templates section “Miller-Rabin (64-bit primality)”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Miller-Rabin: is n prime? Deterministic for all n &lt; 2^63.
+// USE: primality of a few huge numbers (sieve impossible).
+// TIME: ~12 * 64 multiplications. mulmod uses __int128.
+ll mulmod(ll a, ll b, ll m) { return (__int128)a * b % m; }
+ll powmod(ll a, ll e, ll m) {
+    ll r = 1;
+    a %= m;
+    while (e &gt; 0) {
+        if (e &amp; 1) r = mulmod(r, a, m);
+        a = mulmod(a, a, m);
+        e &gt;&gt;= 1;
+    }
+    return r;
+}
+bool isPrime(ll n) {
+    if (n &lt; 2) return false;
+    for (ll p : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37})
+        if (n % p == 0) return n == p;
+    ll d = n - 1;
+    int s = 0;
+    while (d % 2 == 0) { d /= 2; s++; }
+    for (ll a : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}) {
+        ll x = powmod(a, d, n);
+        if (x == 1 || x == n - 1) continue;
+        bool composite = true;
+        for (int i = 1; i &lt; s &amp;&amp; composite; i++) {
+            x = mulmod(x, x, n);
+            if (x == n - 1) composite = false;
+        }
+        if (composite) return false;
+    }
+    return true;
+}</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

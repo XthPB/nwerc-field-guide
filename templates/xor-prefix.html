@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>XOR prefixes and letter parities · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>XOR prefixes and letter parities</h1><p class="lead">prefix_xor returns n+1 values. prefix_xor(a)[r] XOR prefix_xor(a)[l] gives the XOR on [l,r). A one-hot letter mask lets the same arithmetic track odd frequencies. This guide companion also shows the three-value operation used in constructive proofs.</p><pre><code class="language-cpp">std::vector&lt;unsigned&gt; prefix_xor(const std::vector&lt;unsigned&gt;&amp; a) {
+    std::vector&lt;unsigned&gt; prefix(a.size() + 1);
+    for (std::size_t i = 0; i &lt; a.size(); ++i)
+        prefix[i + 1] = prefix[i] ^ a[i];
+    return prefix;
+}
+bool at_most_one_odd(unsigned parity) {
+    return (parity &amp; (parity - 1u)) == 0;
+}
+void equalize_triple(std::vector&lt;unsigned&gt;&amp; a, int i, int j, int k) {
+    unsigned value = a[i] ^ a[j] ^ a[k];
+    a[i] = a[j] = a[k] = value;
+}</code></pre><p>Guide companion · C++17. Include the corresponding standard headers.</p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

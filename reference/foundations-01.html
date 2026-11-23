@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>From a story to an algorithm · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/construct.html">Constructive proofs and implementation</a> · Foundations</p><h1>From a story to an algorithm</h1><h2>Start with a question you can answer</h2>
+<p>A scoreboard says <code>(2,1)</code>, then <code>(1,2)</code>. Can both belong to a game where scores only increase? You do not need to reconstruct every scoring event. One coordinate decreased, so the answer is already no. The useful object is a <strong>constraint between consecutive observations</strong>.</p>
+<p>This is the first contest habit: turn the story into objects, operations, constraints and an objective. “Travel” might mean shortest path, but it might also mean reachability, scheduling, or a deterministic walk. Choose the model before the algorithm.</p>
+<h2>A five-pass reading routine</h2>
+<ol>
+<li>Rewrite the output in one sentence: minimise what, count what, or construct what?</li>
+<li>Separate guarantees from goals. A connected graph is a promise; a connected chosen subgraph may be your responsibility.</li>
+<li>Copy the largest bounds and numeric ranges. Include the sum of sizes over test cases.</li>
+<li>Solve a tiny example manually and write down why each decision is legal.</li>
+<li>Build a brute-force oracle before optimising an unfamiliar idea.</li>
+</ol>
+<p>For <code>n≈20</code>, subsets may be realistic. For <code>n≈2000</code>, quadratic work may fit. For <code>n≈200000</code>, look for near-linear or <code>n log n</code> work. These are <strong>starting estimates</strong>, not universal timing promises: an O(n²) table of tiny arithmetic is very different from O(n²) allocations or large integer operations.</p>
+<h2>The cost of a representation</h2>
+<p>An adjacency matrix uses O(V²) memory even if a graph has only V edges. An adjacency list uses O(V+E). A DP with <code>200000 × 200000</code> states is impossible before you even discuss transitions. Always write:</p>
+<div class="formula">time = number of states × work per state<br>space = states simultaneously retained × bytes per state</div>
+
+<p>For a subset DP with n=20, <code>2^n≈10^6</code>; adding a last-vertex dimension multiplies memory by 20. At eight bytes per entry that is roughly 160 MB, before overhead.</p>
+<h2>C++ that supports reasoning</h2>
+<pre><code class="language-cpp">using ll = long long;
+using i128 = __int128_t;
+const ll INF = (1LL&lt;&lt;62);
+// Cast BEFORE multiplying, not after overflow has happened.
+i128 cross = (i128)ax*by - (i128)ay*bx;
+// Never add a transition to an unreachable state.
+if (dp[u] != INF) dp[v] = min(dp[v], dp[u] + cost);
+</code></pre>
+<p>Use half-open intervals <code>[l,r)</code> unless a problem forces another convention. They contain <code>r-l</code> items; empty intervals have <code>l==r</code>. Name whether an array is zero-based or one-based. A surprising number of “hard algorithm” bugs are indexing disagreements.</p>
+<h2>A progression you will repeat</h2>
+<p><strong>Enumerate → find repeated work → retain a sufficient summary → prove it → implement → test.</strong> Do not skip the first step because it is slow. A brute-force model tells you exactly what the optimised algorithm must preserve.</p>
+<details><summary>Pause and solve: why is checking only adjacent scoreboard entries enough?</summary><p>Coordinatewise ≤ is transitive. If every adjacent pair is nondecreasing, every earlier observation is ≤ every later one. Checking all pairs adds work without adding a constraint.</p></details>
+
+<p>Your first milestone is to solve the three linked problems, explaining the invariant aloud before writing C++. Aim for a precise five-line proof, not speed.</p><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2025-k.html">BAPC 2025-K · Knowing the Clock</a></li><li><a href="../regional/bapc-2021-a.html">BAPC 2021-A · Arm Coordination</a></li><li><a href="../regional/bapc-2024-j.html">BAPC 2024-J · Jumbled Scoreboards</a></li></ul></section><p><a href="../tracks/construct.html">Constructive proofs and implementation</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

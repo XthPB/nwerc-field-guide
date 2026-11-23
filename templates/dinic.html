@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Dinic max flow · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Dinic max flow</h1><p class="lead">Reverse arcs carry residual capacity. Size capacities for the largest possible total flow.</p><p>From the ICPC Code Templates section “Max Flow (Dinic)”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Max flow (Dinic). USE: max flow / min cut, bipartite matching,
+//   edge- or vertex-disjoint paths, project selection (see facts).
+// NEEDS: DIRECTED edges with capacity &gt;= 0 (ll), nodes 0..n-1;
+//   undirected edge = add_edge both ways. Call flow() ONCE.
+// TIME: O(V^2 E) worst case, much faster in practice;
+//   O(E sqrt V) on unit-capacity / bipartite matching graphs.
+struct FlowEdge {
+    int v, u;
+    long long cap, flow = 0;
+    FlowEdge(int v, int u, long long cap) : v(v), u(u), cap(cap) {}
+};
+struct Dinic {
+    const long long flow_inf = 1e18;
+    vector&lt;FlowEdge&gt; edges;     // edge i and i ^ 1 are a pair
+    vector&lt;vector&lt;int&gt;&gt; adj;
+    int n, m = 0;
+    int s, t;
+    vector&lt;int&gt; level, ptr;
+    queue&lt;int&gt; q;
+    Dinic(int n, int s, int t) : n(n), s(s), t(t) {
+        adj.resize(n);
+        level.resize(n);
+        ptr.resize(n);
+    }
+    void add_edge(int v, int u, long long cap) {
+        edges.emplace_back(v, u, cap);
+        edges.emplace_back(u, v, 0);
+        adj[v].push_back(m);
+        adj[u].push_back(m + 1);
+        m += 2;
+    }
+    bool bfs() {
+        while (!q.empty()) {
+            int v = q.front();
+            q.pop();
+            for (int id : adj[v]) {
+                if (edges[id].cap == edges[id].flow)
+                    continue;
+                if (level[edges[id].u] != -1)
+                    continue;
+                level[edges[id].u] = level[v] + 1;
+                q.push(edges[id].u);
+            }
+        }
+        return level[t] != -1;
+    }
+    long long dfs(int v, long long pushed) {
+        if (pushed == 0)
+            return 0;
+        if (v == t)
+            return pushed;
+        for (int&amp; cid = ptr[v]; cid &lt; (int)adj[v].size(); cid++) {
+            int id = adj[v][cid];
+            int u = edges[id].u;
+            if (level[v] + 1 != level[u])
+                continue;
+            long long tr = dfs(u, min(pushed,
+                                      edges[id].cap - edges[id].flow));
+            if (tr == 0)
+                continue;
+            edges[id].flow += tr;
+            edges[id ^ 1].flow -= tr;
+            return tr;
+        }
+        return 0;
+    }
+    long long flow() {
+        long long f = 0;
+        while (true) {
+            fill(level.begin(), level.end(), -1);
+            level[s] = 0;
+            q.push(s);
+            if (!bfs())
+                break;
+            fill(ptr.begin(), ptr.end(), 0);
+            while (long long pushed = dfs(s, flow_inf)) {
+                f += pushed;
+            }
+        }
+        return f;
+    }
+};</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

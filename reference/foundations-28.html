@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Games on graphs, minimax and Sprague–Grundy · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/games.html">Games and interactive reasoning</a> · Foundations</p><h1>Games on graphs, minimax and Sprague–Grundy</h1><h2>“Random choice” can still mean worst case</h2>
+<p>If the output asks for an absolute guarantee, every permitted outcome must be covered, even when the story says a choice is random. Jail or Joyride therefore takes the maximum over tied escape destinations. Expected capture time would be a different problem with probability equations.</p>
+<p>For a finite acyclic turn-based game, a state is winning if it has a move to a losing state; it is losing if every move goes to a winning state. The terminal convention depends on normal play (“no move loses”) versus misère play (“no move wins”).</p>
+<h2>Retrograde analysis handles cycles</h2>
+<p>Start from known losing terminal states. A predecessor of a losing state is winning because it can move there. A predecessor becomes losing once all of its outgoing moves are known winning. Track the number of unresolved outgoing moves and process a queue.</p>
+<pre><code class="language-cpp">while(!q.empty()) {
+    int v=q.front();q.pop();
+    for(int u:reverse[v]) if(state[u]==UNKNOWN) {
+        if(state[v]==LOSE) state[u]=WIN,q.push(u);
+        else if(--remaining[u]==0) state[u]=LOSE,q.push(u);
+    }
+}
+// Unresolved states may be draws under the specified infinite-play rules.
+</code></pre>
+<p>Time is O(V+E). A plain recursive minimax with memoisation can loop forever on cyclic games; a depth cutoff changes the game instead of solving it.</p>
+<h2>Minimax with costs</h2>
+<p>If one player chooses an action and an adversary chooses a response, the recurrence has a min outside and a max inside. Nonnegative costs and cycles require care: the adversary may force infinite cost. Structural reductions can remove one player's choices, as the shortest-approach proof does in Jail or Joyride.</p>
+<p>Always specify whose turn a state represents. If a position looks identical but the player to move differs, those are different states.</p>
+<h2>Nim and the XOR invariant</h2>
+<p>In normal-play Nim, a move reduces one heap. The position is losing exactly when the XOR of heap sizes is zero. From zero XOR, changing one heap makes it nonzero. From nonzero XOR, choose the highest set bit and reduce a heap containing it to make the XOR zero. This gives both a proof and a winning move.</p>
+<h2>Sprague–Grundy values</h2>
+<p>For a finite impartial normal-play game, define <code>g(state)=mex{g(next)}</code>. Independent games combine by XOR of their Grundy values. The value is more informative than win/lose: two winning games can sum to a losing game.</p>
+<pre><code class="language-cpp">int mex(const vector&lt;int&gt;&amp; values) {
+    vector&lt;char&gt; seen(values.size()+1,false);
+    for(int x:values) if(x&lt;(int)seen.size()) seen[x]=true;
+    int g=0;while(g&lt;(int)seen.size() &amp;&amp; seen[g])++g;
+    return g;
+}
+</code></pre>
+<p>The theorem needs independent components, impartial moves and normal play. Do not apply it unchanged to partisan games, shared resources, or arbitrary cyclic games.</p>
+<h2>Alpha–beta and state-space search</h2>
+<p>For small adversarial search problems, minimax with alpha–beta pruning can reduce visited nodes, especially with good move ordering. Worst-case complexity remains exponential. Transposition tables reuse repeated states; symmetry reduction can shrink the state graph. These techniques are useful when constraints permit search, not a substitute for proving polynomial structure when n is large.</p>
+<details><summary>Checkpoint: why does XOR of two equal Nim heaps equal a losing position?</summary><p>The equal values cancel. Any move changes one heap, and the opponent can mirror it in the other heap, restoring equality until the first player has no move.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2021-j.html">BAPC 2021-J · Jail or Joyride</a></li></ul></section><p><a href="../tracks/games.html">Games and interactive reasoning</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

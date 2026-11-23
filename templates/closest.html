@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Closest and farthest pairs · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Closest and farthest pairs</h1><p class="lead">Use the routine corresponding to the requested extreme; preserve the coordinate order its proof needs.</p><p>From the ICPC Code Templates section “Geometry: Farthest Pair + Closest Pair”. Use the code with the types and conventions shown in the excerpt.</p><p>Include these supporting sections first · <a href="../templates/geometry.html">Exact integer geometry</a> · <a href="../templates/hull.html">Convex hull and angular order</a></p><pre><code>// Farthest pair (diameter) of a point set: rotating calipers over
+//   the convex hull above. TIME: O(n log n). Returns squared dist.
+ll farthestPair(const vector&lt;Point&gt; &amp;pts) {
+    vector&lt;Point&gt; h = convexHull(pts);
+    int k = h.size();
+    if (k == 1) return 0;
+    if (k == 2) return dist2(h[0], h[1]);
+    ll best = 0;
+    for (int i = 0, j = 1; i &lt; k; i++) {
+        Point e = h[(i + 1) % k] - h[i];          // edge i -&gt; i+1
+        while (cross(e, h[(j + 1) % k] - h[j]) &gt; 0) j = (j + 1) % k;
+        best = max({best, dist2(h[i], h[j]),
+                    dist2(h[(i + 1) % k], h[j])});
+    }
+    return best;
+}
+// Closest pair: sweep by x, keep points with x within d in a set
+//   ordered by y. NEEDS: &gt;= 2 points. TIME: O(n log n). Squared.
+ll closestPair(vector&lt;Point&gt; pts) {
+    sort(pts.begin(), pts.end());
+    set&lt;pair&lt;ll, ll&gt;&gt; active;                 // {y, x}
+    ll best = LLONG_MAX;
+    int left = 0;
+    for (Point p : pts) {
+        ll d = sqrtl((long double)best) + 1;   // current distance
+        while (p.x - pts[left].x &gt; d) {
+            active.erase({pts[left].y, pts[left].x});
+            left++;
+        }
+        auto it = active.lower_bound({p.y - d, LLONG_MIN});
+        for (; it != active.end() &amp;&amp; it-&gt;first &lt;= p.y + d; it++) {
+            ll dx = p.x - it-&gt;second, dy = p.y - it-&gt;first;
+            best = min(best, dx * dx + dy * dy);
+        }
+        active.insert({p.y, p.x});
+    }
+    return best;
+}
+// ALL pairs within distance R: grid cells of side R (floorDiv), map
+//   cell -&gt; points, check the 3x3 cells around each point; fast when
+//   each cell holds O(1) points. 3D closest pair: same sweep + dz.</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Clip a polygon by a directed line · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Clip a polygon by a directed line</h1><p class="lead">Keep the left side of A→B. Call this once for each counterclockwise edge of a convex clipping polygon. Points on the boundary are kept. The parameter eps is measured in signed cross-product units. Choose it for the coordinate scale, and use exact predicates when inputs permit.</p><pre><code class="language-cpp">struct ClipPoint {
+    long double x, y;
+};
+std::vector&lt;ClipPoint&gt; clip_left(const std::vector&lt;ClipPoint&gt;&amp; shape,
+                                 ClipPoint a, ClipPoint b, long double eps) {
+    auto side = [&amp;](ClipPoint p) {
+        long double v = (b.x - a.x) * (p.y - a.y) - (b.y - a.y) * (p.x - a.x);
+        return std::abs(v) &lt;= eps ? 0.0L : v;
+    };
+    std::vector&lt;ClipPoint&gt; result;
+    if (shape.empty()) return result;
+    ClipPoint p = shape.back();
+    long double first = side(p);
+    for (ClipPoint q : shape) {
+        long double last = side(q);
+        if ((first &lt; 0 &amp;&amp; last &gt; 0) || (first &gt; 0 &amp;&amp; last &lt; 0)) {
+            long double t = first / (first - last);
+            result.push_back({p.x + t * (q.x - p.x), p.y + t * (q.y - p.y)});
+        }
+        if (last &gt;= 0) result.push_back(q);
+        p = q;
+        first = last;
+    }
+    return result;
+}</code></pre><p>Guide companion · C++17. Include the corresponding standard headers.</p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

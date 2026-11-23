@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Range queries: prefix sums to segment trees · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/range.html">Range queries and sweeps</a> · Foundations</p><h1>Range queries: prefix sums to segment trees</h1><h2>Choose the operation before the structure</h2>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>First tool to consider</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Static range sum</td>
+<td>Prefix sums</td>
+</tr>
+<tr>
+<td>Point addition and prefix/range sum</td>
+<td>Fenwick tree</td>
+</tr>
+<tr>
+<td>Static range minimum</td>
+<td>Sparse table</td>
+</tr>
+<tr>
+<td>Point update and associative range query</td>
+<td>Segment tree</td>
+</tr>
+<tr>
+<td>Range update and range query</td>
+<td>Lazy segment tree, if tags compose</td>
+</tr>
+<tr>
+<td>Offline window frequency queries</td>
+<td>Mo's algorithm</td>
+</tr>
+</tbody>
+</table>
+<p>A segment tree is not automatically better than a prefix array. Its value is handling updates or more general associative aggregates.</p>
+<h2>Fenwick tree: binary-sized prefix pieces</h2>
+<p>A one-based Fenwick node i stores a suffix of the prefix ending at i, of length <code>i&amp;-i</code>. A prefix query strips the lowest set bit; an update adds that bit to visit all containing nodes.</p>
+<pre><code class="language-cpp">struct Fenwick {
+    int n; vector&lt;long long&gt; bit;
+    Fenwick(int n):n(n),bit(n+1){}
+    void add(int i,long long x){for(++i;i&lt;=n;i+=i&amp;-i)bit[i]+=x;}
+    long long prefix(int r){ // sum of [0,r)
+        long long s=0;for(;r;r-=r&amp;-r)s+=bit[r];return s;
+    }
+    long long sum(int l,int r){return prefix(r)-prefix(l);}
+};
+</code></pre>
+<p>Each operation costs O(log n), memory O(n). Difference arrays plus one or two Fenwick trees support range additions with point or range-sum queries. Derive the two-tree formula from weighted prefix contributions rather than memorising offsets.</p>
+<h2>A segment tree stores a monoid</h2>
+<p>A monoid is an associative combine operation with an identity. Sum has identity 0, minimum has +∞, maximum has −∞, and matrix product has the identity matrix. Associativity allows intervals to be split and recombined. Commutativity is not required.</p>
+<pre><code class="language-cpp">// Leaves start at index N, with N a power of two.
+auto query(int l,int r) {
+    auto left=identity(),right=identity();
+    for(l+=N,r+=N;l&lt;r;l/=2,r/=2) {
+        if(l&amp;1) left=merge(left,tree[l++]);
+        if(r&amp;1) right=merge(tree[--r],right);
+    }
+    return merge(left,right);
+}
+</code></pre>
+<p>The separate left and right accumulators preserve order. This matters for strings, matrices and function composition. Build time is O(n); point updates and queries are O(log n).</p>
+<h2>Store enough information to merge</h2>
+<p>For maximum subarray sum, each node needs total sum, best prefix, best suffix and best subarray. Merge two nodes by considering a best subarray wholly left, wholly right, or crossing the boundary as left suffix + right prefix. Storing only the best subarray loses information needed by the parent.</p>
+<p>This mirrors DP state design: a segment summary must expose everything the outside world can observe across its boundary.</p>
+<h2>Sparse tables</h2>
+<p>For static idempotent operations such as min, build answers for intervals of length 2^k. A query uses two possibly overlapping blocks of length 2^floor(log length); overlap is harmless because min(x,x)=x. O(n log n) preprocessing and O(1) queries. This overlapping trick does not work for sums; it would count overlap twice.</p>
+<details><summary>Checkpoint: can an ordinary Fenwick tree answer arbitrary range minimum after arbitrary updates?</summary><p>Not with the standard subtraction trick: minimum has no inverse. Special restricted-update variants exist, but a segment tree is the general tool for arbitrary point changes and range minima.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2024-m.html">BAPC 2024-M · Museum Visit</a></li><li><a href="../regional/bapc-2024-h.html">BAPC 2024-H · Horse Habitat</a></li></ul></section><p><a href="../tracks/range.html">Range queries and sweeps</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

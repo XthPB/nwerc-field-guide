@@ -1,6 +1,8 @@
 # NWERC Field Guide
 
-[Read the dynamic programming guide](https://xthpb.github.io/nwerc-field-guide/)
+[Read the NWERC Field Guide](https://xthpb.github.io/nwerc-field-guide/)
+
+The [subject tracks](https://xthpb.github.io/nwerc-field-guide/#subjects) include 138 new worked lessons, 32 foundation articles and 61 BAPC case studies. The [practice index](https://xthpb.github.io/nwerc-field-guide/practice.html) provides rating and intersecting-tag filters for 10,384 Codeforces IDs. The [tag-pair explorer](https://xthpb.github.io/nwerc-field-guide/combinations.html) covers all 570 observed official tag pairs at 2000–3000. The [50 follow-up technique notes](https://xthpb.github.io/nwerc-field-guide/followup.html) complement the one-problem walkthroughs. The [advanced DP workshops](https://xthpb.github.io/nwerc-field-guide/tracks/advanced.html) cover one individually derived problem per band from 1700 to 3000. Run the [Python differential checks](checks/advanced_workshops.py) with Python 3.9 or newer.
 
 The [six-part reading path](https://xthpb.github.io/nwerc-field-guide/path.html) connects 235 lessons in 34 units, from a first prefix table to combined contest techniques. The 21 topic chapters provide a shorter route to individual subjects. Each lesson walks through an example, explains the state and update, and asks a small variation with a revealable answer. Equations, diagrams, filters and step controls work offline after downloading the repository and opening `index.html`.
 
@@ -26,3 +28,5 @@ The public template pages are read-only copies of relevant ICPC cheat-sheet sect
 The site runs directly from the repository root on GitHub Pages. Font and KaTeX notices are included in `assets/`.
 
 The [verification code](checks/) includes brute-force oracles for the C++17 headers and independent Python checks for selected derivations.
+
+The [per-subject inventory](https://xthpb.github.io/nwerc-field-guide/subjects-inventory.html) gives distinct family counts and links to published implementations. The [catalogue check](checks/contest_catalog.py) recomputes every tag-pair count and reconciles the search index with the downloadable CSV files.

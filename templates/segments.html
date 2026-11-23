@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Segment and line predicates · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Segment and line predicates</h1><p class="lead">Use exact predicates for integer coordinates and make touching and overlapping cases explicit.</p><p>From the ICPC Code Templates section “Geometry: Segments and Lines”. Use the code with the types and conventions shown in the excerpt.</p><p>Include these supporting sections first · <a href="../templates/geometry.html">Exact integer geometry</a></p><pre><code>// Segments and lines with the Point struct above. TIME: O(1).
+// p on segment [a, b] (endpoints count)
+bool onSegment(Point p, Point a, Point b) {
+    return cross(a, b, p) == 0
+        &amp;&amp; min(a.x, b.x) &lt;= p.x &amp;&amp; p.x &lt;= max(a.x, b.x)
+        &amp;&amp; min(a.y, b.y) &lt;= p.y &amp;&amp; p.y &lt;= max(a.y, b.y);
+}
+// do segments [a, b] and [c, d] share a point? (touching counts)
+bool segmentsIntersect(Point a, Point b, Point c, Point d) {
+    int d1 = sgn(cross(c, d, a)), d2 = sgn(cross(c, d, b));
+    int d3 = sgn(cross(a, b, c)), d4 = sgn(cross(a, b, d));
+    if (d1 * d2 &lt; 0 &amp;&amp; d3 * d4 &lt; 0) return true;   // proper crossing
+    return onSegment(a, c, d) || onSegment(b, c, d)
+        || onSegment(c, a, b) || onSegment(d, a, b);
+}
+// intersection of infinite lines ab and cd, NOT parallel
+// (parallel iff cross(b - a, d - c) == 0)
+pair&lt;long double, long double&gt; lineIntersection(Point a, Point b,
+                                                Point c, Point d) {
+    long double t = (long double)cross(c - a, d - c)
+                    / cross(b - a, d - c);
+    return {a.x + t * (b.x - a.x), a.y + t * (b.y - a.y)};
+}
+long double distToSegment(Point p, Point a, Point b) {
+    if (a == b || dot(p - a, b - a) &lt;= 0) return sqrtl(dist2(p, a));
+    if (dot(p - b, a - b) &lt;= 0) return sqrtl(dist2(p, b));
+    return fabsl((long double)cross(a, b, p)) / sqrtl(dist2(a, b));
+}</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

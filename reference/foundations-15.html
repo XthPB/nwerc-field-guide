@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Tree DP and the art of merging children · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/trees.html">Trees and paths</a> · Foundations</p><h1>Tree DP and the art of merging children</h1><h2>A tree gives you independence after a cut</h2>
+<p>Root the tree. Removing an edge separates a child's subtree from everything else. Once you describe how the child interacts through its parent boundary, different child subtrees can often be combined independently.</p>
+<p>For maximum-weight independent set, keep two states: take[u] and skip[u]. Taking u forces skipping every child; skipping u permits the better choice for each child. That is a constant-size message across each edge.</p>
+<pre><code class="language-cpp">take[u]=weight[u]; skip[u]=0;
+for(int v:children[u]) {
+    take[u]+=skip[v];
+    skip[u]+=max(take[v],skip[v]);
+}
+</code></pre>
+<p>Negative weights are fine when the empty set is allowed. If at least one vertex must be chosen, state that extra condition explicitly.</p>
+<h2>Connected subsets: why the root condition matters</h2>
+<p>For Jungle Job, let <code>dp[u][k]</code> count connected k-vertex subsets inside u's subtree <strong>that contain u</strong>. Start with <code>dp[u][1]=1</code>. For each child v, either select nothing from its subtree, or select a connected subset containing v. If you chose vertices below v without v, the chosen set would disconnect.</p>
+<div class="formula">new[i+j] += dp[u][i] · dp[v][j] for j≥1<br>new[i] += dp[u][i] for choosing nothing from v</div>
+
+<pre><code class="language-cpp">vector&lt;long long&gt; next(sizeU+sizeV+1,0);
+for(int i=1;i&lt;=sizeU;i++) {
+    next[i]=(next[i]+dpU[i])%MOD;
+    for(int j=1;j&lt;=sizeV;j++)
+        next[i+j]=(next[i+j]+dpU[i]*dpV[j])%MOD;
+}
+</code></pre>
+<p>Use a fresh array while merging a child; otherwise you may reuse that same child several times. Modulo multiplication may need 128-bit arithmetic if the modulus is large.</p>
+<h2>Count each object once</h2>
+<p>Every nonempty connected subset has a unique highest vertex in the rooted tree. Sum <code>dp[u][k]</code> over all u to count all connected k-subsets. This is the missing step in many first attempts: a root-conditioned DP does not automatically count objects that exclude the global root.</p>
+<h2>Why the knapsack can be O(n²)</h2>
+<p>A naive “n nodes times n² merging” analysis says O(n³). A tighter analysis charges multiplication pairs to vertices in different merged portions. Each pair meets at a unique lowest common ancestor/merge, giving O(n²) total pair work when loops use actual subtree sizes. Allocating or scanning full length-n arrays at every merge can lose that bound.</p>
+<h2>Generating functions make the same recurrence visible</h2>
+<p>Write <code>P_u(x)=Σ dp[u][k]x^k</code>. Then <code>P_u(x)=x∏(1+P_v(x))</code>. Coefficient multiplication is the child convolution; the 1 means skip that child. FFT/NTT may accelerate some large convolutions, but a global speed-up needs analysis of the whole merge tree and polynomial sizes. It is not automatically near-linear.</p>
+<h2>Beyond two states</h2>
+<p>Common boundary information includes whether u is selected, degree used at u, distance to a marked vertex, parity, or the number of chosen vertices. Write the legal combinations as a small table before coding. If the state must record arbitrary connectivity among many boundary vertices, you have moved toward treewidth/profile DP.</p>
+<details><summary>Checkpoint: why is multiplying counts valid for two child choices?</summary><p>The child subtrees are disjoint and, after fixing the parent boundary condition, their choices do not constrain one another. Each pair of child configurations yields one distinct combined configuration. If cross-child constraints exist, they must be represented in the merge state.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2023-j.html">BAPC 2023-J · Jungle Job</a></li><li><a href="../regional/bapc-2021-c.html">BAPC 2021-C · Cangaroo</a></li></ul></section><p><a href="../tracks/trees.html">Trees and paths</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

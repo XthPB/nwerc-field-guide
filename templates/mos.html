@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Mo’s offline queries · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Mo’s offline queries</h1><p class="lead">Supply add, remove and get_answer for the statistic in your problem. The example supplies the query ordering and pointer movement.</p><p>From the ICPC Code Templates section “Mo&#x27;s Algorithm”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Mo&#x27;s algorithm: answer OFFLINE range queries [l, r] when you can
+//   add/remove one element quickly (distinct count, mode, pairs...).
+// NEEDS: all queries known in advance, no updates, 0-based inclusive.
+// TIME: O((n + q) * sqrt(n)) add/remove calls.
+// SET block_size = max(1, (int)sqrt(n)) BEFORE sorting.
+void add(int idx);      // TODO: add a[idx] to the data structure
+void remove(int idx);   // TODO: remove a[idx]
+int get_answer();       // TODO: answer for the current range
+int block_size;
+struct Query {
+    int l, r, idx;
+    bool operator&lt;(Query other) const
+    {
+        return make_pair(l / block_size, r) &lt;
+               make_pair(other.l / block_size, other.r);
+    }
+};
+vector&lt;int&gt; mo_s_algorithm(vector&lt;Query&gt; queries) {
+    vector&lt;int&gt; answers(queries.size());
+    sort(queries.begin(), queries.end());
+    // TODO: initialize data structure
+    int cur_l = 0;
+    int cur_r = -1;
+    // invariant: data structure reflects the range [cur_l, cur_r]
+    for (Query q : queries) {
+        while (cur_l &gt; q.l) {
+            cur_l--;
+            add(cur_l);
+        }
+        while (cur_r &lt; q.r) {
+            cur_r++;
+            add(cur_r);
+        }
+        while (cur_l &lt; q.l) {
+            remove(cur_l);
+            cur_l++;
+        }
+        while (cur_r &gt; q.r) {
+            remove(cur_r);
+            cur_r--;
+        }
+        answers[q.idx] = get_answer();
+    }
+    return answers;
+}
+// SQRT SPLIT BY SIZE (not tree HLD): S = total size of all sets or
+//   adjacency lists, B ~ sqrt(S). HEAVY (size &gt;= B): at most S/B of
+//   them, handle each with one O(S) scan. LIGHT: brute force all pairs
+//   inside, sum of |s|^2 &lt;= B * S. Total O(S sqrt S).
+// e.g. two sets sharing 2 values; triangles: orient each edge to the
+//   higher (degree, id) end, out-degree &lt;= sqrt(2m), O(m sqrt m).</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Lazy propagation and persistent structures · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/range.html">Range queries and sweeps</a> · Foundations</p><h1>Lazy propagation and persistent structures</h1><h2>A lazy tag is a promise about every element</h2>
+<p>A range addition by x changes a segment sum by <code>x·length</code>. Instead of visiting every leaf, update the stored sum and leave a tag saying every descendant still owes this addition. Push the tag before inspecting or modifying only part of the segment.</p>
+<pre><code class="language-cpp">void apply(int node,int length,long long x) {
+    sum[node]+=x*length;
+    lazy[node]+=x;
+}
+void push(int node,int leftLen,int rightLen) {
+    apply(node*2,leftLen,lazy[node]);
+    apply(node*2+1,rightLen,lazy[node]);
+    lazy[node]=0;
+}
+</code></pre>
+<p>The operation costs O(log n) per contiguous range update/query because only O(log n) boundary nodes are partially visited.</p>
+<h2>Composition order is the difficult part</h2>
+<p>For range affine updates <code>x↦a x+b</code>, a sum node of length L changes to <code>a·sum+bL</code>. If an old pending tag is <code>(a₁,b₁)</code> and a newer update is <code>(a₂,b₂)</code>, the combined tag is:</p>
+<div class="formula">new ∘ old = (a₂a₁, a₂b₁+b₂)</div>
+
+<p>Set-to-c is <code>(0,c)</code>; add-d is <code>(1,d)</code>. Set to 5 then add 2 gives 7, while add 2 then set to 5 gives 5. Reversing composition order is a real correctness bug, even though addition-only tests may never reveal it.</p>
+<p>The structure needs three compatible operations: merge summaries, apply a tag to a summary, and compose tags. Applying a tag to a merged segment must agree with applying it to both children then merging.</p>
+<h2>When ordinary lazy propagation fails</h2>
+<p>Range <code>chmin(x)</code> with range sums cannot be represented using only sum and length: <code>[1,9]</code> and <code>[5,5]</code> have the same sum but react differently to <code>chmin(6)</code>. Segment tree beats stores extra extrema and counts, applies updates cheaply only under certain conditions, and descends otherwise. Its complexity requires a separate amortised proof. It is a specialist tool, not a generic tag trick.</p>
+<h2>Persistence: remember old versions</h2>
+<p>A persistent segment tree copies only nodes on an updated root-to-leaf path. Unchanged subtrees are shared. A point update creates O(log n) nodes and returns a new root; old roots remain valid.</p>
+<p>For static range k-th queries, build one frequency-tree version per prefix of the array after coordinate compression. Subtract counts between roots r and l to represent subarray <code>[l,r)</code>. At each level, compare k with the difference of left-child counts, then descend left or right. Query time O(log σ), total nodes O(n log σ).</p>
+<pre><code class="language-cpp">int kth(int rootL,int rootR,int k) {
+    int leftCount=count[left[rootR]]-count[left[rootL]];
+    if(isLeaf(rootR)) return coordinate(rootR);
+    if(k&lt;=leftCount) return kth(left[rootL],left[rootR],k);
+    return kth(right[rootL],right[rootR],k-leftCount);
+}
+</code></pre>
+<p>This subtraction is valid because counts are additive. You cannot subtract arbitrary minimum-tree roots to get a range minimum.</p>
+<h2>Implicit trees and treaps</h2>
+<p>An implicit segment tree allocates nodes only for visited portions of a huge coordinate domain. A treap uses random priorities to maintain expected logarithmic height and supports split/merge. An implicit treap indexes sequence positions and can support reversal or cut-and-paste with lazy tags. These are broader ICPC preparation; the five-year corpus does not imply every one will appear next year.</p>
+<details><summary>Checkpoint: what must a lazy reversal tag do to a noncommutative summary?</summary><p>Reverse the order-dependent aggregate, often by swapping stored forward and backward summaries and swapping children. Merely setting a Boolean tag while leaving the aggregate unchanged is insufficient.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2024-m.html">BAPC 2024-M · Museum Visit</a></li></ul></section><p><a href="../tracks/range.html">Range queries and sweeps</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

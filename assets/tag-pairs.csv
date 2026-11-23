@@ -1,0 +1,602 @@
+first_tag,second_tag,800_to_1600_ids,1700_to_1900_ids,2000_to_2400_ids,2500_to_3000_ids,mapped_2000_to_3000_ids,2000_to_3000_families
+*special,2-sat,0,0,1,0,0,1
+*special,binary search,3,2,11,2,0,13
+*special,bitmasks,1,2,0,1,0,1
+*special,brute force,13,8,3,1,0,4
+*special,combinatorics,1,1,3,3,0,6
+*special,constructive algorithms,10,3,3,2,0,5
+*special,data structures,6,4,10,8,0,18
+*special,dfs and similar,4,2,6,4,0,10
+*special,divide and conquer,0,0,0,1,0,1
+*special,dp,9,4,11,7,0,18
+*special,dsu,1,1,0,2,0,2
+*special,expression parsing,1,1,3,0,0,3
+*special,games,0,0,1,2,0,3
+*special,geometry,2,0,2,4,0,6
+*special,graph matchings,0,1,0,0,0,0
+*special,graphs,3,4,4,5,0,9
+*special,greedy,19,13,11,5,0,16
+*special,hashing,0,0,1,0,0,1
+*special,implementation,60,15,6,1,0,7
+*special,interactive,1,1,1,2,0,3
+*special,math,17,9,9,3,0,12
+*special,matrices,0,0,0,1,0,1
+*special,meet-in-the-middle,0,1,0,0,0,0
+*special,number theory,5,2,2,3,0,5
+*special,probabilities,1,1,0,1,0,1
+*special,shortest paths,0,2,0,1,0,1
+*special,sortings,7,5,5,3,0,8
+*special,string suffix structures,0,0,0,1,0,1
+*special,strings,8,2,4,1,0,5
+*special,ternary search,0,0,2,0,0,2
+*special,trees,2,3,3,3,0,6
+*special,two pointers,2,1,2,1,0,3
+2-sat,binary search,0,0,1,2,0,3
+2-sat,bitmasks,0,2,0,0,0,0
+2-sat,brute force,3,1,0,1,0,1
+2-sat,chinese remainder theorem,0,0,1,0,0,1
+2-sat,combinatorics,1,1,0,2,0,2
+2-sat,constructive algorithms,3,2,4,5,0,9
+2-sat,data structures,0,0,2,4,0,6
+2-sat,dfs and similar,0,1,11,4,1,15
+2-sat,dp,1,0,0,2,0,2
+2-sat,dsu,0,1,7,3,1,10
+2-sat,fft,0,1,1,0,0,1
+2-sat,flows,0,0,1,0,0,1
+2-sat,graph matchings,0,0,2,1,0,3
+2-sat,graphs,0,3,10,7,1,17
+2-sat,greedy,4,2,4,2,0,6
+2-sat,implementation,1,1,3,2,0,5
+2-sat,interactive,0,0,1,0,0,1
+2-sat,math,2,1,0,0,0,0
+2-sat,matrices,0,0,1,1,0,2
+2-sat,number theory,0,1,0,0,0,0
+2-sat,shortest paths,0,1,0,0,0,0
+2-sat,sortings,1,0,2,1,0,3
+2-sat,string suffix structures,1,0,0,0,0,0
+2-sat,strings,1,1,0,0,0,0
+2-sat,trees,0,0,0,2,0,2
+2-sat,two pointers,0,0,1,2,0,3
+binary search,bitmasks,12,15,31,16,2,45
+binary search,brute force,93,50,82,38,1,118
+binary search,chinese remainder theorem,0,0,1,0,0,1
+binary search,combinatorics,10,10,28,9,0,36
+binary search,constructive algorithms,38,35,46,26,3,71
+binary search,data structures,81,100,184,94,9,272
+binary search,dfs and similar,7,17,36,32,4,65
+binary search,divide and conquer,2,10,28,26,0,52
+binary search,dp,62,54,107,53,4,157
+binary search,dsu,6,8,24,19,0,39
+binary search,expression parsing,1,1,0,0,0,0
+binary search,flows,1,3,9,4,0,12
+binary search,games,5,0,6,4,0,10
+binary search,geometry,12,5,14,22,0,36
+binary search,graph matchings,0,1,4,2,0,6
+binary search,graphs,4,17,39,30,2,65
+binary search,greedy,175,119,141,55,1,190
+binary search,hashing,2,6,16,16,4,31
+binary search,implementation,105,60,75,38,0,112
+binary search,interactive,7,13,29,22,1,45
+binary search,math,133,76,99,39,0,137
+binary search,matrices,1,0,2,1,0,3
+binary search,meet-in-the-middle,2,0,2,1,0,3
+binary search,number theory,23,17,29,4,0,33
+binary search,probabilities,0,0,9,7,0,15
+binary search,schedules,3,1,0,0,0,0
+binary search,shortest paths,2,6,16,12,0,25
+binary search,sortings,77,59,74,23,1,96
+binary search,string suffix structures,1,3,6,9,2,14
+binary search,strings,18,14,12,13,2,25
+binary search,ternary search,10,9,17,4,0,21
+binary search,trees,6,12,43,40,5,78
+binary search,two pointers,98,69,83,27,3,109
+bitmasks,brute force,49,33,71,56,7,125
+bitmasks,chinese remainder theorem,0,0,3,0,0,3
+bitmasks,combinatorics,11,10,36,30,5,63
+bitmasks,communication,0,0,1,1,0,2
+bitmasks,constructive algorithms,54,37,47,29,5,74
+bitmasks,data structures,8,8,49,40,9,88
+bitmasks,dfs and similar,5,14,36,26,6,61
+bitmasks,divide and conquer,4,7,18,24,3,42
+bitmasks,dp,28,41,114,91,21,201
+bitmasks,dsu,0,1,11,9,1,20
+bitmasks,expression parsing,0,1,0,1,1,1
+bitmasks,fft,1,1,1,14,0,15
+bitmasks,flows,0,1,4,3,1,7
+bitmasks,games,2,2,10,6,3,16
+bitmasks,geometry,1,1,4,1,0,5
+bitmasks,graph matchings,0,0,4,2,0,6
+bitmasks,graphs,3,15,27,22,6,49
+bitmasks,greedy,79,45,48,33,4,79
+bitmasks,hashing,1,7,6,7,0,13
+bitmasks,implementation,27,19,26,21,2,47
+bitmasks,interactive,1,10,14,8,1,20
+bitmasks,math,66,50,73,68,11,138
+bitmasks,matrices,1,2,4,8,3,12
+bitmasks,meet-in-the-middle,0,4,7,6,1,13
+bitmasks,number theory,13,12,19,16,5,35
+bitmasks,probabilities,2,4,9,14,1,23
+bitmasks,schedules,1,0,0,0,0,0
+bitmasks,shortest paths,1,2,5,5,0,10
+bitmasks,sortings,6,5,19,7,1,25
+bitmasks,string suffix structures,0,1,1,5,2,5
+bitmasks,strings,7,10,15,9,3,24
+bitmasks,ternary search,2,0,0,0,0,0
+bitmasks,trees,2,13,30,23,9,52
+bitmasks,two pointers,4,5,5,13,0,18
+brute force,chinese remainder theorem,1,2,2,0,0,2
+brute force,combinatorics,17,16,40,38,1,76
+brute force,communication,0,0,1,0,0,1
+brute force,constructive algorithms,125,56,87,45,1,130
+brute force,data structures,74,58,112,70,6,180
+brute force,dfs and similar,34,32,64,39,3,103
+brute force,divide and conquer,4,7,23,26,2,47
+brute force,dp,117,88,143,95,13,234
+brute force,dsu,13,9,18,18,0,36
+brute force,expression parsing,1,3,1,0,0,1
+brute force,fft,0,1,3,10,0,13
+brute force,flows,0,2,5,6,2,11
+brute force,games,15,4,6,7,0,13
+brute force,geometry,31,14,13,13,0,26
+brute force,graph matchings,2,1,3,6,0,9
+brute force,graphs,34,25,69,38,5,107
+brute force,greedy,327,104,137,68,6,202
+brute force,hashing,7,9,23,16,1,38
+brute force,implementation,409,99,120,58,4,176
+brute force,interactive,2,3,18,16,0,33
+brute force,math,324,114,152,108,7,253
+brute force,matrices,1,0,4,5,0,9
+brute force,meet-in-the-middle,1,5,6,7,1,13
+brute force,number theory,94,46,67,25,0,90
+brute force,probabilities,2,6,12,10,2,22
+brute force,schedules,2,0,0,0,0,0
+brute force,shortest paths,4,10,19,7,0,26
+brute force,sortings,93,29,46,23,2,68
+brute force,string suffix structures,1,0,9,7,4,16
+brute force,strings,96,24,33,17,6,49
+brute force,ternary search,2,2,6,0,0,6
+brute force,trees,7,16,43,32,6,75
+brute force,two pointers,52,29,37,25,0,61
+chinese remainder theorem,combinatorics,0,0,1,2,0,3
+chinese remainder theorem,constructive algorithms,0,1,5,1,0,6
+chinese remainder theorem,data structures,0,0,0,1,0,1
+chinese remainder theorem,dfs and similar,0,0,1,0,0,1
+chinese remainder theorem,fft,0,0,2,1,0,3
+chinese remainder theorem,flows,0,0,1,0,0,1
+chinese remainder theorem,games,0,0,1,1,0,2
+chinese remainder theorem,geometry,0,0,1,1,0,2
+chinese remainder theorem,implementation,0,0,1,1,0,2
+chinese remainder theorem,interactive,0,0,2,0,0,2
+chinese remainder theorem,math,3,3,9,5,2,13
+chinese remainder theorem,meet-in-the-middle,0,0,0,1,0,1
+chinese remainder theorem,number theory,2,2,7,5,2,11
+chinese remainder theorem,string suffix structures,0,0,0,1,0,1
+chinese remainder theorem,strings,0,1,0,0,0,0
+chinese remainder theorem,trees,0,0,1,0,0,1
+chinese remainder theorem,two pointers,0,0,0,1,0,1
+combinatorics,communication,0,0,0,1,0,1
+combinatorics,constructive algorithms,19,12,26,14,1,40
+combinatorics,data structures,9,15,36,28,0,63
+combinatorics,dfs and similar,2,12,31,22,0,50
+combinatorics,divide and conquer,0,3,16,12,1,27
+combinatorics,dp,37,42,160,153,14,294
+combinatorics,dsu,1,5,13,13,1,24
+combinatorics,fft,0,2,7,23,1,29
+combinatorics,flows,0,0,0,2,0,2
+combinatorics,games,2,0,5,4,0,8
+combinatorics,geometry,3,3,3,5,0,8
+combinatorics,graph matchings,0,0,2,3,0,5
+combinatorics,graphs,7,9,27,26,1,49
+combinatorics,greedy,26,12,28,18,0,46
+combinatorics,hashing,0,1,6,3,1,9
+combinatorics,implementation,21,16,25,20,0,44
+combinatorics,interactive,0,1,2,3,1,5
+combinatorics,math,102,71,174,141,10,303
+combinatorics,matrices,1,1,9,9,2,17
+combinatorics,meet-in-the-middle,0,2,2,2,0,4
+combinatorics,number theory,18,16,48,29,5,76
+combinatorics,probabilities,2,8,23,29,2,50
+combinatorics,shortest paths,0,0,3,4,0,7
+combinatorics,sortings,16,15,14,6,1,19
+combinatorics,string suffix structures,0,0,2,3,0,5
+combinatorics,strings,8,5,9,4,1,13
+combinatorics,ternary search,0,0,2,0,0,2
+combinatorics,trees,3,7,31,35,3,63
+combinatorics,two pointers,9,7,17,7,0,24
+communication,constructive algorithms,0,0,3,1,0,4
+communication,expression parsing,0,0,1,0,0,1
+communication,graphs,0,0,2,0,0,2
+communication,greedy,0,0,1,0,0,1
+communication,interactive,0,0,3,2,0,5
+communication,math,0,0,1,1,0,2
+communication,number theory,0,0,2,1,0,3
+communication,trees,0,0,2,0,0,2
+constructive algorithms,data structures,43,47,63,30,3,93
+constructive algorithms,dfs and similar,22,34,86,57,5,142
+constructive algorithms,divide and conquer,3,8,19,14,0,33
+constructive algorithms,dp,45,41,60,38,2,97
+constructive algorithms,dsu,11,16,25,16,0,41
+constructive algorithms,expression parsing,0,1,1,0,0,1
+constructive algorithms,fft,0,1,1,2,0,3
+constructive algorithms,flows,3,3,8,10,0,18
+constructive algorithms,games,23,9,7,6,0,13
+constructive algorithms,geometry,10,13,19,10,0,29
+constructive algorithms,graph matchings,6,2,9,10,0,19
+constructive algorithms,graphs,36,55,106,79,6,184
+constructive algorithms,greedy,422,161,189,96,6,283
+constructive algorithms,hashing,1,7,12,11,0,22
+constructive algorithms,implementation,231,85,96,49,2,145
+constructive algorithms,interactive,9,29,52,41,2,87
+constructive algorithms,math,350,114,147,84,3,224
+constructive algorithms,matrices,2,3,4,5,0,9
+constructive algorithms,meet-in-the-middle,0,0,2,2,0,3
+constructive algorithms,number theory,74,29,31,18,0,48
+constructive algorithms,probabilities,2,3,9,10,0,18
+constructive algorithms,schedules,1,0,0,0,0,0
+constructive algorithms,shortest paths,6,4,19,10,0,29
+constructive algorithms,sortings,107,41,41,22,1,63
+constructive algorithms,string suffix structures,1,1,2,2,0,4
+constructive algorithms,strings,68,22,27,10,0,35
+constructive algorithms,ternary search,0,2,6,1,0,7
+constructive algorithms,trees,18,29,62,40,4,100
+constructive algorithms,two pointers,25,27,23,11,1,34
+data structures,dfs and similar,11,31,105,62,14,163
+data structures,divide and conquer,4,19,58,78,9,135
+data structures,dp,59,91,199,143,20,337
+data structures,dsu,15,28,72,55,7,123
+data structures,expression parsing,2,2,0,1,0,1
+data structures,fft,0,0,2,5,0,7
+data structures,flows,0,2,7,11,1,18
+data structures,games,7,1,10,11,2,20
+data structures,geometry,8,5,16,29,5,45
+data structures,graph matchings,0,0,5,5,0,10
+data structures,graphs,12,27,94,67,7,156
+data structures,greedy,162,136,236,110,9,340
+data structures,hashing,9,9,33,34,3,65
+data structures,implementation,142,102,138,85,4,221
+data structures,interactive,1,1,6,5,0,10
+data structures,math,68,76,132,75,10,205
+data structures,matrices,2,0,14,15,2,27
+data structures,meet-in-the-middle,0,0,0,2,0,2
+data structures,number theory,7,18,37,25,3,62
+data structures,probabilities,0,1,12,15,4,26
+data structures,schedules,1,1,1,0,1,1
+data structures,shortest paths,4,11,22,16,1,38
+data structures,sortings,85,80,131,46,5,177
+data structures,string suffix structures,0,3,10,17,5,26
+data structures,strings,19,23,42,36,9,78
+data structures,ternary search,0,3,7,2,0,9
+data structures,trees,12,39,126,119,18,238
+data structures,two pointers,52,65,96,42,4,136
+dfs and similar,divide and conquer,5,3,14,23,6,37
+dfs and similar,dp,40,77,143,87,15,225
+dfs and similar,dsu,41,33,82,42,8,123
+dfs and similar,expression parsing,0,2,1,0,0,1
+dfs and similar,fft,0,0,3,3,0,6
+dfs and similar,flows,1,2,5,6,2,11
+dfs and similar,games,2,9,14,8,4,21
+dfs and similar,geometry,1,1,3,1,0,4
+dfs and similar,graph matchings,3,3,9,6,0,15
+dfs and similar,graphs,87,116,216,129,22,338
+dfs and similar,greedy,54,64,125,58,9,180
+dfs and similar,hashing,2,6,17,7,2,24
+dfs and similar,implementation,42,37,76,34,3,108
+dfs and similar,interactive,2,5,7,8,0,13
+dfs and similar,math,27,21,62,42,8,103
+dfs and similar,matrices,0,2,1,4,0,5
+dfs and similar,meet-in-the-middle,0,2,2,3,0,5
+dfs and similar,number theory,2,10,22,12,2,34
+dfs and similar,probabilities,1,3,9,7,0,16
+dfs and similar,shortest paths,12,31,35,22,3,55
+dfs and similar,sortings,15,14,37,14,4,51
+dfs and similar,string suffix structures,0,0,1,3,2,4
+dfs and similar,strings,8,7,15,7,2,22
+dfs and similar,ternary search,0,0,2,0,1,2
+dfs and similar,trees,45,92,199,135,27,323
+dfs and similar,two pointers,3,11,12,7,1,19
+divide and conquer,dp,6,8,40,55,10,93
+divide and conquer,dsu,1,2,13,19,5,32
+divide and conquer,expression parsing,0,0,0,1,0,1
+divide and conquer,fft,0,0,3,10,2,13
+divide and conquer,flows,0,0,1,2,1,3
+divide and conquer,games,0,0,1,1,0,2
+divide and conquer,geometry,0,1,4,6,2,10
+divide and conquer,graph matchings,0,0,0,1,0,1
+divide and conquer,graphs,1,1,8,24,2,32
+divide and conquer,greedy,4,13,30,25,3,53
+divide and conquer,hashing,0,2,4,9,1,13
+divide and conquer,implementation,5,8,19,21,1,39
+divide and conquer,interactive,2,2,9,10,0,18
+divide and conquer,math,4,12,26,32,3,57
+divide and conquer,matrices,0,0,2,3,0,5
+divide and conquer,meet-in-the-middle,0,1,1,2,0,3
+divide and conquer,number theory,1,4,8,6,2,14
+divide and conquer,probabilities,0,0,4,8,0,12
+divide and conquer,shortest paths,0,1,3,7,0,10
+divide and conquer,sortings,4,12,11,8,2,19
+divide and conquer,string suffix structures,0,0,0,1,0,1
+divide and conquer,strings,0,2,6,5,0,10
+divide and conquer,ternary search,0,0,1,2,0,3
+divide and conquer,trees,4,3,32,39,9,70
+divide and conquer,two pointers,0,5,11,13,1,24
+dp,dsu,12,14,39,20,3,57
+dp,expression parsing,0,0,2,5,1,7
+dp,fft,1,2,9,25,3,33
+dp,flows,2,5,8,14,3,22
+dp,games,11,14,29,26,6,53
+dp,geometry,2,2,12,18,4,30
+dp,graph matchings,2,3,5,8,0,13
+dp,graphs,28,56,105,83,11,183
+dp,greedy,224,157,224,133,7,348
+dp,hashing,6,13,22,16,3,38
+dp,implementation,138,81,105,57,7,161
+dp,interactive,1,1,5,4,1,9
+dp,math,134,97,219,199,28,404
+dp,matrices,2,5,22,33,8,51
+dp,meet-in-the-middle,0,3,8,6,1,14
+dp,number theory,29,29,74,40,9,111
+dp,probabilities,5,13,50,49,9,98
+dp,schedules,1,1,0,0,0,0
+dp,shortest paths,7,19,36,21,1,56
+dp,sortings,44,43,67,29,4,93
+dp,string suffix structures,1,3,12,13,5,25
+dp,strings,42,32,58,29,11,87
+dp,ternary search,1,1,7,0,1,7
+dp,trees,27,56,139,128,21,260
+dp,two pointers,52,44,51,35,3,84
+dsu,fft,0,0,1,2,0,3
+dsu,flows,0,0,3,1,0,4
+dsu,games,0,1,5,0,0,5
+dsu,geometry,0,0,1,4,0,5
+dsu,graph matchings,0,0,4,1,0,5
+dsu,graphs,37,35,88,58,6,141
+dsu,greedy,31,26,57,17,1,74
+dsu,hashing,0,0,7,3,1,10
+dsu,implementation,22,19,29,16,1,44
+dsu,interactive,2,0,1,0,0,1
+dsu,math,14,13,21,13,0,33
+dsu,matrices,0,2,4,0,0,4
+dsu,meet-in-the-middle,1,0,0,1,0,1
+dsu,number theory,2,2,9,3,1,12
+dsu,probabilities,0,0,2,1,0,3
+dsu,shortest paths,2,9,4,6,0,9
+dsu,sortings,7,17,28,7,2,34
+dsu,string suffix structures,0,0,5,0,0,5
+dsu,strings,7,3,7,1,0,8
+dsu,ternary search,0,1,1,0,1,1
+dsu,trees,10,23,58,42,8,98
+dsu,two pointers,3,5,19,5,0,23
+expression parsing,flows,0,0,0,1,0,1
+expression parsing,graphs,0,0,1,0,0,1
+expression parsing,greedy,1,1,3,1,0,4
+expression parsing,implementation,7,7,2,1,0,3
+expression parsing,interactive,0,0,1,0,0,1
+expression parsing,math,3,1,1,0,0,1
+expression parsing,number theory,0,0,1,0,0,1
+expression parsing,schedules,1,0,0,0,0,0
+expression parsing,sortings,1,0,0,0,0,0
+expression parsing,strings,5,2,1,1,0,2
+fft,flows,0,0,1,1,0,2
+fft,games,0,0,0,1,0,1
+fft,geometry,0,0,1,1,0,2
+fft,graphs,0,0,4,4,0,8
+fft,greedy,1,1,2,3,0,5
+fft,implementation,0,0,2,1,0,3
+fft,math,1,2,11,32,2,42
+fft,matrices,0,0,1,0,0,1
+fft,meet-in-the-middle,0,0,0,2,0,2
+fft,number theory,0,1,4,6,0,10
+fft,probabilities,0,0,0,1,0,1
+fft,sortings,0,0,0,1,0,1
+fft,string suffix structures,0,0,0,1,0,1
+fft,strings,0,0,0,4,0,4
+fft,ternary search,0,1,0,0,0,0
+fft,trees,0,0,3,7,0,10
+flows,games,0,0,1,0,0,1
+flows,geometry,0,0,1,1,0,2
+flows,graph matchings,2,3,12,19,1,31
+flows,graphs,3,2,24,33,4,57
+flows,greedy,6,8,7,12,1,19
+flows,hashing,0,1,1,0,0,1
+flows,implementation,3,1,3,2,0,5
+flows,interactive,0,0,0,1,0,1
+flows,math,2,5,3,7,2,10
+flows,matrices,0,0,0,1,0,1
+flows,meet-in-the-middle,0,0,0,1,0,1
+flows,number theory,0,1,1,1,1,2
+flows,probabilities,0,0,0,1,1,1
+flows,shortest paths,0,0,7,3,0,9
+flows,sortings,1,1,1,4,1,5
+flows,strings,0,0,0,1,0,1
+flows,ternary search,0,0,1,0,0,1
+flows,trees,0,1,3,3,1,6
+flows,two pointers,0,2,2,1,0,3
+games,geometry,0,1,0,2,0,2
+games,graph matchings,0,0,2,0,0,2
+games,graphs,1,5,9,8,2,16
+games,greedy,71,19,22,9,0,30
+games,hashing,0,0,0,1,0,1
+games,implementation,16,4,9,12,1,20
+games,interactive,1,2,3,6,0,9
+games,math,47,11,18,14,3,31
+games,matrices,0,1,0,3,0,3
+games,meet-in-the-middle,0,0,0,1,0,1
+games,number theory,5,3,3,3,1,6
+games,probabilities,0,2,4,1,0,5
+games,schedules,1,1,0,0,0,0
+games,shortest paths,0,1,1,3,1,4
+games,sortings,17,1,5,2,0,7
+games,string suffix structures,0,0,0,1,0,1
+games,strings,8,2,2,0,0,2
+games,ternary search,0,0,1,0,0,1
+games,trees,1,7,10,11,2,20
+games,two pointers,1,2,2,2,0,4
+geometry,graph matchings,0,1,0,0,0,0
+geometry,graphs,0,1,4,12,0,16
+geometry,greedy,25,11,14,8,0,22
+geometry,hashing,0,1,2,0,0,2
+geometry,implementation,32,14,19,7,0,26
+geometry,interactive,1,2,2,3,0,5
+geometry,math,64,23,24,27,1,51
+geometry,matrices,1,0,1,1,0,2
+geometry,meet-in-the-middle,0,0,0,1,0,1
+geometry,number theory,4,2,3,1,0,4
+geometry,probabilities,2,0,1,6,0,7
+geometry,schedules,0,0,0,1,0,1
+geometry,shortest paths,2,1,4,2,0,6
+geometry,sortings,13,7,13,23,2,36
+geometry,string suffix structures,0,0,0,1,0,1
+geometry,strings,0,0,2,0,0,2
+geometry,ternary search,2,2,4,3,0,7
+geometry,trees,0,1,3,6,0,9
+geometry,two pointers,1,3,5,12,2,17
+graph matchings,graphs,2,4,12,15,0,27
+graph matchings,greedy,6,3,12,12,0,24
+graph matchings,implementation,3,2,2,2,0,4
+graph matchings,interactive,0,1,0,1,0,1
+graph matchings,math,2,3,4,4,0,8
+graph matchings,number theory,0,0,1,1,1,2
+graph matchings,probabilities,0,1,0,0,0,0
+graph matchings,shortest paths,1,0,3,0,0,3
+graph matchings,sortings,3,1,2,5,0,7
+graph matchings,strings,0,0,1,0,0,1
+graph matchings,trees,0,3,3,3,0,6
+graph matchings,two pointers,1,0,0,2,0,2
+graphs,greedy,58,72,124,66,7,189
+graphs,hashing,1,6,18,4,1,22
+graphs,implementation,36,37,72,43,4,114
+graphs,interactive,3,6,14,11,0,22
+graphs,math,29,23,64,53,9,115
+graphs,matrices,0,2,6,6,0,12
+graphs,meet-in-the-middle,0,0,0,6,0,6
+graphs,number theory,3,9,22,18,2,39
+graphs,probabilities,1,0,7,7,2,14
+graphs,shortest paths,20,48,87,51,6,135
+graphs,sortings,11,19,52,19,3,70
+graphs,string suffix structures,0,0,2,0,0,2
+graphs,strings,5,4,10,3,0,13
+graphs,ternary search,0,1,1,0,0,1
+graphs,trees,30,54,105,95,15,193
+graphs,two pointers,0,11,12,6,0,18
+greedy,hashing,8,10,14,12,0,26
+greedy,implementation,512,142,165,49,2,212
+greedy,interactive,5,8,17,6,0,23
+greedy,math,620,144,184,88,3,267
+greedy,matrices,3,1,6,3,0,9
+greedy,meet-in-the-middle,1,2,0,1,0,1
+greedy,number theory,97,37,40,18,0,58
+greedy,probabilities,2,4,10,9,0,19
+greedy,schedules,2,2,0,0,0,0
+greedy,shortest paths,15,23,23,12,1,35
+greedy,sortings,385,127,134,47,4,179
+greedy,string suffix structures,2,2,2,7,0,8
+greedy,strings,155,49,39,19,1,57
+greedy,ternary search,6,6,17,2,0,19
+greedy,trees,31,54,109,54,9,161
+greedy,two pointers,129,67,73,31,1,103
+hashing,implementation,16,10,22,10,1,32
+hashing,interactive,0,0,1,1,0,2
+hashing,math,10,11,14,13,0,27
+hashing,matrices,1,0,1,0,0,1
+hashing,meet-in-the-middle,0,1,2,1,0,3
+hashing,number theory,3,6,5,5,0,10
+hashing,probabilities,0,0,1,5,0,5
+hashing,schedules,1,0,0,0,0,0
+hashing,shortest paths,0,2,1,1,1,2
+hashing,sortings,2,5,10,2,1,12
+hashing,string suffix structures,2,6,19,14,4,33
+hashing,strings,11,19,39,31,4,69
+hashing,ternary search,1,0,0,0,0,0
+hashing,trees,0,1,14,10,2,23
+hashing,two pointers,1,4,7,5,0,12
+implementation,interactive,3,8,15,9,0,24
+implementation,math,434,119,125,63,5,186
+implementation,matrices,3,0,7,6,1,13
+implementation,meet-in-the-middle,0,1,1,1,0,2
+implementation,number theory,62,14,25,10,2,35
+implementation,probabilities,2,1,6,2,1,8
+implementation,schedules,5,0,0,0,0,0
+implementation,shortest paths,6,7,13,10,1,23
+implementation,sortings,196,56,57,17,0,74
+implementation,string suffix structures,1,1,5,4,1,9
+implementation,strings,215,33,32,11,2,42
+implementation,ternary search,5,0,9,1,0,10
+implementation,trees,16,19,49,48,6,96
+implementation,two pointers,81,37,36,15,1,51
+interactive,math,6,12,28,23,1,47
+interactive,matrices,0,0,1,0,0,1
+interactive,meet-in-the-middle,0,0,1,1,0,1
+interactive,number theory,1,2,9,9,0,18
+interactive,probabilities,1,2,8,18,1,25
+interactive,shortest paths,0,0,4,3,0,5
+interactive,sortings,0,3,8,5,0,13
+interactive,string suffix structures,0,0,1,0,0,1
+interactive,strings,1,0,3,1,0,3
+interactive,ternary search,0,2,0,1,0,1
+interactive,trees,3,4,13,10,1,20
+interactive,two pointers,3,1,2,1,0,3
+math,matrices,5,2,21,27,6,47
+math,meet-in-the-middle,2,4,5,8,0,12
+math,number theory,282,102,158,96,14,250
+math,probabilities,8,18,55,57,10,110
+math,schedules,2,2,0,0,0,0
+math,shortest paths,5,4,8,7,1,15
+math,sortings,141,50,55,28,2,81
+math,string suffix structures,0,1,5,4,0,9
+math,strings,39,15,23,10,1,33
+math,ternary search,10,7,18,0,0,18
+math,trees,7,15,59,51,11,108
+math,two pointers,49,26,46,21,1,66
+matrices,meet-in-the-middle,0,0,0,1,0,1
+matrices,number theory,1,1,5,4,1,9
+matrices,probabilities,0,1,3,3,2,6
+matrices,shortest paths,0,0,0,1,0,1
+matrices,sortings,2,0,2,0,0,2
+matrices,string suffix structures,0,0,0,2,0,2
+matrices,strings,0,1,1,4,0,5
+matrices,trees,0,1,2,4,1,6
+matrices,two pointers,0,0,2,2,0,3
+meet-in-the-middle,number theory,2,2,1,3,0,4
+meet-in-the-middle,probabilities,0,0,1,1,0,1
+meet-in-the-middle,shortest paths,0,0,0,1,0,1
+meet-in-the-middle,sortings,0,1,0,1,0,1
+meet-in-the-middle,string suffix structures,0,0,0,1,0,1
+meet-in-the-middle,strings,0,1,0,0,0,0
+meet-in-the-middle,trees,0,0,0,3,0,3
+meet-in-the-middle,two pointers,0,1,1,1,0,2
+number theory,probabilities,0,2,6,7,1,13
+number theory,schedules,1,0,0,0,0,0
+number theory,shortest paths,2,2,3,4,1,7
+number theory,sortings,17,9,11,3,0,14
+number theory,string suffix structures,0,0,1,0,0,1
+number theory,strings,5,4,1,3,0,4
+number theory,ternary search,1,1,2,0,0,2
+number theory,trees,2,3,16,12,4,28
+number theory,two pointers,6,10,17,5,0,21
+probabilities,shortest paths,0,0,2,1,1,3
+probabilities,sortings,0,0,9,2,1,11
+probabilities,strings,1,0,1,2,0,3
+probabilities,ternary search,0,0,1,0,0,1
+probabilities,trees,1,3,18,13,4,30
+probabilities,two pointers,0,1,4,2,0,6
+schedules,sortings,1,1,0,1,0,1
+schedules,ternary search,1,0,0,0,0,0
+schedules,two pointers,3,0,0,0,0,0
+shortest paths,sortings,4,5,11,2,0,12
+shortest paths,string suffix structures,0,0,0,1,0,1
+shortest paths,strings,1,1,1,2,0,3
+shortest paths,trees,2,12,12,13,1,23
+shortest paths,two pointers,1,4,3,1,0,4
+sortings,string suffix structures,0,1,2,1,0,3
+sortings,strings,28,11,15,2,1,17
+sortings,ternary search,3,4,4,2,0,6
+sortings,trees,9,8,38,14,3,52
+sortings,two pointers,64,37,41,16,1,57
+string suffix structures,strings,3,7,25,24,11,49
+string suffix structures,trees,0,1,2,5,2,7
+string suffix structures,two pointers,1,1,3,1,1,4
+strings,trees,1,10,19,16,3,35
+strings,two pointers,23,12,9,4,1,13
+ternary search,trees,0,0,1,0,1,1
+ternary search,two pointers,1,4,6,2,0,8
+trees,two pointers,1,11,15,8,1,23

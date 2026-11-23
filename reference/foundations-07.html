@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Bitmask DP and meet in the middle · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/advanced.html">Advanced DP across subjects</a> · Foundations</p><h1>Bitmask DP and meet in the middle</h1><h2>A subset is a compact state</h2>
+<p>For n labelled choices, bit i records whether choice i has been used. A mask is a representation; the DP state still needs a mathematical meaning. Assignment DP can use only <code>mask</code>, because the next person is <code>popcount(mask)</code>. Travelling-salesman DP also needs the last vertex, because the next edge cost depends on it.</p>
+<pre><code class="language-cpp">vector&lt;long long&gt; dp(1&lt;&lt;n,INF); dp[0]=0;
+for(int mask=0;mask&lt;(1&lt;&lt;n);mask++) {
+    int person=__builtin_popcount((unsigned)mask);
+    if(person==n) continue;
+    for(int job=0;job&lt;n;job++) if(!(mask&gt;&gt;job&amp;1))
+        dp[mask|(1&lt;&lt;job)]=min(dp[mask|(1&lt;&lt;job)],dp[mask]+cost[person][job]);
+}
+</code></pre>
+<p>Assignment takes O(n2^n) time and O(2^n) space. TSP-style DP takes O(n²2^n) time and O(n2^n) space. For large bipartite assignment, matching or Hungarian is more appropriate.</p>
+<h2>Partition a set into groups</h2>
+<p>If a group is feasible when its subset sum is divisible by k, one recurrence chooses a feasible submask and recurses on the remainder. All <code>(mask,submask)</code> pairs total 3^n: each element is outside mask, inside submask, or inside mask but outside submask.</p>
+<pre><code class="language-cpp">for(int sub=mask;sub;sub=(sub-1)&amp;mask) {
+    if(valid[sub]) dp[mask]=max(dp[mask],1+dp[mask^sub]);
+}
+</code></pre>
+<p>Require a fixed bit of mask to lie in sub if the order of groups is irrelevant. This removes duplicate partitions, but does not change the exponential class.</p>
+<h2>SOS DP: aggregate every submask</h2>
+<p>If <code>F[mask]=Σ A[sub]</code> over all sub⊆mask, do not enumerate every submask separately. For each bit, transfer from masks without that bit to masks with it. O(n2^n) work replaces O(3^n).</p>
+<pre><code class="language-cpp">F=A;
+for(int b=0;b&lt;n;b++) for(int mask=0;mask&lt;(1&lt;&lt;n);mask++)
+    if(mask&gt;&gt;b&amp;1) F[mask]+=F[mask^(1&lt;&lt;b)];
+</code></pre>
+<p>The invariant after processing b bits is that all choices on those bits have been summed, while unprocessed bits remain fixed. Möbius inversion reverses the operation by subtraction.</p>
+<h2>Meet in the middle</h2>
+<p>For 40 items, 2^40 is too large but two lists of 2^20 sums are manageable. Enumerate each half, sort one, and binary-search complementary sums. Time is O(2^(n/2)·n) with ordinary sorting and memory O(2^(n/2)).</p>
+<p>Adjusted Average has a different small parameter: at most four removals among many items. Split four into two plus two. <strong>Index disjointness is the hard part</strong>: sweeping an index boundary makes the two pairs automatically disjoint. Combining two arbitrary pair-sum lists without this condition is wrong.</p>
+<h2>Bitsets are parallel set operations</h2>
+<p>A machine word intersects 64 Boolean values at once. <code>popcount(A&amp;B)</code> counts common elements; this is excellent for dense neighbourhoods or colour masks. A bitset is not automatically a subset DP: Hidden Art uses four-colour masks as a counting signature, while Gyrating Glyphs uses masks to enumerate operator codewords.</p>
+<details><summary>Checkpoint: when can labelled items be replaced by counts?</summary><p>When items with the same type are interchangeable in every future transition and in the objective. Grinding Gravel depends on residues, so a vector of residue counts is sufficient. If identities create extra compatibility constraints, the compression may lose necessary information.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2022-a.html">BAPC 2022-A · Adjusted Average</a></li><li><a href="../regional/bapc-2022-g.html">BAPC 2022-G · Grinding Gravel</a></li><li><a href="../regional/bapc-2023-h.html">BAPC 2023-H · Hidden Art</a></li><li><a href="../regional/bapc-2021-g.html">BAPC 2021-G · Gyrating Glyphs</a></li></ul></section><p><a href="../tracks/advanced.html">Advanced DP across subjects</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

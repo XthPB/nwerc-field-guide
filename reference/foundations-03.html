@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Sorting, two pointers and searching the answer · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/greedy.html">Greedy, sorting and search</a> · Foundations</p><h1>Sorting, two pointers and searching the answer</h1><h2>Sorting creates structure you can exploit</h2>
+<p>Without order, finding a partner near a target may require scanning everything. After sorting, increasing the left pointer increases the sum; decreasing the right pointer decreases it. A monotone boundary replaces repeated search.</p>
+<p>For sorted <code>a</code>, the closest pair sum to T can be found with two pointers. If <code>a[l]+a[r]&lt;T</code>, no pair with the same l and a smaller r is better on the high side, so discard l. The invariant explains which candidates become irrelevant.</p>
+<pre><code class="language-cpp">int l=0, r=(int)a.size()-1;
+while (l&lt;r) {
+    long long sum=a[l]+a[r];
+    consider(l,r);
+    if (sum&lt;T) ++l;
+    else --r;
+}
+</code></pre>
+<p>The scan is O(n), because each pointer moves at most n times. Sorting costs O(n log n). This is <strong>amortised analysis</strong>, not “each loop iteration is constant so the total is constant.”</p>
+<h2>Binary search is a theorem about a predicate</h2>
+<p>To find the first feasible integer, you need <code>false false … true true</code>. Write the predicate and prove monotonicity before writing the loop.</p>
+<pre><code class="language-cpp">// Invariant: lo is infeasible; hi is feasible.
+while (hi-lo&gt;1) {
+    long long mid=lo+(hi-lo)/2;
+    if (feasible(mid)) hi=mid;
+    else lo=mid;
+}
+return hi;
+</code></pre>
+<p>A sentinel is useful only if its truth value is justified. If you do not know a feasible upper bound, double one until it becomes feasible, checking overflow.</p>
+<h2>Worked model: mills and travel time</h2>
+<p>By time T, a mill with productivity p and round-trip travel delay 2t contributes <code>max(0,p(T-2t))</code>. Sum this over mills. Every contribution is nondecreasing in T, so the total is too. To deliver quantity Q, search for the first T whose total reaches Q.</p>
+<p>A numerical search with 80–100 fixed iterations has predictable precision, unlike a vague <code>while(hi-lo&gt;eps)</code> whose meaning changes with scale. But the function is piecewise linear: after sorting mills by activation time, maintain <code>P=Σp</code> and <code>B=Σ2pt</code>. Within a segment, capacity is <code>PT-B</code>; solve <code>T=(Q+B)/P</code> and check whether T lies in that segment. This is a progression from feasibility to exploiting algebra.</p>
+<h2>Two pointers inside DP</h2>
+<p>In Interrail Pass, each pass covers a consecutive suffix of trips bounded by both dates and trip count. As the current trip advances, the earliest coverable trip cannot move backwards. Keep one moving pointer per pass type, turning repeated binary searches into O(nk) total pointer work.</p>
+<h2>When ternary search is appropriate</h2>
+<p>Ternary search needs a unimodal objective, not merely a monotone predicate. On a discrete domain, examine the final few positions exactly. Flat regions, multiple peaks, or numerical noise can invalidate an informal “looks like a hill” argument.</p>
+<details><summary>Checkpoint: can you binary-search a target sum in an unsorted array?</summary><p>Not by comparing an arbitrary middle element. The required monotonicity is absent. You can sort, use a hash table, or binary-search an entirely different monotone feasibility predicate.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2023-a.html">BAPC 2023-A · APT Upgrade</a></li><li><a href="../regional/bapc-2025-i.html">BAPC 2025-I · Intermill Logistics</a></li><li><a href="../regional/bapc-2024-i.html">BAPC 2024-I · Interrail Pass</a></li><li><a href="../regional/bapc-2022-a.html">BAPC 2022-A · Adjusted Average</a></li></ul></section><p><a href="../tracks/greedy.html">Greedy, sorting and search</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

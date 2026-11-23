@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Dynamic programming: design the state first · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/advanced.html">Advanced DP across subjects</a> · Foundations</p><h1>Dynamic programming: design the state first</h1><h2>DP is controlled forgetting</h2>
+<p>Imagine studying for several exams. Two different histories have reached the same exam, passed the same number of exams, but leave 7 and 12 units of spare time. If future decisions only care about available time, the 7-unit history is dominated. Keep the best resource for each passed count.</p>
+<p>A state is a promise about what information from the past the future can observe. “Use DP” is not a state definition. Write a sentence beginning <strong>dp[…] means…</strong> and include whether it is a minimum, maximum, count, probability or feasibility flag.</p>
+<h2>Derive a DP in five pieces</h2>
+<ol>
+<li><strong>State:</strong> what makes two histories interchangeable?</li>
+<li><strong>Transition:</strong> what is the next choice or final choice?</li>
+<li><strong>Base:</strong> what is true before making any choices?</li>
+<li><strong>Order:</strong> why are dependencies already computed?</li>
+<li><strong>Answer:</strong> which states represent finished solutions?</li>
+</ol>
+<p>For a minimum-cost partition of a prefix, choose the final block:</p>
+<div class="formula">dp[i] = min over j&lt;i of {dp[j] + cost(j,i)}<br>dp[0]=0; unreachable states = +∞</div>
+
+<p>Every valid partition has a unique final cut, so the recurrence is complete. Combining an optimal prefix with a legal final block is feasible, so it never invents a solution. These two directions are the standard induction proof.</p>
+<h2>Worked example: word break</h2>
+<p>Dictionary <code>{a, ab, bc}</code> and string <code>abc</code>. A greedy longest first word chooses <code>ab</code> and gets stuck at <code>c</code>. DP keeps all reachable boundaries: 0→1 using <code>a</code>, then 1→3 using <code>bc</code>.</p>
+<pre><code class="language-cpp">vector&lt;char&gt; can(s.size()+1,false); can[0]=true;
+for(int i=0;i&lt;(int)s.size();i++) if(can[i])
+    for(const string&amp; w:dictionary)
+        if(s.compare(i,w.size(),w)==0) can[i+w.size()]=true;
+</code></pre>
+<p>This version costs the sum of attempted character comparisons. A trie or bounded word lengths can reduce it. The optimisation changes transition discovery, not the state meaning.</p>
+<h2>DP and shortest paths are the same view in a DAG</h2>
+<p>Make every state a vertex and every transition an edge. Minimum cost is shortest path; maximum score is longest path; counts add over incoming edges. If a resource always increases, that resource may give a topological order. Boggle Sort advances through columns; Interrail Pass advances through trips.</p>
+<p>A cycle changes the problem. Ordinary memoisation cannot solve <code>dp[u]</code> by recursively calling itself through a cycle. You may need Dijkstra, SCC contraction, equations, or a game-theoretic fixed point.</p>
+<h2>Memory compression is a dependency proof</h2>
+<p>If layer i only reads layer i−1, keep two arrays. Updating one array in place can be correct or catastrophic depending on iteration order. In Decelerating Jump, decreasing speed and increasing position are part of the proof, not cosmetic loop choices.</p>
+<details><summary>Checkpoint: why does “best spare time for each passed count” work, while “maximum passed so far” alone does not?</summary><p>The number passed does not determine what future exams remain affordable. Spare time affects future choices. Keeping the maximum spare time for a fixed passed count preserves every future opportunity and removes only dominated histories.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2023-e.html">BAPC 2023-E · Exam Study Planning</a></li><li><a href="../regional/bapc-2025-b.html">BAPC 2025-B · Boggle Sort</a></li><li><a href="../regional/bapc-2024-i.html">BAPC 2024-I · Interrail Pass</a></li><li><a href="../regional/bapc-2021-d.html">BAPC 2021-D · Decelerating Jump</a></li></ul></section><p><a href="../tracks/advanced.html">Advanced DP across subjects</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

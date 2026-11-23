@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Manacher palindromic radii · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Manacher palindromic radii</h1><p class="lead">Odd and even centers have different index conventions.</p><p>From the ICPC Code Templates section “Manacher, old heading &quot;Z Algorithm&quot; (Iancu)”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Manacher (Iancu&#x27;s; the old heading said &quot;Z Algorithm&quot;).
+// USE: all palindromes in O(n): longest palindromic substring,
+//   #palindromic substrings, &quot;is s[l..r] a palindrome&quot; in O(1).
+// P[i] = radius in &quot;#s0#s1#...#&quot; = length of the longest palindrome
+//   centred at i in the ORIGINAL string. 0-based inclusive [l, r].
+// longest = max P[i]; #palindromic substrings = sum of (P[i] + 1) / 2
+vector&lt;int&gt; preprocess(const string&amp; s) {
+    string processed_string = &quot;#&quot;;
+    for(char c : s) {
+        processed_string += c;
+        processed_string += &#x27;#&#x27;;
+    }
+    int n = processed_string.size();
+    vector&lt;int&gt; P(n, 0);
+    int C = 0, R = 0;
+    for (int i = 1; i &lt; n; ++i) {
+        int mirror = 2 * C - i;
+        if (i &lt; R)
+            P[i] = min(R - i, P[mirror]);
+        while (i - (1 + P[i]) &gt;= 0 &amp;&amp; i + (1 + P[i]) &lt; n &amp;&amp;
+               processed_string[i - (1 + P[i])] ==
+               processed_string[i + (1 + P[i])])
+            P[i]++;
+        if (i + P[i] &gt; R) {
+            C = i;
+            R = i + P[i];
+        }
+    }
+    return P;
+}
+bool is_palindrome_substring(const string&amp; s, int l, int r,
+                             const vector&lt;int&gt;&amp; P) {
+    // FIXED (old line was wrong for ~1/3 of substrings):
+    // return P[(l + r) / 2] &gt;= (r - l + 1) / 2;
+    return P[l + r + 1] &gt;= r - l + 1;
+}</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

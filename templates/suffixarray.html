@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Suffix array and LCP · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Suffix array and LCP</h1><p class="lead">Cap any suffix comparison by the requested substring lengths.</p><p>From the ICPC Code Templates section “Suffix Array + LCP”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Suffix array + LCP. USE: #distinct substrings, longest repeated
+//   substring, longest common substring of two strings, k-th
+//   substring in sorted order. TIME: O(n log^2 n) (n = 2e5: 0.1 s).
+// sa[i] = start of the i-th smallest suffix
+vector&lt;int&gt; suffixArray(const string &amp;s) {
+    int n = s.size();
+    if (n == 0) return {};
+    vector&lt;int&gt; sa(n), cls(n), tmp(n);  // cls = rank by first len
+    for (int i = 0; i &lt; n; i++) { sa[i] = i; cls[i] = s[i]; }
+    for (int len = 1; ; len *= 2) {
+        auto key = [&amp;](int i) {
+            return make_pair(cls[i], i + len &lt; n ? cls[i + len] : -1);
+        };
+        sort(sa.begin(), sa.end(),
+             [&amp;](int a, int b) { return key(a) &lt; key(b); });
+        tmp[sa[0]] = 0;
+        for (int i = 1; i &lt; n; i++)
+            tmp[sa[i]] = tmp[sa[i - 1]] + (key(sa[i - 1]) &lt; key(sa[i]));
+        cls = tmp;
+        if (cls[sa[n - 1]] == n - 1) break;  // all ranks different
+    }
+    return sa;
+}
+// lcp[i] = common prefix of suffixes sa[i] and sa[i+1], O(n)
+vector&lt;int&gt; lcpArray(const string &amp;s, const vector&lt;int&gt; &amp;sa) {
+    int n = s.size();
+    vector&lt;int&gt; pos(n), lcp(max(n - 1, 0));
+    for (int i = 0; i &lt; n; i++) pos[sa[i]] = i;
+    int h = 0;
+    for (int i = 0; i &lt; n; i++) {     // suffixes from long to short
+        if (pos[i] == n - 1) { h = 0; continue; }
+        int j = sa[pos[i] + 1];
+        while (i + h &lt; n &amp;&amp; j + h &lt; n &amp;&amp; s[i + h] == s[j + h]) h++;
+        lcp[pos[i]] = h;
+        if (h &gt; 0) h--;
+    }
+    return lcp;
+}
+// #distinct substrings = n(n+1)/2 - sum(lcp)
+// LCP(suffix a, suffix b) = min lcp[pos[a]..pos[b]-1] (sparse table)
+// longest repeated substring = max lcp; two strings: s + &#x27;#&#x27; + t</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

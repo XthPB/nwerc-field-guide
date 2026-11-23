@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Articulation points · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Articulation points</h1><p class="lead">The DFS root has its own child-count condition.</p><p>From the ICPC Code Templates section “Articulation Points”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Articulation points: vertices whose removal disconnects the graph.
+// NEEDS: UNDIRECTED, nodes 0..n-1. TIME: O(V + E), recursive.
+// Globals clash with Bridges, SCC and LCA: one per program.
+// isCut[v] is set once even if found several times.
+vector&lt;bool&gt; isCut;
+void IS_CUTPOINT(int v) { isCut[v] = true; }
+int n; // number of nodes
+vector&lt;vector&lt;int&gt;&gt; adj; // adjacency list of graph
+vector&lt;bool&gt; visited;
+vector&lt;int&gt; tin, low;
+int timer;
+void dfs(int v, int p = -1) {
+    visited[v] = true;
+    tin[v] = low[v] = timer++;
+    int children=0;
+    for (int to : adj[v]) {
+        if (to == p) continue;
+        if (visited[to]) {
+            low[v] = min(low[v], tin[to]);
+        } else {
+            dfs(to, v);
+            low[v] = min(low[v], low[to]);
+            if (low[to] &gt;= tin[v] &amp;&amp; p!=-1)
+                IS_CUTPOINT(v);
+            ++children;
+        }
+    }
+    if(p == -1 &amp;&amp; children &gt; 1)
+        IS_CUTPOINT(v);
+}
+void find_cutpoints() {
+    timer = 0;
+    isCut.assign(n, false);
+    visited.assign(n, false);
+    tin.assign(n, -1);
+    low.assign(n, -1);
+    for (int i = 0; i &lt; n; ++i) {
+        if (!visited[i])
+            dfs (i);
+    }
+}</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

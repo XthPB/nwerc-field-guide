@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>An advanced ICPC algorithm map · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/construct.html">Constructive proofs and implementation</a> · Foundations</p><h1>An advanced ICPC algorithm map</h1><h2>Learn by the obstruction each tool removes</h2>
+<p>A long algorithm list is useful only if you can recognise what problem blocks progress. Use this map to diagnose that obstruction, then return to the linked theory chapters and implement the technique on a small exercise.</p>
+<table>
+<thead>
+<tr>
+<th>Obstruction in your current model</th>
+<th>Technique to investigate</th>
+<th>Essential condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Too many equivalent histories</td>
+<td>DP state compression, Pareto pruning</td>
+<td>Same future behaviour or proven dominance</td>
+</tr>
+<tr>
+<td>Quadratic minimum over old states</td>
+<td>Deque, segment tree, CHT/Li Chao</td>
+<td>Window monotonicity or line-form transition</td>
+</tr>
+<tr>
+<td>Cyclic dependencies</td>
+<td>SCC condensation</td>
+<td>Component can be summarised correctly</td>
+</tr>
+<tr>
+<td>Many subtree/path queries</td>
+<td>Euler tour, LCA, HLD</td>
+<td>Rooted tree structure</td>
+</tr>
+<tr>
+<td>Dynamic connectivity with deletions</td>
+<td>Reverse time, rollback DSU</td>
+<td>Offline lifetime information</td>
+</tr>
+<tr>
+<td>Global one-to-one assignment</td>
+<td>Matching, Hungarian, flow</td>
+<td>Correct compatibility/capacity model</td>
+</tr>
+<tr>
+<td>Huge step count, small state</td>
+<td>Binary lifting, matrix exponentiation</td>
+<td>Repeatable deterministic/linear transition</td>
+</tr>
+<tr>
+<td>Many substring comparisons</td>
+<td>Suffix array/LCP, suffix automaton</td>
+<td>Exact substring structure</td>
+</tr>
+<tr>
+<td>Polynomial-size counting convolution</td>
+<td>FFT/NTT</td>
+<td>Coefficient and modulus bounds</td>
+</tr>
+<tr>
+<td>Small separator or narrow width</td>
+<td>Profile/plug DP, treewidth DP</td>
+<td>Boundary state captures interactions</td>
+</tr>
+<tr>
+<td>Continuous degrees of freedom</td>
+<td>Tight-constraint enumeration</td>
+<td>Valid perturbation/exchange lemma</td>
+</tr>
+</tbody>
+</table>
+<h2>Euler tours are not Hamiltonian paths</h2>
+<p>An Euler trail uses every edge exactly once; a Hamiltonian path visits every vertex exactly once. Hierholzer's algorithm constructs an Euler trail in O(V+E) after degree and connectivity conditions are checked. Store edge IDs and mark each edge once, including parallel edges. Reverse the vertex sequence produced by backtracking.</p>
+<p>For an undirected graph, nonzero-degree vertices must be connected and the number of odd-degree vertices must be zero or two. For directed graphs, in/out balance and suitable connectivity conditions replace parity. These are separate from the distance-three construction in Hamiltooonian Hike.</p>
+<h2>Advanced graph models</h2>
+<p>Minimum-cost flow handles capacities plus costs. 2-SAT handles Boolean clauses of size two. General SAT, general longest simple path, and arbitrary set cover do not become easy just because n is large; look for a special parameter, tree structure, planarity, bounded degree, or approximation only if the statement allows it.</p>
+<p>Treewidth formalises “small boundary”: a bag of k vertices can support exponential-in-k DP while the whole graph is large. Planar separators and centroid decomposition are related divide-and-conquer ideas, but their invariants differ.</p>
+<h2>Advanced geometry and optimisation</h2>
+<p>Half-plane intersection, rotating calipers, Minkowski sums and minimum enclosing circles are useful after mastering orientation, hulls and degeneracies. Randomised incremental minimum enclosing circle has expected linear behaviour with a constant-size boundary certificate. Delaunay/Voronoi structures are powerful but implementation-heavy; a local contest may offer a simpler spatial or distribution-based route.</p>
+<p>For optimisation, Lagrangian relaxation (often called the aliens trick in CP) introduces a penalty to trade count against cost. Recovering an exact constrained optimum needs a justified convexity/duality argument and tie handling. Do not binary-search a penalty and assume every desired count will appear.</p>
+<h2>Prioritise depth over collecting templates</h2>
+<p>First make BFS, Dijkstra, SCC, Fenwick, segment tree, knapsack, tree DP and modular arithmetic dependable. Then add matching/flow, rerooting, bitmask/profile DP, suffix structures and DP optimisation. Specialist topics are a final layer.</p>
+<details><summary>Checkpoint: what should you do when you recognise three possible algorithms?</summary><p>Write the state/graph each would use, its exact complexity under the bounds, and the missing proof condition. Choose the simplest candidate whose conditions you can establish. Familiarity alone is not evidence that a technique applies.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2025-e.html">BAPC 2025-E · Excruciating Elevators</a></li><li><a href="../regional/bapc-2025-l.html">BAPC 2025-L · Linguistic Labyrinth</a></li><li><a href="../regional/bapc-2023-i.html">BAPC 2023-I · International Irregularities</a></li><li><a href="../regional/bapc-2024-d.html">BAPC 2024-D · Disgruntled Diner</a></li></ul></section><p><a href="../tracks/construct.html">Constructive proofs and implementation</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

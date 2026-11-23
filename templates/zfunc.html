@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Z-function · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Z-function</h1><p class="lead">Choose a separator outside the input alphabet if using a pattern followed by its text.</p><p>From the ICPC Code Templates section “Z-Function”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Z-function. USE: pattern search (like KMP), periods, &quot;how much
+//   of the start of s matches at position i&quot;. TIME: O(n).
+// z[i] = longest common prefix of s and s.substr(i), z[0] = 0
+vector&lt;int&gt; zFunction(const string &amp;s) {
+    int n = s.size();
+    vector&lt;int&gt; z(n, 0);
+    // [l, r) = the match reaching farthest right so far
+    for (int i = 1, l = 0, r = 0; i &lt; n; i++) {
+        if (i &lt; r) z[i] = min(r - i, z[i - l]);
+        while (i + z[i] &lt; n &amp;&amp; s[z[i]] == s[i + z[i]]) z[i]++;
+        if (i + z[i] &gt; r) { l = i; r = i + z[i]; }
+    }
+    return z;
+}
+// find p in t: z of p + &#x27;#&#x27; + t; z[i] == |p| -&gt; match at i-|p|-1
+// smallest period of s: first p &gt;= 1 with p + z[p] == n, else n</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

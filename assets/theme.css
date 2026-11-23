@@ -8,3 +8,4 @@
 .brand{display:inline-block;white-space:nowrap}.brand svg{vertical-align:-.32em;margin-right:.42em}.menu a{white-space:nowrap}@media(max-width:480px){.brandfull{display:none}.topin{gap:.35rem}.menu{gap:.62rem}}
 
 .reading p,.reading figcaption,.reading summary,.reading td,.reading h1,.reading h2,.reading .next a{overflow-wrap:anywhere}.reading a{overflow-wrap:anywhere}.brand,.menu a{overflow-wrap:normal}
+.searchrow label{min-width:0;max-width:100%}.searchrow select{min-width:0;width:100%}

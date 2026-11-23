@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>DAG DP, SCCs, bridges and 2-SAT · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../tracks/graph.html">Graphs, connectivity and flow</a> · Foundations</p><h1>DAG DP, SCCs, bridges and 2-SAT</h1><h2>A cycle tells you what information to compress</h2>
+<p>In a strongly connected component (SCC), every vertex reaches every other. Contract each SCC into one vertex; the resulting condensation graph is always a DAG. If it had a directed cycle, its components would mutually reach each other and should have been one SCC.</p>
+<p>Kosaraju runs DFS for finish order, then DFS on reversed edges in reverse finish order. Tarjan uses one DFS with discovery indices, low links and an active stack. Both take O(V+E). Prefer an implementation you can explain and test; Tarjan's low-link update rules are easy to misremember.</p>
+<h2>Why sink components appear repeatedly</h2>
+<p>A sink SCC has no outgoing edge in the condensation graph. Every finite DAG vertex reaches a sink. In Locking Doors, one chosen exit in every sink SCC is necessary and sufficient. In Failing Factory, dependency closure leads to choosing among sink SCCs and evaluating their probability products.</p>
+<p>Do not memorise “SCC problem → count sources.” Determine whether the arrows mean “can reach,” “requires,” or “must happen before.” Reversing the semantic direction changes sources into sinks.</p>
+<h2>DP after contraction</h2>
+<p>For a DAG, process vertices in topological order for forward transitions, or reverse order when a state depends on successors.</p>
+<pre><code class="language-cpp">for(int u:reverseTopo) {
+    best[u]=base[u];
+    for(int v:dag[u]) best[u]=max(best[u],weight(u,v)+best[v]);
+}
+</code></pre>
+<p>Contracting an SCC does not automatically make arbitrary optimisation easy. Longest simple path inside an SCC remains hard in general. You need a reason the component can be represented by a single weight, reachability flag, or other sufficient summary.</p>
+<h2>Bridges and articulation points</h2>
+<p>In undirected DFS, <code>low[v]</code> is the earliest discovery time reachable from v's subtree using tree edges and at most one back edge. A tree edge u→v is a bridge when <code>low[v]&gt;tin[u]</code>. Removing it splits the graph. An articulation point separates child subtrees when <code>low[v]≥tin[u]</code>; the DFS root has its own child-count rule.</p>
+<pre><code class="language-cpp">low[u]=tin[u]=timer++;
+for(auto [v,id]:g[u]) {
+    if(id==parentEdge) continue;
+    if(tin[v]!=-1) low[u]=min(low[u],tin[v]);
+    else {
+        dfs(v,id); low[u]=min(low[u],low[v]);
+        if(low[v]&gt;tin[u]) bridges.push_back(id);
+    }
+}
+</code></pre>
+<p>Use edge IDs so a parallel edge back to the parent is not accidentally ignored.</p>
+<h2>2-SAT turns choices into implications</h2>
+<p>A clause <code>(a OR b)</code> means <code>not a → b</code> and <code>not b → a</code>. A formula is satisfiable exactly when no variable and its negation belong to the same SCC. Recovering an assignment depends on your component numbering convention; verify it on unit clauses rather than copying an unexplained comparison.</p>
+<p>Pairwise conflicts can make the implication graph quadratic. House Numbering admits a stronger unicyclic structural solution, demonstrating why a generic reduction may be correct yet unnecessarily large.</p>
+<details><summary>Checkpoint: why is a reachable directed cycle fatal in Jail or Joyride?</summary><p>The desired guarantee covers every tied escape choice. A cycle lets the teenagers keep choosing an escape along it indefinitely. This is an adversarial certainty criterion, not an expected-time calculation under a benign random tie-break.</p></details><section><h2>Worked BAPC problems</h2><ul class="reading-list"><li><a href="../regional/bapc-2023-l.html">BAPC 2023-L · Locking Doors</a></li><li><a href="../regional/bapc-2024-f.html">BAPC 2024-F · Failing Factory</a></li><li><a href="../regional/bapc-2021-j.html">BAPC 2021-J · Jail or Joyride</a></li><li><a href="../regional/bapc-2022-h.html">BAPC 2022-H · House Numbering</a></li></ul></section><p><a href="../tracks/graph.html">Graphs, connectivity and flow</a></p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

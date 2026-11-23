@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Extended gcd and residues · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Extended gcd and residues</h1><p class="lead">Positive gcd and normalized residues simplify divisibility tests.</p><p>From the ICPC Code Templates section “Extended GCD + Chinese Remainder (any moduli)”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// USE: a*x + b*y = g, inverse mod a NON-prime m, systems
+//   &quot;x = r1 mod m1, x = r2 mod m2&quot; (cycles that must line up).
+// TIME: O(log min(a, b)).
+ll extgcd(ll a, ll b, ll &amp;x, ll &amp;y) {   // returns g = gcd(a, b)
+    if (b == 0) { x = 1; y = 0; return a; }
+    ll x1, y1;
+    ll g = extgcd(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - (a / b) * y1;
+    return g;
+}
+// a^-1 mod m for ANY m (prime or not); -1 if gcd(a, m) != 1
+ll inverseMod(ll a, ll m) {
+    ll x, y;
+    if (extgcd(((a % m) + m) % m, m, x, y) != 1) return -1;
+    return ((x % m) + m) % m;
+}
+// a*x + b*y = c: solvable iff c % g == 0; x0*(c/g), y0*(c/g) is
+// one solution, all: x + k*(b/g), y - k*(a/g)
+// CRT: m1, m2 need NOT be coprime. Returns {x, lcm} with
+// 0 &lt;= x &lt; lcm, or {-1, -1} if impossible. lcm must fit in ll.
+pair&lt;ll, ll&gt; crt(ll r1, ll m1, ll r2, ll m2) {
+    ll p, q;
+    ll g = extgcd(m1, m2, p, q);
+    if ((r2 - r1) % g != 0) return {-1, -1};
+    ll lcm = m1 / g * m2;
+    __int128 k = (__int128)((r2 - r1) / g) * p % (m2 / g);
+    __int128 x = (r1 + k * m1) % lcm;
+    if (x &lt; 0) x += lcm;
+    return {(ll)x, lcm};
+}
+// more equations: {r, m} = crt(r, m, r_i, m_i) one at a time</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

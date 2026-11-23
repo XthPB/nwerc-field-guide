@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Adaptive Simpson integration · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Adaptive Simpson integration</h1><p class="lead">Handle singularities and split at known discontinuities before relying on a local error estimate.</p><p>From the ICPC Code Templates section “Adaptive Simpson Integration”. Use the code with the types and conventions shown in the excerpt.</p><pre><code>// Adaptive Simpson: integral of f over [a, b] to absolute error ~eps.
+// USE: areas / volumes with no formula (area of a union of circles:
+//   integrate the covered length of each vertical line x).
+// NEEDS: f smooth on [a, b]; split [a, b] at kinks (e.g. at every
+//   circle&#x27;s left/right x) and add the pieces.
+double simpsonPart(const function&lt;double(double)&gt; &amp;f, double a,
+                   double b, double fa, double fm, double fb,
+                   double whole, double eps, int depth) {
+    double m = (a + b) / 2, flm = f((a + m) / 2), frm = f((m + b) / 2);
+    double left = (m - a) / 6 * (fa + 4 * flm + fm);
+    double right = (b - m) / 6 * (fm + 4 * frm + fb);
+    if (depth &lt;= 0 || fabs(left + right - whole) &lt;= 15 * eps)
+        return left + right + (left + right - whole) / 15;
+    return simpsonPart(f, a, m, fa, flm, fm, left, eps / 2, depth - 1)
+         + simpsonPart(f, m, b, fm, frm, fb, right, eps / 2, depth - 1);
+}
+double integrate(const function&lt;double(double)&gt; &amp;f, double a,
+                 double b, double eps = 1e-9) {
+    double fa = f(a), fm = f((a + b) / 2), fb = f(b);
+    double whole = (b - a) / 6 * (fa + 4 * fm + fb);
+    return simpsonPart(f, a, b, fa, fm, fb, whole, eps, 40);
+}</code></pre></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>
