@@ -2,8 +2,11 @@
 
 [Read the dynamic programming guide](https://xthpb.github.io/nwerc-field-guide/)
 
-The DP volume contains 21 chapters and 228 lessons. Each lesson starts with a problem, follows a small example and links to C++ or mathematical templates. Equations, diagrams, filters and step controls work offline after downloading the repository and opening `index.html`.
+The [six-part reading path](https://xthpb.github.io/nwerc-field-guide/path.html) connects 235 lessons in 34 units, from a first prefix table to combined contest techniques. The 21 topic chapters provide a shorter route to individual subjects. Each lesson walks through an example, explains the state and update, and asks a small variation with a revealable answer. Equations, diagrams, filters and step controls work offline after downloading the repository and opening `index.html`.
 
+- [Audit of 1,500 Codeforces DP problems, rated 800–3000](https://xthpb.github.io/nwerc-field-guide/audit.html)
+- [Why each child needs a different rerooting message](https://xthpb.github.io/nwerc-field-guide/lessons/rerootproduct.html)
+- [When the next coin leaves a gap](https://xthpb.github.io/nwerc-field-guide/lessons/contiguouscoins.html)
 - [Which voting groups need every member?](https://xthpb.github.io/nwerc-field-guide/lessons/pivotweight.html)
 - [Can the cashier make an unsplittable payout?](https://xthpb.github.io/nwerc-field-guide/lessons/adversarycoins.html)
 - [Visit every city with a set and a last stop](https://xthpb.github.io/nwerc-field-guide/lessons/tour.html)
@@ -15,6 +18,8 @@ The DP volume contains 21 chapters and 228 lessons. Each lesson starts with a pr
 - [Compare the same idea across contest problems](https://xthpb.github.io/nwerc-field-guide/coverage.html#shared)
 - [See the most-solved Codeforces examples in five rating bands](https://xthpb.github.io/nwerc-field-guide/coverage.html#classics)
 - [Read the sources and checks](https://xthpb.github.io/nwerc-field-guide/sources.html)
+
+The seeded audit spans all 23 rating bands. Each row links to its evidence and cheat-sheet pages, and identifies how the templates were selected. The [results CSV](assets/dp-audit.csv), [sampling frame](assets/audit-frame.csv) and [draw verification](checks/draw_audit.py) are available for reuse.
 
 The public template pages are read-only copies of relevant ICPC cheat-sheet sections and DP companion material. The problem index identifies authored mappings, code-supported building blocks and tag-based starting points. NWERC 2022 and 2023 problem details are withheld for practice.
 

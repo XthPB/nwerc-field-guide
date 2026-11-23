@@ -1,0 +1,2316 @@
+id,rating,start_utc_seconds,title,official_tags
+2B,2000,1267117200,The least round way,dp|math
+4D,1700,1268395200,Mysterious Present,dp|sortings
+5C,1900,1269100800,Longest Regular Bracket Sequence,constructive algorithms|data structures|dp|greedy|sortings|strings
+6D,2600,1269673200,Lizards and Basements 2,brute force|dp
+7E,2600,1270136700,Defining Macros,dp|expression parsing|implementation
+8C,2000,1270741500,Looking for Order,bitmasks|dp
+8E,2600,1270741500,Beads,dp|graphs
+9D,1900,1270983600,How many trees?,combinatorics|divide and conquer|dp
+10B,1500,1271346300,Cinema Cashier,dp|implementation
+10D,2800,1271346300,LCIS,dp
+11D,2200,1272294000,A Simple Task,bitmasks|dp|graphs
+11E,2800,1272294000,"Forward, march!",binary search|dp|greedy
+13C,2200,1273154400,Sequence,dp|sortings
+13D,2600,1273154400,Triangles,dp|geometry
+14D,1900,1274283000,Two Paths,dfs and similar|dp|graphs|shortest paths|trees|two pointers
+14E,1900,1274283000,Camels,dp
+15E,2600,1275145200,Triangles,combinatorics|dp
+16E,1900,1275570000,Fish,bitmasks|dp|probabilities
+17C,2500,1276182000,Balance,dp
+18D,2000,1276700400,Seller Bob,brute force|dp|greedy
+18E,2000,1276700400,Flag 2,dp
+19B,1900,1277391600,Checkout Assistant,dp
+21C,2000,1277730300,Stripe 2,binary search|dp|sortings
+22B,1500,1277823600,Bargaining Table,brute force|dp
+23E,2500,1278687600,Tree,dp
+24D,2400,1280149200,Broken robot,dp|math|probabilities
+27E,2000,1284130800,Number With The Given Amount Of Divisors,brute force|dp|number theory
+28C,2200,1284735600,Bath Queue,combinatorics|dp|probabilities
+28D,2400,1284735600,"Don't fear, DravDe is kind",binary search|data structures|dp|hashing
+30C,1800,1285340400,Shooting Gallery,dp|probabilities
+31E,2400,1285599600,TV Game,dp
+35D,1700,1287471600,Animals,dp|greedy
+37D,2300,1288018800,Lesson Timetable,combinatorics|dp|math
+38E,1800,1288440000,Let's Go Rolling!,dp|sortings
+38F,2100,1288440000,Smart Boy,dp|games|strings
+38H,2400,1288440000,The Great Marathon,dp
+39C,2100,1287904200,Moon Craters,dp|sortings
+39E,2000,1287904200,What Has Dirichlet Got to Do with That?,dp|games
+41D,1900,1289232000,Pawn,dp
+44E,1400,1289041200,Anfisa the Monkey,dp
+44H,1700,1289041200,Phone Number,dp
+45B,2200,1289646000,School,dp|dsu
+46E,1900,1291536000,Comb,data structures|dp
+48E,2100,1292140800,Ivan the Fool VS Gorynych the Dragon,dp|games|graphs
+48G,2700,1292140800,Galaxy Union,dp|trees|two pointers
+49D,1800,1292601600,Game,brute force|dp|implementation
+49E,2300,1292601600,Common ancestor,dp
+50D,2100,1292862000,Bombing,binary search|dp|probabilities
+51F,2800,1293552000,Caterpillar,dfs and similar|dp|graphs|trees
+53E,2500,1294329600,Dead Ends,bitmasks|dp
+54C,2000,1294733700,First Digit Law,dp|math|probabilities
+54D,2100,1294733700,Writing a Song,brute force|dp|strings
+55D,2500,1294992000,Beautiful numbers,dp|number theory
+56D,2100,1295626200,Changing a String,dp
+57D,2500,1295971200,Journey,dp|math
+58E,2400,1296489600,Expression,dp
+62E,2700,1298649600,World Evil,dp|flows
+63E,2000,1298908800,Sweets Game,bitmasks|dfs and similar|dp|games|implementation
+66E,2000,1299513600,Petya and Post,data structures|dp
+67A,1800,1300033800,Partial Teacher,dp|graphs|greedy|implementation
+67C,2600,1300033800,Sequence of Balls,dp
+67D,1900,1300033800,Optical Experiment,binary search|data structures|dp
+68D,2500,1300464000,Half-decay tree,data structures|divide and conquer|dp|math|probabilities
+69D,1900,1300809600,Dot,dp|games
+70E,2700,1301155200,Information Reform,dp|implementation|trees
+71C,1600,1301410800,Round Table Knights,dp|math|number theory
+71E,2200,1301410800,Nuclear Fusion,bitmasks|dp
+72G,1000,1300637400,Fibonacci army,*special|dp
+73C,1800,1302422400,LionAge II,dp
+74B,1500,1302879600,Train,dp|games|greedy
+75D,2000,1302706800,Big Maximum Sum,data structures|dp|greedy|implementation|math|trees
+76C,2700,1302609600,Mutation,bitmasks|dp|math
+76D,1700,1302609600,Plus and xor,dp|greedy|math
+76F,2300,1302609600,Tourist,binary search|data structures|dp
+77C,2100,1303226100,Beavermuncher-0xFF,dfs and similar|dp|dsu|greedy|trees
+77D,2300,1303226100,Domino Carpet,dp|implementation
+78C,2000,1303916400,Beaver Game,dp|games|number theory
+79C,1800,1304175600,Beaver,data structures|dp|greedy|hashing|strings|two pointers
+79D,2800,1304175600,Password,bitmasks|dp|shortest paths
+81E,2700,1304485200,Pairs,dfs and similar|dp|dsu|graphs|implementation|trees
+82D,2000,1304694000,Two out of Three,dp
+83D,2400,1305299400,Numbers,dp|math|number theory
+83E,2800,1305299400,Two Subsequences,bitmasks|dp
+86C,2500,1306077000,Genetic engineering,dp|string suffix structures|trees
+87C,2000,1307458800,Interesting Game,dp|games|math
+87D,2300,1307458800,Beautiful Road,dfs and similar|dp|dsu|graphs|implementation|sortings|trees
+89B,2300,1308236400,Widget Library,dp|expression parsing|graphs|implementation
+93D,2500,1309446000,Flags,dp|math|matrices
+93E,2600,1309446000,Lostborn,dp|math|number theory
+95B,1800,1310137200,Lucky Numbers,dp|greedy
+95D,2500,1310137200,Horse Races,dp|math
+95E,2500,1310137200,Lucky Country,dp|dsu|graphs
+98E,2700,1311346800,Help Shrek and Donkey,dp|games|math|probabilities
+101B,1700,1312390800,Buses,binary search|data structures|dp
+101D,2300,1312390800,Castle,dp|greedy|probabilities|sortings|trees
+101E,2500,1312390800,Candies and Stones,divide and conquer|dp
+106C,1700,1313766000,Buns,dp
+107B,1600,1314111600,Basketball Team,combinatorics|dp|math|probabilities
+107C,2400,1314111600,Arrangement,bitmasks|dp
+107D,2400,1314111600,Crime Management,dp|graphs|matrices
+109C,1900,1314633600,Lucky Tree,dp|dsu|trees
+111C,2100,1315051200,Petya and Spiders,bitmasks|dp|dsu
+111D,2300,1315051200,Petya and Coloring,combinatorics|dp
+115D,2600,1316098800,Unambiguous Arithmetic Expression,dp|expression parsing
+115E,2400,1316098800,Linear Kingdom Races,data structures|dp
+118D,1700,1317999600,Caesar's Legions,dp
+119C,2000,1318604400,Education Reform,dp
+120F,1400,1318919400,Spiders,dp|greedy|trees
+123C,2300,1320333000,Brackets,combinatorics|dp|greedy
+123E,2500,1320333000,Maze,dfs and similar|dp|probabilities|trees
+126B,1700,1320858000,Password,binary search|dp|hashing|string suffix structures|strings
+126D,2300,1320858000,Fibonacci Sums,dp|math
+128C,2000,1321337400,Games with Rectangle,combinatorics|dp
+132C,1800,1322924400,Logo Turtle,dp
+132D,2100,1322924400,Constants in the language of Shakespeare,constructive algorithms|dp|greedy
+137D,1900,1324015200,Palindromes,dp|strings
+138D,2500,1324728000,World of Darkraft,dp|games
+138E,2900,1324728000,Hellish Constraints,brute force|dp|two pointers
+140E,2600,1325689200,New Year Garland,combinatorics|dp
+141E,2300,1326034800,Clearing Up,constructive algorithms|dp|dsu|graphs
+142C,2300,1326380700,Help Caretaker,brute force|dp
+145C,2100,1327215600,Lucky Subsequence,combinatorics|dp|math
+148D,1800,1328198400,Bag of mice,dp|games|math|probabilities
+148E,1900,1328198400,Porcelain,dp
+149D,1900,1328886000,Coloring Brackets,dp
+150D,2600,1329490800,Mission Impassable,dp|strings
+152E,2500,1329750000,Garden,bitmasks|dp|graphs|trees
+156C,2000,1330536600,Cipher,combinatorics|dp
+156E,3000,1330536600,Mrs. Hudson's Pancakes,brute force|dp
+158E,1900,1330804800,Phone Talks,*special|dp|sortings
+159D,1500,1331280000,Palindrome pairs,*special|brute force|dp|strings
+161D,1800,1331478300,Distance in Tree,dfs and similar|dp|trees
+161E,2500,1331478300,Polycarpus the Safecracker,brute force|dp
+163A,1700,1332687900,Substring and Subsequence,dp
+163E,2800,1332687900,e-Government,data structures|dfs and similar|dp|strings|trees
+165C,1600,1331911800,Another Problem on Strings,binary search|brute force|dp|math|strings|two pointers
+165E,2200,1331911800,Compatible Numbers,bitmasks|brute force|dfs and similar|dp
+166D,2500,1332516600,Shoe Store,dp|graph matchings|greedy|sortings|two pointers
+166E,1500,1332516600,Tetrahedron,dp|math|matrices
+167B,1800,1332860400,Wizards and Huge Prize,dp|math|probabilities
+173C,1900,1333724400,Spiral Maximum,brute force|dp
+174B,1400,1333897500,File List,dp|greedy|implementation
+175D,2400,1334390400,Plane of Tanks: Duel,brute force|dp|math|probabilities
+175E,2600,1334390400,Power Defence,brute force|dp|geometry|greedy
+176B,1700,1334934300,Word Cut,dp
+176D,2500,1334934300,Hyper String,dp
+178F2,2200,1335614400,Representative Sampling,dp|sortings|strings
+180C,1400,1335078000,Letter,dp
+180E,1800,1335078000,Cubes,binary search|dp|two pointers
+182E,1800,1335280200,Wooden Fence,dp
+183D,2700,1335532800,T-shirt,dp|greedy|probabilities
+185C,2500,1336145400,Clever Fat Rat,dp
+187B,1800,1336663800,AlgoRace,dp|shortest paths
+189A,1300,1336663800,Cut Ribbon,brute force|dp
+191A,1500,1338132600,Dynasty Puzzles,dp
+201A,1700,1340983800,Clear Symmetry,constructive algorithms|dp|math
+201C,2000,1340983800,Fragile Bridges,dp
+201D,2600,1340983800,Brand New Problem,bitmasks|brute force|dp
+204A,1500,1342020600,Little Elephant and Interval,binary search|combinatorics|dp
+204D,2400,1342020600,Little Elephant and Retro Strings,dp
+208B,1900,1343057400,Solitaire,dfs and similar|dp
+208C,1900,1343057400,Police Station,dp|graphs|shortest paths
+209A,1600,1342252500,Multicolored Marbles,dp|math
+212C,2100,1342450800,Cowboys,combinatorics|dp|math
+212E,1500,1342450800,IT Restaurants,dfs and similar|dp|trees
+213B,1900,1343662200,Numbers,combinatorics|dp
+213C,2000,1343662200,Relay Race,dp
+215E,2100,1344267000,Periodical Numbers,combinatorics|dp|number theory
+217C,2600,1345273500,Formurosa,divide and conquer|dp|expression parsing
+219C,1600,1346081400,Color Stripe,brute force|dp|greedy
+219D,1700,1346081400,Choosing Capital for Treeland,dfs and similar|dp|graphs|trees
+222E,1900,1347291900,Decoding Genome,dp|matrices
+223B,1900,1347809400,Two Strings,data structures|dp|strings
+225C,1700,1348069500,Barcode,dp|matrices
+228C,2000,1348759800,Fractal Detector,dp|hashing
+229D,2100,1349105400,Towers,dp|greedy|two pointers
+229E,2600,1349105400,Gifts,combinatorics|dp|math|probabilities
+231E,2100,1349623800,Cactus,data structures|dfs and similar|dp|graphs|trees
+232B,1900,1349969400,Table,bitmasks|combinatorics|dp|math
+232C,2600,1349969400,Doe Graphs,constructive algorithms|divide and conquer|dp|graphs|shortest paths
+232E,3000,1349969400,Quick Tortoise,bitmasks|divide and conquer|dp
+234C,1300,1350370800,Weather,dp|implementation
+234F,1800,1350370800,Fence,dp
+235B,2000,1350803400,Let's Play Osu!,dp|math|probabilities
+235E,2600,1350803400,Number Challenge,combinatorics|dp|implementation|math|number theory
+238C,2100,1352044800,World Eater Brothers,dfs and similar|dp|greedy|trees
+238E,2600,1352044800,Meeting Her,dp|graphs|shortest paths
+243D,2700,1353079800,Cubes,data structures|dp|geometry|two pointers
+245H,1800,1353339000,Queries for Number of Palindromes,dp|hashing|strings
+246E,2400,1353511800,Blood Cousins Return,binary search|data structures|dfs and similar|dp|sortings
+248E,2600,1353857400,Piglet's Birthday,dp|math|probabilities
+249D,2700,1353857400,Donkey and Stars,data structures|dp|geometry|math|sortings
+251C,2000,1354807800,Number Transformation,dp|greedy|number theory
+251E,3000,1354807800,Tree and Table,dfs and similar|dp|implementation|trees
+253B,1400,1354960800,Physics Practical,binary search|dp|sortings|two pointers
+254E,2100,1355047200,Dormitory,dp|implementation
+255C,1500,1355671800,Almost Arithmetical Progression,brute force|dp
+256D,2700,1355671800,Liars and Serge,dp
+258B,1900,1356190200,Little Elephant and Elections,brute force|combinatorics|dp
+258C,2000,1356190200,Little Elephant and LCM,binary search|combinatorics|dp|math
+258D,2600,1356190200,Little Elephant and Broken Sorting,dp|math|probabilities
+261B,1900,1358091000,Maxim and Restaurant,dp|math|probabilities
+261C,2000,1358091000,Maxim and Matrix,constructive algorithms|dp|math
+261D,2600,1358091000,Maxim and Increasing Subsequence,dp
+261E,2800,1358091000,Maxim and Calculator,brute force|dp|two pointers
+263E,2500,1358350200,Rhombus,brute force|data structures|dp
+264B,1500,1358686800,Good Sequences,dp|number theory
+264C,2000,1358686800,Choosing Balls,dp
+264D,2500,1358686800,Colorful Stones,dp|two pointers
+264E,3000,1358686800,Roadside Trees,data structures|dp
+268D,2300,1359387000,Wall Bars,dp
+269B,1700,1359732600,Greenhouse Effect,dp
+269D,2600,1359732600,Maximum Waterfall,data structures|dp|graphs|sortings
+273D,2400,1360769400,Dima and Figure,dp
+273E,2600,1360769400,Dima and Game,dp|games
+274B,1800,1361374200,Zero Tree,dfs and similar|dp|greedy|trees
+276D,1700,1361719800,Little Girl and Maximum XOR,bitmasks|dp|greedy|implementation|math
+277D,2800,1362065400,Google Code Jam,dp|probabilities
+279C,1700,1362411000,Ladder,dp|implementation|two pointers
+279D,2200,1362411000,The Minimum Number of Variables,bitmasks|dp
+279E,1900,1362411000,Beautiful Decomposition,dp|games|greedy|number theory
+280E,3000,1362929400,Sequence Transformation,brute force|data structures|dp|implementation|math
+282D,2100,1363188600,Yet Another Number Game,dp|games
+283B,1700,1363534200,Cow Program,dfs and similar|dp|graphs
+283C,2100,1363534200,Coin Troubles,dp
+283D,2400,1363534200,Cows and Cool Sequences,dp|math|number theory
+285D,1900,1363879800,Permutation Sum,bitmasks|combinatorics|dp|implementation|meet-in-the-middle
+285E,2600,1363879800,Positions in Permutations,combinatorics|dp|math
+288E,2800,1364916600,Polo the Penguin and Lucky Numbers,dp|implementation|math
+289B,1400,1364916600,Polo the Penguin and Matrix,brute force|dp|implementation|sortings|ternary search
+292D,1900,1366040100,Connected Components,data structures|dfs and similar|dp|dsu
+294B,1700,1365348600,Shaass and Bookshelf,dp|greedy
+294E,2300,1365348600,Shaass the Great,dp|trees
+295B,1700,1365694200,Greg and Graph,dp|graphs|shortest paths
+295C,2100,1365694200,Greg and Friends,combinatorics|dp|graphs|shortest paths
+295D,2400,1365694200,Greg and Caves,combinatorics|dp
+296B,2000,1365694200,Yaroslav and Two Strings,combinatorics|dp
+300D,2300,1366903800,Painting Square,dp|fft
+301E,2800,1367769900,Yaroslav and Arrangements,dp
+303E,3000,1368363600,Random Ranking,dp|math|probabilities
+309B,2100,1368803400,Context Advertising,dp|two pointers
+311B,2400,1369582200,Cats Transport,data structures|dp
+313B,1100,1369927800,Ilya and Queries,dp|implementation
+313D,2100,1369927800,Ilya and Roads,dp
+314C,2000,1370619000,Sereja and Subsequences,data structures|dp
+314E,2900,1370619000,Sereja and Squares,dp
+316B2,1600,1371042000,EKG,dfs and similar|dp
+316D1,2300,1371042000,PE Lesson,brute force|dp
+316D2,2300,1371042000,PE Lesson,dp
+316D3,2400,1371042000,PE Lesson,dp|math
+317D,2300,1371223800,Game with Powers,dp|games
+319C,2100,1371992400,Kalila and Dimna in the Logging Industry,dp|geometry
+321B,1900,1372433400,Ciel and Duel,dp|flows|greedy
+321D,2900,1372433400,Ciel and Flipboard,dp|greedy|math
+321E,2600,1372433400,Ciel and Gondolas,data structures|divide and conquer|dp
+327A,1200,1372941000,Flipping Game,brute force|dp|implementation
+327E,2300,1372941000,Axis Walking,bitmasks|combinatorics|constructive algorithms|dp|meet-in-the-middle
+331C1,1100,1374075000,The Great Julya Calendar,dp
+331C2,2400,1374075000,The Great Julya Calendar,dp
+331C3,2500,1374075000,The Great Julya Calendar,dp
+332B,1500,1374679800,Maximum Absurdity,data structures|dp|implementation
+332E,2400,1374679800,Binary Key,dp|greedy|implementation
+335B,1900,1375549200,Palindrome,constructive algorithms|dp
+335D,2400,1375549200,Rectangles and Square,brute force|dp
+335E,2800,1375549200,Counting Skyscrapers,dp|math|probabilities
+335F,3000,1375549200,"Buy One, Get One Free",dp|greedy
+336E,2700,1376062200,Vasily the Bear and Painting Square,bitmasks|combinatorics|dp|implementation
+337D,2000,1376668800,Book of Evil,dfs and similar|divide and conquer|dp|trees
+339C,1700,1377531000,Xenia and Weights,constructive algorithms|dfs and similar|dp|graphs|greedy|shortest paths
+340D,1500,1377876600,Bubble Sort Graph,binary search|data structures|dp
+342D,2100,1378540800,Xenia and Dominoes,bitmasks|dfs and similar|dp
+346B,2000,1379691000,Lucky Common Subsequence,dp|strings
+346D,2600,1379691000,Robot Control,dp|graphs|shortest paths
+348D,2500,1380295800,Turtles,dp|matrices
+348E,2800,1380295800,Pilgrims,dfs and similar|dp|trees
+349B,1700,1380295800,Color the Fence,data structures|dp|greedy|implementation
+351A,1800,1380900600,Jeff and Rounding,dp|greedy|implementation|math
+351B,1900,1380900600,Jeff and Furik,combinatorics|dp|probabilities
+351C,2500,1380900600,Jeff and Brackets,dp|matrices
+353D,2000,1381419000,Queue,constructive algorithms|dp
+353E,2200,1381419000,Antichain,dp|graph matchings|greedy
+354B,2400,1381678200,Game with Strings,bitmasks|dp|games
+354C,2100,1381678200,Vasya and Beautiful Arrays,brute force|dp|number theory
+354D,2900,1381678200,Transferring Pyramid,dp
+354E,2200,1381678200,Lucky Number Representation,constructive algorithms|dfs and similar|dp
+356D,2700,1381838400,Bags and Coins,bitmasks|constructive algorithms|dp|greedy
+356E,3000,1381838400,Xenia and String Problem,dp|hashing|implementation|string suffix structures|strings
+358D,1800,1382715000,Dima and Hares,dp|greedy
+359B,1400,1383379200,Permutation,constructive algorithms|dp|math
+360B,2000,1384102800,Levko and Array,binary search|dp
+360C,2500,1384102800,Levko and Strings,combinatorics|dp
+362C,1900,1384443000,Insertion Sort,data structures|dp|implementation|math
+363B,1100,1384156800,Fence,brute force|dp
+364B,2200,1384875000,Free Market,dp|greedy
+366C,1900,1385307000,Dima and Salad,dp
+367E,2700,1385479800,Sereja and Intervals,combinatorics|dp
+368B,1100,1385479800,Sereja and Suffixes,data structures|dp
+369D,2200,1385739000,Valera and Fools,dfs and similar|dp|graphs|shortest paths
+370E,2500,1386399600,Summer Reading,dp|greedy
+372B,1900,1386943200,Counting Rectangles is Fun,brute force|divide and conquer|dp
+372C,2100,1386943200,Watching Fireworks is Fun,data structures|dp|math
+374C,1900,1387380600,Inna and Dima,dfs and similar|dp|graphs|implementation
+374D,2000,1387380600,Inna and Sequence ,binary search|data structures|dp|trees
+375B,1600,1387893600,Maximum Submatrix 2,data structures|dp|implementation|sortings
+375E,3000,1387893600,Red and Black Tree,dp|implementation|math
+377C,2200,1388331000,Captains Mode,bitmasks|dp|games
+377E,2800,1388331000,Cookie Clicker,dp|geometry
+379D,2000,1388417400,New Year Letter,bitmasks|brute force|dp
+382E,2600,1389972600,Ksenia and Combinatorics,combinatorics|dp
+383D,2300,1390231800,Antimatter,dp
+383E,2700,1390231800,Vowels,combinatorics|divide and conquer|dp
+385C,1700,1390577700,Bear and Prime Numbers,binary search|brute force|data structures|dp|implementation|math|number theory
+385D,2200,1390577700,Bear and Floodlight,bitmasks|dp|geometry
+386C,2000,1389906900,Diverse Substrings,dp|strings|two pointers
+386D,2100,1389906900,Game with Points,dp|graphs|implementation|shortest paths
+401D,2000,1394465400,Roman and Numbers,bitmasks|brute force|combinatorics|dp|number theory
+402D,1800,1394983800,Upgrading Array,dp|greedy|math|number theory
+403D,2300,1394983800,Beautiful Pairs of Numbers,combinatorics|dp
+404D,1900,1395243000,Minesweeper 1D,dp|implementation
+407B,1600,1396162800,Long Path,dp|implementation
+407D,2700,1396162800,Largest Submatrix 3,dp|hashing
+413D,2000,1397977200,2048,bitmasks|dp
+414B,1400,1396798800,Mashmokh and ACM,combinatorics|dp|number theory
+416B,1300,1397376000,Art Union,brute force|dp|implementation
+416C,1600,1397376000,Booking System,binary search|dp|greedy|implementation
+416E,2500,1397376000,President's Path,dp|graphs|shortest paths
+417A,1500,1397749200,Elimination,dp|implementation|math
+417D,1900,1397749200,Cunning Gena,bitmasks|dp|greedy|sortings
+424D,2300,1398409200,Biathlon Track,binary search|brute force|constructive algorithms|data structures|dp
+424E,2500,1398409200,Colored Jenga,dfs and similar|dp|probabilities
+425C,2300,1398612600,Sereja and Two Sequences,data structures|dp
+425E,2500,1398612600,Sereja and Sets,dp
+427D,2200,1399044600,Match & Catch,dp|string suffix structures|strings
+429B,1600,1399822800,Working out,dp
+429C,2300,1399822800,Guess the Tree,bitmasks|constructive algorithms|dp|greedy|trees
+431C,1600,1400686200,k-Tree,dp|implementation|trees
+431D,2100,1400686200,Random Task,binary search|bitmasks|combinatorics|dp|math
+432D,2000,1400167800,Prefixes and Suffixes,dp|string suffix structures|strings|two pointers
+433B,1200,1400914800,Kuriyama Mirai's Stones,dp|implementation|sortings
+433E,2500,1400914800,Tachibana Kanade's Tofu,dp
+435D,2000,1401463800,Special Grid,brute force|dp|greedy
+436D,2800,1402673400,Pudding Monsters,dp
+436F,3000,1402673400,Banners,brute force|data structures|dp
+437E,2500,1401627600,The Child and Polygon,dp|geometry
+439E,2100,1401895800,Devu and Birthday Celebration,combinatorics|dp|math
+440D,2200,1401809400,Berland Federalization,dp|trees
+441E,2400,1402241400,Valera and Number,bitmasks|dp|math|probabilities
+446A,1600,1405256400,DZY Loves Sequences,dp|implementation|two pointers
+448C,1900,1405605600,Painting Fence,divide and conquer|dp|greedy
+449D,2400,1405774800,Jzzhu and Numbers,bitmasks|combinatorics|dp
+449E,2900,1405774800,Jzzhu and Squares,dp|math|number theory
+453B,2000,1406907000,Little Pony and Harmony Chest,bitmasks|brute force|dp
+453D,3000,1406907000,Little Pony and Elements of Harmony,dp|matrices
+455A,1500,1407511800,Boredom,dp
+455B,1900,1407511800,A Lot of Games,dfs and similar|dp|games|implementation|strings|trees
+455C,2100,1407511800,Civilization,dfs and similar|dp|dsu|ternary search|trees
+459E,1900,1408116600,Pashmak and Graph,dp|sortings
+461B,2000,1409061600,Appleman and Tree,dfs and similar|dp|trees
+463D,1900,1409383800,Gargari and Permutations,dfs and similar|dp|graphs|implementation
+464C,2100,1410103800,Substitutes in Number,dp
+464D,2700,1410103800,World of Darkraft - 2,dp|probabilities
+466C,1700,1410535800,Number of Ways,binary search|brute force|data structures|dp|two pointers
+466D,2100,1410535800,Increase Sequence,combinatorics|dp
+467C,1700,1411054200,George and Job,dp|implementation
+467D,2400,1411054200,Fedor and Essay,dfs and similar|dp|graphs|hashing|strings
+467E,2300,1411054200,Alex and Complicated Task,data structures|dp|greedy
+474D,1700,1412609400,Flowers,dp
+474E,2000,1412609400,Pillars,binary search|data structures|dp|sortings|trees
+476B,1300,1413122400,Dreamoon and WiFi,bitmasks|brute force|combinatorics|dp|math|probabilities
+476E,2200,1413122400,Dreamoon and Strings,dp|strings
+477D,2700,1413122400,Dreamoon and Binary,dp|strings
+478D,2000,1413474000,Red-Green Towers,dp
+479E,1900,1413709200,Riding in a Lift,combinatorics|dp
+480D,2600,1413709200,Parcels,dp|graphs
+482C,2600,1414170000,Game with Strings,bitmasks|dp|probabilities
+482D,2700,1414170000,Random Function and Tree,combinatorics|dp|trees
+484D,2400,1415205000,Kindergarten,data structures|dp|greedy
+486D,2100,1415718000,Valid Sets,dfs and similar|dp|math|trees
+486E,2200,1415718000,LIS of Sequence,data structures|dp|greedy|hashing|math
+487B,2000,1416590400,Strip,binary search|data structures|dp|two pointers
+489B,1200,1416238500,BerSU Ball,dfs and similar|dp|graph matchings|greedy|sortings|two pointers
+489C,1400,1416238500,Given Length and Sum of Digits...,dp|greedy|implementation
+489E,2300,1416238500,Hiking,binary search|dp
+489F,2100,1416238500,Special Matrices,combinatorics|dp
+490F,2200,1416733800,Treeland Tour,data structures|dfs and similar|dp|trees
+494B,2000,1418488200,Obsessive String,dp|strings
+494C,2600,1418488200,Helping People,dp|probabilities
+494D,2700,1418488200,Birthday,data structures|dfs and similar|dp|trees
+497E,2900,1418833800,Subsequences Return,dp|matrices
+498B,2400,1419438600,Name That Tune,dp|probabilities|two pointers
+498D,2400,1419438600,Traffic Jams in the Land,data structures|dp|number theory
+498E,2700,1419438600,Stairs and Lines,dp|matrices
+500E,2300,1419951600,New Year Domino,data structures|dp|dsu
+500F,2700,1419951600,New Year Shopping,divide and conquer|dp
+505B,1400,1421586000,Mr. Kitayuta's Colorful Graph,dfs and similar|dp|dsu|graphs
+505C,1900,1421586000,"Mr. Kitayuta, the Treasure Hunter",dfs and similar|dp|two pointers
+506E,3000,1421586000,Mr. Kitayuta's Gift,combinatorics|dp|matrices|strings
+507D,2200,1422028800,The Maths Lecture,dp|implementation
+507E,2100,1422028800,Breaking Good,dfs and similar|dp|graphs|shortest paths
+508E,2200,1422376200,Arthur and Brackets,dp|greedy
+509C,2000,1422705600,Sums of Digits,dp|greedy|implementation
+509F,2300,1422705600,Progress Monitoring,dp|trees
+510D,1900,1422894600,Fox And Jumping,bitmasks|brute force|dp|math
+512D,2900,1422894600,Fox And Travelling,dp|trees
+513E1,2600,1423328400,Subarray Cuts,dp
+513E2,2700,1423328400,Subarray Cuts,dp
+513G1,1800,1423328400,Inversions problem,brute force|dfs and similar|dp|meet-in-the-middle
+513G2,2400,1423328400,Inversions problem,dp|probabilities
+514E,2200,1423931400,Darth Vader and Tree,dp|matrices
+516D,2800,1424190900,Drazil and Morning Exercise,dfs and similar|dp|dsu|trees|two pointers
+518D,1700,1424795400,Ilya and Escalator,combinatorics|dp|math|probabilities
+518F,2300,1424795400,Pasha and Pipe,binary search|brute force|combinatorics|dp|implementation
+519D,1800,1425128400,A and B and Interesting Substrings,data structures|dp|two pointers
+519E,2100,1425128400,A and B and Lecture Rooms,binary search|data structures|dfs and similar|dp|trees
+520E,2200,1425279600,Pluses everywhere,combinatorics|dp|math|number theory
+522A,1200,1425740400,Reposts,*special|dfs and similar|dp|graphs|trees
+522B,1100,1425740400,Photo to Remember,*special|data structures|dp|implementation
+524B,1700,1426946400,Фото на память - 2 (round version),dp|greedy
+525E,2100,1427387400,Anya and Cubes,binary search|bitmasks|brute force|dp|math|meet-in-the-middle
+526E,2400,1428165300,Transmitting Levels,dp|implementation
+527D,1800,1426610700,Clique Problem,data structures|dp|greedy|implementation|sortings
+533B,2000,1429286400,Work Group,dfs and similar|dp|graphs|strings|trees
+533D,3000,1429286400,Landmarks,data structures|dp
+533E,1800,1429286400,Correcting Mistakes,constructive algorithms|dp|greedy|hashing|strings|two pointers
+534B,1400,1428854400,Covered Path,dp|greedy|math
+534F,2400,1428854400,Simplified Nonogram,bitmasks|dp|hashing|meet-in-the-middle
+536D,2900,1429029300,Tavas in Kansas,dp|games
+538B,1400,1430064000,Quasi Binary,constructive algorithms|dp|greedy|implementation
+538E,2200,1430064000,Demiurges Play Again,dfs and similar|dp|math|trees
+540D,1900,1430411400,Bad Luck Island,dp|probabilities
+542D,2600,1430668800,Superhero's Job,dfs and similar|dp|hashing|math|number theory
+542F,2100,1430668800,Quest,dp|greedy
+543A,1800,1431016200,Writing Code,dp
+543C,2500,1431016200,Remembering Strings,bitmasks|dp
+543D,2300,1431016200,Road Improvement,dp|trees
+545C,1500,1432053000,Woodcutters,dp|greedy
+546D,1700,1432312200,Soldier and Number Game,constructive algorithms|dp|math|number theory
+547B,1900,1432658100,Mike and Feet,binary search|data structures|dp|dsu
+547C,2300,1432658100,Mike and Foam,bitmasks|combinatorics|dp|math|number theory
+548B,1400,1432658100,Mike and Fun,brute force|dp|greedy|implementation
+550A,1500,1433435400,Two Substrings,brute force|dp|greedy|implementation|strings
+550C,1500,1433435400,Divisibility by Eight,brute force|dp|math
+552C,1900,1434645000,Vanya and Scales,brute force|dp|greedy|math|meet-in-the-middle|number theory
+552E,2100,1434645000,Vanya and Brackets,brute force|dp|expression parsing|greedy|implementation|strings
+553A,1500,1435163400,Kyoya and Colored Balls,combinatorics|dp|math
+557C,1900,1435676400,Arthur and Table,brute force|data structures|dp|greedy|math|sortings
+557E,2300,1435676400,Ann and Half-Palindrome,data structures|dp|graphs|string suffix structures|strings|trees
+559C,2200,1437573600,Gerald and Giant Chess,combinatorics|dp|math|number theory
+559E,3000,1437573600,Gerald and Path,dp|sortings
+566F,1500,1438273200,Clique in the Divisibility Graph,dp|math|number theory
+567C,1700,1438790400,Geometric Progression,binary search|data structures|dp
+567F,2400,1438790400,Mausoleum,dp
+568B,1900,1439224200,Symmetric and Transitive,combinatorics|dp|math
+568E,3000,1439224200,Longest Increasing Subsequence,data structures|dp
+570E,2300,1439483400,Pig and Palindromes,combinatorics|dp
+571B,2000,1440261000,Minimization,dp|greedy|sortings
+573B,1600,1440865800,Bear and Blocks,binary search|data structures|dp|math
+573D,3000,1440865800,Bear and Cavalry,data structures|divide and conquer|dp
+575F,2100,1441526400,Bulbo,dp|greedy
+575H,1800,1441526400,Bots,combinatorics|dp|math|number theory
+576D,2700,1441902600,Flights for Regular Customers,dp|matrices
+577B,1900,1441902600,Modulo Sum,combinatorics|data structures|dp|two pointers
+578D,2700,1442416500,LCS Again,dp|greedy
+580A,900,1442939400,Kefa and First Steps,brute force|dp|implementation
+580D,1800,1442939400,Kefa and Dishes,bitmasks|dp
+581E,2800,1443430800,Kojiro and Furrari,dp|greedy
+581F,2400,1443430800,Zublicanes and Mumocrates,dp|trees|two pointers
+582B,1900,1443890700,Once Again...,constructive algorithms|dp|matrices
+582E,3000,1443890700,Boolean Function,bitmasks|dp|expression parsing
+587B,2100,1444926600,Duff in Beach,dp
+590D,2300,1445763600,Top Secret Task,dp
+592D,2200,1446309000,Super M,dfs and similar|dp|graphs|trees
+593E,2400,1446655500,Strange Calculation and Cats,dp|matrices
+596D,2300,1447605300,Wilbur and Trees,dp|math|probabilities|sortings
+596E,2500,1447605300,Wilbur and Strings,dfs and similar|dp|graphs|strings
+597B,1600,1447264800,Restaurant,dp|greedy|sortings
+597C,1900,1447264800,Subsequences,data structures|dp
+598E,2000,1447426800,Chocolate Bar,brute force|dp
+599E,2600,1448037300,Sandy and Nuts,bitmasks|dp|trees
+601C,2300,1448382900,Kleofáš and the n-thlon,dp|math|probabilities
+601E,2800,1448382900,A Museum Robbery,data structures|dp
+602B,1400,1448382900,Approximating a Constant Range,dp|implementation|two pointers
+603A,1600,1448984100,Alternative Thinking,dp|greedy|math
+607A,1600,1450888500,Chain Reaction,binary search|dp
+607B,1900,1450888500,Zuma,dp
+611C,1500,1451487900,New Year and Domino,dp|implementation
+611D,2000,1451487900,New Year and Ancient Prophecy,dp|hashing|strings
+612F,2600,1451055600,Simba on the Circle,dp
+613B,1900,1452789300,Skills,binary search|brute force|dp|greedy|sortings|two pointers
+613D,2800,1452789300,Kingdom and its Cities,dfs and similar|divide and conquer|dp|graphs|sortings|trees
+615B,1600,1452261900,Longtail Hedgehog,dp|graphs
+615C,2000,1452261900,Running Track,dp|greedy|strings|trees
+618D,2200,1454087400,Hamiltonian Spanning Tree,dfs and similar|dp|graph matchings|greedy|trees
+621E,2000,1454249100,Wet Shark and Blocks,dp|matrices
+623B,2300,1454605500,Array GCD,dp|greedy|number theory
+623C,2900,1454605500,Electric Charges,binary search|dp
+626B,1300,1455384900,Cards,constructive algorithms|dp|math
+626D,1800,1455384900,Jerry's Protest,brute force|combinatorics|dp|probabilities
+626F,2400,1455384900,Group Projects,dp
+627A,1700,1456683000,XOR Equation,dp|math
+627D,2600,1456683000,Preorder Test,binary search|dfs and similar|dp|graphs|greedy|trees
+628B,1300,1455894000,New Skateboard,dp
+628D,2200,1455894000,Magic Numbers,dp
+629C,2000,1455986100,Famil Door and Brackets,dp|strings
+629D,2000,1455986100,Babaei and Birthday Cake,data structures|dp
+629E,2300,1455986100,Famil Door and Roads,combinatorics|data structures|dfs and similar|dp|probabilities|trees
+631E,2600,1457022900,Product Sum,data structures|dp|geometry
+632E,2400,1456844400,Thief in a Shop,divide and conquer|dp|fft|math
+633C,1900,1456506900,Spy Syndrome 2,data structures|dp|hashing|implementation|sortings|string suffix structures|strings
+633D,2000,1456506900,Fibonacci-ish,brute force|dp|hashing|implementation|math
+633F,2600,1456506900,The Chocolate Spree,dfs and similar|dp|graphs|trees
+637D,1600,1457870400,Running with Obstacles,*special|data structures|dp|greedy
+641D,2400,1461515700,Little Artem and Random Variable,dp|implementation|math|probabilities
+643C,2400,1462633500,Levels and Regions,dp
+643E,2700,1462633500,Bear and Destroying Subtrees,dp|math|probabilities|trees
+643F,2900,1462633500,Bears and Juice,dp|math|meet-in-the-middle
+645D,1800,1458318900,Robot Rapping Results Report,binary search|dp|graphs
+645E,2200,1458318900,Intellectual Inquiry,dp|greedy|strings
+650B,1900,1457342700,Image Preview,binary search|brute force|dp|two pointers
+650C,2200,1457342700,Table Compression,dfs and similar|dp|dsu|graphs|greedy
+650D,2600,1457342700,Zip-line,binary search|data structures|dp|hashing
+651A,1100,1457342700,Joysticks,dp|greedy|implementation|math
+653B,1300,1458376500,Bear and Compressing,brute force|dfs and similar|dp|strings
+659G,2300,1459353900,Fence Divercity,combinatorics|dp|number theory
+660C,1600,1460127600,Hard Process,binary search|dp|two pointers
+662C,2600,1460729700,Binary Table,bitmasks|brute force|divide and conquer|dp|fft|math
+665C,1300,1461164400,Simple Strings,dp|greedy|strings
+665F,2400,1461164400,Four Divisors,data structures|dp|math|number theory|sortings|two pointers
+666A,1800,1461947700,Reberland Linguistics,dp|implementation|strings
+671A,1800,1462984500,Recycling Bottles,dp|geometry|greedy|implementation
+671D,2900,1462984500,Roads in Yusland,data structures|dp|greedy
+675E,2300,1463416500,Trains and Statistic,data structures|dp|greedy
+676C,1500,1464188700,Vasya and String,binary search|dp|strings|two pointers
+677D,2300,1464798900,Vanya and Treasure,data structures|dp|graphs|shortest paths
+677E,2300,1464798900,Vanya and Balloons,binary search|brute force|dp|implementation
+678E,2200,1465834200,Another Sith Tournament,bitmasks|dp|math|probabilities
+679B,2200,1465403700,Bear and Tower of Cubes,binary search|dp|greedy
+682C,1600,1466181300,Alyona and the Tree,dfs and similar|dp|graphs|trees
+682D,1900,1466181300,Alyona and Strings,dp|strings
+685A,1700,1466699700,Robbers' watch,brute force|combinatorics|dp|math
+685B,1900,1466699700,Kay and Snowflake,data structures|dfs and similar|dp|trees
+687C,1900,1467219900,The Values You Can Make,dp
+689E,2000,1467822900,Mike and Geometry Problem,combinatorics|data structures|dp|geometry|implementation
+690D3,2100,1468137600,The Wall (hard),dp
+691F,2200,1468425600,Couple Cover,brute force|dp|number theory
+696C,2000,1468514100,PLEASE,combinatorics|dp|implementation|math|matrices
+696D,2500,1468514100,Legen...,data structures|dp|matrices|strings
+698A,1400,1468933500,Vacations,dp
+698C,2400,1468933500,LRU,bitmasks|dp|math|probabilities
+700B,1800,1469205300,Connecting Universities,dfs and similar|dp|graphs|trees
+702A,800,1469804400,Maximum Increase,dp|greedy|implementation
+703E,2600,1470323700,Mishka and Divisors,dp|number theory
+704B,2500,1470578700,Ant Man,dp|graphs|greedy
+704C,2900,1470578700,Black Widow,dp|graphs|implementation|math
+706B,1100,1470933300,Interesting drink,binary search|dp|implementation
+706C,1600,1470933300,Hard problem,dp|strings
+708C,2300,1472056500,Centroids,data structures|dfs and similar|dp|graphs|greedy|trees
+710E,2000,1471875000,Generate a String,dfs and similar|dp
+711C,1700,1472472300,Coloring Trees,dp
+712D,2200,1473525900,Memory and Scores,combinatorics|dp|math
+713C,2300,1473784500,Sonya and Problem Wihtout a Legend,dp|sortings
+717B,2700,1473584400,R3D3’s Summer Adventure,dp|greedy
+718A,1700,1474635900,Efim and Strange Grade,dp|implementation|math
+718D,2900,1474635900,Andrew and Chemistry,dp|hashing|trees
+721C,1800,1475244300,Journey,dp|graphs
+721E,2700,1475244300,Road to Home,binary search|dp
+722E,2900,1475330700,Research Rover,combinatorics|dp
+724E,2900,1475928900,Goods transportation,dp|flows|greedy
+724F,2700,1475928900,Uniformly Branched Trees,combinatorics|dp|trees
+727F,2300,1476522300,Polycarp's problems,binary search|dp|greedy
+729B,1200,1479632700,Spotlights,dp|implementation
+729F,2500,1479632700,Financiers Game,dp
+730I,2000,1477209600,Olympiad in Programming and Sports,dp|flows|graphs|greedy
+730J,1900,1477209600,Bottles,dp
+731E,2200,1476611100,Funny Game,dp|games
+732B,1000,1476714900,Cormen --- The Best Friend Of a Man,dp|greedy
+733C,1800,1477922700,Epidemic in Monstropolis,constructive algorithms|dp|greedy|two pointers
+734C,1600,1479227700,Anton and Making Potions,binary search|dp|greedy|two pointers
+734E,2100,1479227700,Anton and Tree,dfs and similar|dp|trees
+735E,2500,1480264500,Ostap and Tree,dp|trees
+739E,3000,1479918900,Gosha is hunting,brute force|data structures|dp|flows|math|probabilities|sortings
+741B,1600,1481034900,Arpa's weak amphitheater and Mehrdad's valuable Hoses,dfs and similar|dp|dsu
+743D,1800,1481726100,Chloe and pleasant prizes,dfs and similar|dp|graphs|trees
+743E,2200,1481726100,Vladik and cards,binary search|bitmasks|brute force|dp
+744C,2400,1481992500,Hongcow Buys a Deck of Cards,bitmasks|brute force|dp
+747D,1800,1482113100,Winter Is Coming,dp|greedy|sortings
+747F,2500,1482113100,Igor and Interesting Numbers,brute force|combinatorics|dp|math
+750D,1900,1483107300,New Year and Fireworks,brute force|data structures|dfs and similar|dp|implementation
+750E,2600,1483107300,New Year and Old Subsequence,data structures|divide and conquer|dp|matrices
+753A,1000,1483002300,Santa Claus and Candies,dp|greedy|math
+754C,2200,1483713300,Vladik and chat,brute force|constructive algorithms|dp|implementation|strings
+755F,2600,1484499900,PolandBall and Gifts,bitmasks|dp|greedy
+756B,1600,1485108900,Travel Card,binary search|dp
+756D,2400,1485108900,Bacterial Melee,brute force|combinatorics|dp|string suffix structures
+757D,2200,1484235300,Felicity's Big Secret Revealed,bitmasks|dp
+757E,2500,1484235300,Bash Plays with Functions,brute force|combinatorics|dp|number theory
+758D,2000,1484838300,Ability To Convert,constructive algorithms|dp|greedy|math|strings
+758E,2600,1484838300,Broken Tree,dfs and similar|dp|graphs|greedy|trees
+761C,1500,1485873300,Dasha and Password,brute force|dp|implementation
+761F,2600,1485873300,Dasha and Photos,brute force|data structures|dp|implementation
+762D,2300,1485354900,Maximum path,dp|greedy|implementation
+763A,1600,1486042500,Timofey and a tree,dfs and similar|dp|dsu|graphs|implementation|trees
+765E,2200,1487059500,Tree Folding,dfs and similar|dp|greedy|implementation|trees
+766C,1700,1486487100,Mahmoud and a Message,brute force|dp|greedy|strings
+766D,2000,1486487100,Mahmoud and a Dictionary,data structures|dfs and similar|dp|dsu|graphs
+766E,2100,1486487100,Mahmoud and a xor trip,bitmasks|constructive algorithms|data structures|dfs and similar|dp|math|trees
+768C,1800,1487606700,Jon Snow and his Favourite Number,brute force|dp|implementation|sortings
+768D,2200,1487606700,Jon and Orbs,dp|math|probabilities
+768E,2100,1487606700,Game of Stones,bitmasks|dp|games
+771C,2100,1489851300,Bear and Tree Jumps,dfs and similar|dp|trees
+771D,2500,1489851300,Bear and Company,dp
+771E,3000,1489851300,Bear and Rectangle Strips,dp|greedy
+772C,2300,1492356900,Vulnerable Kerbals,constructive algorithms|dp|graphs|math|number theory
+772D,2700,1492356900,Varying Kibibits,bitmasks|dp
+773D,2700,1494171900,Perishable Roads,dp|graphs|shortest paths
+774I,2300,1491406500,Composing Of String,*special|dp
+774J,2000,1491406500,Stepan's Series,*special|dp
+776G,2900,1487861100,Sherlock and the Encrypted Data,bitmasks|combinatorics|dp
+777B,1300,1487930700,Game of Credit Cards,data structures|dp|greedy|sortings
+777C,1600,1487930700,Alyona and Spreadsheet,binary search|data structures|dp|greedy|implementation|two pointers
+777E,2000,1487930700,Hanoi Factory,brute force|data structures|dp|greedy|sortings
+778E,3000,1488096300,Selling Numbers,dp|sortings
+780F,2400,1488705300,Axel and Marston in Bitland,bitmasks|dp|graphs|matrices
+780G,2700,1488705300,Andryusha and Nervous Barriers,data structures|dp
+785D,2300,1489590300,Anton and School - 2,combinatorics|dp|math|number theory
+786A,2000,1490281500,Berzerk,dfs and similar|dp|games
+788A,1600,1490803500,Functions again,dp|two pointers
+792C,2000,1490625300,Divide by Three,dp|greedy|math|number theory
+793D,2100,1492965900,Presents in Bankopolis,dp|graphs|shortest paths
+793E,2900,1492965900,Problem of offices,constructive algorithms|dfs and similar|dp|trees
+793F,3000,1492965900,Julia the snail,data structures|divide and conquer|dp
+796C,1900,1491842100,Bank Hacking,constructive algorithms|data structures|dp|trees
+796D,2100,1491842100,Police Stations,constructive algorithms|dfs and similar|dp|graphs|shortest paths|trees
+796E,2400,1491842100,Exam Cheating,binary search|dp
+797B,1400,1492266900,Odd sum,dp|greedy|implementation
+797E,2000,1492266900,Array Queries,brute force|data structures|dp
+797F,2600,1492266900,Mice and Holes,data structures|dp|greedy|sortings
+798B,1300,1492785300,Mike and strings,brute force|dp|strings
+798C,1700,1492785300,Mike and gcd problem,dp|greedy|number theory
+799D,2100,1494516900,Field expansion,brute force|dp|meet-in-the-middle
+802J2,2100,1495958700,Send the Fool Further! (medium),dp|trees
+802J3,2400,1495958700,Send the Fool Further! (hard),dfs and similar|dp|math|trees
+803E,2000,1493391900,Roma and Poker,dp|graphs
+804D,2500,1493909400,Expected diameter of a tree,binary search|brute force|dfs and similar|dp|sortings|trees
+808E,2300,1494860700,Selling Souvenirs,binary search|dp|greedy|ternary search
+808G,2300,1494860700,Anthem of Berland,dp|strings
+809C,2600,1495303500,Find a car,combinatorics|divide and conquer|dp
+809D,2900,1495303500,Hitchhiking in the Baltic States,data structures|dp
+811C,1900,1495877700,Vladik and Memorable Trip,dp|implementation
+812B,1600,1496326500,"Sagheer, the Hausmeister",bitmasks|brute force|dp
+813D,2600,1496675100,Two Melodies,dp|flows
+814C,1600,1496837700,An impassioned circulation of affection,brute force|dp|strings|two pointers
+814D,2000,1496837700,An overnight dance in discotheque,dfs and similar|dp|geometry|greedy|trees
+814E,2600,1496837700,An unavoidable detour for home,combinatorics|dp|graphs|shortest paths
+815C,2400,1497710100,Karen and Supermarket,brute force|dp|trees
+817C,1600,1497539100,Really Big Numbers,binary search|brute force|dp|math
+821E,2100,1498401300,Okabe and El Psy Kongroo,dp|matrices
+822D,1800,1499011500,My pretty girl Noora,brute force|dp|greedy|math|number theory
+822E,2400,1499011500,Liar,binary search|dp|hashing|string suffix structures
+825F,2400,1500217500,String Compression,dp|hashing|string suffix structures|strings
+830A,1800,1499958300,Office Keys,binary search|brute force|dp|greedy|sortings
+830D,2800,1499958300,Singer House,combinatorics|dp|graphs|trees
+833B,2200,1501425300,The Bakery,binary search|data structures|divide and conquer|dp|two pointers
+835C,1600,1501511700,Star sky,dp|implementation
+835D,1900,1501511700,Palindromic characteristics,brute force|dp|hashing|strings
+835F,2500,1501511700,Roads in the Kingdom,dfs and similar|dp|graphs|trees
+837D,2100,1501773300,Round Subset,dp|math
+838C,2800,1502085900,Future Failure,dp|games
+838E,2300,1502085900,Convex Countour,dp
+839C,1500,1502548500,Journey,dfs and similar|dp|graphs|probabilities|trees
+839D,2200,1502548500,Winter is here,combinatorics|dp|math|number theory
+840B,2100,1503068700,Leha and another game about graph,constructive algorithms|data structures|dfs and similar|dp|graphs
+840C,2500,1503068700,On the Bench,combinatorics|dp
+845D,1800,1503327900,Driving Test,data structures|dp|greedy
+845F,2500,1503327900,Guards In The Storehouse,bitmasks|dp
+846C,1800,1504623900,Four Segments,brute force|data structures|dp
+847E,1800,1505739900,Packmen,binary search|dp
+848D,2900,1504272900,Shake It!,combinatorics|dp|flows|graphs
+850C,2200,1504535700,Arpa and a game with Mojtaba,bitmasks|dp|games
+850D,2800,1504535700,Tournament Construction,constructive algorithms|dp|graphs|greedy|math
+852B,2000,1504432800,Neural Network country,dp|matrices
+852E,2100,1504432800,Casinos and travel,dp
+852H,3000,1504432800,Bob and stages,dp|geometry
+853D,2400,1504702500,Michael and Charging Stations,binary search|dp|greedy
+855B,1500,1506263700,Marvolo Gaunt's Ring,brute force|data structures|dp
+855C,2000,1506263700,Helga Hufflepuff's Cup,dp|trees
+855E,2200,1506263700,Salazar Slytherin's Locket,bitmasks|dp
+856B,2300,1505050500,Similar Words,dp|hashing|strings|trees
+856C,2400,1505050500,Eleventh Birthday,combinatorics|dp|math
+856D,2400,1505050500,Masha and Cactus,dp|trees
+858C,1500,1505653500,Did you mean...,dp|greedy|implementation
+859C,1500,1505583300,Pie Rules,dp|games
+859D,2100,1505583300,Third Month Insanity,dp|probabilities|trees
+864E,2000,1506335700,Fire,dp|sortings
+865C,2400,1506791100,Gotta Go Fast,binary search|dp
+868C,1500,1507187100,Qualification Rounds,bitmasks|brute force|constructive algorithms|dp
+868D,2200,1507187100,Huge Strings,bitmasks|brute force|dp|implementation|strings
+868E,2700,1507187100,Policeman and a Tree,dp|graphs|trees
+868F,2500,1507187100,Yet Another Minimization Problem,divide and conquer|dp
+869C,1800,1507296900,The Intriguing Obsession,combinatorics|dp|math
+870C,1300,1508054700,Maximum splitting,dp|greedy|math|number theory
+873B,1500,1507817100,Balanced Substring,dp|implementation
+873E,2300,1507817100,Awards For Contestants,brute force|data structures|dp
+875E,2600,1508151900,Delivery Club,binary search|data structures|dp
+877B,1500,1508773500,Nikita and string,brute force|dp
+883D,2500,1508573100,Packmen Strike Back,binary search|dp|math
+883I,1900,1508573100,Photo Processing,binary search|dp
+886E,2400,1510502700,Maximum Element,combinatorics|dp|math
+888D,1600,1510239900,Almost Identity Permutations,combinatorics|dp|math
+888F,2500,1510239900,Connecting Vertices,dp|graphs
+889E,3000,1510502700,Mod Mod Mod,binary search|dp|math
+891A,1500,1510929300,Pride,brute force|dp|greedy|math|number theory
+893D,1900,1511449500,Credit Card,data structures|dp|greedy|implementation
+893E,2000,1511449500,Counting Arrays,combinatorics|dp|math|number theory
+894A,800,1511099700,QAQ,brute force|dp
+894E,2100,1511099700,Ralph and Mushrooms,dp|graphs
+895C,2000,1511712300,Square Subsets,bitmasks|combinatorics|dp|math
+900D,2000,1513008300,Unusual Sequences,bitmasks|combinatorics|dp|math|number theory
+900E,2100,1513008300,Maximum Questions,data structures|dp|strings
+903F,2200,1513091100,Clear The Matrix,bitmasks|dp
+906C,2400,1514037900,Party,bitmasks|brute force|dp|graphs
+908D,2200,1514562000,New Year and Arbitrary Arrangement,dp|math|probabilities
+908E,2500,1514562000,New Year and Entity Enumeration,bitmasks|combinatorics|dp|math
+908G,2800,1514562000,New Year and Original Order,dp|math
+909C,1800,1514392500,Python Indentation,dp
+909E,1900,1514392500,Coprocessor,dfs and similar|dp|graphs|greedy
+910A,800,1513940700,The Way to Home,dfs and similar|dp|greedy|implementation
+913C,1600,1515422700,Party Lemonade,bitmasks|dp|greedy
+913E,2400,1515422700,Logical Expression,bitmasks|dp|shortest paths
+913F,2800,1515422700,Strongly Connected Tournament,dp|graphs|math|probabilities
+914C,1800,1516462500,Travelling Salesman and Special Numbers,brute force|combinatorics|dp
+914G,2600,1516462500,Sum the Fibonacci,bitmasks|divide and conquer|dp|fft|math
+915C,1700,1515848700,Permute Digits,dp|greedy
+917A,1800,1517236500,The Monster,dp|greedy|implementation|math
+917B,1700,1517236500,MADMAX,dfs and similar|dp|games|graphs
+917C,2900,1517236500,Pollywog,combinatorics|dp|matrices
+917D,2600,1517236500,Stranger Trees,dp|math|matrices|trees
+919B,1100,1517403900,Perfect Number,binary search|brute force|dp|implementation|number theory
+919D,1700,1517403900,Substring,dfs and similar|dp|graphs
+920D,2400,1517582100,Tanks,dp|greedy|implementation
+922E,2200,1518023700,Birds,dp
+922F,2400,1518023700,Divisibility,constructive algorithms|dp|greedy|number theory
+924C,1700,1521905700,Riverside Curio,data structures|dp|greedy
+924E,2700,1521905700,Wardrobe,dp|greedy
+928B,1400,1519486500,Chat,*special|dp
+930C,1900,1520177700,Teodor is not a liar!,data structures|dp
+930E,2900,1520177700,Coins Exhibition,data structures|dp|math
+932D,2200,1518705300,Tree,binary search|dp|trees
+932E,2400,1518705300,Team Work,combinatorics|dp|math
+932F,2700,1518705300,Escape Through Leaf,data structures|dp|geometry
+932G,2900,1518705300,Palindrome Partition,dp|string suffix structures|strings
+933A,1800,1518609900,A Twisty Movement,dp
+935E,2300,1519058100,Fafa and Ancient Mathematics,dfs and similar|dp|trees
+936B,2100,1519574700,Sleepy Game,dfs and similar|dp|games|graphs
+936D,3000,1519574700,World of Tank,dp|greedy
+938F,2700,1518793500,Erasing Substrings,bitmasks|dp|greedy
+939F,2400,1518861900,Cutlet,data structures|dp
+940B,1400,1519464900,Our Tanya is Crying Out Loud,dp|greedy
+940E,2000,1519464900,Cashback,data structures|dp|greedy|math
+946D,1800,1520348700,Timetable,dp
+946F,2400,1520348700,Fibonacci String Subsequences,combinatorics|dp|matrices
+946G,2500,1520348700,Almost Increasing Array,data structures|dp
+954F,2100,1521698700,Runner's Problem,dp|matrices|sortings
+954H,2500,1521698700,Path Counting,combinatorics|dp
+955F,2600,1521822900,Heaps,dp|trees
+958C2,2000,1523689500,Encryption (medium),dp
+958C3,2500,1523689500,Encryption (hard),data structures|dp
+958E2,2200,1523689500,Guard Duty (medium),binary search|dp|greedy|sortings
+959E,1900,1522771500,Mahmoud and Ehab and the xor-MST,bitmasks|dp|graphs|implementation|math
+959F,2400,1522771500,Mahmoud and Ehab and yet another xor task,bitmasks|dp|math|matrices
+960E,2300,1523117100,Alternating Tree,combinatorics|dfs and similar|divide and conquer|dp|probabilities|trees
+960F,2100,1523117100,Pathwalks,data structures|dp|graphs
+960G,2900,1523117100,Bandit Blues,combinatorics|dp|fft|math
+961B,1200,1522850700,Lecture Sleep,data structures|dp|implementation|two pointers
+963B,2000,1523973900,Destruction of a Tree,constructive algorithms|dfs and similar|dp|greedy|trees
+965E,2200,1524677700,Short Code,data structures|dp|greedy|strings|trees
+977F,1700,1525615500,Consecutive Subsequence,dp
+979D,2200,1526308500,Kuro and GCD and XOR and SUM,binary search|bitmasks|brute force|data structures|dp|dsu|greedy|math|number theory|strings|trees
+979E,2400,1526308500,Kuro and Topological Parity,dp
+980D,2100,1525791900,Perfect Groups,dp|math|number theory
+980F,2900,1525791900,Cactus to Tree,dp|graphs|trees
+981D,1900,1527432600,Bookshelves,bitmasks|dp|greedy
+981E,2200,1527432600,Addition on Segments,bitmasks|data structures|divide and conquer|dp
+982C,1500,1526574900,Cut 'em all!,dfs and similar|dp|graphs|greedy|trees
+983B,1800,1526395500,XOR-pyramid,dp
+983C,2400,1526395500,Elevator,dp|graphs|shortest paths
+985E,2100,1526913900,Pencils and Boxes,binary search|data structures|dp|greedy|two pointers
+987C,1400,1527608100,Three displays,brute force|dp|implementation
+988F,2100,1527863700,Rain and Umbrellas,dp
+989E,2700,1528724100,A Trance of Nightfall,dp|geometry|matrices|probabilities
+990F,2400,1528625100,Flow Control,dfs and similar|dp|greedy|trees
+990G,2400,1528625100,GCD Counting,divide and conquer|dp|dsu|number theory|trees
+991D,1500,1529768100,Bishwock,dp|greedy
+993D,2500,1529166900,Compute Power,binary search|dp|greedy
+995F,2700,1529858100,Cowmpany Cowmpensation,combinatorics|dp|math|trees
+996A,800,1529858100,Hit the Lottery,dp|greedy
+997B,2000,1530453900,Roman Digits,brute force|combinatorics|dp|greedy|math
+998B,1200,1530453900,Cutting,dp|greedy|sortings
+999F,2000,1529591700,Cards and Joy,dp
+1000D,1900,1530110100,Yet Another Problem On a Subsequence,combinatorics|dp
+1000G,2700,1530110100,Two-Paths,data structures|dp|trees
+1003F,2200,1530628500,Abbreviation,dp|hashing|strings
+1004E,2400,1530808500,Sonya and Ice Cream,binary search|data structures|dp|greedy|shortest paths|trees
+1005D,1500,1531150500,Polycarp and Div 3,dp|greedy|number theory
+1006F,2100,1531751700,Xor-Paths,bitmasks|brute force|dp|meet-in-the-middle
+1012C,1900,1532938500,Hills,dp
+1015E1,1700,1533047700,Stars Drawing (Easy Edition),brute force|dp|greedy
+1015E2,1900,1533047700,Stars Drawing (Hard Edition),binary search|dp|greedy
+1015F,2300,1533047700,Bracket Substring,dp|strings
+1016C,1800,1533307500,Vasya And The Mushrooms,dp|implementation
+1016F,2600,1533307500,Road Projects,dfs and similar|dp|trees
+1025D,2100,1534685700,Recovering BST,brute force|dp|math|number theory|trees
+1027E,2100,1534602900,Inverse Coloring,combinatorics|dp|math
+1028G,3000,1535387700,Guess the number,dp|interactive
+1029B,1200,1535122200,Creating the Contest,dp|greedy|math
+1029E,2100,1535122200,Tree with Small Distances,dp|graphs|greedy
+1030E,2000,1537707900,Vasya and Good Sequences,bitmasks|dp
+1032C,1700,1542557100,Playing Piano,constructive algorithms|dp
+1032E,2100,1542557100,The Unbearable Lightness of Weights,dp|math
+1032F,2400,1542557100,Vasya and Maximum Matching,dp|trees
+1033C,1600,1538931900,Permutation Game,brute force|dp|games
+1034C,2700,1537540500,Region Separation,combinatorics|dp|number theory|trees
+1036C,1900,1536330900,Classy Numbers,combinatorics|dp
+1037C,1300,1535898900,Equalize,dp|greedy|strings
+1038D,1800,1536248100,Slime,dp|greedy|implementation
+1038E,2400,1536248100,Maximum Matching,bitmasks|brute force|dfs and similar|dp|graphs
+1038F,2900,1536248100,Wrap Around,dp|strings
+1039D,2800,1536165300,You Are Given a Tree,data structures|dp|trees
+1040B,1300,1536165300,Shashlik Cooking,dp|greedy|math
+1041F,2500,1537094100,Ray in the tube,data structures|divide and conquer|dp|math
+1042B,1200,1537171500,Vitamins,bitmasks|brute force|dp|implementation
+1042E,2300,1537171500,Vasya and Magic Matrix,dp|math|probabilities
+1043F,2500,1540740900,Make It One,bitmasks|combinatorics|dp|math|number theory|shortest paths
+1044C,2100,1541355000,Optimal Polygon Perimeter,dp|geometry
+1051C,1500,1537454700,Vasya and Multisets,brute force|dp|greedy|implementation|math
+1051D,1700,1537454700,Bicolorings,bitmasks|dp
+1051E,2600,1537454700,Vasya and Big Integers,binary search|data structures|dp|hashing|strings
+1055E,2500,1541860500,Segments on the Line,binary search|dp
+1056D,1600,1543163700,Decorate Apple Tree,constructive algorithms|dfs and similar|dp|graphs|greedy|sortings|trees
+1056F,2500,1543163700,Write The Contest,binary search|dp|math
+1057C,2000,1539335100,Tanya and Colored Candies,*special|dp
+1059E,2400,1538750100,Split the Tree,binary search|data structures|dp|greedy|trees
+1060E,2000,1538636700,Sergey and Subway,dfs and similar|dp|trees
+1060F,2900,1538636700,Shrinking Tree,combinatorics|dp
+1061C,1700,1542901500,Multiplicity,data structures|dp|implementation|math|number theory
+1065D,2200,1539269400,Three Pieces,dfs and similar|dp|shortest paths
+1065F,2500,1539269400,Up and Down the Tree,dfs and similar|dp|trees
+1066F,2100,1539354900,Yet another 2D Walking,dp
+1067A,1900,1540398900,Array Without Local Maximums ,dp
+1067E,2800,1540398900,Random Forest Rank,dp|graph matchings|math|trees
+1070A,2200,1540022700,Find a Number,dp|graphs|number theory|shortest paths
+1070G,2300,1540022700,Monsters and Potions,brute force|dp|greedy|implementation
+1070J,2300,1540022700,Streets and Avenues in Berhattan,dp
+1073E,2300,1540478100,Segment Sum,bitmasks|combinatorics|dp|math
+1073F,2500,1540478100,Choosing Two Paths,dfs and similar|dp|greedy|trees
+1076F,2500,1542033300,Summer Practice Report,dp|greedy
+1077F1,1900,1542378900,Pictures with Kittens (easy version),dp
+1077F2,2100,1542378900,Pictures with Kittens (hard version),data structures|dp
+1081C,1500,1544970900,Colorful Bricks,combinatorics|dp|math
+1082E,2000,1543415700,Increasing Frequency,binary search|dp|greedy
+1082F,2800,1543415700,Speed Dial,dp|strings|trees
+1083A,1800,1544459700,The Fair Nut and the Best Path,data structures|dp|trees
+1083E,2400,1544459700,The Fair Nut and Rectangles,data structures|dp|geometry
+1084C,1500,1544459700,The Fair Nut and String,combinatorics|dp|implementation
+1085G,2900,1545572100,Beautiful Matrix,combinatorics|data structures|dp
+1088E,2400,1543934100,Ehab and a component choosing problem,dp|greedy|math|trees
+1089A,2200,1543734300,Alice the Fan,dp
+1091D,1700,1546180500,New Year and the Permutation Concatenation,combinatorics|dp|math
+1092F,1900,1545143700,Tree with Maximum Cost,dfs and similar|dp|trees
+1093F,2400,1544884500,Vasya and Array,dp
+1096D,1800,1546007700,Easy Problem,dp
+1096E,2500,1546007700,The Top Scorer,combinatorics|dp|math|probabilities
+1096F,2300,1546007700,Inversion Expectation,dp|math|probabilities
+1096G,2400,1546007700,Lucky Tickets,divide and conquer|dp|fft
+1097B,1200,1546613100,Petr and a Combination Lock,bitmasks|brute force|dp
+1097D,2200,1546613100,Makoto and a Blackboard,dp|math|number theory|probabilities
+1097G,3000,1546613100,Vladislav and a Great Legend,combinatorics|dp|trees
+1099F,2400,1546706100,Cookies,binary search|data structures|dfs and similar|dp|games|trees
+1101D,2000,1547217300,GCD Counting,data structures|dfs and similar|dp|number theory|trees
+1101F,2400,1547217300,Trucks and Cities,binary search|dp
+1102F,2000,1547044500,Elongated Matrix,binary search|bitmasks|brute force|dp|graphs
+1105C,1500,1547985900,Ayoub and Lost Array,combinatorics|dp|math
+1105E,2200,1547985900,Helping Hiasat ,bitmasks|brute force|dp|meet-in-the-middle
+1106E,2100,1548938100,Lunar New Year and Red Envelopes,data structures|dp
+1107D,1800,1548516900,Compression,dp|implementation|math|number theory
+1107E,2400,1548516900,Vasya and Binary String,dp
+1107F,2600,1548516900,Vasya and Endless Credits,dp|flows|graph matchings|graphs|sortings
+1107G,2400,1548516900,Vasya and Maximum Profit,binary search|constructive algorithms|data structures|dp|dsu
+1108D,1400,1548254100,Diverse Garland,constructive algorithms|dp|greedy
+1109A,1600,1550334900,Sasha and a Bit of Relax,dp|implementation
+1109D,2400,1550334900,Sasha and Interesting Fact from Graph Theory,brute force|combinatorics|dp|math|trees
+1110D,2200,1549546500,Jongmah,dp
+1111D,2600,1549208100,Destroy the Colony,combinatorics|dp|math
+1111E,2500,1549208100,Tree,data structures|dfs and similar|dp|graphs|trees
+1113A,900,1550334900,Sasha and His Trip,dp|greedy|math
+1114D,1900,1549807500,Flood Fill,dp
+1117D,2100,1550504400,Magic Gems,dp|math|matrices
+1117F,2500,1550504400,Crisp String,bitmasks|dp
+1118F2,2700,1550586900,Tree Cutting (Hard Version),combinatorics|dfs and similar|dp|trees
+1119E,1900,1554550500,Pavel and Triangles,brute force|dp|fft|greedy|ternary search
+1120C,2100,1551627300,Compress String,dp|strings
+1120D,2500,1551627300,Power Tree,dfs and similar|dp|dsu|graphs|greedy|trees
+1129C,2400,1551022500,Morse Code,binary search|data structures|dp|hashing|sortings|string suffix structures|strings
+1129D,2900,1551022500,Isolation,data structures|dp
+1131D,2000,1550917200,Gourmet choice,dfs and similar|dp|dsu|graphs|greedy
+1131E,2300,1550917200,String Multiplication,dp|greedy|strings
+1131G,2700,1550917200,Most Dangerous Shark,data structures|dp|two pointers
+1132E,2300,1551798300,Knapsack,dfs and similar|dp|greedy
+1132F,2000,1551798300,Clear the String,dp
+1132G,2400,1551798300,Greedy Subsequences,data structures|dp|trees
+1133E,1800,1551971100,K Balanced Teams,dp|sortings|two pointers
+1137C,2500,1552035900,Museums Tour,dp|graphs|implementation
+1139D,2300,1553182500,Steps to One,dp|math|number theory|probabilities
+1140D,1200,1553267100,Minimum Triangulation,dp|greedy|math
+1140E,2200,1553267100,Palindrome-less Arrays,combinatorics|divide and conquer|dp
+1142B,2000,1553965800,Lynyrd Skynyrd,data structures|dfs and similar|dp|math|trees
+1142D,2800,1553965800,Foreigner,dp
+1144G,2400,1554041100,Two Merged Sequences,dp|greedy
+1146F,2500,1555783500,Leaf Partition,dp|trees
+1146G,2700,1555783500,Zoning Restrictions,dp|flows|graphs
+1146H,2900,1555783500,Satanic Panic,dp|geometry
+1149B,2200,1556548500,Three Religions,dp|implementation|strings
+1149D,3000,1556548500,Abandoning Roads,brute force|dp|graphs|greedy
+1151B,1600,1555601700,Dima and a Bad XOR,bitmasks|brute force|constructive algorithms|dp
+1151E,2100,1555601700,Number of Components,combinatorics|data structures|dp|math
+1151F,2300,1555601700,Sonya and Informatics,combinatorics|dp|matrices|probabilities
+1152D,2100,1556116500,Neko and Aki's Prank,dp|greedy|trees
+1152F1,2800,1556116500,Neko Rules the Catniverse (Small Version),bitmasks|dp|matrices
+1152F2,3000,1556116500,Neko Rules the Catniverse (Large Version),bitmasks|dp|matrices
+1153D,1900,1555164300,Serval and Rooted Tree,binary search|dfs and similar|dp|greedy|trees
+1153F,2600,1555164300,Serval and Bonus Problem,combinatorics|dp|math|probabilities
+1154F,2100,1555425300,Shovels Shop,dp|greedy|sortings
+1155D,1900,1555943700,Beautiful Array,brute force|data structures|divide and conquer|dp|greedy
+1155F,2800,1555943700,Delivery Oligopoly,brute force|dp|graphs
+1156D,2200,1556721300,0-1-Tree,dfs and similar|divide and conquer|dp|dsu|trees
+1156F,2300,1556721300,Card Bag,dp|math|probabilities
+1157F,2000,1556289300,Maximum Balanced Circle,constructive algorithms|dp|greedy|two pointers
+1163D,2100,1557414300,Mysterious Code,dp|strings
+1168C,2200,1558884900,And Reachability,bitmasks|dp
+1168D,3000,1558884900,Anagram Paths,dp|implementation|trees
+1172B,1900,1559909100,Nauuo and Circle,combinatorics|dfs and similar|dp|trees
+1172C1,2300,1559909100,Nauuo and Pictures (easy version),dp|probabilities
+1172C2,2600,1559909100,Nauuo and Pictures (hard version),dp|probabilities
+1174E,2500,1559570700,Ehab and the Expected GCD Problem,combinatorics|dp|math|number theory
+1175E,2200,1559745300,Minimal Segment Cover,data structures|dfs and similar|divide and conquer|dp|greedy|implementation|trees
+1175G,3000,1559745300,Yet Another Partiton Problem,data structures|divide and conquer|dp|geometry|two pointers
+1176C,1300,1560090900,Lose it!,dp|greedy|implementation
+1176F,2100,1560090900,Destroy it!,dp|implementation|sortings
+1178B,1300,1563636900,WOW Factor,dp|strings
+1178F1,2200,1563636900,Short Colorful Strip,combinatorics|dfs and similar|dp
+1178F2,2600,1563636900,Long Colorful Strip,dp
+1179D,2700,1561136700,Fedor Runs for President,data structures|dp|trees
+1180A,800,1561136700,Alex and a Rhombus,dp|implementation|math
+1181C,1900,1560677700,Flag,brute force|combinatorics|dp|implementation
+1182A,1000,1560258300,Filling Shapes,dp|math
+1182D,2400,1560258300,Complete Mirror,constructive algorithms|dfs and similar|dp|hashing|implementation|trees
+1182E,2300,1560258300,Product Oriented Recurrence,dp|math|matrices|number theory
+1183E,2000,1561559700,Subsequences (easy version),dp|graphs|implementation|shortest paths
+1183H,1900,1561559700,Subsequences (hard version),dp|strings
+1185G1,2100,1560955500,Playlist for Polycarp (easy version),bitmasks|combinatorics|dp
+1185G2,2600,1560955500,Playlist for Polycarp (hard version),combinatorics|dp
+1187E,2100,1561905900,Tree Painting,dfs and similar|dp|trees
+1187F,2500,1561905900,Expected Square Beauty,dp|math|probabilities
+1188C,2500,1562339100,Array Beauty,dp
+1189C,1400,1562339100,Candies!,data structures|dp|implementation|math
+1194F,2400,1563115500,Crossword Expert,combinatorics|dp|number theory|probabilities|two pointers
+1194G,2700,1563115500,Another Meme Problem,dp
+1195C,1400,1563374100,Basketball Exercise,dp
+1196D2,1600,1563978900,RGB Substring (hard version),data structures|dp|implementation|two pointers
+1197D,1900,1563806100,Yet Another Subarray Problem,dp|greedy|math
+1197E,2300,1563806100,Culture Code,binary search|combinatorics|data structures|dp|shortest paths|sortings
+1197F,2700,1563806100,Coloring Game,dp|games|matrices
+1198D,2300,1564497300,Rectangle Painting 1,dp
+1200B,1200,1565526900,Block Adventure,dp|greedy
+1200D,1900,1565526900,White Lines,brute force|data structures|dp|implementation|two pointers
+1200F,2300,1565526900,Graph Traveler,brute force|data structures|dfs and similar|dp|graphs|implementation|math|number theory
+1201D,2100,1564936500,Treasure Hunting,binary search|dp|greedy|implementation
+1202B,1700,1565188500,You Are Given a Decimal String...,brute force|dp|shortest paths
+1202C,2100,1565188500,You Are Given a WASD-string...,brute force|data structures|dp|greedy|implementation|math|strings
+1203F2,2300,1565706900,Complete the Projects (hard version),dp|greedy
+1204C,1700,1566311700,"Anna, Svyatoslav and Maps",dp|graphs|greedy|shortest paths
+1204E,2300,1566311700,"Natasha, Sasha and the Prefix Sums",combinatorics|dp|math|number theory
+1206B,900,1566135900,Make Product Equal One,dp|implementation
+1207C,1500,1566484500,Gas Pipeline,dp|greedy
+1208F,2600,1566743700,Bits And Pieces,bitmasks|dfs and similar|dp|greedy
+1209E1,2000,1568466300,Rotate Columns (easy version),bitmasks|brute force|dp|greedy|sortings
+1209E2,2500,1568466300,Rotate Columns (hard version),bitmasks|dp|greedy|sortings
+1214D,1900,1567587900,Treasure Island,dfs and similar|dp|flows|hashing
+1215B,1400,1568543700,The Number of Products,combinatorics|dp|implementation
+1215E,2200,1568543700,Marbles,bitmasks|dp
+1216F,2100,1569049500,Wi-Fi,data structures|dp|greedy
+1218A,2800,1568554500,BubbleReactor,dp|graphs
+1218C,2600,1568554500,Jumping Transformers,dp
+1220E,2200,1568822700,Tourism,dfs and similar|dp|dsu|graphs|greedy|trees
+1221D,1800,1568903700,Make The Fence Great Again,dp
+1221G,2900,1568903700,Graph And Numbers,bitmasks|brute force|combinatorics|dp|meet-in-the-middle
+1223D,2000,1570374300,Sequence Sorting,dp|greedy|two pointers
+1223E,2100,1570374300,Paint the Tree,dp|sortings|trees
+1223F,2600,1570374300,Stack Exterminable Arrays,data structures|divide and conquer|dp|hashing
+1225E,2200,1572087900,Rock Is Push,binary search|dp
+1227F1,2200,1574582700,Wrong Answer on test 233 (Easy Version),dp
+1228E,2300,1569762300,Another Filling the Grid,combinatorics|dp|math
+1234C,1500,1569940500,Pipes,dp|implementation
+1234F,2200,1569940500,Yet Another Substring Reverse,bitmasks|dp
+1236E,2500,1571319300,Alice and the Unfair Game,binary search|data structures|dp|dsu
+1237E,2400,1571236500,Balanced Binary Search Trees,dp|math
+1237F,2600,1571236500,Balanced Domino Placements,combinatorics|dp
+1238C,1600,1570545300,Standard Free2play,dp|greedy|math
+1238D,1900,1570545300,AB-string,binary search|combinatorics|dp|strings
+1238E,2200,1570545300,Keyboard Purchase,bitmasks|dp
+1238F,2200,1570545300,The Maximum Subtree,dfs and similar|dp|graphs|trees
+1239A,1700,1571562300,Ivan the Fool and the Probability Theory,combinatorics|dp|math
+1242C,2400,1573052700,Sum Balance,bitmasks|dfs and similar|dp|graphs
+1244D,1800,1570957500,Paint the Tree,brute force|constructive algorithms|dp|graphs|implementation|trees
+1245B,1200,1572618900,Restricted RPS,constructive algorithms|dp|greedy
+1245C,1400,1572618900,Constanze's Machine,dp
+1245E,2300,1572618900,Hyakugoku and Ladders,dp|probabilities|shortest paths
+1245F,2300,1572618900,Daniel and Spring Cleaning,bitmasks|brute force|combinatorics|dp
+1248D1,2000,1571562300,The World Is Just a Programming Task (Easy Version),brute force|dp|greedy|implementation
+1249E,1700,1571754900,By Elevator or Stairs?,dp|shortest paths
+1249F,2200,1571754900,Maximum Weight Subset,dp|trees
+1250D,3000,1572168900,Conference Problem,dp
+1250G,2300,1572168900,Discarding Game,dp|greedy|two pointers
+1251E1,2300,1571929500,Voting (Easy Version),data structures|dp|greedy
+1252B,2300,1572147000,Cleaning Robots,dp|trees
+1252D,3000,1572147000,Find String in a Grid,data structures|dp|strings|trees
+1252J,2300,1572147000,Tiling Terrace,brute force|dp
+1253C,1500,1573914900,Sweets Eating,dp|greedy|math|sortings
+1253E,2200,1573914900,Antenna Coverage,data structures|dp|greedy|sortings
+1256E,2000,1572873300,Yet Another Division Into Teams,dp|greedy|sortings
+1257D,1700,1573655700,Yet Another Monster Killing Problem,binary search|data structures|dp|greedy|sortings|two pointers
+1257E,2000,1573655700,The Contest,data structures|dp|greedy
+1260D,1900,1574862600,A Game with Traps,binary search|dp|greedy|sortings
+1260E,2400,1574862600,Tournament,brute force|dp|greedy
+1263F,2400,1575038100,Economic Difficulties,data structures|dfs and similar|dp|flows|graphs|trees
+1264D1,2600,1575556500,Beautiful Bracket Sequence (easy version),combinatorics|dp|probabilities
+1265E,2100,1575556500,Beautiful Mirrors,data structures|dp|math|probabilities
+1268B,2000,1576926300,Domino for Young,dp|greedy|math
+1271D,2100,1576401300,Portals,data structures|dp|greedy|implementation|sortings
+1271E,2100,1576401300,Common Number,binary search|combinatorics|dp|math
+1272C,1200,1576157700,Yet Another Broken Keyboard,combinatorics|dp|implementation
+1272D,1500,1576157700,Remove One Element,brute force|dp
+1272F,2200,1576157700,Two Bracket Sequences,dp|strings|two pointers
+1276A,1400,1576321500,As Simple as One and Two,dp|greedy
+1276D,2900,1576321500,Tree Elimination,dp|trees
+1278C,1700,1576766100,Berry Jam,data structures|dp|greedy|implementation
+1278F,2600,1576766100,Cards,combinatorics|dp|math|number theory|probabilities
+1279E,2700,1577457600,New Year Permutations,combinatorics|dp
+1279F,2800,1577457600,New Year and Handle Change,binary search|dp
+1280D,2500,1576386300,Miss Punyverse,dp|greedy|trees
+1282B1,1400,1577198100,K for the Price of One (Easy Version),dp|greedy|sortings
+1282B2,1600,1577198100,K for the Price of One (Hard Version),dp|greedy|sortings
+1283E,1800,1577552700,New Year Parties,dp|greedy
+1284B,1400,1578139500,New Year and Ascent Sequence,binary search|combinatorics|data structures|dp|implementation|sortings
+1285B,1300,1578665100,Just Eat It!,dp|greedy|implementation
+1285D,1900,1578665100,Dr. Evil Underscores,bitmasks|brute force|dfs and similar|divide and conquer|dp|greedy|strings|trees
+1285E,2300,1578665100,Delete a Segment,brute force|constructive algorithms|data structures|dp|graphs|sortings|trees|two pointers
+1286A,1800,1578233100,Garland,dp|greedy|sortings
+1288C,1600,1579012500,Two Arrays,combinatorics|dp
+1288D,2000,1579012500,Minimax Problem,binary search|bitmasks|dp
+1292C,2300,1579440900,Xenon's Attack on the Gangs,combinatorics|dfs and similar|dp|greedy|trees
+1292D,2700,1579440900,Chaotic V.,dp|graphs|greedy|math|number theory|trees
+1294F,2000,1579703700,Three Paths on a Tree,dfs and similar|dp|greedy|trees
+1295C,1600,1580308500,Obtain The String,dp|greedy|strings
+1295F,2700,1580308500,Good Contest,combinatorics|dp|probabilities
+1296E1,1800,1580826900,String Coloring (easy version),constructive algorithms|dp|graphs|greedy|sortings
+1296E2,2000,1580826900,String Coloring (hard version),data structures|dp
+1299D,3000,1581257100,Around the World,bitmasks|combinatorics|dfs and similar|dp|graphs|math|trees
+1301E,2500,1581604500,Nanosoft,binary search|data structures|dp|implementation
+1303E,2200,1581518100,Erase Subsequences,dp|strings
+1304C,1500,1581771900,Air Conditioner,dp|greedy|implementation|sortings|two pointers
+1304F1,2300,1581771900,Animal Observation (easy version),data structures|dp
+1304F2,2400,1581771900,Animal Observation (hard version),data structures|dp|greedy
+1307C,1500,1581953700,Cow and Message,brute force|dp|math|strings
+1307E,2500,1581953700,Cow and Treats,binary search|combinatorics|dp|greedy|implementation|math
+1310B,2500,1582473900,Double Elimination,dp|implementation
+1310C,2800,1582473900,Au Pont Rouge,binary search|dp|strings
+1310D,2300,1582473900,Tourism,dp|graphs|probabilities
+1310E,2900,1582473900,Strange Function,dp
+1312E,2100,1583764500,Array Shrinking,dp|greedy
+1312G,2600,1583764500,Autocompletion,data structures|dfs and similar|dp
+1313C1,1500,1582448700,Skyscrapers (easy version),brute force|data structures|dp|greedy
+1313C2,1900,1582448700,Skyscrapers (hard version),data structures|dp|greedy
+1313D,2500,1582448700,Happy New Year,bitmasks|dp|implementation
+1315B,1300,1582473900,Homecoming,binary search|dp|greedy|strings
+1316E,2300,1583332500,Team Building,bitmasks|dp|greedy|sortings
+1320A,1400,1583068500,Journey Planning,data structures|dp|greedy|math|sortings
+1320E,3000,1583068500,Treeland and Viruses,data structures|dfs and similar|dp|shortest paths|trees
+1322D,2800,1583573700,Reality Show,bitmasks|dp
+1323A,800,1583573700,Even Subset Sum Problem,brute force|dp|greedy|implementation
+1324E,1700,1584018300,Sleeping Schedule,dp|implementation
+1324F,1800,1584018300,Maximum White Subtree,dfs and similar|dp|graphs|trees
+1326F1,2600,1584628500,Wise Men (Easy Version),bitmasks|brute force|dp|meet-in-the-middle
+1327E,1800,1584974100,Count The Blocks,combinatorics|dp|math
+1327F,2500,1584974100,AND Segments,bitmasks|combinatorics|data structures|dp|two pointers
+1327G,2800,1584974100,Letters and Question Marks,bitmasks|dp|string suffix structures
+1328D,1800,1585233300,Carousel,constructive algorithms|dp|graphs|greedy|math
+1332F,2500,1585661700,Independent Set,dfs and similar|dp|trees
+1334F,2500,1586529300,Strange Function,binary search|data structures|dp|greedy
+1335E1,1700,1586788500,Three Blocks Palindrome (easy version),binary search|brute force|data structures|dp|two pointers
+1335E2,1800,1586788500,Three Blocks Palindrome (hard version),brute force|data structures|dp|two pointers
+1336A,1600,1586961300,Linova and Kingdom,dfs and similar|dp|greedy|sortings|trees
+1336C,2200,1586961300,Kaavi and Magic Spell,dp|strings
+1338D,2700,1586700300,Nested Rubber Bands,constructive algorithms|dfs and similar|dp|math|trees
+1339A,900,1586700300,Filling Diamonds,brute force|dp|implementation|math
+1340B,1700,1587653100,Nastya and Scoreboard,bitmasks|dp|graphs|greedy
+1340C,2400,1587653100,Nastya and Unexpected Guest,dfs and similar|dp|graphs|shortest paths
+1342F,3000,1587911700,Make It Ascending,bitmasks|brute force|dp
+1343C,1200,1587479700,Alternating Subsequence,dp|greedy|two pointers
+1344C,2600,1588775700,Quantifier Question,dfs and similar|dp|graphs|math
+1345B,1100,1588775700,Card Constructions,binary search|brute force|dp|math
+1346E,1700,1590762900,Magic Tricks,*special|dp|graphs
+1346I,2900,1590762900,Pac-Man 2.0,*special|dp
+1348E,2400,1588343700,Phoenix and Berries,brute force|dp|greedy|math
+1350B,1400,1589286900,Orac and Models,dp|math|number theory
+1353E,1900,1589466900,K-periodic Garland,brute force|dp|greedy
+1353F,2200,1589466900,Decreasing Heights,brute force|dp
+1354B,1200,1589707200,Ternary String,binary search|dp|implementation|two pointers
+1354E,2100,1589707200,Graph Coloring,dfs and similar|dp|graphs
+1354F,2500,1589707200,Summoning Minions,constructive algorithms|dp|flows|graph matchings|greedy|sortings
+1355B,1200,1589628900,Young Explorers,dp|greedy|sortings
+1359B,1000,1590676500,New Theatre Square,brute force|dp|greedy|implementation|two pointers
+1359D,2000,1590676500,Yet Another Yet Another Task,data structures|dp|implementation|two pointers
+1360E,1300,1590327300,Polygon,dp|graphs|implementation|shortest paths
+1360F,1700,1590327300,Spy-string,bitmasks|brute force|constructive algorithms|dp|hashing|strings
+1363E,2000,1590935700,Tree Shuffling,dfs and similar|dp|greedy|trees
+1363F,2600,1590935700,Rotating Substrings,dp|strings
+1366E,2100,1591886100,Two Arrays,binary search|brute force|combinatorics|constructive algorithms|dp|two pointers
+1366F,2700,1591886100,Jog Around The Graph,binary search|dp|geometry|graphs
+1366G,2700,1591886100,Construct the String,data structures|dp|strings
+1367E,1900,1592318100,Necklace Assembly,brute force|dfs and similar|dp|graphs|greedy|number theory
+1367F1,2100,1592318100,Flying Sort (Easy Version),dp|greedy|two pointers
+1367F2,2400,1592318100,Flying Sort (Hard Version),binary search|data structures|dp|greedy|sortings|two pointers
+1369D,1900,1592921100,TediousLee,dp|graphs|greedy|math|trees
+1369F,2700,1592921100,BareLee,dfs and similar|dp|games
+1370D,2000,1592663700,Odd-Even Subsequence,binary search|dp|dsu|greedy|implementation
+1371E2,2300,1593610500,Asterism (Hard Version),binary search|combinatorics|dp|math|number theory|sortings
+1372D,2100,1594479900,Omkar and Circle,brute force|dp|games|greedy
+1372E,2900,1594479900,Omkar and Last Floor,dp|greedy|two pointers
+1373D,1600,1593095700,Maximum Sum on Even Positions,divide and conquer|dp|greedy|implementation
+1373E,2200,1593095700,Sum of Digits,brute force|constructive algorithms|dp|greedy
+1379C,2000,1595149200,Choosing flowers,binary search|brute force|data structures|dfs and similar|dp|greedy|sortings|two pointers
+1379E,2800,1595149200,Inverse Genealogy,constructive algorithms|divide and conquer|dp|math|trees
+1380C,1400,1594565100,Create The Teams,brute force|dp|greedy|implementation|sortings
+1380F,2600,1594565100,Strange Addition,data structures|dp|matrices
+1381B,1800,1595342100,Unmerge,dp
+1381D,3000,1595342100,The Majestic Brown Tree Snake,dfs and similar|dp|greedy|trees|two pointers
+1382B,1100,1595342100,Sequential Nim,dp|games
+1383B,1900,1595601300,GameGame,bitmasks|constructive algorithms|dp|games|greedy|math
+1383E,2800,1595601300,Strange Operation,combinatorics|data structures|dp
+1384B1,1900,1595601300,Koa and the Beach (Easy Version),brute force|dp|greedy
+1384B2,2200,1595601300,Koa and the Beach (Hard Version),constructive algorithms|dp|greedy|implementation
+1385D,1500,1594996500,a-Good String,bitmasks|brute force|divide and conquer|dp|implementation
+1387A,2100,1595502300,Graph,*special|binary search|dfs and similar|dp|math|ternary search
+1387B1,2100,1595502300,Village (Minimum),*special|dp|greedy|trees
+1387C,2900,1595502300,Viruses,*special|dp|shortest paths|string suffix structures
+1389B,1600,1596033300,Array Walk,brute force|dp|greedy
+1389C,1500,1596033300,Good String,brute force|dp|greedy|two pointers
+1389F,2600,1596033300,Bicolored Segments,data structures|dp|graph matchings|sortings
+1389G,2800,1596033300,Directing Edges,dfs and similar|dp|graphs|trees
+1391C,1500,1596983700,Cyclic Permutations ,combinatorics|dp|graphs|math
+1391D,2000,1596983700,505,bitmasks|brute force|constructive algorithms|dp|greedy|implementation
+1392D,1700,1597588500,Omkar and Bed Wars,dp|greedy
+1392G,2900,1597588500,Omkar and Pies,bitmasks|dfs and similar|dp|math|shortest paths
+1392H,3000,1597588500,ZS Shuffles Cards,combinatorics|dp|math|probabilities
+1393D,2100,1596810900,Rarity and New Dress,dfs and similar|dp|implementation|shortest paths
+1393E1,2800,1596810900,Twilight and Ancient Scroll (easier version),dp|hashing|implementation|string suffix structures|strings
+1394A,1800,1597242900,Boboniu Chats with Du,dp|greedy|sortings|two pointers
+1394D,2800,1597242900,Boboniu and Jianghu,dp|greedy|sortings|trees
+1395C,1600,1597242900,Boboniu and Bit Operations,bitmasks|brute force|dp|greedy
+1396C,2300,1598798100,Monster Invaders,dp|greedy|implementation
+1398C,1600,1597415700,Good Subarrays,data structures|dp|math
+1398D,1800,1597415700,Colored Rectangles,dp|greedy|sortings
+1398F,2500,1597415700,Controversial Rounds,binary search|data structures|dp|greedy|two pointers
+1399F,2300,1596638100,Yet Another Segments Subset,data structures|dp|graphs|sortings
+1400E,2200,1598366100,Clear the Multiset,data structures|divide and conquer|dp|greedy
+1400F,2800,1598366100,x-prime Substrings,brute force|dfs and similar|dp|string suffix structures|strings
+1400G,2600,1598366100,Mercenaries,bitmasks|brute force|combinatorics|dp|dsu|math|two pointers
+1401D,1800,1598020500,Maximum Distributed Tree,dfs and similar|dp|greedy|implementation|math|number theory|sortings|trees
+1402C,2600,1598443500,Star Trek,*special|combinatorics|dfs and similar|dp|games|graphs|matrices|trees
+1404B,1900,1599402900,Tree Tag,dfs and similar|dp|games|trees
+1406B,1200,1599918300,Maximum Product,brute force|dp|greedy|implementation|sortings
+1407D,2200,1599575700,Discrete Centrifugal Jumps,data structures|dp|graphs
+1407E,2500,1599575700,Egor in the Republic of Dagestan,constructive algorithms|dfs and similar|dp|graphs|greedy|shortest paths
+1408C,1500,1601476500,Discrete Acceleration,binary search|dp|implementation|math|two pointers
+1408D,2000,1601476500,Searchlights,binary search|brute force|data structures|dp|implementation|sortings|two pointers
+1408G,2700,1601476500,Clusterization Counting,combinatorics|dp|dsu|fft|graphs|trees
+1409E,1800,1599230100,Two Platforms,binary search|dp|sortings|two pointers
+1409F,2100,1599230100,Subsequences of Length Two,dp|strings
+1413C,1900,1603623900,Perform Easily,binary search|brute force|dp|implementation|sortings|two pointers
+1415C,1400,1606633500,Bouncing Ball,brute force|dp|implementation
+1415F,2900,1606633500,Cakes for Clones,dp
+1416C,2000,1601219100,XOR Inverse,bitmasks|data structures|divide and conquer|dp|greedy|math|sortings|strings|trees
+1418C,1500,1600094100,Mortal Kombat Tower,dp|graphs|greedy|shortest paths
+1420C1,1300,1600958100,Pokémon Army (easy version),constructive algorithms|dp|greedy
+1420C2,2100,1600958100,Pokémon Army (hard version),data structures|divide and conquer|dp|greedy|implementation
+1420E,2500,1600958100,Battle Lemmings,dp|greedy
+1421E,2700,1603011900,Swedish Heroes,brute force|dp|implementation
+1422C,1700,1601827500,Bargain,combinatorics|dp|math
+1422E,2700,1601827500,Minlexes,dp|greedy|implementation|strings
+1423J,2400,1601903100,Bubble Cup hypothesis,bitmasks|constructive algorithms|dp|math
+1425B,2600,1601182800,Blue and Red of Our Faculty!,divide and conquer|dp
+1425D,2300,1601182800,Danger of Mad Snakes,combinatorics|dp|math
+1426F,2000,1601280300,Number of Subsequences,combinatorics|dp|strings
+1427C,2000,1602341400,The Hard Work of Paparazzi,dp
+1428F,2400,1602939900,Fruit Sequences,binary search|data structures|divide and conquer|dp|two pointers
+1428G1,2900,1602939900,Lucky Numbers (Easy Version),dp|greedy
+1428G2,3000,1602939900,Lucky Numbers (Hard Version),dp|greedy
+1430F,2600,1602407100,Realistic Gameplay,dp|greedy
+1430G,2600,1602407100,Yet Another DAG Problem,bitmasks|dfs and similar|dp|flows|graphs|math
+1431G,2100,1605191700,Number Deletion Game,*special|dp|games|greedy
+1433F,2100,1603204500,Zero Remainder Sum ,dp
+1437C,1800,1603809300,Chef Monocarp,dp|flows|graph matchings|greedy|math|sortings
+1437E,2200,1603809300,Make It Increasing,binary search|constructive algorithms|data structures|dp|implementation
+1437F,2600,1603809300,Emotional Fishermen,combinatorics|dp|math|two pointers
+1442A,1800,1604327700,Extreme Subtraction,constructive algorithms|dp|greedy
+1442D,2800,1604327700,Sum,data structures|divide and conquer|dp|greedy
+1442E,3000,1604327700,"Black, White and Grey Tree",binary search|constructive algorithms|dfs and similar|dp|greedy|trees
+1443B,1300,1604327700,Saving the City,dp|greedy|math|sortings
+1444D,2900,1604228700,Rectangular Polyline,constructive algorithms|dp|geometry
+1446B,1800,1605450900,Catching Cheaters,dp|strings
+1446C,2100,1605450900,Xor Tree,binary search|bitmasks|data structures|divide and conquer|dp|trees
+1451B,900,1605969300,Non-Substring Subsequence,dp|greedy|implementation|strings
+1451C,1400,1605969300,String Equality,dp|greedy|hashing|implementation|strings
+1452D,1600,1605796500,Radio Towers,combinatorics|dp|math
+1452E,2500,1605796500,Two Editorials,brute force|dp|greedy|sortings|two pointers
+1453E,2300,1607087100,Dog Snacks,binary search|dfs and similar|dp|greedy|trees
+1453F,2700,1607087100,Even Harder,dp
+1455D,1600,1606746900,Sequence and Swaps,dp|greedy|sortings
+1455F,2800,1606746900,String and Operations,dp|greedy
+1455G,2900,1606746900,Forbidden Value,data structures|dp
+1458B,2000,1608370500,Glass Half Spilled,dp
+1459B,1300,1608370500,Move and Turn,dp|math
+1461B,1400,1607697300,Find the Spruce,brute force|dp|implementation
+1461C,1500,1607697300,Random Events,dp|math|probabilities
+1461F,2700,1607697300,Mathematical Expression,constructive algorithms|dp|greedy
+1462B,800,1608042900,Last Year's Substring,dp|implementation|strings
+1466B,800,1609338900,Last minute enhancements,dp|greedy
+1466C,1300,1609338900,Canine poetry,dp|greedy|strings
+1467D,2200,1610116500,Sum of Paths,combinatorics|dp|math
+1467E,2500,1610116500,Distinctive Roots in a Tree,data structures|dfs and similar|dp|trees
+1468A,2200,1608896100,LaIS,data structures|dp|greedy
+1469B,1000,1609166100,Red and Blue,dp|greedy
+1469C,1600,1609166100,Building a Fence,dp|greedy|implementation|two pointers
+1470A,1300,1609857300,Strange Birthday Party,binary search|dp|greedy|sortings|two pointers
+1472B,800,1609770900,Fair Division,dp|greedy|math
+1472C,1100,1609770900,Long Jumps,dp|graphs
+1472D,1200,1609770900,Even-Odd Game,dp|games|greedy|sortings
+1472E,1700,1609770900,Correct Placement,binary search|data structures|dp|sortings|two pointers
+1472F,2100,1609770900,New Year's Puzzle,brute force|dp|graph matchings|greedy|sortings
+1472G,2100,1609770900,Moving to the Capital,dfs and similar|dp|graphs|shortest paths
+1473D,1700,1610634900,Program,data structures|dp|implementation|strings
+1473G,2800,1610634900,Tiles,combinatorics|dp|fft|math
+1474D,2200,1611066900,Cleaning,data structures|dp|greedy|math
+1474F,3000,1611066900,1 2 3 4 ...,dp|math|matrices
+1475B,900,1611586800,New Year's Number,brute force|dp|math
+1475D,1800,1611586800,Cleaning the Phone,binary search|dp|sortings|two pointers
+1475G,1900,1611586800,Strange Beauty,dp|math|number theory|sortings
+1476C,1600,1611930900,Longest Simple Cycle,dp|graphs|greedy
+1476D,1700,1611930900,Journey,dfs and similar|dp|dsu|implementation
+1476F,3000,1611930900,Lanterns,binary search|data structures|dp
+1478B,1100,1611844500,Nezzar and Lucky Number,brute force|dp|greedy|math
+1479B1,1900,1612708500,Painting the Array I,constructive algorithms|data structures|dp|greedy|implementation
+1479B2,2100,1612708500,Painting the Array II,constructive algorithms|data structures|dp|greedy|implementation
+1481E,2500,1612535700,Sorting Books,data structures|dp|greedy
+1482E,2100,1616322000,Skyline Photo,data structures|divide and conquer|dp
+1485B,1200,1613141400,Replace and Keep Sorted,dp|implementation|math
+1485E,2500,1613141400,Move and Swap,dfs and similar|dp|greedy|trees
+1485F,2400,1613141400,Copy or Prefix Sum,combinatorics|data structures|dp|sortings
+1486D,2100,1613658900,Max Median,binary search|data structures|dp
+1486E,2200,1613658900,Paired Payment,binary search|brute force|constructive algorithms|dp|flows|graphs|shortest paths
+1486F,2600,1613658900,Pairs of Paths,combinatorics|data structures|dfs and similar|dp|trees
+1487F,2900,1613399700,Ones,dp|greedy|shortest paths
+1487G,2700,1613399700,String Counting,combinatorics|dp|fft|math
+1488E,2200,1615300500,Palindromic Doubles,*special|data structures|dp
+1491C,1700,1614519300,Pekora and Trampoline,brute force|data structures|dp|greedy|implementation
+1491D,1800,1614519300,Zookeeper and The Infinite Zoo,bitmasks|constructive algorithms|dp|greedy|math
+1492C,1500,1614071100,Maximum width,binary search|data structures|dp|greedy|two pointers
+1494C,1900,1614696300,1D Sokoban,binary search|dp|greedy|implementation|two pointers
+1497D,2500,1615991700,Genius,bitmasks|dp|graphs|number theory
+1497E1,1700,1615991700,Square-Free Division (easy version),data structures|dp|greedy|math|number theory|two pointers
+1497E2,2500,1615991700,Square-Free Division (hard version),data structures|dp|greedy|math|number theory|two pointers
+1498C,1600,1617028500,Planar Reflections,brute force|data structures|dp
+1498D,2200,1617028500,Bananas in a Microwave,dfs and similar|dp|graphs|implementation
+1498F,2500,1617028500,Christmas Game,bitmasks|data structures|dfs and similar|dp|games|math|trees
+1499B,1000,1616079000,Binary Removals,brute force|dp|greedy|implementation
+1499D,2100,1616079000,The Number of Pairs,dp|math|number theory
+1499E,2400,1616079000,Chaotic Merge,combinatorics|dp|math|strings
+1499F,2400,1616079000,Diameter Cuts,combinatorics|dfs and similar|dp|trees
+1501B,900,1615626300,Napoleon Cake,dp|implementation|sortings
+1503C,2200,1617460500,Travelling Salesman Problem,binary search|data structures|dp|greedy|shortest paths|sortings|two pointers
+1506G,2000,1616682900,Maximize the Remaining String,brute force|data structures|dp|greedy|strings
+1509C,1800,1618583700,The Sports Festival,dp|greedy
+1510D,2100,1617523500,Digits,dp|math|number theory
+1511E,2100,1618238100,Colorings and Dominoes,combinatorics|dp|greedy|math
+1511F,2700,1618238100,Chainword,brute force|data structures|dp|matrices|string suffix structures|strings
+1511G,2700,1618238100,Chips on a Board,bitmasks|brute force|data structures|dp|games|two pointers
+1512F,1900,1618065300,Education,brute force|dp|greedy|implementation
+1512G,1700,1618065300,Short Task,brute force|dp|math|number theory
+1513C,1600,1618151700,Add One,dp|matrices
+1515E,2200,1619966100,Phoenix and Computers,combinatorics|dp|math
+1516B,1500,1619012100,AGAGA XOOORRR,bitmasks|brute force|dp|greedy
+1516C,1700,1619012100,Baby Ehab Partitions Again,bitmasks|constructive algorithms|dp|math
+1516D,2100,1619012100,Cut,binary search|data structures|dp|graphs|number theory|two pointers
+1516E,2500,1619012100,Baby Ehab Plays with Permutations,combinatorics|dp|math
+1517D,1800,1619188500,Explorer Space,dp|graphs|shortest paths
+1519B,800,1619706900,The Cake Is a Lie,dp|math
+1519D,1600,1619706900,Maximum Sum of Products,brute force|dp|implementation|math|two pointers
+1521D,2500,1620398100,Nastia Plays with a Tree,constructive algorithms|data structures|dfs and similar|dp|dsu|greedy|implementation|trees
+1521E,2700,1620398100,Nastia and a Beautiful Matrix,binary search|constructive algorithms|dp|greedy
+1523D,2400,1622385300,Love-Hate,bitmasks|brute force|dp|probabilities
+1523E,2600,1622385300,Crypto Lights,combinatorics|dp|math|probabilities
+1525D,1800,1621152000,Armchairs,dp|flows|graph matchings|greedy
+1525E,2100,1621152000,Assimilation IV,combinatorics|dp|math|probabilities|two pointers
+1525F,2800,1621152000,Goblins And Gnomes,brute force|dp|flows|graph matchings
+1526B,1400,1622210700,I Hate 1111,dp|math|number theory
+1526C1,1500,1622210700,Potions (Easy Version),brute force|data structures|dp|greedy
+1527E,2500,1621521300,Partition Game,binary search|data structures|divide and conquer|dp
+1528A,1600,1621866900,Parsa's Humongous Tree,dfs and similar|divide and conquer|dp|greedy|trees
+1528B,1700,1621866900,Kavi on Pairing Duty,combinatorics|dp|math
+1528E,2900,1621866900,Mashtali and Hagh Trees,combinatorics|dp|trees
+1530F,2600,1626532500,Bingo,bitmasks|combinatorics|dp|math|probabilities
+1534C,1300,1623598500,Little Alawn's Puzzle,combinatorics|dp|dsu|graphs|math
+1534F2,3000,1623598500,Falling Sand (Hard Version),dfs and similar|dp|graphs|greedy
+1535C,1400,1622817300,Unstable String,binary search|dp|greedy|implementation|strings|two pointers
+1535D,1800,1622817300,Playoff Tournament,data structures|dfs and similar|dp|implementation|trees
+1535E,2200,1622817300,Gold Transfer,binary search|data structures|dp|greedy|interactive|trees
+1536C,1500,1622990100,Diluc and Kaeya,data structures|dp|hashing|number theory
+1537E1,1600,1624026900,Erase and Extend (Easy Version),binary search|brute force|dp|greedy|hashing|implementation|string suffix structures|strings|two pointers
+1538A,800,1623335700,Stone Game,brute force|dp|greedy
+1538F,1500,1623335700,Interesting Function,binary search|dp|math|number theory
+1539B,800,1624183500,Love Song,dp|implementation|strings
+1539E,2500,1624183500,Game with Cards,binary search|constructive algorithms|data structures|dp|greedy|implementation
+1540B,2300,1624635300,Tree Array,brute force|combinatorics|dp|graphs|math|probabilities|trees
+1540C1,2700,1624635300,Converging Array (Easy Version),dp|math
+1540C2,2900,1624635300,Converging Array (Hard Version),dp|math
+1542D,2200,1625317500,Priority Queue,combinatorics|dp|implementation|math|ternary search
+1542E1,2400,1625317500,Abnormal Permutation Pairs (easy version),combinatorics|dp|fft|math
+1542E2,2700,1625317500,Abnormal Permutation Pairs (hard version),combinatorics|dp|fft|math
+1547E,1500,1625927700,Air Conditioners,data structures|dp|implementation|shortest paths|sortings|two pointers
+1547G,2100,1625927700,How Many Paths?,dfs and similar|dp|graphs|trees
+1548C,2500,1627828500,The Three Little Pigs,combinatorics|dp|fft|math
+1549B,800,1627828500,Gregor and the Pawn Game,dfs and similar|dp|flows|graph matchings|graphs|greedy|implementation
+1550E,2500,1626273300,Stringforces,binary search|bitmasks|brute force|dp|strings|two pointers
+1550F,2700,1626273300,Jumping Around,binary search|data structures|divide and conquer|dp|dsu|graphs|shortest paths
+1551E,2000,1627050900,Fixed Points,binary search|brute force|dp
+1551F,2200,1627050900,Equidistant Vertices,brute force|combinatorics|dfs and similar|dp|trees
+1552D,1800,1627223700,Array Differentiation,bitmasks|brute force|constructive algorithms|dfs and similar|dp|graphs|math
+1552F,2200,1627223700,Telepanting,binary search|data structures|dp|sortings
+1553B,1300,1626964500,Reverse String,brute force|dp|hashing|implementation|strings
+1553C,1200,1626964500,Penalty,bitmasks|brute force|dp|greedy
+1553D,1500,1626964500,Backspace,dp|greedy|strings|two pointers
+1554E,2600,1627569300,You,dfs and similar|dp|math|number theory
+1555C,1300,1627655700,Coin Rows,brute force|constructive algorithms|dp|implementation
+1555D,1600,1627655700,Say No to Palindromes,brute force|constructive algorithms|dp|strings
+1556E,2200,1630247700,Equilibrium,data structures|dp|greedy
+1556F,2500,1630247700,Sports Betting,bitmasks|combinatorics|dp|graphs|math|probabilities
+1557C,1700,1628519700,Moamen and XOR,bitmasks|combinatorics|dp|math|matrices
+1557D,2200,1628519700,Ezzat and Grid,data structures|dp|greedy
+1558B,1900,1629815700,Up the Strip,brute force|dp|math|number theory|two pointers
+1559B,900,1629038100,Mocha and Red and Blue,dp|greedy
+1559E,2200,1629038100,Mocha and Stars,combinatorics|dp|fft|math|number theory
+1560F2,2100,1629297300,Nearest Beautiful Number (hard version),bitmasks|brute force|constructive algorithms|dfs and similar|dp|greedy
+1561D1,1700,1629815700,Up the Strip (simplified version),brute force|data structures|dp|math|number theory
+1562D1,1700,1629988500,Two Hundred Twenty One (easy version),data structures|dp|math
+1562E,2500,1629988500,Rescue Niwen!,dp|greedy|string suffix structures|strings
+1566B,800,1631457300,MIN-MEX Cut,bitmasks|constructive algorithms|dp|greedy
+1566C,1000,1631457300,MAX-MEX Cut,bitmasks|constructive algorithms|dp|greedy
+1566E,2000,1631457300,Buds Re-hanging,constructive algorithms|dfs and similar|dp|greedy|trees
+1566F,2600,1631457300,Points Movement,data structures|dp|greedy|implementation|sortings
+1567C,1600,1630852500,Carrying Conundrum,bitmasks|combinatorics|dp|math
+1569F,3000,1631111700,Palindromic Hamiltonian Path,brute force|dfs and similar|dp|graphs|hashing
+1571E,1700,1633617300,Fix the String,*special|bitmasks|dp|greedy
+1571F,2000,1633617300,Kotlinforces,*special|constructive algorithms|dp
+1571G,2500,1633617300,A Battle Against a Dragon,*special|data structures|dp
+1572A,1800,1631975700,Book,binary search|brute force|data structures|dp|graphs|implementation|sortings
+1572C,2700,1631975700,Paint,dp|greedy
+1572E,3000,1631975700,Polygon,binary search|dp|geometry
+1574F,2700,1632148500,Occurrences,combinatorics|dfs and similar|dp|dsu|fft|graphs
+1575D,1800,1633181700,Divisible by Twenty-Five,brute force|dfs and similar|dp
+1575H,2200,1633181700,Holiday Wall Ornaments,dp|strings
+1575L,2100,1633181700,Longest Array Deconstruction,data structures|divide and conquer|dp|sortings
+1579G,2200,1632839700,Minimal Coverage,dp
+1580A,1700,1632996900,Portal,brute force|data structures|dp|greedy|implementation
+1580B,2600,1632996900,Mathematics Curriculum,brute force|combinatorics|dp|trees
+1580D,2900,1632996900,Subsequence,brute force|divide and conquer|dp|greedy|trees
+1582E,2000,1635069900,Pchelyonok and Segments,binary search|data structures|dp|greedy|math
+1582F1,1800,1635069900,Korney Korneevich and XOR (easy version),bitmasks|dp|greedy
+1582F2,2400,1635069900,Korney Korneevich and XOR (hard version),binary search|brute force|dp|greedy|two pointers
+1583C,1700,1634468700,Omkar and Determination,data structures|dp
+1584F,2600,1636869900,Strange LCS,bitmasks|dp|graphs|greedy|strings
+1585F,2400,1639322100,Non-equal Neighbours,combinatorics|dp|math
+1585G,2500,1639322100,Poachers,dp|games|graphs|trees
+1592C,1700,1633271700,Bakry and Partitioning,bitmasks|constructive algorithms|dfs and similar|dp|graphs|trees
+1593B,900,1634135700,Make it Divisible by 25,dfs and similar|dp|greedy|math
+1593F,2100,1634135700,Red-Black Number,dfs and similar|dp|implementation|math|meet-in-the-middle
+1593G,2200,1634135700,Changing Brackets,constructive algorithms|data structures|dp|greedy
+1594D,1700,1633705500,The Number of Imposters,constructive algorithms|dfs and similar|dp|dsu|graphs
+1594E2,2300,1633705500,Rubik's Cube Coloring (hard version),brute force|dp|implementation|math|trees
+1598A,800,1633856700,Computer Game,brute force|dfs and similar|dp|implementation
+1598C,1200,1633856700,Delete Two Elements,data structures|dp|implementation|math|two pointers
+1598E,2100,1633856700,Staircases,brute force|combinatorics|data structures|dfs and similar|dp|implementation|math
+1598F,2400,1633856700,RBS,binary search|bitmasks|brute force|data structures|dp
+1601B,1900,1635143700,Frog Traveler,data structures|dfs and similar|dp|graphs|shortest paths|two pointers
+1601C,2300,1635143700,Optimal Insertion,data structures|divide and conquer|dp|greedy|sortings
+1601D,2700,1635143700,Difficult Mountain,data structures|dp|greedy|sortings
+1601E,2900,1635143700,Phys Ed Online,data structures|dp|greedy
+1603C,2300,1635604500,Extreme Extension,dp|greedy|math|number theory
+1603D,3000,1635604500,Artistic Partition,divide and conquer|dp|number theory
+1603F,2700,1635604500,"October 18, 2017",combinatorics|dp|implementation|math
+1605F,2900,1636727700,PalindORme,combinatorics|dp
+1606E,2100,1635518100,Arena,combinatorics|dp|math
+1606F,2800,1635518100,Tree Queries,brute force|dp|trees
+1608C,1700,1639217100,Game Master,data structures|dfs and similar|dp|graphs|greedy|two pointers
+1609C,1400,1638110100,Complex Market Analysis,binary search|dp|implementation|number theory|schedules|two pointers
+1609E,2400,1638110100,William The Oblivious ,bitmasks|data structures|dp|matrices
+1610D,2000,1637678100,Not Quite Lee,combinatorics|dp|math|number theory
+1611E2,1900,1637850900,Escape The Maze (hard version),dfs and similar|dp|greedy|shortest paths|trees
+1612E,2000,1637573700,Messages,brute force|dp|greedy|probabilities|sortings
+1612F,2800,1637573700,Armor and Weapons,brute force|dp|greedy|shortest paths
+1613D,1900,1638369300,MEX Sequences,dp|math
+1614C,1500,1637925300,Divan and bitwise operations,bitmasks|combinatorics|constructive algorithms|dp|math
+1614D1,2100,1637925300,Divan and Kostomuksha (easy version),dp|number theory
+1614D2,2300,1637925300,Divan and Kostomuksha (hard version),dp|number theory
+1615F,2800,1640356500,LEGOndary Grandmaster,combinatorics|dp|math
+1616D,2000,1640792100,Keep the Average High,dp|greedy|math
+1616H,3000,1640792100,Keep XOR Low,bitmasks|combinatorics|data structures|divide and conquer|dp|math
+1617E,2700,1639661700,Christmas Chocolates,dfs and similar|dp|games|graphs|implementation|math|number theory|shortest paths|trees
+1618D,1300,1639492500,Array and Operations,dp|greedy|math
+1619E,1700,1640010900,MEX and Increments,constructive algorithms|data structures|dp|greedy|implementation|math|sortings
+1620C,1800,1639841700,BA-String,brute force|dp|greedy|implementation|math
+1620F,2800,1639841700,Bipartite Array,dp|greedy
+1620G,2400,1639841700,Subsequences Galore,bitmasks|combinatorics|dp
+1621E,2300,1641220500,New School,binary search|data structures|dp|greedy|implementation|sortings
+1624E,2000,1641825300,Masha-forgetful,brute force|constructive algorithms|dp|hashing|implementation|strings
+1625C,1700,1641989100,Road Optimization,dp
+1625E1,2500,1641989100,Cats on the Upgrade (easy version),brute force|data structures|dfs and similar|divide and conquer|dp|graphs|trees
+1626C,1700,1642343700,Monsters And Spells,binary search|data structures|dp|greedy|implementation|math|two pointers
+1626F,2800,1642343700,A Random Code Problem,combinatorics|dp|math|number theory|probabilities
+1627D,1900,1642257300,Not Adding,brute force|dp|math|number theory
+1627E,2200,1642257300,Not Escaping,data structures|dp|implementation|shortest paths|two pointers
+1628D1,2100,1642862100,Game on Sum (Easy Version),combinatorics|dp|games|math
+1628D2,2400,1642862100,Game on Sum (Hard Version),combinatorics|dp|games|math
+1630C,2200,1643294100,Paint the Middle,dp|greedy|sortings|two pointers
+1630D,2400,1643294100,Flipping Range,constructive algorithms|dp|greedy|number theory
+1631B,1100,1643294100,Fun with Even Subarrays,dp|greedy
+1632C,1600,1643553300,Strange Test,binary search|bitmasks|brute force|dp|math
+1633D,1600,1643639700,Make Them Equal,dp|greedy
+1635D,1800,1645367700,Infinite Set,bitmasks|dp|math|matrices|number theory|strings
+1637B,1100,1644676500,MEX and Array,brute force|dp|greedy|math
+1637D,1800,1644676500,Yet Another Minimization Problem,dp|greedy|math
+1637F,2500,1644676500,Towers,constructive algorithms|dfs and similar|dp|greedy|trees
+1644C,1400,1645540500,Increase Subarray Sums,brute force|dp|greedy|implementation
+1646C,1500,1646408100,Factorials and Powers of Two,bitmasks|brute force|constructive algorithms|dp|math
+1646D,2000,1646408100,Weight the Tree,constructive algorithms|dfs and similar|dp|implementation|trees
+1646E,2200,1646408100,Power Board,brute force|dp|math|number theory
+1647D,1900,1647009300,Madoka and the Best School in Russia,constructive algorithms|dp|math|number theory
+1648D,2800,1646560500,Serious Business,data structures|divide and conquer|dp|implementation|shortest paths
+1650F,2200,1646750100,Vitaly and Advanced Useless Algorithms,dp|greedy|implementation
+1650G,2100,1646750100,Counting Shortcuts,data structures|dfs and similar|dp|graphs|shortest paths
+1657E,2200,1647960300,Star MST,combinatorics|dp|graph matchings|math
+1658E,2500,1648391700,Gojou and Matrix Game,data structures|dp|games|hashing|implementation|math|number theory|sortings
+1659C,1500,1650206100,Line Empire,binary search|brute force|dp|greedy|implementation|math
+1660C,1300,1648737300,Get an Even String,dp|greedy|strings
+1661B,1300,1649514900,Getting Zero,bitmasks|brute force|dfs and similar|dp|graphs|greedy|shortest paths
+1661E,2500,1649514900,Narrow Components,brute force|data structures|dp|dsu|math|trees
+1666F,2200,1649837100,Fancy Stack,combinatorics|dp|implementation
+1666J,2100,1649837100,Job Lookup,constructive algorithms|dp|shortest paths|trees
+1667B,2100,1650378900,Optimal Partition,data structures|dp
+1667D,2900,1650378900,Edge Elimination,constructive algorithms|dfs and similar|dp|trees
+1667E,3000,1650378900,Centroid Probabilities,combinatorics|dp|fft|math
+1670F,2400,1651847700,"Jee, You See?",bitmasks|combinatorics|dp
+1671E,2100,1650638100,Preorder,combinatorics|divide and conquer|dp|dsu|hashing|sortings|trees
+1671F,2700,1650638100,Permutation Counting,brute force|combinatorics|dp|fft|math
+1673C,1500,1651329300,Palindrome Basis,brute force|dp|math|number theory
+1674G,2000,1651502100,Remove Directed Edges,dfs and similar|dp|graphs
+1675F,1800,1651761300,Vlad and Unfinished Business,dfs and similar|dp|greedy|trees
+1675G,2300,1651761300,Sorting Pancakes,dp
+1676G,1300,1652193900,White-Black Balanced Subtrees,dfs and similar|dp|graphs|trees
+1677A,1600,1652020500,Tokitsukaze and Strange Inequality,brute force|data structures|dp
+1677D,2500,1652020500,Tokitsukaze and Permutations,dp|math
+1678B2,1800,1652020500,Tokitsukaze and Good 01-String (hard version),dp|greedy|implementation
+1679D,1900,1652520900,Toss a Coin to Your Graph...,binary search|dfs and similar|dp|graphs
+1679E,2400,1652520900,Typical Party in Dorm,bitmasks|combinatorics|dp|strings
+1679F,2600,1652520900,Formalism for Formalism,bitmasks|dp|math
+1680E,2000,1652452500,Moving Chips,bitmasks|dp|greedy
+1681D,1700,1653316500,Required Length,brute force|dfs and similar|dp|hashing|shortest paths
+1681E,2600,1653316500,Labyrinth Adventures,data structures|dp|matrices|shortest paths
+1681F,2300,1653316500,Unique Occurrences,data structures|dfs and similar|divide and conquer|dp|dsu|trees
+1686B,800,1653500100,Odd Subarrays,dp|greedy
+1689C,1600,1654878900,Infected Tree,dfs and similar|dp|trees
+1689D,1900,1654878900,Lena and Matrix,data structures|dp|geometry|shortest paths
+1691F,2500,1654007700,K-Set Tree,combinatorics|dfs and similar|dp|math|trees
+1692G,1400,1655217300,2^Sort,data structures|dp|sortings|two pointers
+1692H,1700,1655217300,Gambling,data structures|dp|greedy|math
+1693B,1700,1655390100,Fake Plastic Trees,dfs and similar|dp|greedy|trees
+1693D,2800,1655390100,Decinc Dividing,brute force|data structures|divide and conquer|dp|greedy
+1695C,1700,1655562900,Zero Path,brute force|data structures|dp|graphs|greedy|shortest paths
+1695D1,2200,1655562900,Tree Queries (Easy Version),brute force|constructive algorithms|dfs and similar|dp|greedy|trees
+1695D2,2300,1655562900,Tree Queries (Hard Version),constructive algorithms|dfs and similar|dp|greedy|trees
+1697E,2400,1655044500,Coloring,brute force|combinatorics|constructive algorithms|dp|geometry|graphs|greedy|implementation|math
+1699D,2300,1656945300,Almost Triple Deletions,data structures|dp|greedy
+1699E,2600,1656945300,Three Days Grace,data structures|dp|greedy|math|number theory|two pointers
+1700D,1900,1655629500,River Locks,binary search|dp|greedy|math
+1700F,2600,1655629500,Puzzle,constructive algorithms|dp|greedy
+1701E,2500,1657290900,Text Editor,brute force|dp|greedy|strings
+1703F,1300,1657636500,Yet Another Problem About Pairs Satisfying an Inequality,binary search|data structures|dp|greedy|sortings
+1703G,1600,1657636500,"Good Key, Bad Key",bitmasks|brute force|dp|greedy|math
+1704E,2200,1659276300,Count Seconds,brute force|constructive algorithms|dp|graphs|implementation|math
+1704F,2600,1659276300,Colouring Game,constructive algorithms|dp|games
+1706B,1100,1658154900,Making Towers,dp|greedy|math
+1706C,1400,1658154900,Qpwoeirut And The City,dp|flows|greedy|implementation
+1706D2,2400,1658154900,Chopping Carrots (Hard Version),brute force|constructive algorithms|data structures|dp|greedy|math|number theory|two pointers
+1707D,3000,1657982100,Partial Virtual Trees,combinatorics|dfs and similar|dp|math|trees
+1709B,900,1658414100,Also Try Minecraft,data structures|dp|implementation
+1709F,2500,1658414100,Multiset of Strings,bitmasks|brute force|dp|fft|flows|graphs|math|meet-in-the-middle|trees
+1710C,2500,1658673300,XOR Triangle,bitmasks|brute force|constructive algorithms|dp|greedy|math
+1713C,1200,1659796500,Build Permutation,constructive algorithms|dp|math
+1713F,2900,1659796500,Lost Array,bitmasks|combinatorics|constructive algorithms|dp|math
+1714D,1600,1659364500,Color with Occurrences,brute force|data structures|dp|greedy|strings
+1715E,2400,1661006100,Long Way Home,data structures|divide and conquer|dp|geometry|graphs|greedy|shortest paths
+1716C,2000,1659623700,Robot in a Hallway,data structures|dp|greedy|implementation|ternary search
+1716D,2000,1659623700,Chip Move,brute force|dp|math
+1716E,2500,1659623700,Swap and Maximum Block,bitmasks|data structures|dfs and similar|divide and conquer|dp
+1716F,2500,1659623700,Bags with Balls,combinatorics|dp|math|number theory
+1718A1,1800,1660660500,Burenka and Traditions (easy version),dp|greedy
+1718A2,1900,1660660500,Burenka and Traditions (hard version),data structures|dp|greedy
+1720D1,1800,1660829700,Xor-Subsequence (easy version),bitmasks|brute force|dp|strings|trees|two pointers
+1720D2,2400,1660829700,Xor-Subsequence (hard version),bitmasks|data structures|dp|strings|trees
+1721E,2200,1661610900,Prefix Function Queries,dfs and similar|dp|hashing|string suffix structures|strings|trees
+1722E,1600,1661871000,Counting Rectangles,brute force|data structures|dp|implementation
+1725E,2500,1662298500,Electrical Efficiency,combinatorics|data structures|dp|math|number theory|trees
+1725J,2500,1662298500,Journey,dp|trees
+1725M,1800,1662298500,Moving Both Hands,dp|graphs|shortest paths
+1728D,1800,1662647700,Letter Picking,constructive algorithms|dp|games|two pointers
+1728G,2700,1662647700,Illumination,binary search|bitmasks|brute force|combinatorics|dp|math|two pointers
+1729G,2100,1662993300,Cut Substrings,combinatorics|dp|hashing|strings|two pointers
+1730F,2700,1664116500,Almost Sorted,bitmasks|data structures|dp
+1731D,1700,1672151700,Valiant's New Map,binary search|brute force|data structures|dp|two pointers
+1731E,2000,1672151700,Graph Cost,dp|greedy|math|number theory
+1731F,2500,1672151700,Function Sum,brute force|combinatorics|dp|fft|math
+1732B,900,1666519500,Ugu,brute force|dp|greedy|implementation
+1732E,2800,1666519500,Location,data structures|dp|math|number theory
+1733D2,2000,1663598100,Zero-One (Hard Version),dp|greedy
+1733E,2700,1663598100,Conveyor,constructive algorithms|dp|math
+1734D,1800,1663934700,Slime Escape,data structures|dp|greedy|two pointers
+1734F,2500,1663934700,Zeros and Ones,bitmasks|divide and conquer|dp|math
+1736C2,2400,1665412500,Good Subarrays (Hard Version),binary search|data structures|dp|two pointers
+1736E,2600,1665412500,Swap and Take,dp|greedy
+1737D,2200,1665153300,Ela and the Wiring Wizard,brute force|dp|graphs|greedy|implementation|shortest paths
+1737E,2500,1665153300,Ela Goes Hiking,combinatorics|dp|math|probabilities
+1738C,1500,1664548500,Even Number Addicts,dp|games|greedy|math
+1738E,2300,1664548500,Balance Addicts,combinatorics|dp|math|two pointers
+1738G,2900,1664548500,Anti-Increasing Addicts,constructive algorithms|dp|greedy|math
+1739C,1500,1664462100,Card Game,combinatorics|constructive algorithms|dp|games
+1739E,2400,1664462100,Cleaning Robot,bitmasks|dp
+1739F,2600,1664462100,Keyboard Design,bitmasks|data structures|dp|string suffix structures|strings
+1740E,1800,1667034600,Hanging Hearts,constructive algorithms|data structures|dfs and similar|dp|greedy|trees
+1740F,2600,1667034600,Conditional Mix,combinatorics|dp|math
+1741E,1600,1665498900,Sending a Sequence Over the Network,dp
+1741G,2200,1665498900,Kirill and Company,bitmasks|brute force|dfs and similar|dp|flows|graphs|shortest paths
+1743C,1100,1666017300,Save the Magazines,constructive algorithms|dp|greedy
+1743D,1700,1666017300,Problem with Random Tests,brute force|dp|greedy|probabilities
+1743E,2400,1666017300,FTL,binary search|dp
+1743F,2300,1666017300,Intersection and Union,data structures|dp|matrices|probabilities
+1743G,3000,1666017300,Antifibonacci Cut,bitmasks|combinatorics|constructive algorithms|data structures|dp|hashing|math
+1746D,1900,1665844500,Paths on the Tree,dfs and similar|dp|greedy|sortings|trees
+1747E,2900,1667572500,List Generation,combinatorics|dp|math
+1748C,1600,1668263700,Zero-Sum Prefixes,brute force|data structures|dp|greedy|implementation
+1748E,2300,1668263700,Yet Another Array Counting Problem,binary search|data structures|divide and conquer|dp|flows|math|trees
+1749D,1900,1666276500,Counting Arrays,combinatorics|dp|math|number theory
+1750E,2400,1667745300,Bracket Cost,binary search|data structures|divide and conquer|dp|greedy|strings
+1750F,2700,1667745300,Majority,combinatorics|dp|math|strings
+1753A1,1300,1666511400,Make Nonzero Sum (easy version),constructive algorithms|dp|greedy
+1753A2,1500,1666511400,Make Nonzero Sum (hard version),constructive algorithms|dp|greedy
+1753C,2000,1666511400,Wish I Knew How to Sort,dp|math|probabilities
+1759E,1500,1668782100,The Humanoid,brute force|dp|sortings
+1762F,2600,1671114900,Good Pairs ,binary search|data structures|dp
+1763D,2200,1671460500,Valid Bitonic Permutations,combinatorics|dp|implementation|math|number theory
+1763E,2200,1671460500,Node Pairs,dp|graphs|math|number theory
+1763F,3000,1671460500,Edge Queries,data structures|dfs and similar|dp|dsu|graphs|trees
+1764D,2000,1669471500,Doremy's Pegging Game,combinatorics|dp|math
+1764E,2400,1669471500,Doremy's Number Line,dp|greedy|sortings
+1765C,2600,1669545300,Card Guessing,combinatorics|dp|probabilities
+1765F,2200,1669545300,Chemistry Lab,dp|geometry|probabilities
+1766C,1300,1670855700,Hamiltonian Wall,dp|implementation
+1766E,2300,1670855700,Decomposition,binary search|brute force|data structures|divide and conquer|dp|two pointers
+1767C,2100,1671201300,Count Binary Strings,data structures|dp
+1767D,1500,1671201300,Playoff,combinatorics|constructive algorithms|dp|greedy|math
+1767E,2500,1671201300,Algebra Flash,bitmasks|brute force|dp|graphs|math|meet-in-the-middle|trees
+1768F,2900,1672929300,Wonderful Jump,dp|greedy
+1769C1,1200,1670058000,Подкрутка I,*special|brute force|dp|greedy
+1769C2,1300,1670058000,Подкрутка II,*special|dp
+1769D1,1800,1670058000,Игра в Девятку I,*special|brute force|dp
+1770E,2400,1672410900,Koxia and Tree,combinatorics|dfs and similar|dp|dsu|math|probabilities|trees
+1771B,1400,1670772900,Hossam and Friends,binary search|constructive algorithms|dp|two pointers
+1771D,2100,1670772900,Hossam and (sub-)palindromic tree,brute force|data structures|dfs and similar|dp|strings|trees
+1771E,2500,1670772900,Hossam and a Letter,brute force|dp|implementation|two pointers
+1773G,2800,1670400300,Game of Questions,bitmasks|combinatorics|dp|fft|math|probabilities
+1774C,1300,1671287700,Ice and Fire,constructive algorithms|dp|greedy
+1774E,1900,1671287700,Two Chess Pieces,dfs and similar|dp|greedy|trees
+1775F,2500,1673349300,Laboratory on Pluto,constructive algorithms|dp|greedy|math
+1776B,2200,1676804700,Vittorio Plays with LEGO Bricks,dp|geometry
+1776M,3000,1676804700,Parmigiana With Seafood,binary search|dp|greedy|trees
+1777D,1900,1674311700,Score of a Tree,bitmasks|combinatorics|dfs and similar|dp|math|probabilities|trees
+1778D,2100,1675262100,Flexible String Revisit,combinatorics|dp|math|probabilities
+1778F,2600,1675262100,Maximizing Root,dfs and similar|dp|graphs|math|number theory|trees
+1779D,1700,1672756500,Boris and His Amazing Haircut,constructive algorithms|data structures|dp|dsu|greedy|sortings
+1779F,2500,1672756500,Xorcerer's Stones,bitmasks|constructive algorithms|dp|trees
+1780F,2300,1674657300,Three Chairs,bitmasks|brute force|combinatorics|data structures|dp|number theory|sortings
+1781F,2700,1673784300,Bracket Insertion,combinatorics|dp|math|trees
+1783D,2000,1673188500,Different Arrays,brute force|dp|implementation
+1784D,2400,1675598700,Wooden Spoon,combinatorics|dp
+1787C,1600,1675002900,Remove the Bracket,dp|greedy|math
+1788E,2200,1675953300,Sum Over Zero,data structures|dfs and similar|dp
+1789C,1500,1677334800,Serval and Toxel's Arrays,combinatorics|dp|implementation|math
+1789E,2500,1677334800,Serval and Music Game,brute force|dp|implementation|math|number theory
+1789F,2700,1677334800,Serval and Brain Power,bitmasks|brute force|dp|greedy|implementation|strings
+1791E,1100,1675434900,Negatives and Positives,dp|greedy|sortings
+1792E,2400,1674570900,Divisors and Table,brute force|dfs and similar|dp|number theory
+1792F1,2700,1674570900,Graph Coloring (easy version),combinatorics|dp|graphs
+1792F2,2900,1674570900,Graph Coloring (hard version),brute force|combinatorics|divide and conquer|dp|fft|graphs
+1793D,1800,1676190900,Moscow Gorillas,binary search|dp|greedy|implementation|math|two pointers
+1793E,2600,1676190900,Velepin and Marketing,binary search|data structures|dp|greedy|sortings|two pointers
+1794D,1900,1677951300,Counting Factorizations,combinatorics|divide and conquer|dp|math|number theory
+1794E,2400,1677951300,Labeling the Tree with Distances,data structures|dp|greedy|hashing|implementation|trees
+1795E,2200,1676558100,Explosions?,binary search|data structures|dp|greedy|math
+1796D,2000,1677594900,Maximum Subarray,data structures|dp|greedy|two pointers
+1796E,2500,1677594900,Colored Subgraphs,dfs and similar|dp|games|greedy|trees
+1797D,1900,1680962700,Li Hua and Tree,brute force|data structures|dfs and similar|dp|implementation|trees
+1798E,2300,1679841300,Multitest Generator,brute force|dp
+1798F,2500,1679841300,Gifts from Grandfather Ahmed,dp|math|number theory
+1799D1,1900,1677508500,Hot Start Up (easy version),dp
+1799D2,2100,1677508500,Hot Start Up (hard version),data structures|dp
+1799F,2700,1677508500,Halve or Subtract,binary search|brute force|dp|greedy|sortings
+1799G,2600,1677508500,Count Voting,combinatorics|dp|math
+1801C,1900,1678354500,Music Festival,binary search|data structures|dp|greedy|sortings
+1801D,2100,1678354500,The way home,binary search|data structures|dp|graphs|greedy|shortest paths|sortings
+1801F,2700,1678354500,Another n-dimensional chocolate bar,dp|math|meet-in-the-middle|number theory
+1804D,2000,1678631700,Accommodation,brute force|dp|greedy|implementation
+1804E,2400,1678631700,Routing,bitmasks|brute force|dfs and similar|dp|graphs
+1805D,1800,1680446100,"A Wide, Wide Graph",dfs and similar|dp|graphs|greedy|trees
+1805E,2300,1680446100,There Should Be a Lot of Maximums,brute force|data structures|dfs and similar|dp|trees|two pointers
+1806D,2500,1679141100,DSU Master,combinatorics|dp|dsu|math
+1807G1,1100,1679237700,Subsequence Addition (Easy Version),brute force|data structures|dp|greedy|implementation|sortings
+1807G2,1100,1679237700,Subsequence Addition (Hard Version),bitmasks|dp|greedy|implementation|sortings
+1808C,1900,1680080700,Unlucky Numbers,brute force|dp|greedy|implementation
+1808E1,2200,1680080700,Minibuses on Venus (easy version),combinatorics|divide and conquer|dp
+1808E2,2500,1680080700,Minibuses on Venus (medium version),combinatorics|divide and conquer|dp|matrices
+1808E3,2800,1680080700,Minibuses on Venus (hard version),brute force|combinatorics|dp|math
+1809E,2400,1679582100,Two Tanks,binary search|dp|implementation|math
+1809G,2800,1679582100,Prediction,combinatorics|dp|math
+1811E,1500,1680618900,Living Sequence,binary search|dp|math|number theory
+1811G1,2100,1680618900,Vlad and the Nice Paths (easy version),combinatorics|dp|math
+1811G2,2200,1680618900,Vlad and the Nice Paths (hard version),binary search|combinatorics|data structures|dp|math|two pointers
+1814E,2300,1680791700,Chain Chips,data structures|dp|matrices
+1815D,2600,1681051500,XOR Counting,bitmasks|combinatorics|dp|math
+1819C,2400,1681549500,The Fox and the Complete Tree Traversal,constructive algorithms|dp|implementation|math|trees
+1819D,2800,1681549500,Misha and Apples,brute force|data structures|dp|two pointers
+1821E,2100,1682001300,Rearrange Brackets,brute force|dp|greedy|sortings|strings
+1821F,2600,1682001300,Timber,combinatorics|dp|fft|math
+1822F,1700,1682346900,Gardening Friends,brute force|dfs and similar|dp|graphs|trees
+1823E,2500,1682606100,Removing Graph,brute force|dp|games|graphs|math
+1823F,2600,1682606100,Random Walk,dp|graphs|math|probabilities|trees
+1824C,2500,1683547500,LuoTianyi and XOR-Tree,data structures|dfs and similar|dp|dsu|greedy|trees
+1826D,1700,1683297300,Running Miles,brute force|dp|greedy
+1826E,2400,1683297300,Walk the Runway,bitmasks|brute force|data structures|dp|graphs|implementation|sortings
+1827B1,2000,1684074900,Range Sorting (Easy Version),binary search|dp|dsu|greedy|trees|two pointers
+1827B2,2400,1684074900,Range Sorting (Hard Version),binary search|data structures|dp|greedy
+1827C,2600,1684074900,Palindrome Partition,binary search|brute force|data structures|dp|hashing|strings
+1829D,1000,1683383700,Gold Rush,brute force|dfs and similar|dp|implementation
+1829G,1600,1683383700,Hits Different,data structures|dp|implementation|math
+1829H,1700,1683383700,Don't Blame Me,bitmasks|combinatorics|dp|math
+1830A,1400,1685284500,Copil Copac Draws Trees,dfs and similar|dp|graphs|trees
+1830D,2800,1685284500,Mex Tree,brute force|dp|trees
+1832E,2200,1683902100,Combinatorics Problem,brute force|combinatorics|dp
+1833G,1800,1684506900,Ksyusha and Chinchilla,constructive algorithms|dfs and similar|dp|dsu|greedy|implementation|trees
+1838E,2500,1685889900,Count Supersequences,combinatorics|dp|math
+1839D,2100,1685802900,Ball Sorting,data structures|dp|sortings
+1839E,2400,1685802900,Decreasing Game,constructive algorithms|dfs and similar|dp|greedy|interactive
+1840F,2200,1686062100,Railguns,brute force|dfs and similar|dp|graphs
+1841C,1800,1686580500,Ranom Numbers,brute force|dp|greedy|math|strings
+1842C,1500,1687615500,Tenzing and Balls,dp
+1842E,2300,1687615500,Tenzing and Triangle,data structures|dp|geometry|greedy|math
+1842G,2800,1687615500,Tenzing and Random Operations,combinatorics|dp|math|probabilities
+1842H,3000,1687615500,Tenzing and Random Real Numbers,bitmasks|dp|graphs|math|probabilities
+1843D,1200,1687271700,Apple Tree,combinatorics|dfs and similar|dp|math|trees
+1843F1,1800,1687271700,Omsk Metro (simple version),data structures|dfs and similar|dp|graphs|greedy|math|trees
+1843F2,2300,1687271700,Omsk Metro (hard version),data structures|dfs and similar|divide and conquer|dp|math|trees
+1844C,1300,1689086100,Particles,dp|greedy|implementation|math
+1845C,1400,1688049300,Strong Password,binary search|dp|greedy|strings
+1845D,1800,1688049300,Rating System,binary search|brute force|data structures|dp|dsu|greedy|math|two pointers
+1845E,2500,1688049300,Boxes and Balls,dp|implementation|math
+1845F,2800,1688049300,Swimmers in the Pool,dp|fft|math|number theory
+1846C,1200,1688740500,Rudolf and the Another Competition,constructive algorithms|data structures|dp|greedy|sortings
+1846G,1900,1688740500,Rudolf and CodeVid-23,bitmasks|dp|graphs|greedy|shortest paths
+1847C,1400,1688654100,"Vampiric Powers, anyone?",bitmasks|brute force|dp|greedy
+1848F,2400,1689518100,Vika and Wiki,binary search|bitmasks|combinatorics|divide and conquer|dp|math
+1849E,2300,1690468500,Max to the Right of Min,binary search|data structures|divide and conquer|dp|dsu|two pointers
+1851E,1500,1690295700,Nastya and Potions,dfs and similar|dp|graphs|sortings
+1852C,2400,1690122900,Ina of the Mountain,data structures|dp|greedy|math
+1852D,2800,1690122900,Miriany and Matchstick,constructive algorithms|dp|greedy
+1854B,2200,1690641300,Earn or Unlock,bitmasks|brute force|dp
+1854C,2500,1690641300,Expected Destruction,combinatorics|dp|math|probabilities
+1854E,3000,1690641300,Game Bundles,brute force|constructive algorithms|dp|greedy|math
+1856C,1600,1691246100,To Become Max,binary search|brute force|data structures|dp
+1856E1,1800,1691246100,PermuTree (easy version),dfs and similar|dp|trees
+1856E2,2700,1691246100,PermuTree (hard version),bitmasks|dfs and similar|dp|fft|greedy|implementation|math|trees
+1858B,1500,1692110100,The Walkway,brute force|dp|greedy|math|number theory
+1858D,2200,1692110100,Trees and Segments,brute force|data structures|dp|greedy|two pointers
+1859C,1200,1691850900,Another Permutation Problem,brute force|dp|greedy|math
+1859D,1800,1691850900,Andrey and Escape from Capygrad,binary search|data structures|dp|dsu|greedy|sortings
+1859E,2500,1691850900,Maximum Monogonosity,brute force|dp|math
+1860C,1400,1692282900,Game on Permutation,data structures|dp|games|greedy
+1860D,2200,1692282900,Balanced String,dp
+1861B,1000,1693492500,Two Binary Strings,constructive algorithms|dp|greedy
+1861D,1800,1693492500,Sorting By Multiplication,dp|greedy
+1861E,2300,1693492500,Non-Intersecting Subpermutations,combinatorics|dp|implementation|math
+1862A,800,1692887700,Gift Carpet,dp|greedy|implementation|strings
+1862F,1800,1692887700,Magic Will Save the World,binary search|bitmasks|brute force|dp
+1863E,2100,1693406100,Speedrun,brute force|dfs and similar|dp|graphs|greedy|math|sortings|two pointers
+1863F,2600,1693406100,"Divide, XOR, and Conquer",bitmasks|dp|math
+1863G,2800,1693406100,Swaps,combinatorics|dp|graphs|math
+1864D,1700,1693060500,Matrix Cascade,brute force|constructive algorithms|data structures|dp|greedy|math
+1866C,1900,1693742700,Completely Searching for Inversions,dfs and similar|dp|graphs
+1866D,2300,1693742700,Digital Wallet,dp|greedy
+1866E,2700,1693742700,Elevators of Tamem,dp
+1866G,2100,1693742700,Grouped Carriages,binary search|data structures|dp|flows|greedy
+1866I,2300,1693742700,Imagination Castle,dp|games|two pointers
+1866J,2800,1693742700,Jackets and Packets,dp
+1866K,2500,1693742700,Keen Tree Calculation,binary search|data structures|dp|geometry|graphs|implementation|trees
+1866M,2400,1693742700,Mighty Rock Tower,brute force|combinatorics|dp|math|probabilities
+1868B2,2100,1694354700,Candy Party (Hard Version),bitmasks|constructive algorithms|dp|greedy|implementation|math
+1868C,2400,1694354700,Travel Plan,combinatorics|dp|implementation|math|trees
+1870C,1300,1695047700,Colorful Table,binary search|data structures|dp|implementation|math|two pointers
+1870E,2300,1695047700,Another MEX Problem,bitmasks|brute force|dp|shortest paths
+1872E,1500,1694097300,Data Structures Fan,binary search|bitmasks|data structures|dp
+1874B,2400,1696084500,Jellyfish and Math,bitmasks|brute force|dfs and similar|dp|graphs|shortest paths
+1874C,2300,1696084500,Jellyfish and EVA,dp|graphs|greedy|math|probabilities
+1874D,2800,1696084500,Jellyfish and Miku,divide and conquer|dp|math|probabilities
+1874E,3000,1696084500,Jellyfish and Hack,dp|math
+1875D,1600,1696084500,Jellyfish and Mex,dp
+1879C,1300,1695566100,Make it Alternating,combinatorics|dp|greedy
+1879D,1700,1695566100,Sum of XOR Functions,bitmasks|combinatorics|divide and conquer|dp|math
+1881E,1500,1697121300,Block Sequence,dp
+1881F,1700,1697121300,Minimum Maximum Distance,dfs and similar|dp|graphs|shortest paths|trees
+1882D,1900,1695652500,Tree XOR,bitmasks|dfs and similar|dp|greedy|trees
+1883C,1000,1697972700,Raspberries,dp|math
+1884C,1700,1697958300,Medium Design,brute force|data structures|dp|greedy|sortings
+1884D,2100,1697958300,Counting Rhyme,dp|math|number theory
+1886E,2400,1696862100,I Wanna be the Team Leader,bitmasks|constructive algorithms|dp|greedy|math|sortings|two pointers
+1889C1,2000,1698503700,Doremy's Drying Plan (Easy Version),brute force|data structures|dp|greedy|sortings
+1889C2,2600,1698503700,Doremy's Drying Plan (Hard Version),data structures|dp
+1895C,1400,1699022100,Torn Lucky Ticket,brute force|dp|hashing|implementation|math
+1895E,2300,1699022100,Infinite Card Game,binary search|brute force|data structures|dfs and similar|dp|dsu|games|graphs|greedy|sortings|two pointers
+1895F,2600,1699022100,Fancy Arrays,combinatorics|dp|math|matrices
+1899C,1100,1700231700,Yarik and Array,dp|greedy|two pointers
+1900B,900,1701009300,Laura and Operations,dp|math
+1900C,1300,1701009300,Anji's Binary Tree,dfs and similar|dp|trees
+1900D,2000,1701009300,Small GCD,bitmasks|brute force|dp|math|number theory
+1900E,2100,1701009300,Transitive Graph,dfs and similar|dp|dsu|graphs|implementation
+1901D,1700,1700836500,Yet Another Monster Fight,binary search|dp|greedy|implementation|math
+1901E,2200,1700836500,Compressed Tree,dfs and similar|dp|graphs|greedy|sortings|trees
+1902D,1900,1701614100,Robot Queries,binary search|data structures|dp|implementation
+1903D2,2500,1701362100,Maximum And Queries (hard version),bitmasks|divide and conquer|dp|greedy
+1904B,1100,1702137900,Collecting Game,binary search|dp|greedy|sortings|two pointers
+1905E,2400,1702737300,One-X,combinatorics|dfs and similar|dp|math|trees
+1906E,1900,1701578100,Merge Not Sort,constructive algorithms|dp
+1906H,2200,1701578100,Twin Friends,combinatorics|dp
+1906J,2100,1701578100,Count BFS Graph,combinatorics|dp
+1909F1,2200,1703342100,Small Permutation Problem (Easy Version),brute force|combinatorics|dp|math
+1909F2,2500,1703342100,Small Permutation Problem (Hard Version),combinatorics|dp|math
+1909I,1900,1703342100,Short Permutation Problem,combinatorics|dp|fft|math
+1910E,2100,1702305300,Maximum Sum Subarrays,*special|dp
+1910I,2700,1702305300,Inverse Problem,*special|combinatorics|dp
+1912K,1800,1702452900,Kim's Quest,bitmasks|combinatorics|dp
+1913D,2100,1702910100,Array Collapse,data structures|divide and conquer|dp|trees
+1914D,1200,1702996500,Three Activities,brute force|dp|greedy|implementation|sortings
+1914F,1900,1702996500,Programming Competition,dfs and similar|dp|graph matchings|greedy|trees
+1914G1,2100,1702996500,Light Bulbs (Easy Version),brute force|combinatorics|dfs and similar|dp|dsu|graphs|math|trees
+1914G2,2300,1702996500,Light Bulbs (Hard Version),combinatorics|data structures|dfs and similar|dp|graphs|hashing
+1916H1,2700,1703947800,Matrix Rank (Easy Version),brute force|combinatorics|dp|math|matrices
+1916H2,2700,1703947800,Matrix Rank (Hard Version),combinatorics|dp|math|matrices|string suffix structures
+1917B,1100,1703428500,Erase First or Second Letter,brute force|combinatorics|data structures|dp|strings
+1917D,2300,1703428500,Yet Another Inversions Problem,combinatorics|data structures|dp|implementation|math|number theory
+1917F,2500,1703428500,Construct Tree,bitmasks|constructive algorithms|dp|trees
+1918D,1900,1706625300,Blocking Elements,binary search|data structures|dp|implementation|two pointers
+1919C,1400,1704551700,Grouping Increases,data structures|dp|greedy
+1919E,2600,1704551700,Counting Prefixes,combinatorics|constructive algorithms|dp|implementation|math
+1919F2,2800,1704551700,Wine Factory (Hard Version),data structures|dp|flows|greedy|matrices
+1920E,2100,1705156500,Counting Binary Strings,combinatorics|dp|math
+1921F,1900,1705329300,Sum of Progression,brute force|data structures|dp|implementation|math
+1921G,2200,1705329300,Mischievous Shooter,brute force|data structures|divide and conquer|dp|implementation
+1922F,2500,1705588500,Replace on Segment,dp|graph matchings
+1923B,1100,1708698900,Monsters Attack!,dp|greedy|implementation
+1923E,2000,1708698900,Count Paths,data structures|dfs and similar|dp|dsu|graphs|trees
+1924A,1500,1706366700,Did We Get Everything Covered?,constructive algorithms|dp|greedy|shortest paths|strings
+1924D,2700,1706366700,Balanced Subsequences,combinatorics|dp|math
+1925D,1900,1706366700,Good Trip,combinatorics|dp|math|probabilities
+1926C,1200,1708353300,Vlad and a Sum of Sum of Digits,dp|implementation
+1926E,1500,1708353300,Vlad and an Odd Ordering,binary search|bitmasks|data structures|dp|implementation|math|number theory
+1926F,2200,1708353300,Vlad and Avoiding X,bitmasks|brute force|dfs and similar|dp|implementation
+1926G,1900,1708353300,Vlad and Trouble at MIT,dfs and similar|dp|flows|graphs|greedy|implementation|trees
+1927D,1300,1707230700,Find the Different Ones!,binary search|brute force|data structures|dp|dsu|greedy|two pointers
+1927G,2300,1707230700,Paint Charges,data structures|dp|greedy|math
+1928E,2300,1707644100,Modular Sequence,brute force|constructive algorithms|dp|graphs|greedy|math|number theory
+1929D,1900,1708007700,Sasha and a Walk in the City,combinatorics|dp|math|trees
+1929E,2300,1708007700,Sasha and the Happy Tree Cutting,bitmasks|brute force|dfs and similar|dp|graphs|greedy|math|trees
+1930D1,1800,1708180500,Sum over all Substrings (Easy Version),brute force|dp|greedy|strings
+1930D2,2100,1708180500,Sum over all Substrings (Hard Version),bitmasks|divide and conquer|dp|dsu|greedy|implementation|strings
+1930E,2400,1708180500,2..3...4.... Wonderful! Wonderful!,combinatorics|dp|math
+1932A,800,1708257900,Thorns and Coins,dp|greedy|implementation
+1932F,1900,1708257900,Feed Cats,data structures|dp|sortings
+1933F,2100,1709044500,Turtle Mission: Robot and the Earthquake,dfs and similar|dp|graphs|shortest paths
+1934B,1200,1709303700,Yet Another Coin Problem,brute force|dp|greedy|math
+1935C,1800,1709649300,Messenger in MAC,binary search|brute force|constructive algorithms|data structures|dp|greedy|sortings
+1937B,1300,1709217300,Binary Path,dp|greedy|implementation
+1941B,1000,1710167700,Rudolf and 121,brute force|dp|greedy|math
+1941C,900,1710167700,Rudolf and the Ugly String,dp|greedy|strings
+1941D,1200,1710167700,Rudolf and the Ball Game,dfs and similar|dp|implementation
+1941E,1600,1710167700,Rudolf and k Bridges,binary search|data structures|dp|two pointers
+1942D,2100,1711809300,Learning to Paint,binary search|data structures|dfs and similar|dp|greedy|implementation|sortings
+1942G,2800,1711809300,Bessie and Cards,combinatorics|dp|math
+1943D1,2400,1710599700,Counting Is Fun (Easy Version),brute force|combinatorics|dp|math
+1943D2,2800,1710599700,Counting Is Fun (Hard Version),combinatorics|dp
+1945D,1300,1710835500,Seraphim the Owl,dp|greedy
+1946B,1100,1711118100,Maximum Sum,dp|greedy|math
+1946C,1600,1711118100,Tree Cutting,binary search|dp|greedy|implementation|trees
+1946E,2200,1711118100,Girl Permutation,combinatorics|dp|math|number theory
+1946F,2500,1711118100,Nobody is needed,2-sat|data structures|dfs and similar|dp
+1948B,1100,1710513300,Array Fix,brute force|dp|greedy|implementation
+1948C,1300,1710513300,Arrow Path,brute force|constructive algorithms|dfs and similar|dp|graphs|shortest paths
+1949C,1900,1711274400,Annual Ants' Gathering,dfs and similar|dp|greedy|trees
+1950D,1100,1711637100,Product of Binary Decimals,brute force|dp|implementation|number theory
+1950G,1900,1711637100,Shuffling Songs,bitmasks|dfs and similar|dp|graphs|hashing|implementation|strings
+1954D,1800,1712932500,Colored Balls,combinatorics|dp|math|sortings
+1955F,1800,1712586900,Unfair Game,dp|games|greedy|math|schedules
+1955G,1900,1712586900,GCD on a grid,brute force|dfs and similar|dp|implementation|math|number theory
+1955H,2300,1712586900,The Most Reckless Defense,bitmasks|brute force|constructive algorithms|dp|flows|graph matchings|shortest paths
+1956D,2000,1713018900,Nene and the Mex Operator,bitmasks|brute force|constructive algorithms|divide and conquer|dp|greedy|implementation|math
+1957C,1600,1713710100,How Does the Rook Move?,combinatorics|dp|math
+1957D,1900,1713710100,A BIT of an Inequality,bitmasks|brute force|dp|math
+1957E,2400,1713710100,Carousel of Combinations,brute force|combinatorics|dp|math|number theory
+1958A,1100,1715610900,1-3-5,*special|dp
+1958H,2600,1715610900,Composite Spells,*special|dp
+1967C,2300,1714487700,Fenwick Tree,bitmasks|brute force|combinatorics|data structures|dp|math|trees
+1968G1,1900,1714661100,Division + LCP (easy version),binary search|data structures|dp|hashing|string suffix structures|strings
+1968G2,2200,1714661100,Division + LCP (hard version),binary search|brute force|data structures|dp|hashing|math|string suffix structures|strings
+1969C,1700,1714401300,Minimizing the Sum,dp|implementation
+1969E,2400,1714401300,Unique Array,binary search|data structures|divide and conquer|dp|greedy
+1969F,3000,1714401300,Card Pairing,dp|greedy|hashing|implementation
+1970C2,1700,1714806300,Game on Tree (Medium),dfs and similar|dp|games|trees
+1970C3,1900,1714806300,Game on Tree (Hard),dfs and similar|dp|games|trees
+1970E1,1800,1714806300,Trails (Easy),dp
+1970E2,2000,1714806300,Trails (Medium),dp|matrices
+1970E3,2200,1714806300,Trails (Hard),dp|matrices
+1970G2,2200,1714806300,Min-Fund Prison (Medium),brute force|dfs and similar|dp|graphs|trees
+1970G3,2400,1714806300,Min-Fund Prison (Hard),bitmasks|dfs and similar|dp|graphs|trees
+1971D,1100,1715351700,Binary Cut,dp|greedy|implementation|sortings|strings
+1973A,900,1715956500,Chess For Three,brute force|dp|implementation|math
+1974E,1800,1716215700,Money Buys Happiness,dp
+1975D,1700,1716647700,Paint the Tree,brute force|dfs and similar|dp|greedy|shortest paths|trees
+1975F,2600,1716647700,Set,bitmasks|brute force|combinatorics|dfs and similar|divide and conquer|dp|math
+1976C,1600,1717079700,Job Interview,binary search|dp|greedy|implementation|two pointers
+1976F,2800,1717079700,Remove Bridges,data structures|dfs and similar|dp|greedy|sortings|trees
+1977C,1900,1716734100,Nikita and LCM,brute force|data structures|dp|greedy|math|number theory|sortings
+1978E,2000,1718528700,Computing Machine,brute force|data structures|dp|greedy|implementation
+1979D,1800,1717684500,Fixing a Binary String,bitmasks|brute force|constructive algorithms|dp|greedy|hashing|strings
+1981F,3000,1717149900,Turtle and Paths on a Tree,data structures|dp|trees
+1982C,1200,1719326100,Boring Day,binary search|data structures|dp|greedy|two pointers
+1982E,2300,1719326100,Number of k-good subarrays,bitmasks|brute force|combinatorics|divide and conquer|dp|math|meet-in-the-middle
+1983G,3000,1720362900,Your Loss,bitmasks|brute force|dp|trees
+1984C1,1300,1717943700,Magnitude (Easy Version),dp|greedy|math
+1984C2,1700,1717943700,Magnitude (Hard Version),combinatorics|dp|greedy|math
+1984E,2400,1717943700,Shuffle,dp|greedy|trees
+1984F,2500,1717943700,Reconstruction,brute force|dp|math
+1985H2,2200,1718116500,Maximize the Largest Component (Hard Version),data structures|dfs and similar|dp|dsu|implementation
+1986D,1400,1719154200,Mathematical Problem,brute force|dp|greedy|implementation|math|two pointers
+1987C,1200,1719758100,Basil's Garden,dp|greedy
+1987D,1800,1719758100,World is Mine,dp|games
+1987F1,2500,1719758100,Interesting Problem (Easy Version),dp
+1987F2,2600,1719758100,Interesting Problem (Hard Version),dp
+1987G1,2900,1719758100,Spinning Round (Easy Version),divide and conquer|dp|trees
+1988D,2000,1721054100,The Omnipotent Monster Killer,brute force|dfs and similar|dp|trees
+1988F,3000,1721054100,Heartbeat,combinatorics|dp|fft|math
+1989D,1900,1719498900,Smithing Skill,brute force|data structures|dp|greedy|math|sortings|two pointers
+1989E,2300,1719498900,Distance to Different,combinatorics|dp|math
+1990D,1800,1721486100,Grid Puzzle,bitmasks|brute force|dp|greedy|implementation
+1990F,2800,1721486100,Polygonal Segments,brute force|data structures|divide and conquer|dp|greedy|two pointers
+1992D,1200,1720708500,Test of Love,dp|greedy|implementation
+1992F,1900,1720708500,Valuable Cards,brute force|dp|greedy|number theory|two pointers
+1992G,2000,1720708500,Ultra-Meow,combinatorics|dp|math
+1993D,2200,1722782100,Med-imize,binary search|dp|greedy
+1993E,2700,1722782100,Xor-Grid Problem,bitmasks|constructive algorithms|dp|implementation
+1994C,1600,1721313300,Hungry Games,binary search|dp|two pointers
+1994G,2600,1721313300,Minecraft,bitmasks|brute force|dp|graphs|math
+1995D,2300,1721745300,Cases,bitmasks|brute force|dp|strings
+1995E1,2700,1721745300,Let Me Teach You a Lesson (Easy Version),2-sat|data structures|dp|matrices|two pointers
+1995E2,2900,1721745300,Let Me Teach You a Lesson (Hard Version),data structures|dp|matrices|two pointers
+1996C,1200,1722004500,Sort,dp|greedy|sortings|strings
+1997D,1500,1722350100,Maximize the Root,binary search|dfs and similar|dp|greedy|trees
+1997F,2700,1722350100,Chips on a Line,brute force|combinatorics|dp|greedy|math
+1998D,2100,1723300500,Determine Winning Islands in Race,data structures|dp|graphs|greedy|shortest paths
+1999E,1300,1722954900,Triple Operations,dp|implementation|math
+2000F,1900,1723560000,Color Rows and Columns,dp|greedy|implementation|math
+2001E1,2400,1724164500,Deterministic Heap (Easy Version),combinatorics|dp|math|trees
+2001E2,2900,1724164500,Deterministic Heap (Hard Version),combinatorics|dp|trees
+2002E,2300,1723386900,Cosmic Rays,brute force|data structures|dp
+2002F1,2600,1723386900,Court Blue (Easy Version),brute force|dfs and similar|dp|math|number theory
+2002F2,2800,1723386900,Court Blue (Hard Version),brute force|dp|math|number theory
+2003D2,2100,1724596500,Turtle and a MEX Problem (Hard Version),dfs and similar|dp|graphs|greedy|implementation|math
+2003E1,2600,1724596500,Turtle and Inversions (Easy Version),brute force|divide and conquer|dp|greedy|math
+2003E2,2700,1724596500,Turtle and Inversions (Hard Version),brute force|data structures|divide and conquer|dp|greedy|math|two pointers
+2003F,2800,1724596500,Turtle and Three Sequences,brute force|data structures|dp|greedy|math|probabilities|two pointers
+2005C,1800,1726324500,Lazy Narek,dp|implementation|strings
+2005E1,2100,1726324500,Subtangle Game (Easy Version),dp|games|greedy|implementation
+2005E2,2500,1726324500,Subtangle Game (Hard Version),data structures|dp|games|greedy|implementation
+2008D,1100,1725201300,Sakurako's Hobby,dp|dsu|graphs|math
+2008E,1500,1725201300,Alternating String,brute force|data structures|dp|greedy|implementation|strings
+2009G2,2200,1725374100,Yunli's Subarray Queries (hard version),binary search|data structures|dp
+2009G3,2700,1725374100,Yunli's Subarray Queries (extreme version),data structures|dp|implementation
+2013E,2200,1726842900,Prefix GCD,brute force|dp|greedy|math|number theory
+2013F1,2700,1726842900,Game in Tree (Easy Version),binary search|brute force|data structures|dp|games|greedy|implementation|trees
+2014F,2000,1726929900,Sheriff's Defense,dfs and similar|dp|greedy|trees
+2018B,1900,1727444100,Speedbreaker,binary search|data structures|dp|greedy|implementation|two pointers
+2018D,2200,1727444100,Max Plus Min Plus Size,data structures|dp|dsu|greedy|implementation|matrices|sortings
+2018F1,2900,1727444100,Speedbreaker Counting (Easy Version),combinatorics|dp|greedy|math
+2018F2,3000,1727444100,Speedbreaker Counting (Medium Version),dp|greedy|math
+2019A,800,1727444100,Max Plus Size,brute force|dp|greedy
+2020D,1800,1727624100,Connect the Dots,brute force|dp|dsu|graphs|math|trees
+2020E,2000,1727624100,Expected Power,bitmasks|dp|math|probabilities
+2020F,2900,1727624100,Count Leaves,dp|math|number theory
+2021D,2500,1728194700,"Boss, Thirsty",dp|greedy|implementation
+2021E1,2300,1728194700,Digital Village (Easy Version),brute force|data structures|dfs and similar|dp|dsu|fft|graphs|greedy|implementation|math|trees
+2021E2,2500,1728194700,Digital Village (Hard Version),data structures|dp|dsu|graphs|math|trees
+2021E3,2800,1728194700,Digital Village (Extreme Version),data structures|dfs and similar|dp|dsu|graphs|greedy|math|trees
+2022C,1800,1728848100,Gerrymandering,dp|implementation
+2022D2,2700,1728848100,Asesino (Hard Version),constructive algorithms|dp|interactive
+2023B,1700,1729415100,Skipping,binary search|dp|graphs|shortest paths
+2023D,2900,1729415100,Many Games,brute force|dp|greedy|math|probabilities
+2025B,1100,1728916500,"Binomial Coefficients, Kind Of",combinatorics|dp|math
+2025D,1800,1728916500,Attribute Checks,brute force|data structures|dp|implementation|math|two pointers
+2025E,2200,1728916500,Card Game,combinatorics|dp|fft|greedy|math
+2025F,2700,1728916500,Choose Your Queries,constructive algorithms|dfs and similar|dp|graphs|greedy|trees
+2026D,1900,1730126100,Sums of Segments,binary search|data structures|dp|implementation|math
+2026F,2700,1730126100,Bermart Ice Cream,data structures|dfs and similar|divide and conquer|dp|implementation|trees
+2027C,1500,1729953300,Add Zeros,brute force|data structures|dfs and similar|dp|graphs|greedy
+2027D1,1700,1729953300,The Endspeaker (Easy Version),binary search|dp|graphs|greedy|implementation|two pointers
+2027D2,2200,1729953300,The Endspeaker (Hard Version),binary search|data structures|dp|greedy|implementation|two pointers
+2028C,1600,1731252900,Alice's Adventures in Cutting Cake,binary search|dp|greedy|two pointers
+2028D,2000,1731252900,Alice's Adventures in Cards,constructive algorithms|data structures|dp|graphs|greedy|implementation|ternary search
+2028E,2300,1731252900,Alice's Adventures in the Rabbit Hole,combinatorics|dfs and similar|dp|games|greedy|math|probabilities|trees
+2028F,2700,1731252900,Alice's Adventures in Addition,bitmasks|brute force|dp|implementation
+2029C,1700,1731162900,New Rating,binary search|data structures|dp|greedy
+2029G,3000,1731162900,Balanced Problem,data structures|dp
+2030E,2200,1729346700,MEXimize the Score,combinatorics|data structures|dp|greedy|implementation|math
+2030F,2400,1729346700,Orangutan Approved Subarrays,binary search|data structures|dp|greedy|implementation|two pointers
+2031A,800,1731674100,Penchick and Modern Monument,constructive algorithms|dp|greedy|math
+2031D,1700,1731674100,Penchick and Desert Rabbit,binary search|data structures|dfs and similar|dp|dsu|greedy|implementation|two pointers
+2031E,2100,1731674100,Penchick and Chloe's Trees,data structures|dfs and similar|dp|greedy|implementation|math|sortings|trees
+2032F,2700,1730471700,Peanuts,combinatorics|dp|games|math
+2033C,1400,1729780500,Sakurako's Field Trip,dp|greedy|two pointers
+2033D,1300,1729780500,Kousuke's Assignment,data structures|dp|dsu|greedy|math
+2033G,2200,1729780500,Sakurako and Chefir,data structures|dfs and similar|dp|greedy|trees
+2034F1,2500,1732977300,Khayyam's Royal Decree (Easy Version),combinatorics|dp|math|sortings
+2034F2,2800,1732977300,Khayyam's Royal Decree (Hard Version),combinatorics|dp|math|sortings
+2035F,2500,1730039700,Tree Operations,binary search|brute force|dfs and similar|dp|trees
+2036F,1900,1730558100,XORificator 3000,bitmasks|dp|number theory|two pointers
+2037E,1600,1731854100,Kachina's Favorite Binary String,dp|greedy|interactive|two pointers
+2037G,2000,1731854100,Natlan Exploring,bitmasks|combinatorics|data structures|dp|math|number theory
+2038D,2400,1731926100,Divide OR Conquer,binary search|bitmasks|data structures|dp|implementation
+2038K,2100,1731926100,Grid Walk,brute force|dp|greedy|math|number theory
+2038L,1400,1731926100,Bridge Renovation,brute force|dp|greedy|math|two pointers
+2038M,2800,1731926100,Royal Flush,dp|implementation
+2039E,2200,1732372500,Shohag Loves Inversions,combinatorics|dp|implementation|math
+2039F1,2800,1732372500,Shohag Loves Counting (Easy Version),combinatorics|dp|math|number theory
+2040E,2100,1733668500,Control of Randomness,combinatorics|dfs and similar|dp|graphs|greedy|math|probabilities|trees
+2040F,2700,1733668500,Number of Cubes,combinatorics|dp|math|number theory
+2041C,2000,1732431900,Cube,bitmasks|dfs and similar|dp
+2041H,2300,1732431900,Sheet Music,combinatorics|dp|math
+2041J,2700,1732431900,Bottle Arrangement,data structures|divide and conquer|dp|dsu|greedy
+2042F,2600,1733150100,Two Subarrays,data structures|dp|implementation|matrices
+2043C,1600,1735050900,Sums on Segments,binary search|brute force|data structures|dp|greedy|math
+2043F,2700,1735050900,Nim,bitmasks|brute force|combinatorics|dp|games|greedy|implementation|shortest paths
+2044G2,1900,1734273300,Medium Demon Problem (hard version),dfs and similar|dp|dsu|graphs|implementation|trees
+2044H,2100,1734273300,Hard Demon Problem,constructive algorithms|data structures|dp|implementation|math
+2045H,2200,1733029500,Missing Separators,dp|sortings|string suffix structures|strings
+2048F,2500,1734618900,Kevin and Math Class,brute force|data structures|divide and conquer|dp|implementation|math|trees
+2048G,2800,1734618900,Kevin and Matrices,brute force|combinatorics|dp|math
+2049D,1900,1734705300,Shift + Esc,brute force|dp
+2050C,1200,1733409300,Uninteresting Number,brute force|dp|math
+2050E,1500,1733409300,Three Strings,dp|implementation|strings
+2050G,1900,1733409300,Tree Destruction,dfs and similar|dp|trees
+2051G,2100,1734878100,Snakes,bitmasks|dp|dsu|graphs
+2052F,1700,1734248100,Fix Flooded Floor,constructive algorithms|dp|graphs
+2052M,2700,1734248100,Managing Cluster,dp|graphs|math|trees
+2053A,800,1735396500,Tender Carpenter,dp|geometry|greedy|math
+2053C,1500,1735396500,Bewitching Stargazer,bitmasks|divide and conquer|dp|math
+2053E,1900,1735396500,Resourceful Caterpillar Sequence,dfs and similar|dp|games|graphs|greedy|trees
+2053F,2600,1735396500,Earnest Matrix Complement,brute force|data structures|dp|greedy|implementation|math
+2053I1,2800,1735396500,Affectionate Arrays (Easy Version),data structures|dp|greedy
+2056D,2200,1737124500,Unique Median,binary search|brute force|combinatorics|data structures|divide and conquer|dp
+2056E,2500,1737124500,Nested Segments,combinatorics|dfs and similar|dp|dsu|math
+2056F1,2700,1737124500,Xor of Median (Easy Version),bitmasks|brute force|combinatorics|dp|math
+2056F2,3000,1737124500,Xor of Median (Hard Version),bitmasks|brute force|combinatorics|dp|math
+2057E1,2300,1736001300,Another Exercise on Graphs (Easy Version),binary search|brute force|dp|dsu|graphs|shortest paths|sortings
+2057E2,2500,1736001300,Another Exercise on Graphs (hard version),binary search|dfs and similar|dp|dsu|graphs|shortest paths|sortings
+2060F,2200,1737297300,Multiplicative Arrays,combinatorics|dp|number theory
+2060G,2400,1737297300,Bugged Sort,dp|greedy|sortings
+2061C,1600,1737383700,Kevin and Puzzle,2-sat|combinatorics|dp
+2061E,2000,1737383700,Kevin and And,bitmasks|brute force|dp|greedy|math|sortings
+2062D,2200,1737902100,Balanced Tree,dfs and similar|dp|graphs|greedy|trees
+2062F,2900,1737902100,Traveling Salescat,constructive algorithms|dp|geometry|graphs|greedy|math|sortings
+2063C,1600,1737547500,Remove Exactly Two,brute force|data structures|dfs and similar|dp|graphs|greedy|sortings|trees
+2063E,2300,1737547500,Triangle Tree,data structures|dfs and similar|dp|greedy|trees
+2063F1,2400,1737547500,Counting Is Not Fun (Easy Version),combinatorics|data structures|dfs and similar|dp|dsu|graphs|hashing|implementation|math|trees
+2064C,1300,1739716500,Remove the Ends,brute force|constructive algorithms|dp|greedy
+2064D,1900,1739716500,Eating,binary search|bitmasks|brute force|data structures|dp|greedy|trees|two pointers
+2064F,2600,1739716500,We Be Summing,binary search|data structures|dp|two pointers
+2065C1,1100,1739111700,Skibidus and Fanum Tax (easy version),binary search|dp|greedy
+2065H,2200,1739111700,Bro Thinks He's Him,combinatorics|data structures|divide and conquer|dp|math|matrices
+2066B,1900,1739284500,White Magic,constructive algorithms|data structures|dp|greedy|implementation
+2066C,2300,1739284500,Bitwise Slides,bitmasks|combinatorics|dp|math
+2066D1,2400,1739284500,Club of Young Aircraft Builders (easy version),combinatorics|dp|math
+2066D2,2900,1739284500,Club of Young Aircraft Builders (hard version),combinatorics|dp|math
+2067B,1200,1739284500,Two Large Bags,brute force|dp|greedy|sortings
+2069C,1500,1739889300,Beautiful Sequence,combinatorics|dp|greedy|two pointers
+2070D,1600,1740666900,Tree Jumps,dfs and similar|dp|trees
+2070F,3000,1740666900,Friends and Pizza,bitmasks|divide and conquer|dp|fft
+2071C,1700,1740753300,Trapmigiano Reggiano,constructive algorithms|data structures|dfs and similar|dp|greedy|sortings|trees
+2071D1,1800,1740753300,Infinite Sequence (Easy Version),bitmasks|brute force|dp|implementation|math
+2071D2,2500,1740753300,Infinite Sequence (Hard Version),bitmasks|brute force|constructive algorithms|data structures|dp|implementation|math
+2071E,2600,1740753300,LeaFall,combinatorics|dp|probabilities|trees
+2072E,1500,1740494100,Do You Love Your Hero and His Two-Hit Multi-Target Attacks?,binary search|brute force|constructive algorithms|dp|geometry|greedy|math
+2074G,2100,1741703700,Game With Triangles: Season 2,dp|geometry
+2075D,2000,1742222100,Equalization,bitmasks|brute force|dp|graphs|math
+2075E,2500,1742222100,XOR Matrix,bitmasks|combinatorics|dp|implementation|math
+2077C,2300,1741617900,Binary Subsequence Value Sum,combinatorics|data structures|dp|fft|math|matrices
+2077E,2700,1741617900,Another Folding Strip,combinatorics|constructive algorithms|data structures|divide and conquer|dp|greedy|math
+2078D,1800,1741617900,Scammy Game Ad,dp|greedy|implementation
+2079B,2600,1741334700,Arithmetic Exercise,*special|data structures|dp|greedy
+2081A,1800,1742049300,Math Division,bitmasks|dp|math|probabilities
+2084E,2400,1743863700,Blossom,binary search|combinatorics|dp|implementation|math|two pointers
+2084G1,2600,1743863700,Wish Upon a Satellite (Easy Version),dp|games
+2085C,1600,1742654100,Serval and The Formula,bitmasks|constructive algorithms|dp|greedy
+2086C,1300,1743690900,Disappearing Permutation,dfs and similar|dp|dsu|graphs|greedy|implementation
+2086D,1700,1743690900,Even String,brute force|combinatorics|dp|math|strings
+2086E,2400,1743690900,Zebra-like Numbers,bitmasks|brute force|constructive algorithms|dfs and similar|dp|greedy|math
+2089B2,2300,1742708100,Canteen (Hard Version),binary search|data structures|dp|flows|greedy|two pointers
+2089C1,2200,1742708100,Key of Like (Easy Version),dp|games|math|probabilities
+2090B,1000,1742708100,Pushing Balls,brute force|dp|implementation
+2091B,800,1742913300,Team Training,dp|greedy|sortings
+2091F,1800,1742913300,Igor and Mountain,binary search|brute force|dp
+2091G,2300,1742913300,Gleb and Boating,brute force|constructive algorithms|data structures|dp|graphs|greedy|math|number theory|shortest paths
+2096C,1700,1745073300,Wonderful City,dp|implementation
+2097B,2300,1745656500,Baggage Claim,combinatorics|dfs and similar|dp|dsu|graphs|implementation|math|trees
+2103F,2600,1745246100,Maximize Nor,bitmasks|data structures|dp|implementation|sortings
+2104B,1000,1745850900,Move to the End,brute force|data structures|dp|greedy|implementation
+2104E,1700,1745850900,Unpleasant Strings,binary search|dp|greedy|strings
+2104F,2600,1745850900,Numbers and Strings,binary search|brute force|dfs and similar|dp|implementation|math
+2106D,1500,1745505300,Flower Boy,binary search|dp|greedy|two pointers
+2106F,1900,1745505300,Goblin,dfs and similar|dp|dsu|greedy|math
+2107C,1500,1746455700,Maximum Subarray Sum,binary search|constructive algorithms|dp|implementation|math
+2107F1,2300,1746455700,Cycling (Easy Version),binary search|brute force|dp|greedy
+2107F2,2800,1746455700,Cycling (Hard Version),binary search|brute force|data structures|dp|greedy
+2108C,1500,1746110100,Neo's Escape,binary search|brute force|data structures|dp|dsu|graphs|greedy|implementation
+2109E,2400,1747492500,Binary String Wowee,combinatorics|dp|strings
+2110D,1700,1748097300,Fewer Batteries,binary search|dfs and similar|dp|graphs|greedy|hashing
+2111B,1100,1748961300,Fibonacci Cubes,brute force|dp|implementation|math
+2112E,2200,1750689300,Tree Colorings,combinatorics|dfs and similar|dp|graphs|math|number theory|trees
+2114C,1000,1748270100,Need More Arrays,dp|greedy
+2114E,1400,1748270100,Kirei Attacks the Estate,dfs and similar|dp|greedy|trees
+2114F,2000,1748270100,Small Operations,binary search|brute force|dfs and similar|dp|math|number theory|sortings
+2114G,2200,1748270100,Build an Array,brute force|constructive algorithms|dp|greedy|math|number theory
+2115A,1500,1748702100,Gellyfish and Flaming Peony,constructive algorithms|dp|math|number theory
+2115B,2100,1748702100,Gellyfish and Camellia Japonica,brute force|constructive algorithms|dfs and similar|dp|graphs|greedy|trees
+2115C,2700,1748702100,Gellyfish and Eternal Violet,combinatorics|dp|greedy|math|probabilities
+2115D,2900,1748702100,Gellyfish and Forget-Me-Not,bitmasks|dp|games|greedy|math
+2118D1,1700,1749738900,"Red Light, Green Light (Easy version)",brute force|dfs and similar|dp|graphs|implementation|number theory
+2118D2,2200,1749738900,"Red Light, Green Light (Hard version)",binary search|brute force|data structures|dfs and similar|dp|graphs|implementation|math|number theory
+2119D,2100,1751726100,Token Removing,combinatorics|dp|math
+2119E,2600,1751726100,And Constraint,bitmasks|dp|greedy
+2120E,2300,1750516500,Lanes of Cars,binary search|dp|ternary search
+2121E,1500,1750170900,Sponsor of Your Problems,dp|greedy|implementation|strings
+2121H,2300,1750170900,Ice Baby,binary search|brute force|data structures|dp|implementation|sortings
+2122D,2400,1752935700,Traffic Lights,brute force|data structures|divide and conquer|dp|graphs|greedy|shortest paths
+2122E,2600,1752935700,Greedy Grid Counting,combinatorics|dp|greedy|math
+2124F1,2300,1751812500,Appending Permutations (Easy Version),combinatorics|dp
+2124F2,2800,1751812500,Appending Permutations (Hard Version),combinatorics|dp
+2125D,1600,1753194900,Segments Covering,dp|math|probabilities
+2125E,2500,1753194900,Sets of Complementary Sums,brute force|combinatorics|dp|math|two pointers
+2125F,3000,1753194900,Timofey and Docker,binary search|divide and conquer|dp
+2126B,800,1752762900,No Casino in the Mountains,dp|greedy
+2126G1,2200,1752762900,Big Wins! (easy version),binary search|data structures|dp|dsu|two pointers
+2127F,2800,1754577300,Hamed and AghaBalaSar,brute force|combinatorics|dp|math|probabilities
+2128D,1600,1753626900,Sum of LDS,brute force|combinatorics|dp|greedy|math
+2128E1,1900,1753626900,Submedians (Easy Version),binary search|data structures|dp|greedy|math
+2129A,1300,1753972500,Double Perspective,constructive algorithms|dp|dsu|graphs|greedy|sortings
+2129B,1600,1753972500,Stay or Mirror,brute force|data structures|dp|greedy|sortings
+2129C3,2300,1753972500,Interactive RBS (Hard Version),binary search|bitmasks|constructive algorithms|dp|interactive
+2129D,2600,1753972500,Permutation Blackhole,brute force|combinatorics|dp|implementation|math
+2131G,2000,1754836500,Wafu!,bitmasks|brute force|data structures|dfs and similar|dp|math
+2132D,1600,1755786900,From 1 to Infinity,binary search|dp|implementation|math
+2133D,1900,1756046100,Chicken Jockey,dp|greedy
+2133E,2500,1756046100,I Yearned For The Mines,constructive algorithms|dfs and similar|dp|greedy|trees
+2133F,3000,1756046100,Flint and Steel,data structures|dp|graphs
+2134E,2300,1756218900,Power Boxes,constructive algorithms|dp|implementation|interactive
+2134F,2900,1756218900,Permutation Oddness,combinatorics|dp|math
+2135A,1200,1756391700,Against the Difference,data structures|dp
+2137G,2200,1757255700,Cry Me a River,dfs and similar|dp|games|graphs
+2138C1,1800,1757342100,Maple and Tree Beauty (Easy Version),brute force|dfs and similar|dp|graphs|trees
+2138C2,2000,1757342100,Maple and Tree Beauty (Hard Version),bitmasks|brute force|dfs and similar|dp|fft|trees
+2140E1,2200,1757428500,Prime Gaming (Easy Version),bitmasks|combinatorics|dp
+2140E2,2500,1757428500,Prime Gaming (Hard Version),bitmasks|combinatorics|dp|probabilities
+2141E,2100,1757687700,Perfect Cut,*special|dp|greedy
+2143D1,1800,1758119700,Inversion Graph Coloring (Easy Version),combinatorics|data structures|dp|greedy|two pointers
+2143D2,2200,1758119700,Inversion Graph Coloring (Hard Version),binary search|combinatorics|data structures|dp|two pointers
+2144C,1300,1757946900,Non-Descending Arrays,combinatorics|dp|math
+2144D,1800,1757946900,Price Tags,brute force|dp|math
+2144E1,2200,1757946900,Looking at Towers (easy version),combinatorics|dp
+2144E2,2500,1757946900,Looking at Towers (difficult version),combinatorics|data structures|dp
+2144F,2700,1757946900,Bracket Groups,brute force|constructive algorithms|dp|string suffix structures|strings
+2145D,1800,1759761300,Inversion Value of a Permutation,constructive algorithms|dfs and similar|dp
+2145F,2500,1759761300,Long Journey,dfs and similar|divide and conquer|dp|graphs|greedy|math|matrices|number theory
+2145G,2900,1759761300,Cost of Coloring,combinatorics|divide and conquer|dp|fft|math
+2146F,2900,1758465300,Bubble Sort,brute force|combinatorics|dp
+2147C,1500,1758378900,Rabbits,constructive algorithms|dp|greedy|implementation
+2150C,2100,1758713700,Limited Edition Shop,data structures|dp
+2150D,2700,1758713700,Attraction Theory,combinatorics|dp|math
+2152H1,2900,1759502100,Victorious Coloring (Easy Version),dfs and similar|dp|greedy
+2153D,1800,1760106900,Not Alone,dp|greedy
+2156E,2500,1761316500,Best Time to Buy and Sell Stock,binary search|brute force|data structures|dp|games|graphs|greedy
+2157E,1900,1763890500,Adjusting Drones,binary search|brute force|data structures|dp|dsu|greedy|implementation|sortings
+2157G,2800,1763890500,Isaac's Queries,bitmasks|brute force|constructive algorithms|dfs and similar|divide and conquer|dp|greedy|interactive|math|probabilities
+2158C,1400,1764426900,Annoying Game,dp|games|greedy
+2159B,2100,1760279700,Rectangles,brute force|data structures|dp|dsu|greedy|implementation|two pointers
+2159D1,2500,1760279700,Inverse Minimum Partition (Easy Version),binary search|brute force|dp|geometry|greedy|math|two pointers
+2161D,2100,1761842100,Locked Out,binary search|data structures|dp|greedy
+2162H,2900,1760711700,Beautiful Problem,dp
+2163C,1500,1762787100,Monopati,brute force|combinatorics|dp|math|two pointers
+2164F1,2600,1762439700,Chain Prefix Rank (Easy Version),combinatorics|dfs and similar|dp|math|trees
+2164F2,2900,1762439700,Chain Prefix Rank (Hard Version),binary search|combinatorics|data structures|dfs and similar|dp|graphs|math|trees
+2165B,1900,1763303700,Marble Council,dp|math|sortings
+2167F,1600,1761662100,"Tree, TREE!!!",dfs and similar|dp|math|trees
+2167G,1600,1761662100,Mukhammadali and the Smooth Array,data structures|dp
+2169C,1300,1763130900,Range Operation,dp|greedy|math|two pointers
+2169E,2400,1763130900,Points Selection,dp|greedy
+2169F,2800,1763130900,Subsequence Problem,combinatorics|dp|fft|math
+2170E,2100,1764340500,Binary Strings and Blocks,combinatorics|data structures|dp
+2170F,2600,1764340500,Build XOR on a Segment,bitmasks|dp
+2171D,1400,1763649300,Rae Taylor and Trees (easy version),binary search|data structures|dp|dsu|greedy|implementation|trees
+2171F,1600,1763649300,Rae Taylor and Trees (hard version),binary search|constructive algorithms|data structures|dp|dsu|greedy|implementation|trees
+2171H,2400,1763649300,Shiori Miyagi and Maximum Array Score,binary search|data structures|dp|sortings
+2172L,2300,1763257800,Maximum Color Segment,dp|implementation
+2173B,1100,1764945300,Niko's Tactical Cards,dp|greedy|math
+2173D,1900,1764945300,Taiga's Carry Chains,bitmasks|brute force|dp|greedy|math
+2174B,1900,1765008900,Wishing Cards,dp
+2174F,2800,1765008900,Mosaic Tree,combinatorics|dp|fft|math|trees
+2176D,1800,1765463700,Fibonacci Paths,data structures|dp|graphs|sortings
+2176E,2400,1765463700,Remove at the lowest cost,data structures|dfs and similar|dp|dsu|greedy|implementation|trees
+2176F,2400,1765463700,Omega Numbers,bitmasks|combinatorics|dp|math|number theory
+2178B,900,1766846100,Impost or Sus,dp|greedy|implementation|strings
+2178C,1200,1766846100,First or Second,dp|greedy|implementation
+2178G,2800,1766846100,deCH OR Dations,bitmasks|data structures|dp|hashing|probabilities
+2179B,800,1766501100,Blackslex and Showering,dp|greedy|implementation
+2179H,2200,1766501100,Blackslex and Plants,bitmasks|data structures|dp|implementation|math
+2180C,1900,1766154900,XOR-factorization,bitmasks|constructive algorithms|dp|greedy|number theory
+2180D,2000,1766154900,Insolvable Disks,data structures|dp|greedy|math
+2180E,2300,1766154900,No Effect XOR,bitmasks|divide and conquer|dp|greedy|math
+2180F1,2800,1766154900,Control Car (Easy Version),combinatorics|dp|probabilities
+2181G,2400,1765958700,Greta's Game,binary search|dp|graphs|greedy|math
+2181J,2300,1765958700,Jinx or Jackpot,brute force|dp|math|probabilities
+2181M,1700,1765958700,Medical Parity,dp|strings
+2182C,1200,1767018900,Production of Snowmen,brute force|combinatorics|dp
+2182D,1600,1767018900,Christmas Tree Decoration,combinatorics|dp|greedy|math
+2182F1,2300,1767018900,Christmas Reindeer (easy version),bitmasks|brute force|combinatorics|dp|math
+2182G,2800,1767018900,Short Garland,combinatorics|data structures|dfs and similar|dp|trees
+2183E,2100,1767796500,LCM is Legendary Counting Master,dp|math|number theory
+2183F,2500,1767796500,Jumping Man,brute force|combinatorics|dfs and similar|dp|trees
+2184C,1100,1768228500,Huge Pile,binary search|dfs and similar|dp|graphs|math
+2184D,1600,1768228500,Unfair Game,combinatorics|dp|math
+2184F,1900,1768228500,Cherry Tree,dfs and similar|dp|graphs|trees
+2185H,2500,1768746900,BattleCows 2,binary search|brute force|data structures|dp|greedy
+2187B,1800,1769697300,Shortest Statement Ever,bitmasks|constructive algorithms|dp|greedy
+2187D,2600,1769697300,Cool Problem,bitmasks|dp|math
+2189D1,1900,1769178900,Little String (Easy Version),combinatorics|dp|greedy|math|number theory
+2189D2,2200,1769178900,Little String (Hard Version),combinatorics|dp|greedy|math|number theory
+2189F,2800,1769178900,Zhora the Vacuum Cleaner,data structures|dfs and similar|dp|greedy|implementation|sortings|trees
+2190B1,1400,1768660500,Sub-RBS (Easy Version),combinatorics|constructive algorithms|dp|greedy|strings|two pointers
+2190B2,1900,1768660500,Sub-RBS (Hard Version),dp|games|implementation|strings
+2192D,1800,1771684500,Cost of Tree,dp|greedy|trees
+2192F,2900,1771684500,Fish Fight,dp|math|probabilities
+2193E,1300,1769351700,Product Queries,dp|math|number theory|shortest paths
+2193F,1600,1769351700,Pizza Delivery,dp|greedy
+2193H,2400,1769351700,Remove the Grail Tree,dfs and similar|dp|graphs|greedy|implementation|trees
+2194C,1300,1770541500,Secret message,bitmasks|brute force|dp|math|number theory
+2194E,2000,1770541500,The Turtle Strikes Back,dp|graphs|greedy|implementation
+2194F1,2300,1770541500,Again Trees... (Easy Version),bitmasks|dfs and similar|dp|trees
+2194F2,3000,1770541500,Again Trees... (hard version),bitmasks|data structures|dfs and similar|dp|fft|trees
+2195C,1100,1771166700,Dice Roll Sequence,dp|greedy
+2195E,1500,1771166700,Idiot First Search,dfs and similar|dp|trees
+2195F,2000,1771166700,Parabola Independence,dp|graphs|greedy|math|sortings
+2195G,2300,1771166700,Idiot First Search and Queries,binary search|data structures|dp|graphs|trees
+2196C1,1800,1770820500,Interactive Graph (Simple Version),binary search|combinatorics|dfs and similar|dp|graphs|interactive
+2196C2,2000,1770820500,Interactive Graph (Hard Version),combinatorics|dfs and similar|dp|graphs|interactive
+2196D,2500,1770820500,Double Bracket Sequence,data structures|dp|expression parsing|flows|greedy|strings
+2196E2,3000,1770820500,Fuzzy Concatenation (Hard version),binary search|bitmasks|data structures|dp|greedy|string suffix structures
+2199H,2300,1772462100,Sum of MEX,*special|combinatorics|data structures|dp|math
+2200G,2200,1772202900,Operation Permutation,combinatorics|dp|math|probabilities
+2201A2,1700,1771857300,Lost Civilization (Hard Version),data structures|dp
+2201C,2000,1771857300,Rigged Bracket Sequence,combinatorics|dp|greedy
+2202B,1200,1771857300,ABAB Construction,dp|greedy|implementation
+2203B,1000,1772030100,Beautiful Numbers,bitmasks|dp|fft|greedy|math
+2203F,2600,1772030100,Binary Search with One Swap,binary search|divide and conquer|dp|hashing|math|two pointers
+2204G,2700,1773671700,Grid Path,dp|graphs|matrices
+2205D,1700,1772116500,Simons and Beating Peaks,data structures|divide and conquer|dp|greedy|implementation|trees
+2205E,2100,1772116500,Simons and Dividing the Rhythm,combinatorics|data structures|dp|dsu|math|string suffix structures|strings
+2206D,2600,1772934300,Christmas Tree Un-decoration,data structures|dp|trees
+2206I,2900,1772934300,Growth Factor,combinatorics|dp|math|number theory
+2207C,1600,1772980500,Where's My Water?,data structures|divide and conquer|dp|math
+2207D,2200,1772980500,Boxed Like a Fish,dfs and similar|dp|games|shortest paths|trees
+2207F,3000,1772980500,Hanabi,binary search|data structures|dp|dsu|flows|graph matchings|graphs|greedy
+2208C,1300,1773498900,Stamina and Tasks,dp|greedy|math
+2208E,2700,1773498900,Counting Cute Arrays,combinatorics|dp
+2209E,2200,1774103700,A Trivial String Problem,brute force|dp|hashing|string suffix structures|strings
+2210A,800,1774794900,A Simple Sequence,constructive algorithms|dp|greedy|number theory
+2210C2,2100,1774794900,A Simple GCD Problem (Hard Version),dp|greedy|number theory
+2211B,1100,1774709100,Mickey Mouse Constructive,constructive algorithms|dp|greedy|math
+2211E,2500,1774709100,Minimum Path Cover,brute force|dp|greedy|interactive|math|number theory|trees
+2211F,2400,1774709100,Learning Binary Search,combinatorics|divide and conquer|dp|math
+2215A,1700,1775972100,Interval Mod,constructive algorithms|dp|greedy|math
+2215D,2800,1775972100,"EXPloration, EXPloitation, and Gain Some EXPerience!",bitmasks|brute force|dp|greedy|implementation
+2217F,2400,1775572500,Interval Game,bitmasks|combinatorics|constructive algorithms|dp|games|greedy|math|probabilities
+2217G,2600,1775572500,Down the Pivot,combinatorics|dp|math|trees
+2217H,2800,1775572500,Closer,dfs and similar|dp|trees
+2219C,2300,1776090900,Coloring a Red Black Tree,dfs and similar|dp|greedy|math|probabilities|trees
+2222A,800,1777127700,A Wonderful Contest,brute force|dp|math
+2222C,1500,1777127700,Median Partition,dp|math
+2223B,1600,1778047500,Zhily and Barknights,binary search|data structures|dp|math|sortings|two pointers
+2225C,1100,1776782100,Red-Black Pairs,dp|greedy
+2226D,1900,1777386900,Reserved Reversals,constructive algorithms|dp|greedy|math
+2227E,1400,1777559700,It All Went Sideways,binary search|data structures|dp|greedy
+2227F,1700,1777559700,It Just Keeps Going Sideways,binary search|data structures|dp|greedy|math
+2227H,2100,1777559700,Fallen Leaves,dfs and similar|dp|trees
+2228C1,1500,1778942100,Cirno and Number (Easy Version),binary search|brute force|dp|greedy|implementation
+2228C2,1600,1778942100,Cirno and Number (Hard Version),binary search|dfs and similar|dp|greedy|implementation
+2228F,2700,1778942100,Momoyo and the Network,binary search|dfs and similar|divide and conquer|dp|trees
+2229C2,1400,1779546900,We Be Flipping (Hard Version),constructive algorithms|dp|greedy
+2229E,2100,1779546900,Deconstruction Tree,combinatorics|data structures|dp|graphs|trees
+2229F,2400,1779546900,Load Unbalancing,binary search|bitmasks|dp|greedy
+2229G,3000,1779546900,Roadworks,binary search|data structures|dp|greedy|two pointers
+2230D,1700,1779114900,Good Schedule,dp|greedy
+2230F,2700,1779114900,Game on Growing Tree,binary search|dfs and similar|divide and conquer|dp|games|implementation|trees
+2231E,2300,1779374100,Graph Cutting,dfs and similar|dp|math|trees
+2232C1,1300,1780151700,Seating Arrangement (Easy Version),binary search|dp|greedy|two pointers
+2232D,2000,1780151700,Magical Tiered Cake,constructive algorithms|dfs and similar|dp|greedy
+2233C,1400,1781015700,Cost of a Bracket Sequence,brute force|dp|greedy
+2233F,2800,1781015700,Shortest GCD Paths,dp|graphs|math|number theory|shortest paths
+2234D,1500,1780842900,"XOR, Expression and Two Binary Numbers",bitmasks|divide and conquer|dp|math|number theory
+2234G,2700,1780842900,"Stripe, Token and Two Players",data structures|dp|games
+2236D,1300,1781274900,Brand New Tatar TV Show,binary search|constructive algorithms|dp|games|math
+2236E,1700,1781274900,Friendly Gifts,brute force|dp
+2236F2,2200,1781274900,Elections in Saransk (hard version),combinatorics|dp|math|number theory
+2237F,2400,1781793300,Paint the Array,data structures|dp|greedy
+2238B,900,1782657300,Crimson Triples,dp|math|number theory
+2238C,1400,1782657300,Village Guilds,dfs and similar|dp|trees
+2238E,2100,1782657300,Cake Trial,dp|greedy
+2239D,2500,1782570900,Hunting the Beast,combinatorics|dp|graphs|math
+2241D,1100,1782830100,An Alternative Way,dp|greedy|math
+2241E,1600,1782830100,Fair and Square,combinatorics|dp|graphs|math|number theory|trees
+2242D,1600,1783348500,Two Digit Strings,dp|strings
+2242F,2800,1783348500,Summer Vacation,data structures|dp|probabilities|trees
+2244A,800,1784039700,Iskander and Drawings,dp|games|greedy|strings
+2244D,1200,1784039700,Yaroslav and Productivity,constructive algorithms|dp|greedy|math|number theory
+2244E,1400,1784039700,Masha and the Garland,data structures|dp|greedy|implementation|math|number theory|strings
+2244F,1700,1784039700,Anya Loves Trees!,dfs and similar|dp|greedy|trees
+2244G,1900,1784039700,Yura and Deadlines,data structures|dp
+2245F,2800,1784213100,Familiar?,brute force|combinatorics|dp
+2246C,1400,1783866900,0mar and Alternating Sums,combinatorics|dp|math
+2247A,800,1784385300,Zero Sum,constructive algorithms|dp|number theory
+2247F,2900,1784385300,Paths on a Grid,data structures|dp|hashing
+2248C,1300,1785594900,Maximize the Score,dp|greedy
+2248G,3000,1785594900,No Balance Left,bitmasks|dp|math|number theory
+2252B,1100,1786026900,Always Changing,dp|greedy|math|strings
+2252E,2100,1786026900,Generational Triplets,bitmasks|combinatorics|dp|math
+2252F,2600,1786026900,Spectral Components,dfs and similar|dp|greedy|sortings|trees
+2253F,2600,1786113300,4-beauty,bitmasks|dp|graphs|math|number theory
+2254G,2200,1785854100,Nightcrawler,data structures|dfs and similar|dp|greedy|sortings|trees
+2257E,2100,1786977300,Busy Beaver,brute force|data structures|divide and conquer|dp|greedy|implementation|sortings
+2257F1,2500,1786977300,Beaver's Jumping Track (Easy Version),data structures|dp|matrices
+2257F2,2700,1786977300,Beaver's Jumping Track (Hard Version),data structures|dp|matrices
+2258D,2500,1788014100,Magic Tiles,dp|greedy|implementation
+2258F,3000,1788014100,Plus Minus Tree,data structures|dfs and similar|dp|graphs|greedy|trees
+2259H,2200,1788619500,Treasure Map Destruction (Counting Version),dfs and similar|dp|dsu|graphs|math
+2260D,1700,1788878100,Signs of Prefix Sums,brute force|constructive algorithms|dfs and similar|dp|implementation
+2260E,2000,1788878100,Cyclic Balance,binary search|constructive algorithms|dp|math
+2261G,2800,1792247700,"1 2 3 and XOR, Where Did Everybody Go?",bitmasks|data structures|divide and conquer|dp|greedy|sortings|two pointers
+2262A2,1800,1789223700,Floor of MEX (Hard Version),dp|implementation|math
+2264E1,2200,1789319100,A Prime Flood (Easy Version),combinatorics|dp|number theory
+2264E2,2700,1789319100,A Prime Flood (Hard Version),brute force|combinatorics|dp|number theory
+2266E,1400,1790001300,Prime Destruction,brute force|dp|math|number theory
+2266G,2200,1790001300,Modular Tree,dfs and similar|dp|greedy|math|number theory|trees
+2266H,2400,1790001300,Deque Malfunction,binary search|data structures|dp|greedy
+2267D,1400,1790346900,Backrooms Hill,constructive algorithms|dp|greedy|sortings|two pointers
+2267G,2600,1790346900,New LRT,divide and conquer|dp|fft
+2268D,2600,1790433300,AghaBalaSar and Hamed,data structures|dp|trees
+2271F,2300,1791644700,Beautiful Pillers,constructive algorithms|data structures|dp|greedy|implementation
+2271H1,2800,1791644700,Personal Issues (Easy Version),dp|games|trees
+2273A,1300,1791743700,Lavencia Oranges,binary search|constructive algorithms|dp|greedy
+2274A,800,1791743700,The Projections of Paco,dfs and similar|dp|hashing|implementation|math
+2275E,1500,1791384300,Repentance Is Already on the Way,dp|implementation
+2275H,2400,1791384300,A Problem to Warm Up the Eyebrows,combinatorics|dp|math
+2276E,1800,1791988500,Good Substrings,combinatorics|data structures|dp|greedy|strings
+2276F,2400,1791988500,Permutation Coloring Game,brute force|dp|dsu|games|greedy|implementation|math
+2276G,2100,1791988500,Elimination of Players,combinatorics|dp|math
