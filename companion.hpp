@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <limits>
 #include <queue>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -298,5 +299,185 @@ inline std::vector<i64> connected_sets(const std::vector<std::vector<int>>& g,in
     return answer;
 }
 // [/rerootsets]
+
+// [kadane]
+// Nonempty input. Index-sized vectors of int have sums that fit in i64.
+inline i64 maximum_nonempty_subarray(const std::vector<int>& gain) {
+    assert(!gain.empty());
+    i64 ending = gain.front();
+    i64 best = ending;
+    for (std::size_t i = 1; i < gain.size(); ++i) {
+        ending = gain[i] + std::max<i64>(0, ending);
+        best = std::max(best, ending);
+    }
+    return best;
+}
+// [/kadane]
+
+// [prefix1]
+// Sum on [left, right) is prefix[right] - prefix[left].
+inline std::vector<i64> prefix_sums(const std::vector<int>& values) {
+    std::vector<i64> prefix(values.size() + 1);
+    for (std::size_t i = 0; i < values.size(); ++i)
+        prefix[i + 1] = prefix[i] + values[i];
+    return prefix;
+}
+// [/prefix1]
+
+// [prefixcount]
+// Count nonempty subarrays with the requested sum, including signed entries.
+inline i64 subarray_sum_count(const std::vector<int>& values, int target) {
+    std::unordered_map<i64, i64> frequency{{0, 1}};
+    i64 prefix = 0, answer = 0;
+    for (int value : values) {
+        prefix += value;
+        auto found = frequency.find(prefix - target);
+        if (found != frequency.end()) answer += found->second;
+        ++frequency[prefix];
+    }
+    return answer;
+}
+// [/prefixcount]
+
+// [bracketsuffix]
+// Length and number of longest balanced substrings. CF 5C uses {0, 1}
+// when no nonempty balanced substring exists.
+inline std::pair<int, int> longest_brackets(const std::string& s) {
+    int n = static_cast<int>(s.size());
+    std::vector<int> ending(n + 1);
+    int best = 0, count = 0;
+    for (int i = 1; i <= n; ++i) {
+        if (s[i - 1] != ')') continue;
+        int opening = i - ending[i - 1] - 1;  // 1-based string position
+        if (opening < 1 || s[opening - 1] != '(') continue;
+        ending[i] = ending[i - 1] + 2 + ending[opening - 1];
+        if (ending[i] > best) {
+            best = ending[i];
+            count = 1;
+        } else if (ending[i] == best) {
+            ++count;
+        }
+    }
+    return {best, best == 0 ? 1 : count};
+}
+// [/bracketsuffix]
+
+// [balancewalk]
+// Replace each '?' independently with '(' or ')'. Count balanced results.
+inline int bracket_completions(const std::string& s, int mod) {
+    assert(mod >= 1);
+    int n = static_cast<int>(s.size());
+    std::vector<i64> ways(n + 1), next(n + 1);
+    ways[0] = 1 % mod;
+    for (int i = 0; i < n; ++i) {
+        std::fill(next.begin(), next.end(), 0);
+        for (int open = 0; open <= i; ++open) {
+            if (s[i] != ')')
+                next[open + 1] = (next[open + 1] + ways[open]) % mod;
+            if (s[i] != '(' && open > 0)
+                next[open - 1] = (next[open - 1] + ways[open]) % mod;
+        }
+        ways.swap(next);
+    }
+    return static_cast<int>(ways[0]);
+}
+
+// Each nonempty interval counts once if at least one replacement works.
+inline i64 possible_bracket_intervals(const std::string& s) {
+    int n = static_cast<int>(s.size());
+    i64 answer = 0;
+    for (int left = 0; left < n; ++left) {
+        int low = 0, high = 0;
+        for (int right = left; right < n; ++right) {
+            char c = s[right];
+            high += (c == ')' ? -1 : 1);
+            if (high < 0) break;
+            if (c == '(') ++low;
+            else low = (low == 0 ? 1 : low - 1);
+            if (low == 0) ++answer;
+        }
+    }
+    return answer;
+}
+// [/balancewalk]
+
+// [paldelete]
+// One move erases any contiguous palindrome in the current sequence.
+inline int palindrome_deletions(const std::vector<int>& a) {
+    int n = static_cast<int>(a.size());
+    std::vector<std::vector<int>> cost(n + 1, std::vector<int>(n + 1));
+    for (int left = n - 1; left >= 0; --left) {
+        for (int right = left; right < n; ++right) {
+            cost[left][right] = 1 + cost[left + 1][right];
+            for (int partner = left + 1; partner <= right; ++partner) {
+                if (a[left] != a[partner]) continue;
+                int wrapped = std::max(1, cost[left + 1][partner - 1]);
+                cost[left][right] = std::min(cost[left][right],
+                                             wrapped + cost[partner + 1][right]);
+            }
+        }
+    }
+    return n == 0 ? 0 : cost[0][n - 1];
+}
+// [/paldelete]
+
+// [sortedends]
+// Order the input to minimize the sum of max(prefix) - min(prefix).
+inline i64 minimum_prefix_spread(std::vector<int> a) {
+    std::sort(a.begin(), a.end());
+    int n = static_cast<int>(a.size());
+    std::vector<i64> cost(n);
+    for (int len = 2; len <= n; ++len) {
+        // Both cells still describe length len - 1 as left advances.
+        for (int left = 0; left <= n - len; ++left) {
+            int right = left + len - 1;
+            i64 width = static_cast<i64>(a[right]) - a[left];
+            cost[left] = width + std::min(cost[left], cost[left + 1]);
+        }
+    }
+    return n == 0 ? 0 : cost[0];
+}
+// [/sortedends]
+
+// [exactcoins]
+// Positive sizes, unlimited stock. Return -1 when target cannot be made.
+inline int minimum_coin_count(int target, const std::vector<int>& sizes) {
+    assert(target >= 0);
+    std::vector<int> fewest(static_cast<std::size_t>(target) + 1, -1);
+    fewest[0] = 0;
+    for (int total = 1; total <= target; ++total) {
+        for (int size : sizes) {
+            assert(size > 0);
+            if (size > total || fewest[total - size] < 0) continue;
+            int candidate = 1 + fewest[total - size];
+            if (fewest[total] < 0 || candidate < fewest[total])
+                fewest[total] = candidate;
+        }
+    }
+    return fewest[target];
+}
+// [/exactcoins]
+
+// [posteriorcards]
+// Given a common rate chosen uniformly from [0,1], the initial card
+// orientations are conditionally independent. Process them left to right.
+inline long double optimal_card_time(int n, long double correct,
+                                     long double flip_one, long double flip_rest) {
+    assert(n >= 0);
+    std::vector<long double> next(n + 1, 0), current(n + 1);
+    for (int seen = n - 1; seen >= 0; --seen) {
+        for (int bad = 0; bad <= seen; ++bad) {
+            long double chance_bad = (bad + 1.0L) / (seen + 2.0L);
+            long double good_cost = correct + next[bad];
+            long double repair_one = flip_one + next[bad + 1];
+            long double reverse_rest = flip_rest + next[seen - bad];
+            current[bad] = (1 - chance_bad) * good_cost
+                         + chance_bad * std::min(repair_one, reverse_rest);
+        }
+        current.swap(next);
+    }
+    return next[0];
+}
+// [/posteriorcards]
 
 } // namespace guide

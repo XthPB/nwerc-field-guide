@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Count bracket replacements or feasible intervals · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Count bracket replacements or feasible intervals</h1><p class="lead">Choose bracket_completions for the number of fillings modulo a positive integer. Choose possible_bracket_intervals for the number of intervals admitting at least one filling. Both functions take a string over opening brackets, closing brackets and question marks.</p><p class="small">From the DP companion.</p><pre tabindex="0"><code>// Replace each &#x27;?&#x27; independently with &#x27;(&#x27; or &#x27;)&#x27;. Count balanced results.
+inline int bracket_completions(const std::string&amp; s, int mod) {
+    assert(mod &gt;= 1);
+    int n = static_cast&lt;int&gt;(s.size());
+    std::vector&lt;i64&gt; ways(n + 1), next(n + 1);
+    ways[0] = 1 % mod;
+    for (int i = 0; i &lt; n; ++i) {
+        std::fill(next.begin(), next.end(), 0);
+        for (int open = 0; open &lt;= i; ++open) {
+            if (s[i] != &#x27;)&#x27;)
+                next[open + 1] = (next[open + 1] + ways[open]) % mod;
+            if (s[i] != &#x27;(&#x27; &amp;&amp; open &gt; 0)
+                next[open - 1] = (next[open - 1] + ways[open]) % mod;
+        }
+        ways.swap(next);
+    }
+    return static_cast&lt;int&gt;(ways[0]);
+}
+
+// Each nonempty interval counts once if at least one replacement works.
+inline i64 possible_bracket_intervals(const std::string&amp; s) {
+    int n = static_cast&lt;int&gt;(s.size());
+    i64 answer = 0;
+    for (int left = 0; left &lt; n; ++left) {
+        int low = 0, high = 0;
+        for (int right = left; right &lt; n; ++right) {
+            char c = s[right];
+            high += (c == &#x27;)&#x27; ? -1 : 1);
+            if (high &lt; 0) break;
+            if (c == &#x27;(&#x27;) ++low;
+            else low = (low == 0 ? 1 : low - 1);
+            if (low == 0) ++answer;
+        }
+    }
+    return answer;
+}</code></pre><p><a href="../companion.hpp">Download the complete C++17 header</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/balancewalk.html">Count wildcard bracket strings by their open balance</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>
