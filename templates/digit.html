@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Digit DP on a numerical bound · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Digit DP on a numerical bound</h1><p class="lead">The sheet memoizes loose prefixes for a fixed digit sum. Replace sum with the required automaton and add a started flag when padded zeros have different meaning. The public copy removes a stray character after the negative-bound return.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Digit DP: count x in [0, N] with a property of its digits.
+//   [L, R] = countUpTo(R) - countUpTo(L - 1).
+// State: position, what we need to remember (here: digit sum), and
+//   tight = &quot;prefix still equal to N&quot; (then digits only up to N&#x27;s).
+// TIME: O(#digits * #states * 10). Example: digit sum == S.
+// If leading zeros matter (e.g. &quot;no two equal adjacent digits&quot;),
+//   add a flag started = &quot;a non-zero digit was placed&quot;.
+string D;                    // digits of N
+ll memo[20][200];            // memo for tight == false, -1 = unknown
+ll go(int pos, int sum, bool tight, int S) {
+    if (sum &gt; S) return 0;
+    if (pos == (int)D.size()) return sum == S;
+    if (!tight &amp;&amp; memo[pos][sum] != -1) return memo[pos][sum];
+    int limit = tight ? D[pos] - &#x27;0&#x27; : 9;
+    ll res = 0;
+    for (int d = 0; d &lt;= limit; d++)
+        res += go(pos + 1, sum + d, tight &amp;&amp; d == limit, S);
+    if (!tight) memo[pos][sum] = res;
+    return res;
+}
+ll countUpTo(ll N, int S) {  // #x in [0, N] with digit sum S (&lt; 200)
+    if (N &lt; 0) return 0;
+    D = to_string(N);
+    memset(memo, -1, sizeof memo);
+    return go(0, 0, true, S);
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/tight.html">Translate an enormous numeric interval into a short string</a></li><li><a href="../lessons/digitproduct.html">Attach a residue, digit mask, position, or automaton</a></li><li><a href="../lessons/carry.html">Change direction for arithmetic carries</a></li><li><a href="../lessons/permute.html">Choose and order actual digits</a></li><li><a href="../lessons/totals.html">Sum digits, sum values, or compute moments without a sum axis</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

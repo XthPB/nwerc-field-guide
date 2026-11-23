@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Functional graph distances and cycles · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Functional graph distances and cycles</h1><p class="lead">Reuse the tree and cycle decomposition. For a cycle DP enforce consistency between the first and last decisions on the cycle.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Functional graph: every node v has exactly ONE out-edge nxt[v]
+//   (permutations, &quot;teleporters&quot;, f(x) iterated, linked lists).
+// USE: which nodes lie on cycles; where you are after k steps
+//   (k up to 1e18) -&gt; binary lifting. TIME: cycles O(n).
+// onCycle[v] = true if v lies on a cycle
+vector&lt;bool&gt; findCycleNodes(const vector&lt;int&gt; &amp;nxt) {
+    int n = nxt.size();
+    vector&lt;int&gt; state(n, 0);   // 0 new, 1 on current walk, 2 done
+    vector&lt;bool&gt; onCycle(n, false);
+    for (int s = 0; s &lt; n; s++) {
+        vector&lt;int&gt; path;
+        int v = s;
+        while (state[v] == 0) {
+            state[v] = 1;
+            path.push_back(v);
+            v = nxt[v];
+        }
+        if (state[v] == 1)     // reached our own walk: new cycle at v
+            for (int i = path.size() - 1; i &gt;= 0; i--) {
+                onCycle[path[i]] = true;
+                if (path[i] == v) break;
+            }
+        for (int u : path) state[u] = 2;
+    }
+    return onCycle;
+}
+// node after k steps (k &lt; 2^LOG): O(n LOG) build, O(LOG) query
+const int LOG = 60;            // 30 is enough for k &lt;= 1e9
+vector&lt;vector&lt;int&gt;&gt; buildJumps(const vector&lt;int&gt; &amp;nxt) {
+    vector&lt;vector&lt;int&gt;&gt; jump(LOG, nxt);  // 2^j steps from v
+    for (int j = 1; j &lt; LOG; j++)
+        for (int v = 0; v &lt; (int)nxt.size(); v++)
+            jump[j][v] = jump[j - 1][jump[j - 1][v]];
+    return jump;
+}
+int kthNext(const vector&lt;vector&lt;int&gt;&gt; &amp;jump, int v, ll k) {
+    for (int j = 0; j &lt; LOG; j++)
+        if ((k &gt;&gt; j) &amp; 1) v = jump[j][v];
+    return v;
+}
+// fewest steps from x to reach a node &gt;= y when nxt[v] &gt;= v (steps
+//   only go right, nxt[v] == v means stuck). -1 if never. O(LOG).
+ll fewestSteps(const vector&lt;vector&lt;int&gt;&gt; &amp;jump, int x, int y) {
+    if (x &gt;= y) return 0;
+    ll c = 0;
+    for (int j = LOG - 1; j &gt;= 0; j--)
+        if (jump[j][x] &lt; y) { x = jump[j][x]; c += 1LL &lt;&lt; j; }
+    return jump[0][x] &gt;= y ? c + 1 : -1;
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/functional.html">Strip trees, then close each cycle</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

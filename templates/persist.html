@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Persistent prefix frequencies and k-th value · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Persistent prefix frequencies and k-th value</h1><p class="lead">Start each prefix at the preceding root and add the compressed value. For a slice use its roots before and after the slice. Other persistent DPs can reuse path copying while replacing the node payload.</p><p class="small">From the DP companion.</p><pre tabindex="0"><code>// Rank domain [0, ranks). Node zero is the shared empty tree.
+// add(old_root, rank) returns a new version. Other roots stay valid.
+// kth(before, after, k) requires nested multiset versions and 1-based k.
+class PrefixCounts {
+    struct Node { int child[2]{0,0}; int count = 0; };
+    int ranks;
+    std::vector&lt;Node&gt; nodes{Node{}};
+    int insert(int old, int lo, int hi, int rank) {
+        int cur = static_cast&lt;int&gt;(nodes.size());
+        Node copy = nodes[old];
+        ++copy.count;
+        nodes.push_back(copy);
+        if (hi - lo == 1) return cur;
+        int mid = lo + (hi-lo)/2;
+        int side = rank &gt;= mid;
+        int child = insert(copy.child[side], side ? mid : lo, side ? hi : mid, rank);
+        nodes[cur].child[side] = child;
+        return cur;
+    }
+public:
+    explicit PrefixCounts(int number_of_ranks) : ranks(number_of_ranks) { assert(ranks &gt; 0); }
+    int add(int root, int rank) {
+        assert(0 &lt;= rank &amp;&amp; rank &lt; ranks);
+        return insert(root, 0, ranks, rank);
+    }
+    int kth(int before, int after, int k) const {
+        assert(1 &lt;= k &amp;&amp; k &lt;= nodes[after].count - nodes[before].count);
+        int lo = 0, hi = ranks;
+        while (hi-lo &gt; 1) {
+            int mid = lo + (hi-lo)/2;
+            int a = nodes[before].child[0], b = nodes[after].child[0];
+            int left_count = nodes[b].count - nodes[a].count;
+            bool right = k &gt; left_count;
+            if (right) { k -= left_count; lo = mid; }
+            else hi = mid;
+            before = nodes[before].child[right];
+            after = nodes[after].child[right];
+        }
+        return lo;
+    }
+};</code></pre><p><a href="../companion.hpp">Download the complete C++17 header</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/persistent.html">Versions or time intervals preserve the correct DP layer</a></li><li><a href="../lessons/versionroots.html">Find the k-th value between two array positions</a></li><li><a href="../lessons/slicerecurrence.html">Build a long DP row by reusing slices</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

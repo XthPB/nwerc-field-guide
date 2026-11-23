@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Meet in the middle for profit · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Meet in the middle for profit</h1><p class="lead">Use the prefix-best pass on the weight-sorted right list. When reconstructing a choice, update its stored witness whenever its prefix profit improves. This snippet assumes nonnegative weights.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// n = 40 knapsack: best value with weight &lt;= W
+ll knapsackMitm(const vector&lt;pair&lt;ll, ll&gt;&gt; &amp;items, ll W) {  // {w, v}
+    int h = items.size() / 2;
+    auto half = [&amp;](int from, int to) {        // all {weight, value}
+        vector&lt;pair&lt;ll, ll&gt;&gt; res = {{0, 0}};
+        for (int i = from; i &lt; to; i++) {
+            int k = res.size();
+            for (int j = 0; j &lt; k; j++)
+                res.push_back({res[j].first + items[i].first,
+                               res[j].second + items[i].second});
+        }
+        return res;
+    };
+    vector&lt;pair&lt;ll, ll&gt;&gt; L = half(0, h), R = half(h, items.size());
+    sort(R.begin(), R.end());
+    for (int i = 1; i &lt; (int)R.size(); i++)    // best value up to here
+        R[i].second = max(R[i].second, R[i - 1].second);
+    ll best = 0;
+    for (auto [w, v] : L) {
+        if (w &gt; W) continue;
+        auto it = upper_bound(R.begin(), R.end(),
+                              make_pair(W - w, LLONG_MAX));
+        best = max(best, v + prev(it)-&gt;second);  // R[0] = {0, 0}
+    }
+    return best;
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/dominance.html">Keep a frontier when one score per position fails</a></li><li><a href="../lessons/joinbudget.html">Profit under capacity, several resources, and exact size</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

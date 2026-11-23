@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Number-theoretic transform · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Number-theoretic transform</h1><p class="lead">Use this for ordinary polynomial convolution with the supported modulus and transform length. Choose an appropriate root and power-of-two length and bring modular exponentiation from the linked arithmetic section.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// NTT: multiply two polynomials mod 998244353 in O(n log n).
+// USE: convolution c[k] = sum of a[i] * b[k - i]: #ways to get each
+//   sum from two lists, products of generating functions.
+// NEEDS: power() from Modular Arithmetic; coefficients in [0, MOD);
+//   result length &lt; 2^23. Exact answers that may exceed the mod:
+//   repeat with other NTT primes (e.g. 167772161) and use CRT.
+const ll NTT_MOD = 998244353;      // = 119 * 2^23 + 1, root 3
+void ntt(vector&lt;ll&gt; &amp;a, bool invert) {
+    int n = a.size();
+    for (int i = 1, j = 0; i &lt; n; i++) {   // bit-reversal order
+        int bit = n &gt;&gt; 1;
+        for (; j &amp; bit; bit &gt;&gt;= 1) j ^= bit;
+        j ^= bit;
+        if (i &lt; j) swap(a[i], a[j]);
+    }
+    for (int len = 2; len &lt;= n; len &lt;&lt;= 1) {
+        ll w = power(3, (NTT_MOD - 1) / len, NTT_MOD);
+        if (invert) w = power(w, NTT_MOD - 2, NTT_MOD);
+        for (int i = 0; i &lt; n; i += len) {
+            ll wn = 1;
+            for (int j = 0; j &lt; len / 2; j++) {
+                ll u = a[i + j], v = a[i + j + len / 2] * wn % NTT_MOD;
+                a[i + j] = (u + v) % NTT_MOD;
+                a[i + j + len / 2] = (u - v + NTT_MOD) % NTT_MOD;
+                wn = wn * w % NTT_MOD;
+            }
+        }
+    }
+    if (invert) {
+        ll inv = power(n, NTT_MOD - 2, NTT_MOD);
+        for (ll &amp;x : a) x = x * inv % NTT_MOD;
+    }
+}
+vector&lt;ll&gt; polyMultiply(vector&lt;ll&gt; a, vector&lt;ll&gt; b) {
+    if (a.empty() || b.empty()) return {};
+    int need = a.size() + b.size() - 1, n = 1;
+    while (n &lt; need) n &lt;&lt;= 1;
+    a.resize(n);
+    b.resize(n);
+    ntt(a, false);
+    ntt(b, false);
+    for (int i = 0; i &lt; n; i++) a[i] = a[i] * b[i] % NTT_MOD;
+    ntt(a, true);
+    a.resize(need);
+    return a;
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><p><a href="mod.html">Modular exponentiation used by the NTT</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/recurrence.html">Jump to the n-th term of a short linear recurrence</a></li><li><a href="../lessons/polynomials.html">Convolve independent count distributions</a></li><li><a href="../lessons/universalword.html">Count strings that contain every allowed subsequence</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

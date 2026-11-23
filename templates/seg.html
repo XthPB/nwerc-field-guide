@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Bottom-up segment tree · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Bottom-up segment tree</h1><p class="lead">The original combine is addition over a half-open interval. For a min, max, witness or matrix payload, update the stored type, combine and empty identity together. Preserve combination order for matrices.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Segment tree with 2n nodes (bottom-up, no recursion).
+// USE: point update + range query for an ASSOCIATIVE operation:
+//   sum, min, max, gcd, xor, and, or (also non-commutative ones).
+// NEEDS: 0-based; query(l, r) is HALF-OPEN: a[l] .. a[r-1].
+// TIME: build O(n), update and query O(log n).  MEMORY: 2n.
+// Change combine() and ID together. ID (identity): sum/xor/or/gcd 0,
+//   min LLONG_MAX, max LLONG_MIN, and -1 (all bits), product 1.
+struct SegTree {
+    const ll ID = 0;              // declared before t (init order)
+    ll combine(ll a, ll b) { return a + b; }
+    int n;
+    vector&lt;ll&gt; t;                       // leaves t[n..2n-1], root t[1]
+    SegTree(const vector&lt;ll&gt; &amp;a) : n(a.size()), t(2 * a.size(), ID) {
+        for (int i = 0; i &lt; n; i++) t[n + i] = a[i];
+        for (int i = n - 1; i &gt; 0; i--)
+            t[i] = combine(t[2 * i], t[2 * i + 1]);
+    }
+    void update(int pos, ll value) {    // a[pos] = value
+        pos += n;
+        t[pos] = value;
+        for (pos /= 2; pos &gt;= 1; pos /= 2)
+            t[pos] = combine(t[2 * pos], t[2 * pos + 1]);
+    }
+    ll query(int l, int r) {            // combine of a[l..r-1]
+        ll left = ID, right = ID;
+        for (l += n, r += n; l &lt; r; l /= 2, r /= 2) {
+            if (l &amp; 1) left = combine(left, t[l++]);
+            if (r &amp; 1) right = combine(t[--r], right);
+        }
+        return combine(left, right);
+    }
+};
+// add to a[pos] instead of set: update(pos, query(pos, pos+1) + v)</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/weightedlis.html">Weights, counts, and two strict coordinates</a></li><li><a href="../lessons/spacetime.html">Turn a reachability cone into coordinate inequalities</a></li><li><a href="../lessons/argmin.html">Search by one coordinate and return the best of another</a></li><li><a href="../lessons/unionranges.html">A forbidden gap can turn one predecessor query into two</a></li><li><a href="../lessons/payload.html">Store a witness or the number of optimizers inside each range node</a></li><li><a href="../lessons/twodrange.html">Independent rectangle bounds require a second range dimension</a></li><li><a href="../lessons/matrixrange.html">Represent a substring by its whole DP transition</a></li><li><a href="../lessons/rangeedges.html">Replace a fan of interval transitions with segment-tree nodes</a></li><li><a href="../lessons/operators.html">Maintain a composition when positions change</a></li><li><a href="../lessons/activation.html">A predecessor must become eligible before a range maximum can see it</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

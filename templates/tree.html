@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Rooted tree DP and rerooting · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Rooted tree DP and rerooting</h1><p class="lead">Use reverse traversal for bottom-up child messages. Use forward traversal for the parent contribution. Derive a new message when the objective differs from distance or subtree size.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Tree DP without recursion + rerooting.
+// USE: rooted-tree DP on deep trees (a path of 1e6 nodes would
+//   overflow a recursive DFS); &quot;answer for every node as the root&quot;
+//   in O(n) instead of O(n^2).  NEEDS: tree, nodes 0..n-1.
+// rootTree: BFS order from root. Loop order BACKWARDS = children
+//   before parents (subtree sums); FORWARDS = parents first.
+void rootTree(int root, const vector&lt;vector&lt;int&gt;&gt; &amp;adj,
+              vector&lt;int&gt; &amp;parent, vector&lt;int&gt; &amp;order) {
+    parent.assign(adj.size(), -1);
+    order = {root};
+    for (int i = 0; i &lt; (int)order.size(); i++) {
+        int u = order[i];
+        for (int v : adj[u])
+            if (v != parent[u]) { parent[v] = u; order.push_back(v); }
+    }
+}
+// Example: answer[v] = sum of distances from v to all nodes, O(n)
+vector&lt;ll&gt; sumOfDistances(const vector&lt;vector&lt;int&gt;&gt; &amp;adj) {
+    int n = adj.size();
+    vector&lt;int&gt; parent, order;
+    rootTree(0, adj, parent, order);
+    vector&lt;ll&gt; sub(n, 1);          // subtree size
+    vector&lt;ll&gt; down(n, 0);         // sum of distances into subtree
+    for (int i = n - 1; i &gt; 0; i--) {
+        int v = order[i], p = parent[v];
+        sub[p] += sub[v];
+        down[p] += down[v] + sub[v];
+    }
+    vector&lt;ll&gt; answer(n);
+    answer[0] = down[0];
+    for (int i = 1; i &lt; n; i++) {  // move root from p to child v:
+        int v = order[i], p = parent[v];
+        // sub[v] nodes get 1 closer, the other n - sub[v] 1 farther
+        answer[v] = answer[p] - sub[v] + (n - sub[v]);
+    }
+    return answer;
+}
+// general: down[] bottom-up, then up[v] = parent&#x27;s value minus v&#x27;s
+// part (max/min: use prefix and suffix maxima over children)
+// diameter: a = farthest from any node, b = farthest from a
+// WEIGHTED: node weights (W = total, sub[v] = subtree weight), edge
+//   (p,v) of length L: answer[v] = answer[p] + L * (W - 2 * sub[v]).
+// best node (min sum w * dist) = weighted median: from the root, step
+//   into the child with 2 * sub[child] &gt; W while one exists.
+// tree knapsack dp[v][k], k &lt;= sub[v]: merge child c by nw[i + j] +=
+//   dp[v][i] * dp[c][j], i &lt;= size merged so far, j &lt;= sub[c]: O(n^2)
+//   total (each pair meets once, at its LCA). Cap k at K: O(n K).</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/treedecomp.html">Replace a narrow strip by a small separator</a></li><li><a href="../lessons/functional.html">Strip trees, then close each cycle</a></li><li><a href="../lessons/subtree.html">A tree edge is a one-vertex interface</a></li><li><a href="../lessons/treechoice.html">At most one child can take a special edge</a></li><li><a href="../lessons/treebags.html">Merge a child’s size or budget distribution</a></li><li><a href="../lessons/reroot.html">Send messages in both directions</a></li><li><a href="../lessons/virtual.html">Sparse marked vertices and virtual-tree DP</a></li><li><a href="../lessons/treevalues.html">Collapse an interval of allowed labels to its endpoints</a></li><li><a href="../lessons/openarms.html">Keep a path open for the parent or close it through this vertex</a></li><li><a href="../lessons/subtreeskip.html">A prerequisite tree can become a linear jump DP</a></li><li><a href="../lessons/priority.html">Replace a random elimination order with random priorities</a></li><li><a href="../lessons/centroid.html">Pair paths through one separator exactly once</a></li><li><a href="../lessons/cartesian.html">Make a range minimum or maximum the root</a></li><li><a href="../lessons/excursion.html">Summarize a deterministic subtree traversal that resets its own memory</a></li><li><a href="../lessons/orderexpect.html">A stochastic process can reduce to choosing a deterministic order</a></li><li><a href="../lessons/convexmerge.html">Represent a convex tree DP by its sorted marginal costs</a></li><li><a href="../lessons/xorspan.html">Move a tree-cut DP into the XOR span of allowed totals</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Divide-and-conquer partition DP · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Divide-and-conquer partition DP</h1><p class="lead">Use the recursion once optimal cuts are proven monotone. For exactly k nonempty groups, compute only i ≥ k and permit j ≥ k−1. Use the reachable prefix range on each layer.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Divide &amp; conquer DP. USE: split n items into K consecutive
+//   groups: dp[k][i] = min over j &lt; i of dp[k-1][j] + cost(j, i).
+// NEEDS: best j for i never moves left as i grows (typical when
+//   cost(j, i) is like (sum of group)^2 or #pairs in group).
+// TIME: O(K n log n) cost calls instead of O(K n^2).
+// cost(j, i) = cost of one group made of items j+1..i (1-based).
+// INF from the template.
+vector&lt;ll&gt; prevLayer, curLayer;
+ll cost(int j, int i);
+void computeLayer(int lo, int hi, int optLo, int optHi) {
+    if (lo &gt; hi) return;
+    int mid = (lo + hi) / 2, bestJ = optLo;
+    ll best = INF;
+    for (int j = optLo; j &lt;= min(mid - 1, optHi); j++) {
+        if (prevLayer[j] &gt;= INF) continue;
+        ll val = prevLayer[j] + cost(j, mid);
+        if (val &lt; best) { best = val; bestJ = j; }
+    }
+    curLayer[mid] = best;
+    computeLayer(lo, mid - 1, optLo, bestJ);
+    computeLayer(mid + 1, hi, bestJ, optHi);
+}
+// prevLayer[i] = cost(0, i) (one group); then for k = 2..K:
+// curLayer.assign(n + 1, INF); computeLayer(1, n, 0, n - 1);
+// prevLayer = curLayer.  Answer: prevLayer[n]</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/partition.html">Exactly k consecutive pieces</a></li><li><a href="../lessons/monge.html">Why the best partition cut moves to the right</a></li><li><a href="../lessons/smawk.html">A totally monotone transition matrix</a></li><li><a href="../lessons/movingcost.html">Evaluate a moving segment cost instead of recomputing it</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

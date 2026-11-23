@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Meet in the middle for sums · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Meet in the middle for sums</h1><p class="lead">Keep both lists including the empty subset. For an exact match use equal_range so repeated sums retain their multiplicity. For a closest partner inspect both neighbours of lower_bound.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Meet in the middle. USE: n &lt;= ~40 items where 2^n is too slow but
+//   2^(n/2) is fine: subset sums, n = 40 knapsack, 4-SUM (pairs of
+//   pairs), and bidirectional BFS (search from start AND goal).
+// IDEA: split the items into two halves, list everything for each
+//   half, sort one list, and for each entry of the other list binary
+//   search the best partner. TIME: O(2^(n/2) * n).
+vector&lt;ll&gt; subsetSums(const vector&lt;ll&gt; &amp;a) {    // all 2^|a| sums
+    vector&lt;ll&gt; sums = {0};
+    for (ll x : a) {
+        int k = sums.size();
+        for (int i = 0; i &lt; k; i++) sums.push_back(sums[i] + x);
+    }
+    return sums;
+}
+ll countSubsetsAtMost(const vector&lt;ll&gt; &amp;a, ll S) {  // #subsets sum&lt;=S
+    int h = a.size() / 2;
+    vector&lt;ll&gt; L = subsetSums(vector&lt;ll&gt;(a.begin(), a.begin() + h));
+    vector&lt;ll&gt; R = subsetSums(vector&lt;ll&gt;(a.begin() + h, a.end()));
+    sort(R.begin(), R.end());
+    ll count = 0;
+    for (ll x : L)
+        count += upper_bound(R.begin(), R.end(), S - x) - R.begin();
+    return count;
+}
+// sum EXACTLY S: equal_range instead. CLOSEST to S: lower_bound and
+//   the element before it.</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/bounds.html">Estimate the actual array before choosing a technique</a></li><li><a href="../lessons/exactjoin.html">Join two lists of subset sums</a></li><li><a href="../lessons/nearjoin.html">Closest, at most, or inside an interval</a></li><li><a href="../lessons/boundaryjoin.html">Meet on a grid, a hash, or a boundary state</a></li><li><a href="../lessons/whensplit.html">Choose the parameter before you split</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

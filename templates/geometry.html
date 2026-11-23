@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Exact integer geometry · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Exact integer geometry</h1><p class="lead">Use dot and cross products for structural tests. For route costs use the distance definition required by the problem and a sufficiently wide type. Exact squared distance and Euclidean length may give different optima.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Integer geometry: exact, no EPS. |coord| &lt;= 1e9 keeps cross in ll.
+// cross(a, b) = |a||b| sin(angle), dot(a, b) = |a||b| cos(angle)
+struct Point {
+    ll x, y;
+    Point operator+(Point o) const { return {x + o.x, y + o.y}; }
+    Point operator-(Point o) const { return {x - o.x, y - o.y}; }
+    bool operator&lt;(Point o) const {
+        return x &lt; o.x || (x == o.x &amp;&amp; y &lt; o.y);
+    }
+    bool operator==(Point o) const { return x == o.x &amp;&amp; y == o.y; }
+};
+ll dot(Point a, Point b) { return a.x * b.x + a.y * b.y; }
+ll cross(Point a, Point b) { return a.x * b.y - a.y * b.x; }
+// &gt; 0: o -&gt; a -&gt; b turns left (counter-clockwise), &lt; 0 right,
+// 0 collinear
+ll cross(Point o, Point a, Point b) { return cross(a - o, b - o); }
+ll dist2(Point a, Point b) { return dot(a - b, a - b); }  // squared
+int sgn(ll v) { return (v &gt; 0) - (v &lt; 0); }</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/tripmask.html">Geometry can determine the price of a combinatorial move</a></li><li><a href="../lessons/polygontri.html">Choose the triangle incident to a boundary chord</a></li><li><a href="../lessons/bitonictour.html">Two monotone chains replace a visited set</a></li><li><a href="../lessons/posetchain.html">Turn “all pairs are compatible” into a chain through each object</a></li><li><a href="../lessons/roles.html">Only four witnesses determine a geometric score</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

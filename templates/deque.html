@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Monotone stack and sliding deque · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Monotone stack and sliding deque</h1><p class="lead">The sheet includes nearest-smaller and sliding minimum examples. Reverse comparisons for maximum. Track indices so expiration still works for equal scores.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Monotonic stack / deque. USE: &quot;nearest smaller/greater to the
+//   left/right&quot;, largest rectangle in a histogram, max of every
+//   window, DP of the form dp[i] = min(dp[j]) + c over a SLIDING
+//   range of j.  TIME: O(n) total (each index pushed/popped once).
+// left[i] = largest j &lt; i with a[j] &lt; a[i], or -1
+vector&lt;int&gt; prevSmaller(const vector&lt;ll&gt; &amp;a) {
+    int n = a.size();
+    vector&lt;int&gt; left(n), st;       // st: indices, values increase
+    for (int i = 0; i &lt; n; i++) {
+        while (!st.empty() &amp;&amp; a[st.back()] &gt;= a[i]) st.pop_back();
+        left[i] = st.empty() ? -1 : st.back();
+        st.push_back(i);
+    }
+    return left;
+}
+// next smaller: use the reversed array. Greater: &lt;= in the while.
+ll largestRectangle(const vector&lt;ll&gt; &amp;h) {    // histogram
+    int n = h.size();
+    vector&lt;int&gt; left = prevSmaller(h);
+    vector&lt;ll&gt; rev(h.rbegin(), h.rend());
+    vector&lt;int&gt; rightRev = prevSmaller(rev);
+    ll best = 0;
+    for (int i = 0; i &lt; n; i++) {
+        int right = n - 1 - rightRev[n - 1 - i];  // n if none
+        best = max(best, h[i] * (right - left[i] - 1));
+    }
+    return best;
+}
+// minimum of every window a[i-k+1..i] (max: flip the &gt;=)
+vector&lt;ll&gt; slidingMin(const vector&lt;ll&gt; &amp;a, int k) {
+    deque&lt;int&gt; dq;          // indices, values increase front-&gt;back
+    vector&lt;ll&gt; result;
+    for (int i = 0; i &lt; (int)a.size(); i++) {
+        while (!dq.empty() &amp;&amp; a[dq.back()] &gt;= a[i]) dq.pop_back();
+        dq.push_back(i);
+        if (dq.front() &lt;= i - k) dq.pop_front();
+        if (i &gt;= k - 1) result.push_back(a[dq.front()]);
+    }
+    return result;
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/boundedqueue.html">Remove a large multiplicity with a residue-class deque</a></li><li><a href="../lessons/window.html">A moving predecessor window with a monotone deque</a></li><li><a href="../lessons/stackmin.html">Equal segment extrema form consecutive blocks of cuts</a></li><li><a href="../lessons/cartesian.html">Make a range minimum or maximum the root</a></li><li><a href="../lessons/bottleneckpay.html">A threshold leaves an additive budget and a sliding predecessor interval</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

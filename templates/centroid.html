@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Centroid decomposition · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Centroid decomposition</h1><p class="lead">For path counts, query earlier child branches before inserting distances from the current branch. Recurse after removing the centroid so that other paths are attributed exactly once.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Centroid decomposition. USE: questions about ALL PATHS of a tree
+//   (count paths of length k, paths with sum &lt;= K), &quot;distance to
+//   the nearest marked node&quot; with updates.
+// IDEA: every path u-v passes through the highest centroid c that
+//   lies above both u and v; each node has &lt;= log2(n) + 1 centroids
+//   above it. anc[v] = list of {centroid c above v, dist(v, c)}.
+// NEEDS: tree, nodes 0..n-1. TIME: O(n log n) build and memory.
+struct Centroid {
+    vector&lt;vector&lt;int&gt;&gt; adj;
+    vector&lt;bool&gt; removed;
+    vector&lt;int&gt; par, sub, dist, cpar;      // cpar: centroid-tree parent
+    vector&lt;vector&lt;pair&lt;int, int&gt;&gt;&gt; anc;
+    Centroid(const vector&lt;vector&lt;int&gt;&gt; &amp;g) : adj(g) {
+        int n = g.size();
+        removed.assign(n, false);
+        par.assign(n, -1); sub.assign(n, 0); dist.assign(n, 0);
+        cpar.assign(n, -1); anc.assign(n, {});
+        decompose(0, -1);
+    }
+    vector&lt;int&gt; piece(int s) {   // BFS over the not-removed part of s
+        vector&lt;int&gt; order = {s};
+        par[s] = -1;
+        dist[s] = 0;
+        for (int i = 0; i &lt; (int)order.size(); i++) {
+            int u = order[i];
+            for (int v : adj[u])
+                if (v != par[u] &amp;&amp; !removed[v]) {
+                    par[v] = u;
+                    dist[v] = dist[u] + 1;
+                    order.push_back(v);
+                }
+        }
+        return order;
+    }
+    void decompose(int s, int above) {   // recursion depth O(log n)
+        vector&lt;int&gt; order = piece(s);
+        int total = order.size();
+        for (int i = total - 1; i &gt;= 0; i--) {
+            int u = order[i];
+            sub[u] = 1;
+            for (int v : adj[u])
+                if (v != par[u] &amp;&amp; !removed[v]) sub[u] += sub[v];
+        }
+        int c = s;                       // walk to the centroid
+        while (true) {
+            int next = -1;
+            for (int v : adj[c])
+                if (v != par[c] &amp;&amp; !removed[v] &amp;&amp; 2 * sub[v] &gt; total)
+                    next = v;
+            if (next == -1) break;
+            c = next;
+        }
+        cpar[c] = above;
+        for (int u : piece(c)) anc[u].push_back({c, dist[u]});
+        removed[c] = true;
+        for (int v : adj[c])
+            if (!removed[v]) decompose(v, c);
+    }
+};
+// nearest marked node: best[c] = INF for every c, then
+//   mark(v):  for (auto [c, d] : anc[v]) best[c] = min(best[c], d);
+//   query(v): min over (c, d) in anc[v] of best[c] + d.</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/centroid.html">Pair paths through one separator exactly once</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

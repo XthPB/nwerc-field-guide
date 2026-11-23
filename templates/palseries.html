@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Palindromic tree with series links · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Palindromic tree with series links</h1><p class="lead">This implementation solves mirrored block partitions after interleaving the two ends of the input. Its suffix links and series links are reusable. Adapt the per-node accumulated DP for other palindrome objectives.</p><p class="small">From the DP companion.</p><pre tabindex="0"><code>// Count splits into matching outer blocks (their total number must be even).
+// Lowercase a-z, even length, result modulo 1e9+7. O(n log n).
+inline int mirrored_block_splits(const std::string&amp; s) {
+    constexpr int mod = 1000000007;
+    struct Node {
+        int len=0, link=0, diff=0, series=0, subtotal=0;
+        std::array&lt;int,26&gt; next{};
+    };
+    int n=static_cast&lt;int&gt;(s.size()), last=1;
+    std::vector&lt;Node&gt; nodes(2);
+    nodes.reserve(n+2);
+    nodes[0].len=-1; // Imaginary root. Node 1 is the empty palindrome.
+    std::string text(1,&#x27;#&#x27;);
+    std::vector&lt;int&gt; ways(n+1);
+    ways[0]=1;
+    for (int i=1; i&lt;=n; ++i) {
+        char ch=(i%2) ? s[(i-1)/2] : s[n-i/2];
+        text.push_back(ch);
+        int k=ch-&#x27;a&#x27;;
+        auto suffix = [&amp;](int v) {
+            while (text[i-1-nodes[v].len]!=ch) v=nodes[v].link;
+            return v;
+        };
+        int parent=suffix(last);
+        if (!nodes[parent].next[k]) {
+            int id=static_cast&lt;int&gt;(nodes.size());
+            nodes.emplace_back();
+            nodes[parent].next[k]=id;
+            auto&amp; cur=nodes[id];
+            cur.len=nodes[parent].len+2;
+            cur.link=cur.len==1 ? 1 : nodes[suffix(nodes[parent].link)].next[k];
+            const auto&amp; link=nodes[cur.link];
+            cur.diff=cur.len-link.len;
+            cur.series=(cur.diff==link.diff) ? link.series : cur.link;
+        }
+        last=nodes[parent].next[k];
+        for (int v=last; nodes[v].len&gt;0; v=nodes[v].series) {
+            auto&amp; u=nodes[v];
+            u.subtotal=ways[i-nodes[u.series].len-u.diff];
+            if (u.diff==nodes[u.link].diff) {
+                u.subtotal=(u.subtotal+nodes[u.link].subtotal)%mod;
+            }
+            if (i%2==0) ways[i]=(ways[i]+u.subtotal)%mod;
+        }
+    }
+    return ways[n];
+}</code></pre><p><a href="../dp_templates.hpp">Download the complete C++17 header</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/palcut.html">Palindrome boundaries, suffix links, and series links</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

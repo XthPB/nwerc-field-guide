@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Range minimum with the original index · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Range minimum with the original index</h1><p class="lead">Sort entries by the query coordinate and keep original IDs. Binary-search a closed coordinate range to obtain a half-open slice. Query its lexicographically smallest (value, ID).</p><p class="small">From the DP companion.</p><pre tabindex="0"><code>// Entries are in coordinate order. Query the half-open range [left, right).
+// Store (second value, original index). A smaller ID wins score ties.
+class RangeArgMin {
+    using Entry = std::pair&lt;i64, int&gt;;
+    int n;
+    std::vector&lt;Entry&gt; tree;
+public:
+    explicit RangeArgMin(const std::vector&lt;Entry&gt;&amp; entries)
+        : n(static_cast&lt;int&gt;(entries.size())), tree(2 * n) {
+        std::copy(entries.begin(), entries.end(), tree.begin() + n);
+        for (int k = n - 1; k &gt; 0; --k)
+            tree[k] = std::min(tree[2*k], tree[2*k+1]);
+    }
+    Entry query(int left, int right) const {
+        assert(0 &lt;= left &amp;&amp; left &lt; right &amp;&amp; right &lt;= n);
+        Entry answer = {std::numeric_limits&lt;i64&gt;::max(), std::numeric_limits&lt;int&gt;::max()};
+        for (left += n, right += n; left &lt; right; left /= 2, right /= 2) {
+            if (left &amp; 1) answer = std::min(answer, tree[left++]);
+            if (right &amp; 1) answer = std::min(answer, tree[--right]);
+        }
+        return answer;
+    }
+};</code></pre><p><a href="../companion.hpp">Download the complete C++17 header</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/argmin.html">Search by one coordinate and return the best of another</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

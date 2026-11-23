@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Find a payout that cannot be split · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Find a payout that cannot be split</h1><p class="lead">The coin values and total bound come from Bisecting Bargain. Test a fixed payout using a half-sum bitset. The enumeration of compressed payouts relies on this particular coin system.</p><p class="small">From the DP companion.</p><pre tabindex="0"><code>// One-use nonnegative weights. W is the largest sum the caller wants.
+template &lt;std::size_t W&gt;
+std::bitset&lt;W+1&gt; reachable(const std::vector&lt;int&gt;&amp; weights) {
+    std::bitset&lt;W+1&gt; bits;
+    bits.set(0);
+    for (int weight : weights) {
+        bits |= bits &lt;&lt; weight;
+    }
+    return bits;
+}
+
+// NWERC 2025 B, 1 &lt;= total &lt;= 10000. An empty result means every payout splits.
+inline std::vector&lt;int&gt; unsplittable_payout(int total) {
+    if (total % 2) return std::vector&lt;int&gt;(total, 1);
+    const std::array&lt;int, 7&gt; low{1, 2, 5, 10, 20, 50, 100};
+    const std::array&lt;int, 7&gt; limit{1, 4, 1, 1, 4, 1, 1};
+    std::array&lt;int, 7&gt; counts{};
+    std::vector&lt;int&gt; witness;
+    auto search = [&amp;](auto&amp;&amp; self, int type, int left) -&gt; bool {
+        if (type &lt; static_cast&lt;int&gt;(low.size())) {
+            for (int k = 0; k &lt;= limit[type] &amp;&amp; k * low[type] &lt;= left; ++k) {
+                counts[type] = k;
+                if (self(self, type + 1, left - k * low[type])) return true;
+            }
+            return false;
+        }
+        for (int fives = 0; 500 * fives &lt;= left; ++fives) {
+            int rest = left - 500 * fives;
+            if (rest % 200) continue;
+            std::vector&lt;int&gt; payout;
+            for (int i = 0; i &lt; static_cast&lt;int&gt;(low.size()); ++i) {
+                payout.insert(payout.end(), counts[i], low[i]);
+            }
+            payout.insert(payout.end(), rest / 200, 200);
+            payout.insert(payout.end(), fives, 500);
+            if (!reachable&lt;5000&gt;(payout)[total / 2]) {
+                witness = std::move(payout);
+                return true;
+            }
+        }
+        return false;
+    };
+    search(search, 0, total);
+    return witness;
+}</code></pre><p><a href="../dp_templates.hpp">Download the complete C++17 header</a></p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/adversarycoins.html">Can the cashier make an unsplittable payout?</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

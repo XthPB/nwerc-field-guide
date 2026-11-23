@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Bellman–Ford and edge-count layers · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Bellman–Ford and edge-count layers</h1><p class="lead">For exactly t edges use a fresh layer after each pass. An in-place shortest-path relaxation can traverse several edges in a single pass and changes that meaning.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Bellman-Ford: NEGATIVE weights allowed, finds negative cycles.
+// NEEDS: directed edges {u, v, w}, nodes 0..n-1. TIME: O(V E).
+// dist = INF: unreachable, -INF: a negative cycle makes it -infinity
+vector&lt;ll&gt; bellmanFord(int n, int src,
+                       const vector&lt;array&lt;ll, 3&gt;&gt; &amp;edges) {
+    vector&lt;ll&gt; dist(n, INF);
+    dist[src] = 0;
+    for (int iter = 0; iter &lt; n - 1; iter++)
+        for (auto [u, v, w] : edges)
+            if (dist[u] != INF &amp;&amp; dist[u] + w &lt; dist[v])
+                dist[v] = dist[u] + w;
+    for (int iter = 0; iter &lt; n; iter++)    // spread -INF
+        for (auto [u, v, w] : edges)
+            if (dist[u] != INF &amp;&amp;
+                (dist[u] == -INF || dist[u] + w &lt; dist[v]))
+                dist[v] = -INF;
+    return dist;
+}
+// Floyd-Warshall: ALL PAIRS, V &lt;= ~500, O(V^3), negative weights OK.
+// Start d[i][i] = 0, d[i][j] = w (min over parallel edges) or INF.
+// Afterwards d[i][i] &lt; 0: i lies on a negative cycle.
+void floydWarshall(vector&lt;vector&lt;ll&gt;&gt; &amp;d) {
+    int n = d.size();
+    for (int k = 0; k &lt; n; k++)
+        for (int i = 0; i &lt; n; i++)
+            for (int j = 0; j &lt; n; j++)
+                if (d[i][k] &lt; INF &amp;&amp; d[k][j] &lt; INF)
+                    d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/edgehorizon.html">Fix the number of moves to make a cyclic graph acyclic in time</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

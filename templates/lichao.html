@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Li Chao tree · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Li Chao tree</h1><p class="lead">The tree stores the lower envelope of integer affine functions. Derive slope, intercept and query coordinate from the recurrence. Bound the domain and evaluate products in a type that cannot overflow.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Li Chao tree (convex hull trick). USE: DP of the form
+//   dp[i] = min over j &lt; i of (m[j] * x[i] + c[j]):
+//   for each i: query(x[i]), then addLine(m[i], c[i]).
+// NEEDS: integer x in [lo, hi]; slopes/queries in ANY order;
+//   a*x + b must fit in ll. TIME: O(log(hi - lo)) per call.
+// maximum: addLine(-a, -b) and negate the query result.
+struct LiChao {
+    struct Line {
+        ll a, b;
+        ll at(ll x) const { return a * x + b; }
+    };
+    struct Node { Line line; int left = -1, right = -1; };
+    vector&lt;Node&gt; t;
+    ll lo, hi;
+    LiChao(ll lo, ll hi) : lo(lo), hi(hi) {
+        t.push_back({{0, LLONG_MAX}});
+    }
+    void addLine(ll a, ll b) { insert(0, lo, hi, {a, b}); }
+    ll query(ll x) { return query(0, lo, hi, x); }  // LLONG_MAX: none
+    int child(int node, bool goLeft) {   // create when missing
+        int c = goLeft ? t[node].left : t[node].right;
+        if (c != -1) return c;
+        t.push_back({{0, LLONG_MAX}});
+        c = t.size() - 1;
+        if (goLeft) t[node].left = c; else t[node].right = c;
+        return c;
+    }
+    void insert(int node, ll l, ll r, Line nw) {
+        ll m = l + (r - l) / 2;
+        bool leftBetter = nw.at(l) &lt; t[node].line.at(l);
+        bool midBetter = nw.at(m) &lt; t[node].line.at(m);
+        if (midBetter) swap(t[node].line, nw);  // keep winner at m
+        if (l == r) return;
+        if (leftBetter != midBetter)            // loser wins left
+            insert(child(node, true), l, m, nw);
+        else                                    // or right of m
+            insert(child(node, false), m + 1, r, nw);
+    }
+    ll query(int node, ll l, ll r, ll x) {
+        if (node == -1) return LLONG_MAX;
+        ll m = l + (r - l) / 2;
+        ll here = t[node].line.at(x);
+        if (x &lt;= m) return min(here, query(t[node].left, l, m, x));
+        return min(here, query(t[node].right, m + 1, r, x));
+    }
+};</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/cht.html">Turn each predecessor into a line</a></li><li><a href="../lessons/lichao.html">An envelope with arbitrary insertions or query order</a></li><li><a href="../lessons/componentmerge.html">Merge secondary structures from smaller subtree into larger</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Gaussian elimination · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/interactions.js"></script></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#chapters">Chapters</a><a href="../methods.html">Search</a><a href="../codeforces.html">Problems</a></nav></div></header><main id="content" class="wrap"><div class="reading"><p class="crumb"><a href="../templates.html">‹ Code templates</a></p><h1>Gaussian elimination</h1><p class="lead">Put one row per expectation equation and one column per unknown state. Handle absorbing states separately. A tridiagonal row system admits a cheaper specialized solver.</p><p class="small">From the ICPC Code Templates cheat sheet.</p><pre tabindex="0"><code>// Gaussian elimination: solve A x = b (n equations, m unknowns).
+// USE: expected values / probabilities when states form CYCLES
+//   (random walks): E[v] - sum p(v,u) E[u] = cost(v); circuits.
+// TIME: O(n m^2) (~0.1 s for 500 x 500). Doubles, partial pivoting.
+// returns 0 = no solution, 1 = unique, 2 = infinitely many
+int gauss(vector&lt;vector&lt;double&gt;&gt; a, vector&lt;double&gt; b,
+          vector&lt;double&gt; &amp;x) {
+    const double eps = 1e-9;
+    int n = a.size(), m = a[0].size();
+    for (int i = 0; i &lt; n; i++) a[i].push_back(b[i]);
+    vector&lt;int&gt; where(m, -1);      // where[col] = its pivot row
+    int row = 0;
+    for (int col = 0; col &lt; m &amp;&amp; row &lt; n; col++) {
+        int best = row;
+        for (int i = row; i &lt; n; i++)
+            if (fabs(a[i][col]) &gt; fabs(a[best][col])) best = i;
+        if (fabs(a[best][col]) &lt; eps) continue;
+        swap(a[best], a[row]);
+        where[col] = row;
+        for (int i = 0; i &lt; n; i++) {
+            if (i == row) continue;
+            double factor = a[i][col] / a[row][col];
+            for (int j = col; j &lt;= m; j++)
+                a[i][j] -= factor * a[row][j];
+        }
+        row++;
+    }
+    x.assign(m, 0);
+    for (int j = 0; j &lt; m; j++)
+        if (where[j] != -1) x[j] = a[where[j]][m] / a[where[j]][j];
+    for (int i = 0; i &lt; n; i++) {
+        double sum = 0;
+        for (int j = 0; j &lt; m; j++) sum += a[i][j] * x[j];
+        if (fabs(sum - a[i][m]) &gt; 1e-6) return 0;
+    }
+    for (int j = 0; j &lt; m; j++)
+        if (where[j] == -1) return 2;
+    return 1;
+}</code></pre><p class="small">These are contest snippets. Bring the declarations they use into your file, including standard headers, the <code>ll</code> alias or the modulus where applicable.</p><details class="technical"><summary>Lessons using this template</summary><ul><li><a href="../lessons/cycles.html">Several mutually dependent expectations</a></li><li><a href="../lessons/rowexpect.html">A random walk can have an acyclic direction and a cyclic row</a></li></ul></details></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>
