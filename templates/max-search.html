@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><title>Find the first position exceeding a threshold · NWERC Field Guide</title><link rel="stylesheet" href="../assets/katex.min.css"><link rel="stylesheet" href="../assets/theme.css"><script defer src="../assets/old-links.js"></script><script defer src="../assets/interactions.js"></script><link rel="stylesheet" href="../assets/study.css"><script defer src="../assets/study.js"></script><link rel="stylesheet" href="../assets/course.css"></head><body><a class="skip" href="#content">Skip to content</a><header class="top"><div class="topin"><a class="brand" href="../index.html"><svg aria-hidden="true" viewBox="0 0 28 28" fill="none"><path d="M3 6h9c1.2 0 2.3.5 3 1.3C16 6.5 17 6 18 6h7v16h-7c-1.4 0-2.4.5-3 1.2-1-.7-2-1.2-3-1.2H3z" stroke="currentColor" stroke-width="2"/><path d="M15 8v14M6 11h5m-5 4h5m7-4h4m-4 4h4" stroke="currentColor" stroke-width="1.3"/></svg>NWERC <span class="brandfull">Field </span>Guide</a><nav class="menu" aria-label="Main navigation"><a href="../index.html#subjects">Subjects</a><a href="../practice.html">Practice</a><a href="../templates.html">Templates</a></nav></div></header><main id="content" class="wrap"><div class="reading wide course-reader"><p class="crumb"><a href="../templates.html">Code templates</a></p><h1>Find the first position exceeding a threshold</h1><p class="lead">Store a maximum in each node. Starting at an inclusive zero-based index, descend left first and skip intervals whose maximum cannot exceed the threshold. Set a column’s value to its largest active y. Use the lowest representable integer for an empty column when queries use the same integer type.</p><pre><code class="language-cpp">struct FirstAbove {
+    using Value = long long;
+    int count, base = 1;
+    std::vector&lt;Value&gt; maximum;
+    explicit FirstAbove(int n) : count(n) {
+        while (base &lt; n) base *= 2;
+        maximum.assign(2 * base, std::numeric_limits&lt;Value&gt;::lowest());
+    }
+    void set(int pos, Value value) {
+        int i = base + pos;
+        maximum[i] = value;
+        while (i &gt; 1) {
+            i /= 2;
+            maximum[i] = std::max(maximum[2*i], maximum[2*i+1]);
+        }
+    }
+    int first(int start, Value threshold) const {
+        return descend(1, 0, base, start, threshold);
+    }
+private:
+    int descend(int v, int lo, int hi, int start, Value threshold) const {
+        if (hi &lt;= start || lo &gt;= count || maximum[v] &lt;= threshold) return -1;
+        if (hi - lo == 1) return lo;
+        int mid = lo + (hi - lo)/2;
+        int left = descend(2*v, lo, mid, start, threshold);
+        if (left != -1) return left;
+        return descend(2*v+1, mid, hi, start, threshold);
+    }
+};</code></pre><p>Guide companion · C++17. Include the corresponding standard headers.</p></div></main><footer><a href="../templates.html">Code templates</a><a href="../workshops.html">Worked derivations</a><a href="../archive.html">Regional contests</a><a href="../review.html">Self-checks</a><a href="../coverage.html">Coverage map</a><a href="../sources.html">Sources</a><a href="https://github.com/XthPB/nwerc-field-guide">GitHub</a></footer></body></html>

@@ -3,6 +3,9 @@
   const data = window.contestIndex;
   const form = document.querySelector("#contest-filter");
   if (!data || !form) return;
+  const scan = window.hardScan || {};
+  const hardSelections = new Set(window.hardSelections || []);
+  const dpTag = data.tags.indexOf("dp");
   const previousAudit = new Set(data.previous);
   const priorFamilies = new Set(data.priorFamilies);
   const fields = ["keyword","scope","min","max","tag","tag2","tag3"];
@@ -59,6 +62,21 @@
       const unique=[...new Set(keys)].slice(0,3);
       if(unique.length) box.append(linksLine(mapped.length?"Supporting templates":"Template suggestions from tags",unique.map(k=>["templates/"+k+".html",data.templates[k]])));
       if(!unique.length) box.append(linksLine("Find a starting point", [["methods.html","Browse techniques"],["templates.html","Browse the template library"]]));
+      const record = scan[id];
+      if (record) {
+        const [statement,prose,code,proseWords,codeWords] = record;
+        const evidence=element("details",undefined,"scan-evidence");
+        evidence.append(element("summary","Sources checked for this problem"));
+        evidence.append(linksLine("Statement",[[statement,"Read the indexed statement"]]));
+        for (const [source,words,caption] of [[prose,proseWords,"Solution text"],[code,codeWords,"Reference code"]]) {
+          if (!source) continue;
+          const citation=linksLine(caption,[[source,"Open source"]]);
+          if (words.length) citation.append(" · Terms found: "+words.join(", "));
+          evidence.append(citation);
+        }
+        if (!prose && !code) evidence.append(element("p","The scan retrieved statement material for this entry."));
+        box.append(evidence);
+      }
       fragment.append(box);
     }
     list.append(fragment);
@@ -76,7 +94,13 @@
     matches=data.rows.filter(([id,title,rating,tags,family,fresh])=>{
       if (rating<lo || rating>hi || (scope==="followup" && !fresh) || (scope==="mapped"&&!data.mapped[id])) return false;
       if ((scope==="sourced"&&!data.primary[id]) || (scope==="newfamily"&&priorFamilies.has(family))) return false;
-      if (!selected.every(t=>tags.includes(t)) || !words.every(w=>(id+" "+title).toLowerCase().includes(w))) return false;
+      const inHardScan = scope === "nodp" || scope === "hardmapped" || scope === "hardworked";
+      if (inHardScan && (!scan[id] || tags.includes(dpTag))) return false;
+      if (scope === "hardmapped" && !data.mapped[id]) return false;
+      if (scope === "hardworked" && !hardSelections.has(id)) return false;
+      const wordsFound = inHardScan ? scan[id][3].concat(scan[id][4]).join(" ") : "";
+      const searchable = (id+" "+title+" "+wordsFound).toLowerCase();
+      if (!selected.every(t=>tags.includes(t)) || !words.every(w=>searchable.includes(w))) return false;
       if ((scope==="family"||scope==="newfamily") && families.has(family)) return false;
       families.add(family);
       return true;

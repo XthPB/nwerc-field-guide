@@ -6790,7 +6790,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 8C,Looking for Order,2000,bitmasks|dp,9597,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/8C.go
 2B,The least round way,2000,dp|math,6973,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/2B.go
 2276G,Elimination of Players,2100,combinatorics|dp|math,6639,,
-2273C,Matrix Puzzle,2100,brute force|data structures|implementation|math|matrices,6620,,
+2273C,Matrix Puzzle,2100,brute force|data structures|implementation|math|matrices,6620,course/matrix-corners.html,
 2271E,Array Emptying,2100,binary search|data structures|greedy,6615,,
 2257E,Busy Beaver,2100,brute force|data structures|divide and conquer|dp|greedy|implementation|sortings,6537,,
 2255C,Even If the World Turns,2100,communication|constructive algorithms|expression parsing|greedy|interactive|math|number theory,6528,,
@@ -6955,7 +6955,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1433G,Reducing Delivery Cost,2100,brute force|graphs|shortest paths,2077,,
 1420C2,Pokémon Army (hard version),2100,data structures|divide and conquer|dp|greedy|implementation,2000,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1420C2.go
 1419E,Decryption,2100,constructive algorithms|implementation|math|number theory,1991,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1419E.go
-1418D,Trash Problem,2100,data structures|implementation,1983,,
+1418D,Trash Problem,2100,data structures|implementation,1983,course/largest-gap.html,
 1409F,Subsequences of Length Two,2100,dp|strings,1948,followup.html#cf-1409F,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1409F.go
 1392E,Omkar and Duck,2100,bitmasks|constructive algorithms|interactive|math,1860,,
 1393D,Rarity and New Dress,2100,dfs and similar|dp|implementation|shortest paths,1867,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1393D.go
@@ -7250,7 +7250,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 2266G,Modular Tree,2200,dfs and similar|dp|greedy|math|number theory|trees,6590,,
 2264E1,A Prime Flood (Easy Version),2200,combinatorics|dp|number theory,6582,,
 2259H,Treasure Map Destruction (Counting Version),2200,dfs and similar|dp|dsu|graphs|math,6552,,
-2253E,Diameter Intersections,2200,brute force|dfs and similar|fft|graphs|implementation|trees,6517,,
+2253E,Diameter Intersections,2200,brute force|dfs and similar|fft|graphs|implementation|trees,6517,course/diameter-sumset.html,
 2254G,Nightcrawler,2200,data structures|dfs and similar|dp|greedy|sortings|trees,6525,,
 2242E,Product of Closures,2200,bitmasks|brute force|constructive algorithms|greedy|implementation|math|number theory,6463,,
 2239C,Revival,2200,binary search|data structures|math|two pointers,6443,,
@@ -7418,7 +7418,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1505I,"Mysterious language again, seriously?",2200,*special,2412,,
 1498D,Bananas in a Microwave,2200,dfs and similar|dp|graphs|implementation,2373,,
 1498E,Two Houses,2200,brute force|graphs|greedy|interactive|sortings,2374,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1498E.go
-1500B,Two chandeliers,2200,binary search|brute force|chinese remainder theorem|math|number theory,2393,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1500B.go
+1500B,Two chandeliers,2200,binary search|brute force|chinese remainder theorem|math|number theory,2393,course/cyclic-mismatches.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1500B.go
 1488E,Palindromic Doubles,2200,*special|data structures|dp,2319,,
 1486E,Paired Payment,2200,binary search|brute force|constructive algorithms|dp|flows|graphs|shortest paths,2306,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1486E.go
 1485D,Multiples and Power Differences,2200,constructive algorithms|graphs|math|number theory,2299,,
@@ -7488,7 +7488,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1149B,Three Religions,2200,dp|implementation|strings,713,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1149B.go
 1157G,Inverse of Rows and Columns,2200,brute force|constructive algorithms,765,,
 1155E,Guess the Root,2200,brute force|interactive|math,750,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1155E.go
-1154G,Minimum Possible LCM,2200,brute force|greedy|math|number theory,745,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1154G.go
+1154G,Minimum Possible LCM,2200,brute force|greedy|math|number theory,745,course/divisor-min-lcm.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1154G.go
 1153E,Serval and Snake,2200,binary search|brute force|interactive,737,,https://github.com/Yawn-Sean/Daily_CF_Problems/blob/f4df033d1bbdada021e346e59f9d4e07decfe55a/daily_problems/2024/03/0322/personal_submission/cf1153e_Ldh.py
 1140E,Palindrome-less Arrays,2200,combinatorics|divide and conquer|dp,669,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1140E.go
 1136E,Nastya Hasn't Written a Legend,2200,binary search|data structures,646,,
@@ -8061,7 +8061,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 460D,Little Victor and Set,2300,brute force|constructive algorithms|math,7639,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/400-499/460D.go
 451E,Devu and Flowers,2300,bitmasks|combinatorics|number theory,7596,course/complements.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/400-499/451E.go
 444B,DZY Loves FFT,2300,probabilities,7558,,
-438D,The Child and Sequence,2300,data structures|math,7531,course/lazy-actions.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/400-499/438D.go
+438D,The Child and Sequence,2300,data structures|math,7531,course/lazy-actions.html|course/modulo-potential.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/400-499/438D.go
 432E,Square Tiling,2300,constructive algorithms|greedy,7507,,https://github.com/Yawn-Sean/Daily_CF_Problems/blob/f4df033d1bbdada021e346e59f9d4e07decfe55a/daily_problems/2024/07/0713/personal_submission/cf432e_Equinox.cpp
 429C,Guess the Tree,2300,bitmasks|constructive algorithms|dp|greedy|trees,7489,,
 425C,Sereja and Two Sequences,2300,data structures|dp,7477,,https://github.com/Yawn-Sean/Daily_CF_Problems/blob/f4df033d1bbdada021e346e59f9d4e07decfe55a/daily_problems/2025/05/0510/personal_submission/cf425c_BlackCat_.cpp
@@ -8146,7 +8146,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 2276F,Permutation Coloring Game,2400,brute force|dp|dsu|games|greedy|implementation|math,6638,,
 2275H,A Problem to Warm Up the Eyebrows,2400,combinatorics|dp|math,6632,,
 2266H,Deque Malfunction,2400,binary search|data structures|dp|greedy,6591,,
-2258E,DivMEX,2400,data structures|math|number theory,6543,,
+2258E,DivMEX,2400,data structures|math|number theory,6543,course/first-missing-power.html,
 2241G,Summmon,2400,binary search|data structures|greedy|implementation|math|number theory,6458,,
 2237F,Paint the Array,2400,data structures|dp|greedy,6433,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/2200-2299/2237F.go
 2229F,Load Unbalancing,2400,binary search|bitmasks|dp|greedy,6383,,
@@ -8351,7 +8351,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1263F,Economic Difficulties,2400,data structures|dfs and similar|dp|flows|graphs|trees,1263,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1263F.go
 1260E,Tournament,2400,brute force|dp|greedy,1256,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1260E.go
 1227F2,Wrong Answer on test 233 (Hard Version),2400,combinatorics|math,1114,,
-1257F,Make Them Similar,2400,bitmasks|brute force|hashing|meet-in-the-middle,1245,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1257F.go
+1257F,Make Them Similar,2400,bitmasks|brute force|hashing|meet-in-the-middle,1245,course/half-signatures.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1257F.go
 1242C,Sum Balance,2400,bitmasks|dfs and similar|dp|graphs,1165,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1242C.go
 1252F,Regular Forestation,2400,hashing|trees,1214,,
 1251E2,Voting (Hard Version),2400,binary search|data structures|greedy,1207,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1251E2.go
@@ -8412,11 +8412,11 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1045H,Self-exploration,2400,math,243,,
 1051F,The Shortest Statement,2400,graphs|shortest paths|trees,257,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1051F.go
 1042F,Leaf Sets,2400,data structures|dfs and similar|dsu|graphs|greedy|sortings|trees,226,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1042F.go
-1036E,Covered Points,2400,fft|geometry|number theory,189,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1036E.go
+1036E,Covered Points,2400,fft|geometry|number theory,189,course/lattice-union.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1036E.go
 1036F,Relatively Prime Powers,2400,combinatorics|math|number theory,190,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1036F.go
 1038E,Maximum Matching,2400,bitmasks|brute force|dfs and similar|dp|graphs,202,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1038E.go
 1028E,Restore Array,2400,constructive algorithms,144,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1028E.go
-1027F,Session in BSU,2400,binary search|dfs and similar|dsu|graph matchings|graphs,138,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1027F.go
+1027F,Session in BSU,2400,binary search|dfs and similar|dsu|graph matchings|graphs,138,course/two-date-components.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1027F.go
 1017E,The Supersonic Rocket,2400,geometry|hashing|strings,108,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1017E.go
 1016E,Rest In The Shades,2400,binary search|geometry,101,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1016E.go
 1009G,Allowed Letters,2400,bitmasks|flows|graph matchings|graphs|greedy,67,,
@@ -8441,7 +8441,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 916E,Jamie and Tree,2400,data structures|trees,9678,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/916E.go
 915F,Imbalance Value of a Tree,2400,data structures|dsu|graphs|trees,9672,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/915F.go
 913E,Logical Expression,2400,bitmasks|dp|shortest paths,9658,,
-912E,Prime Gift,2400,binary search|dfs and similar|math|meet-in-the-middle|number theory|two pointers,9653,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/912E.go
+912E,Prime Gift,2400,binary search|dfs and similar|math|meet-in-the-middle|number theory|two pointers,9653,course/smooth-rank.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/912E.go
 908F,New Year and Rainbow Roads,2400,graphs|greedy|implementation,9629,,
 911F,Tree Destruction,2400,constructive algorithms|dfs and similar|graphs|greedy|trees,9647,course/certificate.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/911F.go
 906C,Party,2400,bitmasks|brute force|dp|graphs,9620,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/906C.go
@@ -8826,7 +8826,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1209E2,Rotate Columns (hard version),2500,bitmasks|dp|greedy|sortings,1010,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1209E2.go
 1211G,King's Path,2500,*special|math|trees,1034,,
 1198E,Rectangle Painting 2,2500,flows|graph matchings|graphs,944,,
-1195F,Geometers Anonymous Club,2500,data structures|geometry|math|sortings,927,,
+1195F,Geometers Anonymous Club,2500,data structures|geometry|math|sortings,927,course/minkowski-directions.html,
 1188A2,Add on a Tree: Revolution,2500,constructive algorithms|dfs and similar|implementation|trees,898,,
 1188C,Array Beauty,2500,dp,900,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1188C.go
 1187F,Expected Square Beauty,2500,dp|math|probabilities,895,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1187F.go
@@ -9156,23 +9156,23 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1539F,Strange Array,2600,data structures|greedy|sortings,2578,,
 1536F,Omkar and Akmar,2600,chinese remainder theorem|combinatorics|constructive algorithms|fft|games|geometry|math|meet-in-the-middle|string suffix structures,2559,,
 1523E,Crypto Lights,2600,combinatorics|dp|math|probabilities,2506,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1523E.go
-1515F,Phoenix and Earthquake,2600,constructive algorithms|dfs and similar|dsu|graphs|greedy|trees,2471,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1515F.go
+1515F,Phoenix and Earthquake,2600,constructive algorithms|dfs and similar|dsu|graphs|greedy|trees,2471,course/earthquake-order.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1515F.go
 1510B,Button Lock,2600,flows|graph matchings|graphs,2432,,
 1503D,Flip the Cards,2600,2-sat|constructive algorithms|data structures|greedy|sortings|two pointers,2401,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1503D.go
 1505G,Encoded message,2600,*special|implementation,2410,,https://github.com/DionysiosB/CodeForces/blob/da654ef769146ccbf215b3ef28b894d2742c92d9/1505G-EncodedMessage.cpp
 1500C,Matrix Sorting,2600,bitmasks|brute force|constructive algorithms|greedy|two pointers,2394,,
-1495D,BFS Trees,2600,combinatorics|dfs and similar|graphs|math|shortest paths|trees,2362,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1495D.go
+1495D,BFS Trees,2600,combinatorics|dfs and similar|graphs|math|shortest paths|trees,2362,course/two-bfs-roots.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1495D.go
 1493E,Enormous XOR,2600,bitmasks|constructive algorithms|greedy|math|strings|two pointers,2351,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1493E.go
 1493F,Enchanted Matrix,2600,bitmasks|interactive|number theory,2352,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1493F.go
 1486F,Pairs of Paths,2600,combinatorics|data structures|dfs and similar|dp|trees,2307,,
 1466G,Song of the Sirens,2600,combinatorics|divide and conquer|hashing|math|string suffix structures|strings,2202,,
 1469F,Power Sockets,2600,binary search|data structures|greedy,2227,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1469F.go
-1439B,Graph Subset Problem,2600,constructive algorithms|data structures|graphs,2098,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1439B.go
+1439B,Graph Subset Problem,2600,constructive algorithms|data structures|graphs,2098,course/core-or-clique.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1439B.go
 1439C,Greedy Shopping,2600,binary search|data structures|divide and conquer|greedy|implementation,2099,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1439C.go
 1446D1,Frequency Problem (Easy Version),2600,data structures|greedy,2122,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1446D1.go
 1431H,Rogue-like Game,2600,*special|brute force|greedy|two pointers,2069,,
 1437F,Emotional Fishermen,2600,combinatorics|dp|math|two pointers,2089,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1437F.go
-1437G,Death DBMS,2600,data structures|string suffix structures|strings|trees,2090,,
+1437G,Death DBMS,2600,data structures|string suffix structures|strings|trees,2090,course/active-dictionary.html,
 1430F,Realistic Gameplay,2600,dp|greedy,2060,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1430F.go
 1430G,Yet Another DAG Problem,2600,bitmasks|dfs and similar|dp|flows|graphs|math,2061,followup.html#cf-1430G,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1430G.go
 1423L,Light switches,2600,meet-in-the-middle,2021,,
@@ -9181,7 +9181,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1406E,Deleting Numbers,2600,interactive|math|number theory,1930,,
 1402C,Star Trek,2600,*special|combinatorics|dfs and similar|dp|games|graphs|matrices|trees,1916,,
 1400G,Mercenaries,2600,bitmasks|brute force|combinatorics|dp|dsu|math|two pointers,1907,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1400G.go
-1398G,Running Competition,2600,bitmasks|fft|math|number theory,1887,,
+1398G,Running Competition,2600,bitmasks|fft|math|number theory,1887,course/distance-correlation.html,
 1394C,Boboniu and String,2600,binary search|geometry|ternary search,1871,,
 1391E,Pairs of Pairs,2600,constructive algorithms|dfs and similar|graphs|greedy|trees,1855,,
 1389F,Bicolored Segments,2600,data structures|dp|graph matchings|sortings,1844,,
@@ -9197,7 +9197,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1348F,Phoenix and Memory,2600,data structures|dfs and similar|graphs|greedy,1635,,
 1340D,Nastya and Time Machine,2600,constructive algorithms|dfs and similar|graphs|trees,1600,,
 1326F1,Wise Men (Easy Version),2600,bitmasks|brute force|dp|meet-in-the-middle,1534,,
-1325E,Ehab's REAL Number Theory Problem,2600,brute force|dfs and similar|graphs|number theory|shortest paths,1527,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1325E.go
+1325E,Ehab's REAL Number Theory Problem,2600,brute force|dfs and similar|graphs|number theory|shortest paths,1527,course/kernel-cycle.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1325E.go
 1312G,Autocompletion,2600,data structures|dfs and similar|dp,1483,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1312G.go
 1301F,Super Jaber,2600,dfs and similar|graphs|implementation|shortest paths,1431,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1301F.go
 1270F,Awesome Substrings,2600,math|strings,1303,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1270F.go
@@ -9210,17 +9210,17 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1237F,Balanced Domino Placements,2600,combinatorics|dp,1146,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1237F.go
 1223F,Stack Exterminable Arrays,2600,data structures|divide and conquer|dp|hashing,1102,,
 1218C,Jumping Transformers,2600,dp,1070,,
-1209F,Koala and Notebook,2600,data structures|dfs and similar|graphs|shortest paths|strings|trees,1011,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1209F.go
+1209F,Koala and Notebook,2600,data structures|dfs and similar|graphs|shortest paths|strings|trees,1011,course/digit-edge-bfs.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1209F.go
 1217F,Forced Online Queries Problem,2600,data structures|divide and conquer|dsu|graphs|trees,1067,,
 1208F,Bits And Pieces,2600,bitmasks|dfs and similar|dp|greedy,1004,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1208F.go
 1178F2,Long Colorful Strip,2600,dp,843,,
 1185G2,Playlist for Polycarp (hard version),2600,combinatorics|dp,884,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1185G2.go
 1172C2,Nauuo and Pictures (hard version),2600,dp|probabilities,813,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1172C2.go
-1158D,Winding polygonal line,2600,constructive algorithms|geometry|greedy|math,769,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1158D.go
+1158D,Winding polygonal line,2600,constructive algorithms|geometry|greedy|math,769,course/supporting-turns.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1158D.go
 1153F,Serval and Bonus Problem,2600,combinatorics|dp|math|probabilities,738,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1153F.go
 1140F,Extending Set of Points,2600,data structures|divide and conquer|dsu,670,course/dynamic-connectivity.html,
 1120E,The very same Munchhausen,2600,brute force,608,,
-1110F,Nearest Leaf,2600,data structures|trees,561,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1110F.go
+1110F,Nearest Leaf,2600,data structures|trees,561,course/reroot-leaf-range.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1110F.go
 1111D,Destroy the Colony,2600,combinatorics|dp|math,565,,
 1107F,Vasya and Endless Credits,2600,dp|flows|graph matchings|graphs|sortings,541,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1100-1199/1107F.go
 1091F,New Year and the Mallard Expedition,2600,constructive algorithms|greedy,449,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1091F.go
@@ -9247,7 +9247,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 958F3,Lightsabers (hard),2600,fft,9846,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/958F3.go
 955D,Scissors,2600,brute force|strings,9837,,
 955F,Heaps,2600,dp|trees,9839,,
-940F,Machine Learning,2600,brute force|data structures,9800,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/940F.go
+940F,Machine Learning,2600,brute force|data structures,9800,course/mo-with-time.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/940F.go
 935F,Fafa and Array,2600,data structures|greedy,9770,,
 919F,A Game With Numbers,2600,games|graphs|shortest paths,9690,,
 917D,Stranger Trees,2600,dp|math|matrices|trees,9682,course/kirchhoff.html,
@@ -9284,7 +9284,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 685D,Kay and Eternity,2600,brute force|implementation|sortings,8630,,
 682E,Alyona and Triangles,2600,geometry|two pointers,8616,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/600-699/682E.go
 662C,Binary Table,2600,bitmasks|brute force|divide and conquer|dp|fft|math,8538,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/600-699/662C.go
-653F,Paper task,2600,data structures|string suffix structures|strings,8501,,
+653F,Paper task,2600,data structures|string suffix structures|strings,8501,course/distinct-brackets.html,
 650D,Zip-line,2600,binary search|data structures|dp|hashing,8487,course/critical-lis.html|course/antichain.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/600-699/650D.go
 631E,Product Sum,2600,data structures|dp|geometry,8410,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/600-699/631E.go
 627D,Preorder Test,2600,binary search|dfs and similar|dp|graphs|greedy|trees,8370,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/600-699/627D.go
@@ -9372,8 +9372,8 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 8E,Beads,2600,dp|graphs,9599,,
 7E,Defining Macros,2600,dp|expression parsing|implementation,9161,,
 6D,Lizards and Basements 2,2600,brute force|dp,8687,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/6D.go
-3D,Least Cost Bracket Sequence,2600,greedy,7379,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/3D.go
-2C,Commentator problem,2600,geometry,6974,,
+3D,Least Cost Bracket Sequence,2600,greedy,7379,course/bracket-repair.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/3D.go
+2C,Commentator problem,2600,geometry,6974,course/ratio-loci.html,
 2268E,Kia Kio and Tree of Life,2700,data structures|fft|math|trees,6603,,
 2264E2,A Prime Flood (Hard Version),2700,brute force|combinatorics|dp|number theory,6582,,
 2257F2,Beaver's Jumping Track (Hard Version),2700,data structures|dp|matrices,6538,,
@@ -9481,7 +9481,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1542E2,Abnormal Permutation Pairs (hard version),2700,combinatorics|dp|fft|math,2593,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1542E2.go
 1540C1,Converging Array (Easy Version),2700,dp|math,2586,,
 1521E,Nastia and a Beautiful Matrix,2700,binary search|constructive algorithms|dp|greedy,2501,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1521E.go
-1515G,Phoenix and Odometers,2700,dfs and similar|graphs|math|number theory,2472,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1515G.go
+1515G,Phoenix and Odometers,2700,dfs and similar|graphs|math|number theory,2472,course/closed-walk-residues.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1515G.go
 1519E,Off by One,2700,constructive algorithms|dfs and similar|geometry|graphs|sortings|trees,2487,,
 1514E,Baby Ehab's Hyper Apartment,2700,binary search|graphs|interactive|sortings|two pointers,2465,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1514E.go
 1511F,Chainword,2700,brute force|data structures|dp|matrices|string suffix structures|strings,2446,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1500-1599/1511F.go
@@ -9493,25 +9493,25 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1487G,String Counting,2700,combinatorics|dp|fft|math,2314,,
 1473F,Strange Set,2700,flows|math,2248,,
 1468L,Prime Divisors Selection,2700,binary search|greedy|math|number theory,2219,,
-1411G,No Game No Life,2700,bitmasks|games|math|matrices,1961,,
+1411G,No Game No Life,2700,bitmasks|games|math|matrices,1961,course/xor-stopping.html,
 1458C,Latin Square,2700,math|matrices,2171,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1458C.go
 1461F,Mathematical Expression,2700,constructive algorithms|dp|greedy,2184,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1461F.go
 1450E,Capitalism,2700,constructive algorithms|dfs and similar|graphs|shortest paths,2134,,
 1453F,Even Harder,2700,dp,2155,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1453F.go
-1451F,Nullify The Matrix,2700,constructive algorithms|games,2142,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1451F.go
+1451F,Nullify The Matrix,2700,constructive algorithms|games,2142,course/diagonal-nim.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1451F.go
 1452G,Game On Tree,2700,data structures|dfs and similar|greedy|trees,2149,,
 1421E,Swedish Heroes,2700,brute force|dp|implementation,2007,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1421E.go
 1423E,5G Antenna Towers,2700,geometry,2015,,
 1423F,Coins,2700,math,2016,,
 1422E,Minlexes,2700,dp|greedy|implementation|strings,2012,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1400-1499/1422E.go
-1422F,Boring Queries,2700,data structures|math|number theory,2013,,
+1422F,Boring Queries,2700,data structures|math|number theory,2013,course/lcm-versions.html,
 1408G,Clusterization Counting,2700,combinatorics|dp|dsu|fft|graphs|trees,1942,,
 1388E,Uncle Bogdan and Projections,2700,data structures|geometry|sortings,1838,,
 1386A,Colors,2700,*special|binary search|constructive algorithms|interactive,1827,,
 1379F1,Chess Strikes Back (easy version),2700,binary search|data structures,1795,,
 1372F,Omkar and Modes,2700,binary search|divide and conquer|interactive,1769,,
 1369F,BareLee,2700,dfs and similar|dp|games,1749,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1369F.go
-1370F2,The Hidden Pair (Hard Version),2700,binary search|dfs and similar|graphs|interactive|shortest paths|trees,1757,,
+1370F2,The Hidden Pair (Hard Version),2700,binary search|dfs and similar|graphs|interactive|shortest paths|trees,1757,course/layer-oracle.html,
 1364E,X-OR,2700,bitmasks|constructive algorithms|divide and conquer|interactive|probabilities,1717,,
 1366F,Jog Around The Graph,2700,binary search|dp|geometry|graphs,1730,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1366F.go
 1366G,Construct the String,2700,data structures|dp|strings,1731,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1300-1399/1366G.go
@@ -9524,16 +9524,16 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1303G,Sum of Prefix Sums,2700,data structures|divide and conquer|geometry|trees,1438,,
 1295F,Good Contest,2700,combinatorics|dp|probabilities,1406,,
 1292D,Chaotic V.,2700,dp|graphs|greedy|math|number theory|trees,1392,,
-1270G,Subset with Zero Sum,2700,constructive algorithms|dfs and similar|graphs|math,1304,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1270G.go
+1270G,Subset with Zero Sum,2700,constructive algorithms|dfs and similar|graphs|math,1304,course/telescoping-cycle.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1200-1299/1270G.go
 1279E,New Year Permutations,2700,combinatorics|dp,1334,,
 1271F,Divide The Students,2700,brute force,1310,,
 1264E,Beautiful League,2700,constructive algorithms|flows|graph matchings,1268,,
 1260F,Colored Tree,2700,data structures|trees,1257,,
-1254D,Tree Queries,2700,data structures|probabilities|trees,1230,,
+1254D,Tree Queries,2700,data structures|probabilities|trees,1230,course/random-root-updates.html,
 1238G,Adilbek and the Watering System,2700,data structures|greedy|sortings,1153,,
 1210E,Wojtek and Card Tricks,2700,math,1027,,
 1220F,Gardener Alex,2700,binary search|data structures,1089,,
-1215F,Radio Stations,2700,2-sat,1055,,
+1215F,Radio Stations,2700,2-sat,1055,course/ordered-sat.html,
 1214F,Employment,2700,greedy|sortings,1048,,
 1207G,Indie Album,2700,data structures|dfs and similar|hashing|string suffix structures|strings|trees,998,,
 1205D,Almost All,2700,constructive algorithms|trees,989,,
@@ -9574,7 +9574,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 958D2,Hyperspace Jump (hard),2700,,9844,,
 958E3,Guard Duty (hard),2700,geometry,9845,,
 961F,k-substrings,2700,binary search|hashing|string suffix structures,9870,,
-961G,Partitions,2700,combinatorics|math|number theory,9871,,
+961G,Partitions,2700,combinatorics|math|number theory,9871,course/marked-blocks.html,
 924E,Wardrobe,2700,dp|greedy,9717,,
 949E,Binary Cards,2700,brute force,9813,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/949E.go
 938F,Erasing Substrings,2700,bitmasks|dp|greedy,9782,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/938F.go
@@ -9588,11 +9588,11 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 868E,Policeman and a Tree,2700,dp|graphs|trees,9459,,
 864F,Cities Excursions,2700,dfs and similar|graphs|trees,9449,,
 860E,Arkady and a Nobody-men,2700,data structures|dfs and similar|trees,9431,,
-839E,Mother of Dragons,2700,brute force|graphs|math|meet-in-the-middle,9323,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/800-899/839E.go
+839E,Mother of Dragons,2700,brute force|graphs|math|meet-in-the-middle,9323,course/clique-allocation.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/800-899/839E.go
 838D,Airplane Arrangements,2700,math|number theory,9316,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/800-899/838D.go
 833C,Ever-Hungry Krakozyabra,2700,brute force|combinatorics|greedy|math,9296,,
 827D,Best Edge Weight,2700,data structures|dfs and similar|graphs|trees,9273,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/800-899/827D.go
-827E,Rusty String,2700,fft|math|strings,9274,,
+827E,Rusty String,2700,fft|math|strings,9274,course/forbidden-periods.html,
 812D,Sagheer and Kindergarten,2700,dfs and similar|graphs|implementation|trees,9207,,
 773D,Perishable Roads,2700,dp|graphs|shortest paths,9036,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/700-799/773D.go
 772D,Varying Kibibits,2700,bitmasks|dp,9032,,
@@ -9650,7 +9650,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 309D,Tennis Rackets,2700,brute force|geometry,7006,,
 293B,Distinct Paths,2700,brute force|combinatorics,6942,,
 293D,Ksusha and Square,2700,geometry|math|probabilities|two pointers,6944,,
-293E,Close Vertices,2700,data structures|divide and conquer|trees,6945,,
+293E,Close Vertices,2700,data structures|divide and conquer|trees,6945,course/two-budget-centroid.html,
 267C,Berland Traffic,2700,math|matrices,6824,,
 256D,Liars and Serge,2700,dp,6776,,
 251D,Two Sets,2700,bitmasks|math,6757,,
@@ -9681,7 +9681,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 48G,Galaxy Union,2700,dp|trees|two pointers,7773,,
 42E,Baldman and the military,2700,dfs and similar|graphs|trees,7496,,
 44F,BerPaint,2700,geometry|graphs,7585,,
-13E,Holes,2700,data structures|dsu,1900,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/13E.go
+13E,Holes,2700,data structures|dsu,1900,course/jump-blocks.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/13E.go
 2261G,"1 2 3 and XOR, Where Did Everybody Go?",2800,bitmasks|data structures|divide and conquer|dp|greedy|sortings|two pointers,6571,,
 2271H1,Personal Issues (Easy Version),2800,dp|games|trees,6617,,
 2264F,Deranged Calculator,2800,constructive algorithms|implementation|math,6583,,
@@ -9769,7 +9769,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1765I,Infinite Chess,2800,implementation|shortest paths,3748,,
 1732E,Location,2800,data structures|dp|math|number theory,3573,,
 1749F,Distance to the Path,2800,data structures|dfs and similar|trees,3674,,
-1746F,Kazaee,2800,data structures|hashing|probabilities,3657,,
+1746F,Kazaee,2800,data structures|hashing|probabilities,3657,course/frequency-fingerprint.html,
 1725I,Imitating the Key Tree,2800,combinatorics|dsu|trees,3529,,
 1721F,Matching Reduction,2800,brute force|constructive algorithms|dfs and similar|flows|graph matchings|graphs|interactive,3513,,
 1698F,Equal Reversal,2800,constructive algorithms|graphs|implementation|math,3378,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1600-1699/1698F.go
@@ -9778,7 +9778,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1685D1,Permutation Weight (Easy Version),2800,constructive algorithms|dfs and similar|dsu,3312,,
 1684G,Euclid Guess,2800,constructive algorithms|flows|graph matchings|math|number theory,3308,,
 1672F2,Checker for Array Shuffling,2800,constructive algorithms|dfs and similar|graphs,3235,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1600-1699/1672F2.go
-1654F,Minimal String Xoration,2800,bitmasks|data structures|divide and conquer|greedy|hashing|sortings|strings,3142,,
+1654F,Minimal String Xoration,2800,bitmasks|data structures|divide and conquer|greedy|hashing|sortings|strings,3142,course/xor-ranks.html,
 1648D,Serious Business,2800,data structures|divide and conquer|dp|implementation|shortest paths,3118,,
 1635F,Closest Pair ,2800,data structures|greedy,3074,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1600-1699/1635F.go
 1633F,Perfect Matching,2800,data structures|divide and conquer|interactive|trees,3062,,
@@ -9811,7 +9811,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1425I,Impressive Harvesting of The Orchard,2800,data structures,2031,,
 1419F,Rain of Fire,2800,binary search|data structures|dfs and similar|dsu|graphs|implementation,1992,,
 1404D,Game of Pairs,2800,constructive algorithms|dfs and similar|interactive|math|number theory,1922,,
-1404E,Bricks,2800,flows|graph matchings|graphs,1923,,
+1404E,Bricks,2800,flows|graph matchings|graphs,1923,course/brick-joins.html,
 1400F,x-prime Substrings,2800,brute force|dfs and similar|dp|string suffix structures|strings,1906,followup.html#cf-1400F,
 1394D,Boboniu and Jianghu,2800,dp|greedy|sortings|trees,1872,,
 1393E1,Twilight and Ancient Scroll (easier version),2800,dp|hashing|implementation|string suffix structures|strings,1868,,
@@ -9873,7 +9873,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 796F,Sequence Recovery,2800,bitmasks|data structures|greedy,9135,,
 776F,Sherlock's bet to Moriarty,2800,constructive algorithms|data structures|divide and conquer|geometry|graphs|implementation|trees,9056,,
 762F,Tree nesting,2800,combinatorics|graphs|trees,8981,,
-757F,Team Rocket Rises Again,2800,data structures|graphs|shortest paths,8956,,
+757F,Team Rocket Rises Again,2800,data structures|graphs|shortest paths,8956,course/shortest-dominators.html,
 750F,New Year and Finding Roots,2800,constructive algorithms|implementation|interactive|trees,8933,,
 736D,Permutations,2800,math|matrices,8869,,
 722F,Cyclic Cipher,2800,chinese remainder theorem|data structures|implementation|number theory|two pointers,8790,,
@@ -9898,7 +9898,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 555E,Case of Computer Network,2800,dfs and similar|graphs|trees,8054,course/bridge-demands.html,
 549F,Yura and Developers,2800,data structures|divide and conquer,8021,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/500-599/549F.go
 547E,Mike and Friends,2800,data structures|string suffix structures|strings|trees,8013,course/dictionary.html|course/pattern-range.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/500-599/547E.go
-521D,Shop,2800,greedy,7909,,
+521D,Shop,2800,greedy,7909,course/skill-ratios.html,
 516D,Drazil and Morning Exercise,2800,dfs and similar|dp|dsu|trees|two pointers,7886,,
 513F2,Scaygerboss,2800,flows,7874,,
 493E,Vasya and Polynomial,2800,math,7793,,
@@ -9939,7 +9939,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 48H,Black and White,2800,constructive algorithms,7774,,
 30E,Tricky and Clever Password,2800,binary search|constructive algorithms|data structures|greedy|hashing|strings,7012,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/30E.go
 28E,DravDe saves the world,2800,geometry|math,6924,,
-19D,Points,2800,data structures,5093,,
+19D,Points,2800,data structures,5093,course/strict-successor.html,
 11E,"Forward, march!",2800,binary search|dp|greedy,957,,
 10D,LCIS,2800,dp,499,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1-99/10D.go
 2273E,Six-Seven Bags,2900,brute force|greedy|interactive,6622,,
@@ -10095,7 +10095,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 960G,Bandit Blues,2900,combinatorics|dp|fft|math,9864,,
 955E,Icicles,2900,,9838,,
 930E,Coins Exhibition,2900,data structures|dp|math,9748,,
-938G,Shortest Path Queries,2900,bitmasks|data structures|dsu|graphs,9783,,
+938G,Shortest Path Queries,2900,bitmasks|data structures|dsu|graphs,9783,course/time-xor-basis.html,
 932G,Palindrome Partition,2900,dp|string suffix structures|strings,9758,course/palindrome.html|followup.html#cf-932G,
 933D,A Creative Cutout,2900,brute force|combinatorics|math,9762,,
 917C,Pollywog,2900,combinatorics|dp|matrices,9681,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/900-999/917C.go
@@ -10149,7 +10149,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 449E,Jzzhu and Squares,2900,dp|math|number theory,7579,,
 434D,Nanami's Power Plant,2900,flows,7513,,
 403E,Two Rooted Trees,2900,data structures|implementation|trees,7395,,
-364D,Ghd,2900,brute force|math|probabilities,7245,,
+364D,Ghd,2900,brute force|math|probabilities,7245,course/random-divisor-anchor.html,
 354D,Transferring Pyramid,2900,dp,7199,,
 343E,Pumping Stations,2900,brute force|dfs and similar|divide and conquer|flows|graphs|greedy|trees,7150,course/flow-closure.html,
 338D,GCD Table,2900,chinese remainder theorem|math|number theory,7122,course/congruences.html,
@@ -10175,7 +10175,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 126E,Pills,2900,brute force|flows,1297,,
 117E,Tree or not Tree,2900,data structures|divide and conquer|graphs|implementation|trees,853,,
 111E,Petya and Rectangle,2900,,603,,
-103E,Buying Sets,2900,flows|graph matchings,212,,
+103E,Buying Sets,2900,flows|graph matchings,212,course/tight-set-closure.html,
 89E,Fire and Ice,2900,greedy,9594,,
 79E,Security System,2900,math,9156,,
 73F,Plane of Tanks,2900,brute force|geometry,8880,,
@@ -10309,7 +10309,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 1070M,Algoland and Berland,3000,constructive algorithms|divide and conquer|geometry,353,,
 1063E,Lasers and Mirrors,3000,constructive algorithms|math,313,,
 1028G,Guess the number,3000,dp|interactive,146,course/interactive-budget.html|course/knowledge-state.html|followup.html#cf-1028G,
-1019C,Sergey's problem,3000,constructive algorithms|graphs,112,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1019C.go
+1019C,Sergey's problem,3000,constructive algorithms|graphs,112,course/quasi-kernel.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/1000-1099/1019C.go
 1007C,Guess two numbers,3000,binary search|interactive,58,,
 997E,Good Subsegments,3000,data structures,10019,,
 936D,World of Tank,3000,dp|greedy,9774,,
@@ -10335,7 +10335,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 627E,Orchestra,3000,two pointers,8371,,
 618F,Double Knapsack,3000,constructive algorithms|two pointers,8327,course/invariants.html,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/600-699/618F.go
 603E,Pastoral Oddities,3000,data structures|divide and conquer|dsu|math|trees,8255,,
-587F,Duff is Mad,3000,data structures|strings,8179,,
+587F,Duff is Mad,3000,data structures|strings,8179,course/dictionary-range-split.html,
 582E,Boolean Function,3000,bitmasks|dp|expression parsing,8160,course/truth-tables.html,
 573D,Bear and Cavalry,3000,data structures|divide and conquer|dp,8116,,
 568E,Longest Increasing Subsequence,3000,data structures|dp,8095,,
@@ -10343,7 +10343,7 @@ problem,title,rating,official_tags,sharing_family,worked_or_mapped_lessons,publi
 559E,Gerald and Path,3000,dp|sortings,8071,,https://github.com/EndlessCheng/codeforces-go/blob/2c31891c3a8793ca3def9d97cc790a17dcf3c1ca/main/500-599/559E.go
 533A,Berland Miners,3000,binary search|data structures|dfs and similar|greedy|trees,7954,,
 533D,Landmarks,3000,data structures|dp,7957,,
-526F,Pudding Monsters,3000,data structures|divide and conquer,7934,,
+526F,Pudding Monsters,3000,data structures|divide and conquer,7934,course/permutation-sweep.html,
 506E,Mr. Kitayuta's Gift,3000,combinatorics|dp|matrices|strings,7836,,
 504E,Misha and LCP on Tree,3000,binary search|dfs and similar|hashing|string suffix structures|trees,7835,course/heavy-paths.html,
 464E,The Classic Problem,3000,data structures|graphs|shortest paths,7657,,
